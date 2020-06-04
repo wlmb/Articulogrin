@@ -1,42 +1,40 @@
-\documentclass[12pt,letterpaper,onecolumn,twoside]{article}
-\usepackage[spanish]{babel}
-\usepackage[left=2cm,right=2cm,top=1.5cm,bottom=1.5cm]{geometry}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhead{}\lhead{}\chead{}\rhead{}
-\renewcommand{\headrulewidth}{0pt}
-\usepackage[latin1]{inputenc}
+\documentclass{article}
 \usepackage{amsmath}
-\usepackage{graphicx} % gr�ficos
-\usepackage{subfigure} % subgr�fico
-\usepackage{lscape}
-\usepackage{setspace}
-\usepackage{enumitem}
+\usepackage{graphicx} % gráficos
 \usepackage[noblocks]{authblk}
-\usepackage{float}
-\usepackage{cite}% para contraer referencias
-\usepackage[usenames]{color}
-\providecommand{\abs}[1]{\lvert#1\rvert}
-\providecommand{\norm}[1]{\lVert#1\rVert}
- \title{\textbf{Optimization of Porous Silicon (PSi) with gradient refractive index (GRIN): A comparison with computational schemes with experimental results } }
+%\usepackage{float}
+%\usepackage{cite}% para contraer referencias
+%\usepackage[usenames]{color}
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\usepackage{xcolor}
+\newcommand{\notaL}[1]{{\color{blue}L:#1}}
+\title{\textbf{Optimization of Porous Silicon (PSi) with gradient refractive index (GRIN): A comparison with computational schemes with experimental results } }
 
 \author[1]{C. A. Ospina de la Cruz}
-\author[2]{W. L. Mochan }
+\author[2]{W. L. Mochán }
 \author[3]{V. Agarwal }
 
-\affil[1]{{\scriptsize Posgrado en Ingenier\'ia y Ciencias Aplicadas del Centro de Investigaci�n en Ingenier\'ia y Ciencias Aplicadas (CIICAp-IICBA), Universidad Aut�noma del Estado de Morelos (UAEM), Cuernavaca CP 62209, M�xico}}
-\affil[2]{{\scriptsize Instituto de Ciencias F\'isica ,Universidad Nacional Autonoma de Mexico, Av. Universidad S/N, Col. Chamilpa, 62210 Cuernavaca, Morelos, Mexico  } }
-\affil[3]{{\scriptsize Centro de Investigaci\'on en Ingenier\'ia y Ciencias Aplicadas,Universidad del Estado de Morelos, Av. Universidad 1001 Col. Chamilpa, Cuernavaca, Morelos 62209, Mexico  } }
-\affil[*]{{\scriptsize Corresponding author: xxxxxx@xxxx.xxx}}
-\date{}
-
+\affil[1]{Posgrado en Ingenier\'ia y Ciencias Aplicadas del Centro de
+  Investigación en Ingenier\'ia y Ciencias Aplicadas (CIICAp-IICBA),
+  Universidad Autónoma del Estado de Morelos (UAEM), Cuernavaca CP
+  62209, México}
+\affil[2]{Instituto de Ciencias F\'isica ,Universidad Nacional
+  Autonoma de Mexico, Av. Universidad S/N, Col. Chamilpa, 62210
+  Cuernavaca, Morelos, Mexico}
+\affil[3]{Centro de Investigaci\'on en Ingenier\'ia y Ciencias
+  Aplicadas,Universidad del Estado de Morelos, Av. Universidad 1001
+  Col. Chamilpa, Cuernavaca, Morelos 62209, Mexico  }
 \begin{document}
-\renewcommand{\contentsname}{Contents}
-\renewcommand{\abstractname}{Abstract}
-\renewcommand{\tablename}{Table}
-\vspace{50pt}
 
 \maketitle
+\notaL{Quité los intentos de tipografiar. Que de eso se encargue la
+  revista.}
+\notaL{Cambié la codificación a utf8; ya no uses latin1, es obsoleto.}
+\notaL{Quité las líneas kilométricas. No te ocupes de su longitud y no
+  juntes mis líneas.}
+\notaL{Quité paquetes no escenciales}
+\notaL{Cuida de no poner espacios al final de las líneas.}
+
 \begin{abstract}
 We propose a simple setup which allows the calculation of the current
 density as a function of position within an electrochemical cell used
@@ -52,20 +50,11 @@ built.
 
 Keywords: Porous Silicon; GRIN; Reflectance Spectra.
 \end{abstract}
-
-
-\vspace{-0.8cm}
-\singlespacing
-\tableofcontents
-
-%\newpage
-\spacing{1}
-
-
+\notaL{Cambié el abstract, pero habrá que revisarlo después.}
  \section{Introduction}
 
 The structural behavior of nanostructured materials  has  become a
-great  topic  of global  interest,  where numerous  research has been
+topic  of global  interest,  where numerous  research has been
 done so far \cite{I1}. We found a great way to go for future
 technological  explorations,  countless  challenges and  that  open a
 range of possibilities to develop further  study  on these
@@ -149,7 +138,7 @@ horizontal and c vertical. Here c considered as the height of the
 liquid, and the walls are insulating, but the bottom is completely
 covered with the sample, which act as good conductor. The electrode is
 a thin insulated cable with tip, which  a point  current source.
-\begin{figure}[H]
+\begin{figure}
   \centering
   \includegraphics[scale=.4]{Images/celdan}
   \caption{\emph{Diagram of the Electrolytic cell where we can see the shape of a prism on the sides a, b, c with a, b horizontal and c vertical. I'll take as the height of the liquid. The walls are insulating, but the bottom is completely covered by the sample, I suppose it is a good conductor. The tip of the electrode is a thin insulated wire located at $ \vec{r}_0 $.}}
@@ -186,7 +175,7 @@ using the simplified prism geometry  can solve the problem using the
 theory of image loads. Each load has an image of the same sign and
 magnitude for each lateral insulating surface and the opposite sign
 change in the lower part of the conductive plane, as follows.
- \begin{figure}[H]
+ \begin{figure}
  \centering
  \includegraphics[scale=.6]{Images/Cellgrin}
  \caption{\emph{a) Diagram of a rectangular electrolytic cell, with a
@@ -265,7 +254,7 @@ At a height $ 0 <z <z_0 $ I simplify
      x_0) \cos(G_y y_0) e^{i \vec{G} \cdot \vec{r}} \bigg)
  \end{eqnarray}
 If the surface of the liquid is at a finite height c, then we can use images, like:
-\begin{figure}[H]
+\begin{figure}
   \centering
   \includegraphics[scale=.6]{Images/celd1}
   \caption{\emph{Diagram shows that there is a positive (real) plane $
@@ -435,7 +424,7 @@ y
 T=\frac{\eta_m}{\eta_0}|t|^{2}
 \end{equation}
 \section{Experimental Details}
-\begin{figure}[H]
+\begin{figure}
   \centering
   \includegraphics[scale=0.6]{Images/DE1}
 \caption{\emph{Schematic of the experimental set-up for
@@ -587,7 +576,7 @@ field; the equation is expressed as follows:
  electrolytic box and solve the electrostatic equations with suitable
  boundary conditions. Resulting in an electrostatic model for photonic
  crystals with a refractive index with gradient (EMPCGRIN).
-\begin{figure}[H]
+\begin{figure}
   \centering
   \includegraphics[scale=0.7]{Images/G123}
   \caption{\emph{ Simulation to calculate the current density in
@@ -626,7 +615,7 @@ same way we can give ourselves an idea by means of the graph of how
 the attack would be and the formal side of the pores in the silicon.
 
 \subsection{Monolayers GRIN Porous Silicon }
-\begin{figure}[H]
+\begin{figure}
 	\centering
 	\includegraphics[scale=.3]{../Images/celdan2}
 	\caption{\emph{ Mechanical 3D modeling, design of the
@@ -647,7 +636,7 @@ required data. The design of the cell used is $ 1,206 \ \ cm ^ 2 $
 rectangular ($ 0.62 \ \ cm \times 2.03 \ \ cm $) and a height ( $ 1.2
 \ \ cm $), all this in order to optimize our experiments adjusted to
 all the needs that this required.
-\begin{figure}[H]
+\begin{figure}
   \centering
   \includegraphics[scale=.5]{Images/SPgrin51}
   \caption{\emph{a) Silicon sample attacked with an electrolytic
@@ -704,7 +693,7 @@ all the needs that this required.
  current density increases the dimension of the pores and their
  depth. Thus, the extent of the porous film showing a gradient that
  can be controlled from the lateral current density.
-\begin{figure}[H]
+\begin{figure}
   \centering
   \includegraphics[scale=.5]{Images/semD11}
   \caption{\emph{Characterization of a monolayer of PSi GRIN G1
@@ -733,7 +722,7 @@ A $ and away from the point $ C $ of the substrate, using the proposed
 experimental setup. In addition, it was possible to control the
 current density based on the position of the sample and the depth,
 seen in the SEM micrographs.
- \begin{figure}[H]
+ \begin{figure}
    \centering
    \includegraphics[scale=.7]{Images/grinJDR}
    \caption{\emph{a) It is the relation of the current density $
@@ -764,7 +753,7 @@ $ A (0.3 \ \ cm) $, $ B (0.8 \ \ cm) $ and $ C (1.7 \ \ cm)) $ taken
 in SEM micrographs $ d (J_i) (nm) $ and attack times $ G1 (t = 600 \ \
 s) $ and $ G2 (t = 200 \ \ s) $, depending on the axis $ a $ $ (0.1
 ... 2.0 \ \ cm) $.
-\begin{figure}[H]
+\begin{figure}
   \centering
   \includegraphics[scale=.6]{Images/grinJD31}
   \caption{\emph{The relationship of samples $ G1 (I = 5 mA) $ and $
@@ -808,7 +797,7 @@ of the layers that are manufactured, by controlling the attack time
 for each of the chosen currents.
 
 \subsection{GRIN Porous Silicon Microcavities}
- \begin{figure}[H]
+ \begin{figure}
 	\centering
 	\includegraphics[scale=0.4]{Images/MicrGrin}
 	\caption{\emph{Diagram of a microcavity of porous silicon
@@ -851,7 +840,7 @@ $, $t_{_{H}}=35 s  $ y para  $n_{_{L}}= 1.4$,  $P_{_{L}} =0.75$,
 $d_{_{L}}=0.117 \ \ \mu m  $, $t_{_{L}}=11 s  $. All these data are
 for the point $ 0 $ which is located at one end of the sample just
 below the tip counter-electrode.
-\begin{figure}[H]
+\begin{figure}
   \centering
   \includegraphics[scale=.5]{Images/MCGRIN2}
   \caption{\emph{a) Three locations at different points are
@@ -924,7 +913,7 @@ $ where $ t = d / V $ and the refractive index using the Bruggeman
 formula. For theoretical values, we use complex refractive indices as
 free parameters to fit the experimental refractive spectra (Section
 4.2).
- \begin{figure}[H]
+ \begin{figure}
    \centering
    \includegraphics[scale=.5]{Images/MCGRINSEM}
    \caption{\emph{SEM image of the cross section profile of the
@@ -991,7 +980,7 @@ of our experiment.
 % \backmatter
 %\nocite{*}
 %\bibliographystyle{plain}
-%\bibliography{bibliograf�a.bib} %Aqu� ponen el nombre del archivo .bib
+%\bibliography{bibliografía.bib} %Aquí ponen el nombre del archivo .bib
 \bibliographystyle{unsrt}
 \begin{thebibliography}{X}
   % forma de biblio es MLA
@@ -1095,7 +1084,7 @@ of our experiment.
   \emph{Roughness of the Porous Silicon Dissolution
     Interface.}\textquotedblright Journal of Applied Physics 81:
   61716178.
-\bibitem{I19} L�rondel G, Romestain R, Barret S
+\bibitem{I19} Lérondel G, Romestain R, Barret S
   (1997).\textquotedblleft \emph{Quantitative Analysis of the Light
     Scattering Effect on Porous Silicon
     Optical Measurements.}\textquotedblright Thin Solid Films 297:
