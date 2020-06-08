@@ -221,7 +221,7 @@ with the grounded counterelectrode is large enough that we may assume its
 surface $z=0$ is an equipotential.
 On the other hand, no current can go across the insulating walls of
 the cell, situated at $x=0$, $x=a$,, $y=0$ and $y=b$, nor through the
-free surface of the liquid at $z=c$. Thus, the problem to solve is Poisson
+free surface of the liquid at $z=c$. Thus, the problem to solve is Poisson's
 equation with a point charge source
 \begin{equation}
   \label{eq:poisson}
@@ -288,40 +288,17 @@ image charges.
     charges $q_0$ and another four charges $-q_0$.}
   \label{fig:sideview}
 \end{figure}
-
-This has a mixture of Dirichlet-Neumann type boundary conditions. By
-using the simplified prism geometry  can solve the problem using the
-theory of image loads. Each load has an image of the same sign and
-magnitude for each lateral insulating surface and the opposite sign
-change in the lower part of the conductive plane, as follows.
- \begin{figure}
- \centering
- \includegraphics[scale=.6]{Images/Cellgrin}
- \caption{\emph{a) Diagram of a rectangular electrolytic cell, with a
-     real charge in the corner of the cell with its charges ($ q $)
-     images of the same sign in $ Z_0 $ and another charge image ($ -q
-     $) with change of sign located below the conductor in position $
-     -Z_0 $. b) The upper face seen from above, a real load and its
-     image loads in $ Z_0 $. c) All this formed a systems of a real
-     load and its image loads produced by the cell walls and its other
-     images seen from above, forming a periodic space. }}
- \label{fig:T1}
-\end{figure}
-
-
-From Fig. \ref{fig:T1} we assume that if i put a real charge ($ q $)
-in at $\vec{r}_0= (x_0, y_0, z_0)$, in the corner of the electrolytic
-box it induces images at $\vec{r}_1= (-x_0, y_0, z_0)$ due to a
-reflection in $ (0, y, z) $, images in  $\vec{r}_2= (-x_0, -y_0, z_0)$
-due to a reflection in $ (x, 0, z) $ y the image of the image in
-$\vec{r}_3= (x_0, -y_0, z_0)$  for  $\vec{r}_j$, $(j=0,1,2,3)$. Then,
-these four charges are reflected on the other two surfaces and the
-eight new images are reflected on the original surface, etc.,
-producing a periodic 2D rectangular network with unit cells of signs $
-L_x = 2a $, $ L_y = 2b $ and with a base of 4 equal charges. This
-entire network is reflected from the bottom with an opposite sign load
-(below the driver). Periodic copies separated by the vacuum in the $
-xy $ plane whose area is being increased to achieve convergence.
+Each plane of charges upon reflection on the surface of the sample yields an
+plane of image charges of the opposite sign, while reflections
+on the surface of the liquid yields a plane of charges of the same
+sign. The side view may be interpreted as a periodic rectangular
+lattice with a unit cell of size $2a\times 4c$ containing a basis of eight point
+charges, four positive and four negative. A projection onto the $yz$
+plane would similarly yield a rectangular lattice with a  $2b\times4c$
+unit cell. Putting everything together, the problem is that of solving
+Poisson's equation within an orthothombic lattice of size
+$2a\times2b\times4c$ with a basis of 16 point charges arranged in
+positive and negative planes.
 
 \textbf {Problem considerations}: The problem is the potential, the
 field and the current produced by a periodic 2D network of a real load
