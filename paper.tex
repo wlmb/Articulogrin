@@ -285,7 +285,9 @@ image charges.
     opposite charge. The system may be interpreted as a periodic
     lattice with a rectangular unit cell of size $2a\times 4c$, one of
     which is indicated by wide dashed lines, and with a basis of four
-    charges $q_0$ and another four charges $-q_0$.}
+    charges $q_0$ and another four charges $-q_0$. Within this cell,
+    we indicate its $G=0$ contribution to the electric field (solid
+    arrows, see text).}
   \label{fig:sideview}
 \end{figure}
 Each plane of charges upon reflection on the surface of the sample yields an
@@ -297,46 +299,116 @@ charges, four positive and four negative. A projection onto the $yz$
 plane would similarly yield a rectangular lattice with a  $2b\times4c$
 unit cell. Putting everything together, the problem is that of solving
 Poisson's equation within an orthothombic lattice of size
-$2a\times2b\times4c$ with a basis of 16 point charges arranged in
-positive and negative planes.
+$2a\times2b\times4c$ with a basis of 16 point charges of charge $\pm
+q_0$ arranged in positive and negative planes.
 
-\textbf {Problem considerations}: The problem is the potential, the
-field and the current produced by a periodic 2D network of a real load
-and all its images. The potential due to a periodic network is
-automatically found in the plane making a sum of 2D Fourier.
+The electrostatic potential produced by an infinite array of
+charges expressed as a sum in real space of Coulomb terms has ill
+convergence properties. The potential can be obtained
+using the Ewald summation technique \notaL{ref}, which yields two rapidly converging
+series, one in real space and another one in reciprocal space.
+Nevertheless, as we need the potential and the field to obtain the
+current density on the surface of the sample on which there are no
+real nor image charges, we may perform a somewhat simpler planewise
+summation, where we first obtain the potential and field produced by a
+simple periodic lattice of charges using a fast convergent sum over the 2D
+reciprocal vectors, and then sum over the charges that form the basis
+of the 2D {\em crystal} plane and finally sum over all the planes \notaL{ref}.
+
+We consider first a system made of identical unit charges
+ocuppying the positions $\bm R$ of a 2D Bravais lattice $\{\bm R\}$,
+which we will take as a rectangular lattice with lattice parameters
+$2a$ and $2b$, and lying, for the time being, at the $z=0$ plane.
+The potential it produces obeys
+\begin{equation}
+  \label{eq:poissonRed}
+  \nabla^2\varphi(\bm r)=-4\pi\sum_{\bm R}\delta(\bm r_\|-\bm
+  R)\delta(z)=-\frac{4\pi}{A}\sum_{\bm G}e^{i\bm G\cdot\bm r_\|}\delta(z),
+\end{equation}
+where $\bm r_\|$ is the projection of the observation position $\bm
+r=(x,y,z)$ onto the $xy$ plane,
+$\delta(\ldots)$ is Dirac's delta function, $\{\bm G\}$ is the
+reciprocal lattice defined through $e^{i\bm G\cdot\bm R}=1$ for all
+$\bm R$ and $\bm G$, $A=4ab$ is the area of the unit cell
+and we used the Fourier representation of the 2D
+periodically repeated delta function. We introduce a 2D Fourier representation for
+the potential \notaL{Checar consistencia entre phi y varphi en todos lados}
+\begin{equation}
+  \label{eq:phifourier}
+  \phi(\bm r)=\sum_{\bm G}\phi_{\bm G}(z)e^{i\bm G\cdot\bm r_\|}
+\end{equation}
+where $\phi_{\bm G}(z)$ is the Fourier coefficient of the potential at
+the height $z$. Substitution in Eq. \eqref{eq:poissonRed} yields the
+ordinary differential equation \notaL{El signo estaba mal. Chécalo.}
+ \begin{eqnarray}
+ \frac{d^2}{dz^2}\phi_{\bm G}(z)-G^2\phi_{_{G}}(z)=
+   -\frac{4 \pi}{A} \delta(z),
+ \end{eqnarray}
+an homogeneous equation for $z\ne0$ which may be trivially
+solved. After applying boundary conditions at $z=0$ and regularity
+conditions at infinity, we obtain
+\begin{equation}
+  \label{eq:phiG}
+  \phi_{\bm G}(z)=
+  \begin{cases}
+    -\dfrac{2\pi}{A}\abs{z}&\text{if }G=0,\\
+    \dfrac{2 \pi}{AG}  e^{- G \abs{z}}&\text{if }G\neq 0.
+  \end{cases}
+\end{equation}
+The case $G=0$ corresponds to the potential produced by a uniformly charged plane,
+while the case $G\ne 0$ is the symmetric solution that decays far from
+the source plane. Substituting into Eq. \eqref{eq:phifourier} yields
 \begin{eqnarray}
- \rho(\vec{r}) =q \displaystyle\sum_{R}  \ \delta
-  (\vec{r}-\vec{R}-\vec{r}_0) =\dfrac{q}{A}  \displaystyle\sum_{G}
-  e^{i G \cdot (\vec{r}-\vec{r}_{0})} \delta (z-z_0)
-\end{eqnarray}
-Where $ {R} $ is the 2D Bravais network and $ {G} $ its reciprocal
-network. It is written $ \phi (\vec{r}) = \displaystyle \sum _
-{\vec{G}}  \phi_{_{G}}(z) e^{i \vec {G} \cdot \vec {r}} $. So the
-Poisson equation $ \nabla^2 \phi = -4 \pi \displaystyle
-\sum_{\vec{R}} \delta (\vec{r} - \vec{R} - \vec{r}_0) $.
-Becomes
- \begin{eqnarray}
- \dfrac{\partial^2 \phi_{_{G}}(z)}{\partial z^2}+ G^2\phi_{_{G}}(z)=
-   -\dfrac{4 \pi}{A}  q   e^{i \vec{G} \cdot \vec{r}_{_0}} \delta
-   (z-z_0)
+  \label{eq:phiG1}
+ \phi(\bm r) = -\frac{2 \pi}{A}  \abs{z} +{\sum_{\bm G}}' \frac{2 \pi
+   }{AG} e^{- G \abs{z}} e^{i \bm G\cdot\bm r_\|},
  \end{eqnarray}
-Solving the homogeneous equation above and below $ z = z_0 $, using
-symmetry and conditions at $ \pm \infty $ we obtain $ \phi_{_{G}} =
-\phi_{_{G}}^{0} e^{ G \abs{z-z_0}} \ \ \ \ \ (G \neq 0) $. And
-adjusting the singularity
- \begin{eqnarray}
- \phi_{_{G}}(z)= \dfrac{2 \pi q}{AG}  e^{- G \abs{z-z_0}} e^{-i
-   \vec{G} \cdot \vec{r}_{_0}} \ \ \ \ \ (G\neq 0)
- \end{eqnarray}
-For the case $ G = 0 $ is similar $ \phi_{_{G = 0}} (z) = \dfrac{-2
-  \pi q}{A} \abs{z-z_0} + K, $ $ \ \ $ (K is a constant). Here $ A =
-L_x L_y $ is the unit cell area
- \begin{eqnarray}
- \phi(\vec{r}) = K-\dfrac{2 \pi q}{A}  \abs{z-z_0} +\dfrac{2 \pi
-   q}{A}\displaystyle\sum_{\vec{G}} \dfrac{1}{G} e^{- G \abs{z-z_0}}
-   e^{i \vec{G} \cdot \vec{r}-\vec{r}_0}
- \end{eqnarray}
-Adding all the images loads,
+where the prime indicates that the term $G=0$ should be ommited from
+the sum.
+
+We consider now the basis of our 2D lattice, with equal charges at the
+four positions $(\pm x_0, \pm y_0)$. Each of the corresponding four
+sublattices produces a potential as that in Eq. \eqref{eq:phiG1} but
+shifted by the corresponding basis vector, yielding
+\begin{equation}
+  \label{eq:phiG4}
+  \phi(\bm r) = -\frac{8\pi}{A} \abs{z}
+    +{\sum_{\bm G}}' \frac{8\pi}{AG} e^{- G \abs{z}}\cos(G_x x_0)
+    \cos(G_y y_0) e^{i \bm G\cdot\bm r_\|}.
+\end{equation}
+Finally, we shift the origin of Eq. \eqref{eq:phiG4} vertically to each of the planes shown in
+Fig. \ref{fig:sideview} and multiply by the corresponding charge $q_0$
+or $-q_0$ to obtain the contribution to the total potential. The charge $q_0$ corresponds to
+the planes with heights of the form $z_0+4nc$ and $-z_0+(4n+2)c$, with
+$n=\ldots-2,-1,0,1,2\ldots$ an arbitrary integer, while the charge
+$-q_0$ corresponds to the planes with height $z_0+(4n+2)c$ and
+$-z_0+(4n+4)c$.
+
+We concentrate our attention only on the region $a\le z<z_0$. From
+Fig. \ref{fig:sideview} we see that the $G=0$
+field has contributions only from the charges at $z_0$ and their
+images ant $-z_0$, this contribution is like that of a parallel plate
+capacitor $E_{0z}=-4\pi q_0/ab=-16\pi q_0/A$, which corresponds to the
+potential $\phi_0=16\pi q_0 z/A$. Other contiguous planes of with opposite charges
+contribute to the field elsewhere. The contributions to the potential
+from the $G\ne0$ are simple geometric sums that may be summed
+analytically over $n$ and yield the total potential
+\begin{equation}
+  \label{eq:phitot}
+  \begin{split}
+    \phi(\bm r)=&\frac{16\pi q_0}{A}\biggl(z+{\sum_{\bm G}}'\frac{2\sinh
+      Gc}{G \sinh 2Gc}\cosh G(c-z_0)\cos G_x x_0 \cos G_y y_0\\
+    &\times \sinh Gz\, e^{i\bm G\cdot\bm r_\|}\biggr).
+  \end{split}
+\end{equation}
+
+\notaL{Aquí voy. Checa la ecuación previa}
+
+In our case of
+interest we take $0\le z < z_0$ and thus write
+
+
+
   \begin{eqnarray}\label{Eq:EC11}
  \phi(\vec{r}) = -\dfrac{8\pi q}{A} \bigg((\abs{z-z_0}-\abs{z+z_0} )
     +\dfrac{8\pi q}{A}\displaystyle\sum_{\vec{G}} \dfrac{1}{G} \bigg(
