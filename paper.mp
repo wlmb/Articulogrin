@@ -76,6 +76,7 @@ beginfig(2)
   z1=(-x0,y0);
   z2=(x0,-y0);
   z3=(-x0,-y0);
+  fill unitsquare xscaled a yscaled c withcolor .7white+.3blue;
   for i:=-2*N-1 upto 2*NM1+1:
     draw (i*a,-2*NM12*c)--(i*a,2*NM112*c);
     draw (-2*NM12*a,i*c)--(2*NM112*a,i*c);
@@ -110,7 +111,6 @@ beginfig(2)
     draw z1 shifted(2*i*a, 0) withpen pencircle scaled 5pt
       withcolor blue;
   endfor
-  fill unitsquare xscaled a yscaled c withcolor .7white+.3blue;
   filldraw fullcircle scaled 4pt shifted z0 withpen pencircle scaled 1.5pt withcolor red;
   refleja(z0{dir -135}..z1{dir 135});
   refleja(z0{dir -45}..z2{dir -135});
@@ -120,6 +120,10 @@ beginfig(2)
   refleja(z0 shifted(0,-2c){dir 150}..z2 shifted(0,4c){dir 30});
   draw unitsquare shifted (-.5,-.5) xscaled 2a yscaled 4c shifted
     (4a,c) dashed evenly scaled 2 withpen pencircle scaled 2pt;
+  %draw unitsquare shifted (-.5,-.5) xscaled 2a yscaled 2c shifted
+  %  (-2a,0) dashed withdots scaled 2 withpen pencircle scaled 4pt;
+  %draw subpath (1,4) of unitsquare shifted (-.5,-.5) xscaled 2a yscaled 2c shifted
+  %  (-2a,2c) dashed withdots scaled 2 withpen pencircle scaled 4pt;
   %interim ahangle:=180;
   drawdblarrow ((0,0)--(a,0)) shifted (0,-.2u) shifted (0,-2NM12*c);
   label.bot(btex $a$ etex scaled 2, (.5a,0) shifted (0,-.2u) shifted (0,-2NM12*c));
@@ -129,6 +133,15 @@ beginfig(2)
   label.bot(btex $2a$ etex scaled 2, (4a,0) shifted (0,-.2u) shifted (0,-2NM12*c));
   drawdblarrow ((0,-2c)--(0,2c)) shifted (0,c) shifted (.2u,0) shifted (2NM112*a,0);
   label.rt(btex $4c$ etex scaled 2, (0,c) shifted (.2u,0) shifted (2NM112*a,0));
-
+  draw ((-a,y0)--(a,y0)) shifted (4a,0) dashed evenly;
+  draw ((-a,-y0)--(a,-y0)) shifted (4a,0) dashed evenly;
+  for i:=-2 upto 2:
+    drawarrow ((i*a/3,.9y0)--(i*a/3,-.9y0)) shifted (4a,0);
+  endfor
+  draw ((-a,2c-y0)--(a,2c-y0)) shifted (4a,0) dashed evenly;
+  draw ((-a,2c+y0)--(a,2c+y0)) shifted (4a,0) dashed evenly;
+  for i:=-2 upto 2:
+    drawarrow ((i*a/3,2c-.9y0)--(i*a/3,2c+.9y0)) shifted (4a,0);
+  endfor
 endfig;
 end.
