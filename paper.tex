@@ -430,85 +430,11 @@ as the contributions of opposite non-null reciprocal vectors cancel
 out. As expected, all of the current that leaves the electrode find
 its way to the substrate.
 
-\subsection{Transfer Matrix Method (TMM)}
-One of the methods used for the analysis of photonic crystal
-structures is the transfer matrix method. We use it to investigate the
-reflectance of light in a one-dimensional photonic crystal. The
-electric and magnetic fields within the layers are shown as $E_m$ and
-$H_m$. Then we can specify the electric and magnetic fields in the
-air, $ E_0 $ and $ H_0 $, by solving the following matrix equation:
-\begin{equation}
-\left[
-\begin{matrix}
-E_{_{0}}\\
-H_{_{0}}
-\end{matrix}
-\right]= \textbf{M}_{_{1}}, \textbf{M}_{_{2}},...,\textbf{M}_{_{N}} \left[
-\begin{matrix}
-E_{_{m}}\\
-H_{_{m}}
-\end{matrix}
-\right]
-\end{equation}
-Where N is the total number of layers including the cavity layer and $
-M_j $ is the matrix characteristic of the layer $ j $ specified by:
-\begin{equation}
-\textbf{M}_j = \left[
-\begin{matrix}
-\cos \delta_j & -\frac{i}{\eta_j} \sin \delta_j \\
--i\eta_j \sin\delta_j & \cos\delta_j
-\end{matrix}
-\right]
-\end{equation}
-and
-\begin{equation}
-\delta_j= \frac{2\pi}{\lambda} \tilde{n}_j d_j \cos \theta_j
-\end{equation}
-where $ \lambda $ is the wavelength, $ \tilde{n}_{_{j}} = n_{j} -
-ik_{_{j}}$ is the complex refractive index (CRI) of the layer, $ d_j $
-is the thickness of the layer, and $ \theta_j $ is the angle of
-refraction of light in the $ j $ layer. The parameter $ \eta_ {j} $
-for layer j is defined as:
-\begin{equation}\label{Eq:Mt1}
-\eta_j=\sqrt{\frac{\epsilon_0}{\mu_0}}\tilde{n}_j cos\theta_j \hspace{1cm} (TE \ \ mode)
-\end{equation}
-y
-\begin{equation}\label{Eq:Mt2}
-\eta_j=\sqrt{\frac{\epsilon_0}{\mu_0}} \frac{\tilde{n}_j}{cos\theta_j} \hspace{1cm} (TM \ \ mode)
-\end{equation}
-where $ \epsilon_0 $ and $ \mu_0 $ are permittivity and free space
-permeability, respectively. The transfer matrix of all the photonic
-crystal is given by:
-\begin{equation}
-\textbf{M}=\textbf{M}_1,\textbf{M}_2,...,\textbf{M}_N= \left[
-\begin{matrix}
-m_{11} & m_{12} \\
-m_{21} & m_{22}
-\end{matrix}
-\right]
-\end{equation}
-We can write the reflection and transmission coefficients in a
-one-dimensional photonic crystal nanocavity as:
-\begin{equation}
-r=\frac{\eta_0(m_{11}m_{12}\eta_m)
-  -(m_{21}+m_{22}\eta_m)}{\eta_0(m_{11}m_{12}\eta_m)
-  -(m_{21}+m_{22}\eta_m)}
-\end{equation}
-end
-\begin{equation}
-t=\frac{2\eta_0}{\eta_0(m_{11}m_{12}\eta_m)+(m_{21}m_{22}\eta_m)}
-\end{equation}
-where $ \eta_0 $ and $ \eta_m $ are parameters for air and outlet
-layers, respectively (as defined in equations \ref{Eq:Mt1} or
-\ref{Eq:Mt2}). Furthermore, the reflectivity R and transmittance T of
-the entire photonic crystal nanocavity is given by:
-\begin{equation}
-R=|r|^{2}
-\end{equation}
-y
-\begin{equation}
-T=\frac{\eta_m}{\eta_0}|t|^{2}
-\end{equation}
+Using Eq. \eqref{Eq:J} we can correlate the local current density at
+the sample as it is prepared with its geometric and optical
+properties. For the calculation of the optical properties we use the
+well known transfer matrix method \notaL{refs}.
+
 \section{Experimental Details}
 \begin{figure}
   \centering
