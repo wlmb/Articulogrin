@@ -194,7 +194,7 @@ within the electrolyte that surrounds completely the tip of the
 electrode. Integrating $ \bm j$ over this surface we obtain
 \begin{equation}
   \label{eq:I}
-\int_{\mathcal S'} d\bm a \cdot \bm j = I,
+\int_{\mathcal S'} d\bm a \cdot \bm j = -I,
 \end{equation}
 where the prime on $\mathcal S'$ means we remove from the surface a
 very small hole through which the wire that feeds the current gets
@@ -204,12 +204,12 @@ integral over a closed surface of the current \eqref{eq:j} within the
 electrolyte, ignoring the actual current within the wire. Thus
 \begin{equation}
   \label{eq:gauss}
-  \int_{\mathcal S} d\bm a \cdot \bm E = \frac{I}{\sigma}
+  \int_{\mathcal S} d\bm a \cdot \bm E = -\frac{I}{\sigma}
 \end{equation}
 Using Gauss's law, we interpret this equation as a source for the
 potential in the form of a point charge
 \begin{equation}
-  q_{_{0}} = \frac{I}{4 \pi \sigma}
+  q_{_{0}} = -\frac{I}{4 \pi \sigma}
 \end{equation}
 at the position $\vec{r}_{_{0}}=(x_{_{0}}, y_{_{0}}, z_{_{0}})$ of the
 tip of the electrode. Note that $q_0$ would be the total charge,
@@ -255,10 +255,12 @@ images.
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{paper-1}
-  \caption{Top view of the electrolytic cell (light blue) showing the charge at the
+  \caption{Top view of the fictitious system formed by reflections of
+    the electrolytic cell (light blue) showing the charge at the
     tip of the electrode (red dot) and its images on the walls of the
-    rectangular cell, the images of its images and so on (blue dots). The walls are at $x=0,a$,
-    $y=0,b$. The relation of some charges and their images is
+    rectangular cell, the images of its images and so on (blue
+    dots). The walls are at $x=0,a$,
+    $y=0,b$ (blue lines). The relation of some charges and their images is
     indicated by dashed arrows, with a bar to indicate the
     corresponding reflecting wall. The system may be interpreted as a
     periodic lattice with a rectangular unit cell of size $2a\times 2b$,
@@ -276,13 +278,18 @@ image charges.
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{paper-2}
-  \caption{Side view of the electrolytic cell (light blue)
+  \caption{Side view of the fictitious system formed by reflections of
+    the electrolytic cell (light blue)
     showing the charge at the tip of the electrode (red dot), its
     images within the plane $z=z_0$ (blue dots), and its images at the
     surface of the sample and the top of the electrolyte (green
-    dots). We use solid dots to denote particles with the same charge
-    as that corresponding to the tip $q_0$, and open dots for those of
-    opposite charge. The system may be interpreted as a periodic
+    dots). We use solid dots to denote images with the same charge $q_0$
+    as that corresponding to the tip of the electrode, and open dots for those of
+    opposite charge $-q_0$. The mirror planes that don't invert the charge
+    are indicated by blue lines and the mirror plane that inverts the
+    charge is indicated by a red line. The relation of some charges and their images is
+    indicated by dashed arrows, with a bar to indicate the
+    corresponding reflecting wall. The system may be interpreted as a periodic
     lattice with a rectangular unit cell of size $2a\times 4c$, one of
     which is indicated by wide dashed lines, and with a basis of four
     charges $q_0$ and another four charges $-q_0$. Within this cell,
@@ -290,7 +297,8 @@ image charges.
     arrows, see text).}
   \label{fig:sideview}
 \end{figure}
-Each plane of charges upon reflection on the surface of the sample yields an
+Each plane of charges upon reflection on the surface of the sample at
+the bottom of the cell yields an
 plane of image charges of the opposite sign, while reflections
 on the surface of the liquid yields a plane of charges of the same
 sign. The side view may be interpreted as a periodic rectangular
@@ -443,21 +451,34 @@ well known transfer matrix method \notaL{refs}.
 \section{Experimental Details}
 \begin{figure}
   \centering
-  \includegraphics[scale=0.6]{Images/DE1}
-\caption{(a) \notaL{reordenar figura} Experimental set-up for
-      fabrication of porous silicon with GRIN, consisting of a
-      rectangular electrochemical cell. We indicate the Si wafer, the
-      teflon cell, the platinum point electrode, the electrolyte and the
-      current source. (b) Top and (c) side schematic views of the resulting sample,
+  \includegraphics[width=.8\textwidth]{paper-3}\\[12pt]
+  \includegraphics[width=.8\textwidth]{paper-4}\\[12pt]
+  \includegraphics[width=.8\textwidth]{paper-5}
+  %\\[12pt]
+  %\includegraphics[scale=0.6]{Images/DE1}
+
+\caption{\notaL{reordené figura y rehice} Experimental set-up for
+      the fabrication of porous silicon with GRIN, consisting of a
+      rectangular electrochemical cell. We indicate the Si wafer (dark
+      gray), the teflon cell (light gray), the sealing o-ring (black
+      circles), the insulated feeding cable (white lines within black
+      lines), the uncovered platinum tip (white) within the
+      electrolyte (blue), the electrical contact below the sample
+      (yellow) and the current source. We indicate some geometrical
+      parameters of the arrangement $x0$, $z0$, $a$ and $c$
+      and the current source (upper panel) and a few current density
+      field lines. Top (middle panel) and
+      side (lower panel) schematic views of the resulting sample,
       illustrating three regions $A$, $B$ and $C$ of relatively high, medium and
-      low porosity respectively illustrating the change gradient in
-      pore size and depth. }
+      low porosity respectively illustrating the gradients in pore
+      size, density and depth. \notaL{Es $\nabla p$ razonable para el
+        gradiente de la porosidad}}
     \label{fig:DE1}
   \end{figure}
 
-Fig. \ref{fig:DE1} shows a schematic representation of our
+In Fig. \ref{fig:DE1} we show a schematic representation of our
 experimental setup to manufacture porous silicon with GRIN.
-\notaL{La figura está feita. Hay un abultamiento extraño en la
+\notaL{Cambié las figuras} \notaL{La figura está feita. Hay un abultamiento extraño en la
   punta. Debería verse el aislamiento y la punta descubierta y más
   sumergida. La letra está demasiado chica. El gradiente de porosidad va
   en la dirección opuesta. El panel (a) tiene una discontinuidad. ¿Tú
@@ -466,21 +487,15 @@ experimental setup to manufacture porous silicon with GRIN.
   vistos de arriba y de lado. Está en desorden. Se ve muy descuidada. No dice nada sobre la
   preparación que no esté en la figura 1. Dos páneles no ilustran el
   método experimental, sino el resultado. Quizás yo la quitaría.}
-taking into account the considerations of the electrode as tip, the
-rectangular cell and the sample (silicon wafer) with the largest
-rectangular attack area.
-
-In Fig. \ref{fig:DE1} a) we draw an outline of the surface section,
-divided by three regions A, B and C, dependes in therir porosity i.e.,
-High, Medium and Low Porosity. All this corresponding to  expected to
-be obtained in the experiments. Fig. \ref{fig:DE1} b) the scheme shows
-the electrochemical cell with its parts: silicon wafer, teflon cell,
-platinum point electrode, electrochemical Aqueous Solution and the
-connection of the circuit with the cathode and anode. Finally,
-Fig. \ref{fig:DE1} c) it is a schematic drawing of the Cross section
-of the electrochemically attacked porous silicon seen from three
-different regions as mentioned above. In section 3.1 we give the
-details used to carry out our experiments.
+As dicussed above, we fabricated an electrolytic cell with the shape of a
+rectangular prism on the bottom of which we place a Si which makes an
+electrical contact to a gold plate \notaL{Lo inventé; de qué material es
+  el contacto bajo la muestra} which together make the anode. The
+catode consists of a platinum wire insulated except for a small region
+at its tip, which we take as a point current drain.
+We also show a schematic drawing of the expected GRIN PS structures,
+with a gradient in the porosity, and in the width, density and depth
+of the resulting pores.
 
 \subsection{Fabrication of Porous Silicon Monolayers GRIN}
 Some of the simulated photonic structures were made by electrochemical
