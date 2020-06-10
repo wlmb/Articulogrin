@@ -144,4 +144,39 @@ beginfig(2)
     drawarrow ((i*a/3,2c-.9y0)--(i*a/3,2c+.9y0)) shifted (4a,0);
   endfor
 endfig;
+
+def poro(expr n, size)=
+  begingroup (for i=0 upto n-1:
+      dir(i*360/(n)) scaled (.7+uniformdeviate(.3)) scaled (size)--
+    endfor cycle)
+  endgroup
+enddef;
+
+beginfig(3)
+  picture pic[];
+  fill unitsquare xscaled 30u yscaled 10u withcolor .9white;
+  fill fullcircle scaled 6u shifted (5u,5u) withcolor .6white;
+  fill fullcircle scaled 6u shifted (15u,5u) withcolor .6white;
+  fill fullcircle scaled 6u shifted (25u,5u) withcolor .6white;
+  for i=0 upto 30:
+    begingroup
+      save n;
+      numeric n[];
+      n0=10+i;
+      n1=10/n0;
+      n2=n1*.5u;
+      n3=sqrt(n1);
+      for j=0 upto n0:
+	fill poro(20,n2) shifted (i*u+uniformdeviate(.7u), j*n1*u+uniformdeviate(.5*n1*u));
+      endfor;
+    endgroup;
+  endfor;
+  pic0=thelabel(btex A etex scaled 7, (5u,5u));
+  draw pic0 withcolor white;
+  pic1=thelabel(btex B etex scaled 7, (15u,5u));
+  draw pic1 withcolor white;
+  pic2=thelabel(btex C etex scaled 7, (25u,5u));
+  draw pic2 withcolor white;
+  clip currentpicture to unitsquare xscaled 30u yscaled 10u;
+endfig;
 end.
