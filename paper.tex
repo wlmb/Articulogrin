@@ -402,116 +402,34 @@ analytically over $n$ and yield the total potential
   \end{split}
 \end{equation}
 
-\notaL{Aquí voy. Checa la ecuación previa}
+Notice that the terms of the sum above converge exponentially to zero
+as $G$ increases for any $z$ such that $0\le z <z_0 \le c$, and thus
+the sum is convergent. The divergence in the limit $ z
+\longrightarrow z_0 $ is not worrisome, as we are interested in the
+field close to bottom $z=0$ of the cell.
 
-In our case of
-interest we take $0\le z < z_0$ and thus write
+The current density normal to the surface may now be obtained as
+$j_\perp=-\sigma\partial\phi/\partial z$,
+\begin{equation}
+  \label{Eq:J}
+  \begin{split}
+    j_\perp(\bm r) =& -\frac{I}{ab}\biggl(1+{\sum_{\bm G}}'\frac{2\sinh
+      Gc}{\sinh 2Gc}\cosh G(c-z_0)\cos G_x x_0 \cos G_y y_0\\
+    &\times \cosh Gz\, e^{i\bm G\cdot\bm r_\|}\biggr).
+  \end{split}
+\end{equation}
+Eq. \eqref{Eq:J} is a very rapidly convergent expression that allows,
+in particular, to calculate the current $j_\perp(x,y,0)$ that attacks
+the substrate to produce the PS sample.
+Integrating over the surface of the sample we verify
+\begin{equation}
+  \label{eq:intj}
+  \int_0^adx\int_0^bdy\,j_\perp(\bm r)=-I,
+\end{equation}
+as the contributions of opposite non-null reciprocal vectors cancel
+out. As expected, all of the current that leaves the electrode find
+its way to the substrate.
 
-
-
-  \begin{eqnarray}\label{Eq:EC11}
- \phi(\vec{r}) = -\dfrac{8\pi q}{A} \bigg((\abs{z-z_0}-\abs{z+z_0} )
-    +\dfrac{8\pi q}{A}\displaystyle\sum_{\vec{G}} \dfrac{1}{G} \bigg(
-    e^{- G \abs{z-z_0}} -e^{- G \abs{z+z_0}}  \bigg) \cos(G_x x_0)
-    \cos(G_y y_0) e^{i \vec{G} \cdot \vec{r}}
- \end{eqnarray}
-At a height $ 0 <z <z_0 $ I simplify
-   \begin{eqnarray}
- \phi(\vec{r}) = -\dfrac{16\pi q}{A} \bigg( z
-     +\displaystyle\sum_{\vec{G}} \dfrac{1}{G} \sinh(G z)  \cos(G_x
-     x_0) \cos(G_y y_0) e^{i \vec{G} \cdot \vec{r}} \bigg)
- \end{eqnarray}
-If the surface of the liquid is at a finite height c, then we can use images, like:
-\begin{figure}
-  \centering
-  \includegraphics[scale=.6]{Images/celd1}
-  \caption{\emph{Diagram shows that there is a positive (real) plane $
-      z_0 $, a negative image at $ -z_0 $ below the conductor ($ z = 0
-      $) and its images are a positive plate at $ 2c-z_0 $ and a
-      negative plate at $ 2c + z_0 $, the image is repeated vertically
-      with the period $ L_z = 4c $}}
-  \label{fig:Celda1}
-\end{figure}
-In Fig. \ref{fig:Celda1} it is observed that there is a positive
-(real) plane $ z_0 $, a negative image at $ -z_0 $ below the conductor
-($ z = 0 $) and its images are a positive plate at $ 2c-z_0 $ and a
-negative plate at $ 2c + z_0 $. Also, the image is repeated vertically
-with the period $ L_z = 4c $. Therefore, the equation \ref{Eq:EC11}
-would be rewritten, like this
- \begin{eqnarray}\label{Eq:EC1}
- \nonumber\phi(\vec{r}) = K+\dfrac{8\pi q}{A} \displaystyle\sum_{n}
-   -\bigg(\abs{z-z_0-nL_z}-\abs{z+z_0-nL_z}-\abs{z+2c+z_0-nL_z}+\abs{z-2c-z_0-nL_z}\bigg)
-   +\\ \nonumber \dfrac{1}{G}\displaystyle\sum_{\vec{G}}\bigg(
-   \displaystyle\sum_{n} \bigg( e^{-\abs{z-z_0-nL_z}}
-   +e^{-\abs{z+z_0-nL_z}}-e^{-\abs{z+2c+z_0-nL_z}}-e^{-\abs{z-2c-z_0-nL_z}}
-   \bigg)\bigg)\cos(G_x x_0) \cos(G_y y_0) e^{i \vec{G} \cdot
-   \vec{r}}\\
-\end{eqnarray}
-The constant K is chosen thus $ \phi (z = 0) $, substituting in
-Eq. (\ref {Eq:EC1}) and after factoring $ e^{- nGL_Z} $ we are
-explicitly left with the geometric sum over $n$
-{\small
-  \begin{eqnarray}
-    \nonumber\phi(\vec{r}) = K+\dfrac{16\pi q}{A} \bigg(z+z_0  +
-    \displaystyle\sum_{\vec{G}}\dfrac{1}{G} \bigg(e^{-Gz_0}
-    \sinh(Gz)+e^{-Gz_0(2c_z)} \sinh(Gz_0) -e^{-2Gc} \sinh(Gz)
-    \sinh(Gz_0) \\ \nonumber \dfrac{1+\cosh(2Gc)}{\sinh(2Gc)} -
-    e^{-2Gc}\cosh(2Gc) \sinh(Gz_0)   \bigg) \cos(G_x x_0) \cos(G_y
-    y_0) e^{i \vec{G} \cdot \vec{r}}   \bigg)\\
- \end{eqnarray}
-}
-Evaluating for $ z = 0 $
- \begin{eqnarray}\label{Eq:EC2}
-\nonumber\phi(x, y, 0) = K+\dfrac{16\pi q}{A} \bigg(z_0  +
-   \displaystyle\sum_{\vec{G}}\dfrac{1}{G} \bigg(e^{-2Gc}
-   \sinh(Gz_0)-e^{-2Gc} \sinh(Gz_0)   \bigg) \cos(G_x x_0) \cos(G_y
-   y_0) e^{i \vec{G} \cdot \vec{r}}\bigg) =\\ \nonumber =
-   K+\dfrac{16\pi q}{A} \\
-\end{eqnarray}
-Independent of $ x $ and $ y $ to configure
- \begin{eqnarray}
- K=\dfrac{16\pi q}{A}
-\end{eqnarray}
-I can further simplify Eq. (\ref {Eq:EC2}) to get,
- \begin{eqnarray}
-\nonumber\phi(\vec{r}) = \dfrac{16\pi q}{A}\bigg( z  +
-   \displaystyle\sum_{\vec{G}}\dfrac{\sinh(Gz_0)}{G} \bigg(e^{-Gz_0}
-   -e^{-3Gc} \dfrac{\cosh(Gc)\sinh(Gz_0)}{\sinh(2Gc)}   \bigg)
-   \cos(G_x x_0) \cos(G_y y_0) e^{i \vec{G} \cdot \vec{r}}  \bigg)\\
-\end{eqnarray}
-I am sure it is correct. Then it goes to zero at $ z = 0 $. The term
-with c disappears if $ c \longrightarrow \infty $. The sum converges
-when $ G \longrightarrow \infty $ if $ z <z_0 <c $ and diverges to $ z
-\longrightarrow z_0 $. So it seems ready for calculation.
-The normal component of the field is
-\begin{eqnarray}
-\nonumber E_\perp = -\dfrac{16\pi q}{A}\bigg( 1  +
-  \displaystyle\sum_{\vec{G}}\dfrac{1}{G} \cosh(Gz)\bigg(e^{-Gz_0}
-  -e^{-3Gc} \dfrac{\cosh(Gc)\sinh(Gz_0)}{\sinh(2Gc)}   \bigg) \cos(G_x
-  x_0) \cos(G_y y_0) e^{i \vec{G} \cdot \vec{r}}  \bigg)\\
-\end{eqnarray}
-And the current density is for any $ z $, for our calculation we
-choose that $ z = 0 $
-\begin{eqnarray}\label{Eq:J}
-\nonumber J_\perp = -\dfrac{I}{ab}\bigg( 1  +
-  \displaystyle\sum_{\vec{G}}\dfrac{1}{G} \cosh(Gz_0) \bigg(e^{-Gz_0}
-  -e^{-3Gc} \dfrac{\cosh(Gc)\sinh(Gz_0)}{\sinh(2Gc)}   \bigg) \cos(G_x
-  x_0) \cos(G_y y_0) e^{i \vec{G} \cdot \vec{r}}  \bigg)\\
-\end{eqnarray}
-Integrating on the surface of the sample is obtained $I_{nm}
-=\int^{a}_0 dx \int^{b}_0 dy \ \ e^{i\vec{G}\vec{r}}$
-\begin{eqnarray}
-\nonumber I_{nm}=\dfrac{1}{G_x G_y} (e^{-iG_xa}-1) (e^{-G_y b}-1) \\
-  I_{nm}=\dfrac{ab}{nm \pi^2} ((-1)^n-1-1)(-(1)^m-1-1)
-\end{eqnarray}
-Using the factor of the reciprocal vector in this way $ \vec {G} =
-\bigg (\dfrac{\pi}{a} n, \dfrac{\pi}{b} m \bigg) $,
-however, as all the coefficients of $ e^{- i \vec{G} \vec{r}} $ in
-\ref{Eq:J} they are even in $ \vec{G} $ and the integral is odd in n
-and m, only the constant term taxpayer to the integrated current
-\begin{eqnarray}
-\nonumber I^{nm} =\int \vec{J} dx  dy =-\int \vec{J}_\perp dx  dy=\dfrac{I}{ab}\int dx \int dy=I
-\end{eqnarray}
 \subsection{Transfer Matrix Method (TMM)}
 One of the methods used for the analysis of photonic crystal
 structures is the transfer matrix method. We use it to investigate the
