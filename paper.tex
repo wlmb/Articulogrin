@@ -195,7 +195,7 @@ within the electrolyte that surrounds completely the tip of the
 electrode. Integrating $ \bm j$ over this surface we obtain
 \begin{equation}
   \label{eq:I}
-\int_{\mathcal S'} d\bm a \cdot \bm j = I,
+\int_{\mathcal S'} d\bm a \cdot \bm j = -I,
 \end{equation}
 where the prime on $\mathcal S'$ means we remove from the surface a
 very small hole through which the wire that feeds the current gets
@@ -205,12 +205,12 @@ integral over a closed surface of the current \eqref{eq:j} within the
 electrolyte, ignoring the actual current within the wire. Thus
 \begin{equation}
   \label{eq:gauss}
-  \int_{\mathcal S} d\bm a \cdot \bm E = \frac{I}{\sigma}
+  \int_{\mathcal S} d\bm a \cdot \bm E = -\frac{I}{\sigma}
 \end{equation}
 Using Gauss's law, we interpret this equation as a source for the
 potential in the form of a point charge
 \begin{equation}
-  q_{_{0}} = \frac{I}{4 \pi \sigma}
+  q_{_{0}} = -\frac{I}{4 \pi \sigma}
 \end{equation}
 at the position $\vec{r}_{_{0}}=(x_{_{0}}, y_{_{0}}, z_{_{0}})$ of the
 tip of the electrode. Note that $q_0$ would be the total charge,
@@ -256,10 +256,12 @@ images.
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{paper-1}
-  \caption{Top view of the electrolytic cell (light blue) showing the charge at the
+  \caption{Top view of the fictitious system formed by reflections of
+    the electrolytic cell (light blue) showing the charge at the
     tip of the electrode (red dot) and its images on the walls of the
-    rectangular cell, the images of its images and so on (blue dots). The walls are at $x=0,a$,
-    $y=0,b$. The relation of some charges and their images is
+    rectangular cell, the images of its images and so on (blue
+    dots). The walls are at $x=0,a$,
+    $y=0,b$ (blue lines). The relation of some charges and their images is
     indicated by dashed arrows, with a bar to indicate the
     corresponding reflecting wall. The system may be interpreted as a
     periodic lattice with a rectangular unit cell of size $2a\times 2b$,
@@ -277,13 +279,18 @@ image charges.
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{paper-2}
-  \caption{Side view of the electrolytic cell (light blue)
+  \caption{Side view of the fictitious system formed by reflections of
+    the electrolytic cell (light blue)
     showing the charge at the tip of the electrode (red dot), its
     images within the plane $z=z_0$ (blue dots), and its images at the
     surface of the sample and the top of the electrolyte (green
-    dots). We use solid dots to denote particles with the same charge
-    as that corresponding to the tip $q_0$, and open dots for those of
-    opposite charge. The system may be interpreted as a periodic
+    dots). We use solid dots to denote images with the same charge $q_0$
+    as that corresponding to the tip of the electrode, and open dots for those of
+    opposite charge $-q_0$. The mirror planes that don't invert the charge
+    are indicated by blue lines and the mirror plane that inverts the
+    charge is indicated by a red line. The relation of some charges and their images is
+    indicated by dashed arrows, with a bar to indicate the
+    corresponding reflecting wall. The system may be interpreted as a periodic
     lattice with a rectangular unit cell of size $2a\times 4c$, one of
     which is indicated by wide dashed lines, and with a basis of four
     charges $q_0$ and another four charges $-q_0$. Within this cell,
@@ -291,7 +298,8 @@ image charges.
     arrows, see text).}
   \label{fig:sideview}
 \end{figure}
-Each plane of charges upon reflection on the surface of the sample yields an
+Each plane of charges upon reflection on the surface of the sample at
+the bottom of the cell yields an
 plane of image charges of the opposite sign, while reflections
 on the surface of the liquid yields a plane of charges of the same
 sign. The side view may be interpreted as a periodic rectangular
@@ -404,229 +412,92 @@ analytically over $n$ and yield the total potential
   \end{split}
 \end{equation}
 
-\notaL{Aquí voy. Checa la ecuación previa}
+Notice that the terms of the sum above converge exponentially to zero
+as $G$ increases for any $z$ such that $0\le z <z_0 \le c$, and thus
+the sum is convergent. The divergence in the limit $ z
+\longrightarrow z_0 $ is not worrisome, as we are interested in the
+field close to bottom $z=0$ of the cell.
 
-In our case of
-interest we take $0\le z < z_0$ and thus write
+The current density normal to the surface may now be obtained as
+$j_\perp=-\sigma\partial\phi/\partial z$,
+\begin{equation}
+  \label{Eq:J}
+  \begin{split}
+    j_\perp(\bm r) =& -\frac{I}{ab}\biggl(1+{\sum_{\bm G}}'\frac{2\sinh
+      Gc}{\sinh 2Gc}\cosh G(c-z_0)\cos G_x x_0 \cos G_y y_0\\
+    &\times \cosh Gz\, e^{i\bm G\cdot\bm r_\|}\biggr).
+  \end{split}
+\end{equation}
+Eq. \eqref{Eq:J} is a very rapidly convergent expression that allows,
+in particular, to calculate the current $j_\perp(x,y,0)$ that attacks
+the substrate to produce the PS sample.
+Integrating over the surface of the sample we verify
+\begin{equation}
+  \label{eq:intj}
+  \int_0^adx\int_0^bdy\,j_\perp(\bm r)=-I,
+\end{equation}
+as the contributions of opposite non-null reciprocal vectors cancel
+out. As expected, all of the current that leaves the electrode find
+its way to the substrate.
+\notaL{En este sistema, ¿cuál es el cátodo y cuál el ánodo? ¿de dónde
+  hacia dónde va la corriente? ¿$q_0$ es positiva o negativa?}
+
+Using Eq. \eqref{Eq:J} we can correlate the local current density at
+the sample as it is prepared with its geometric and optical
+properties. For the calculation of the optical properties we use the
+well known transfer matrix method \notaL{refs}.
+\notaL{No necesitamos presentar la teoría de matrices de
+  transferencia. No hay nada original ahí.}
 
 
-
-  \begin{eqnarray}\label{Eq:EC11}
- \phi(\vec{r}) = -\dfrac{8\pi q}{A} \bigg((\abs{z-z_0}-\abs{z+z_0} )
-    +\dfrac{8\pi q}{A}\displaystyle\sum_{\vec{G}} \dfrac{1}{G} \bigg(
-    e^{- G \abs{z-z_0}} -e^{- G \abs{z+z_0}}  \bigg) \cos(G_x x_0)
-    \cos(G_y y_0) e^{i \vec{G} \cdot \vec{r}}
- \end{eqnarray}
-At a height $ 0 <z <z_0 $ I simplify
-   \begin{eqnarray}
- \phi(\vec{r}) = -\dfrac{16\pi q}{A} \bigg( z
-     +\displaystyle\sum_{\vec{G}} \dfrac{1}{G} \sinh(G z)  \cos(G_x
-     x_0) \cos(G_y y_0) e^{i \vec{G} \cdot \vec{r}} \bigg)
- \end{eqnarray}
-If the surface of the liquid is at a finite height c, then we can use images, like:
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{Images/celd1}
-  \caption{Diagram shows that there is a positive (real) plane $
-      z_0 $, a negative image at $ -z_0 $ below the conductor ($ z = 0
-      $) and its images are a positive plate at $ 2c-z_0 $ and a
-      negative plate at $ 2c + z_0 $, the image is repeated vertically
-      with the period $ L_z = 4c $}
-  \label{fig:Celda1}
-\end{figure}
-In Fig. \ref{fig:Celda1} it is observed that there is a positive
-(real) plane $ z_0 $, a negative image at $ -z_0 $ below the conductor
-($ z = 0 $) and its images are a positive plate at $ 2c-z_0 $ and a
-negative plate at $ 2c + z_0 $. Also, the image is repeated vertically
-with the period $ L_z = 4c $. Therefore, the equation \ref{Eq:EC11}
-would be rewritten, like this
- \begin{eqnarray}\label{Eq:EC1}
- \nonumber\phi(\vec{r}) = K+\dfrac{8\pi q}{A} \displaystyle\sum_{n}
-   -\bigg(\abs{z-z_0-nL_z}-\abs{z+z_0-nL_z}-\abs{z+2c+z_0-nL_z}+\abs{z-2c-z_0-nL_z}\bigg)
-   +\\ \nonumber \dfrac{1}{G}\displaystyle\sum_{\vec{G}}\bigg(
-   \displaystyle\sum_{n} \bigg( e^{-\abs{z-z_0-nL_z}}
-   +e^{-\abs{z+z_0-nL_z}}-e^{-\abs{z+2c+z_0-nL_z}}-e^{-\abs{z-2c-z_0-nL_z}}
-   \bigg)\bigg)\cos(G_x x_0) \cos(G_y y_0) e^{i \vec{G} \cdot
-   \vec{r}}\\
-\end{eqnarray}
-The constant K is chosen thus $ \phi (z = 0) $, substituting in
-Eq. (\ref {Eq:EC1}) and after factoring $ e^{- nGL_Z} $ we are
-explicitly left with the geometric sum over $n$
-{\small
-  \begin{eqnarray}
-    \nonumber\phi(\vec{r}) = K+\dfrac{16\pi q}{A} \bigg(z+z_0  +
-    \displaystyle\sum_{\vec{G}}\dfrac{1}{G} \bigg(e^{-Gz_0}
-    \sinh(Gz)+e^{-Gz_0(2c_z)} \sinh(Gz_0) -e^{-2Gc} \sinh(Gz)
-    \sinh(Gz_0) \\ \nonumber \dfrac{1+\cosh(2Gc)}{\sinh(2Gc)} -
-    e^{-2Gc}\cosh(2Gc) \sinh(Gz_0)   \bigg) \cos(G_x x_0) \cos(G_y
-    y_0) e^{i \vec{G} \cdot \vec{r}}   \bigg)\\
- \end{eqnarray}
-}
-Evaluating for $ z = 0 $
- \begin{eqnarray}\label{Eq:EC2}
-\nonumber\phi(x, y, 0) = K+\dfrac{16\pi q}{A} \bigg(z_0  +
-   \displaystyle\sum_{\vec{G}}\dfrac{1}{G} \bigg(e^{-2Gc}
-   \sinh(Gz_0)-e^{-2Gc} \sinh(Gz_0)   \bigg) \cos(G_x x_0) \cos(G_y
-   y_0) e^{i \vec{G} \cdot \vec{r}}\bigg) =\\ \nonumber =
-   K+\dfrac{16\pi q}{A} \\
-\end{eqnarray}
-Independent of $ x $ and $ y $ to configure
- \begin{eqnarray}
- K=\dfrac{16\pi q}{A}
-\end{eqnarray}
-I can further simplify Eq. (\ref {Eq:EC2}) to get,
- \begin{eqnarray}
-\nonumber\phi(\vec{r}) = \dfrac{16\pi q}{A}\bigg( z  +
-   \displaystyle\sum_{\vec{G}}\dfrac{\sinh(Gz_0)}{G} \bigg(e^{-Gz_0}
-   -e^{-3Gc} \dfrac{\cosh(Gc)\sinh(Gz_0)}{\sinh(2Gc)}   \bigg)
-   \cos(G_x x_0) \cos(G_y y_0) e^{i \vec{G} \cdot \vec{r}}  \bigg)\\
-\end{eqnarray}
-I am sure it is correct. Then it goes to zero at $ z = 0 $. The term
-with c disappears if $ c \longrightarrow \infty $. The sum converges
-when $ G \longrightarrow \infty $ if $ z <z_0 <c $ and diverges to $ z
-\longrightarrow z_0 $. So it seems ready for calculation.
-The normal component of the field is
-\begin{eqnarray}
-\nonumber E_\perp = -\dfrac{16\pi q}{A}\bigg( 1  +
-  \displaystyle\sum_{\vec{G}}\dfrac{1}{G} \cosh(Gz)\bigg(e^{-Gz_0}
-  -e^{-3Gc} \dfrac{\cosh(Gc)\sinh(Gz_0)}{\sinh(2Gc)}   \bigg) \cos(G_x
-  x_0) \cos(G_y y_0) e^{i \vec{G} \cdot \vec{r}}  \bigg)\\
-\end{eqnarray}
-And the current density is for any $ z $, for our calculation we
-choose that $ z = 0 $
-\begin{eqnarray}\label{Eq:J}
-\nonumber J_\perp = -\dfrac{I}{ab}\bigg( 1  +
-  \displaystyle\sum_{\vec{G}}\dfrac{1}{G} \cosh(Gz_0) \bigg(e^{-Gz_0}
-  -e^{-3Gc} \dfrac{\cosh(Gc)\sinh(Gz_0)}{\sinh(2Gc)}   \bigg) \cos(G_x
-  x_0) \cos(G_y y_0) e^{i \vec{G} \cdot \vec{r}}  \bigg)\\
-\end{eqnarray}
-Integrating on the surface of the sample is obtained $I_{nm}
-=\int^{a}_0 dx \int^{b}_0 dy \ \ e^{i\vec{G}\vec{r}}$
-\begin{eqnarray}
-\nonumber I_{nm}=\dfrac{1}{G_x G_y} (e^{-iG_xa}-1) (e^{-G_y b}-1) \\
-  I_{nm}=\dfrac{ab}{nm \pi^2} ((-1)^n-1-1)(-(1)^m-1-1)
-\end{eqnarray}
-Using the factor of the reciprocal vector in this way $ \vec {G} =
-\bigg (\dfrac{\pi}{a} n, \dfrac{\pi}{b} m \bigg) $,
-however, as all the coefficients of $ e^{- i \vec{G} \vec{r}} $ in
-\ref{Eq:J} they are even in $ \vec{G} $ and the integral is odd in n
-and m, only the constant term taxpayer to the integrated current
-\begin{eqnarray}
-\nonumber I^{nm} =\int \vec{J} dx  dy =-\int \vec{J}_\perp dx  dy=\dfrac{I}{ab}\int dx \int dy=I
-\end{eqnarray}
-\subsection{Transfer Matrix Method (TMM)}
-One of the methods used for the analysis of photonic crystal
-structures is the transfer matrix method. We use it to investigate the
-reflectance of light in a one-dimensional photonic crystal. The
-electric and magnetic fields within the layers are shown as $E_m$ and
-$H_m$. Then we can specify the electric and magnetic fields in the
-air, $ E_0 $ and $ H_0 $, by solving the following matrix equation:
-\begin{equation}
-\left[
-\begin{matrix}
-E_{_{0}}\\
-H_{_{0}}
-\end{matrix}
-\right]= \textbf{M}_{_{1}}, \textbf{M}_{_{2}},...,\textbf{M}_{_{N}} \left[
-\begin{matrix}
-E_{_{m}}\\
-H_{_{m}}
-\end{matrix}
-\right]
-\end{equation}
-Where N is the total number of layers including the cavity layer and $
-M_j $ is the matrix characteristic of the layer $ j $ specified by:
-\begin{equation}
-\textbf{M}_j = \left[
-\begin{matrix}
-\cos \delta_j & -\frac{i}{\eta_j} \sin \delta_j \\
--i\eta_j \sin\delta_j & \cos\delta_j
-\end{matrix}
-\right]
-\end{equation}
-and
-\begin{equation}
-\delta_j= \frac{2\pi}{\lambda} \tilde{n}_j d_j \cos \theta_j
-\end{equation}
-where $ \lambda $ is the wavelength, $ \tilde{n}_{_{j}} = n_{j} -
-ik_{_{j}}$ is the complex refractive index (CRI) of the layer, $ d_j $
-is the thickness of the layer, and $ \theta_j $ is the angle of
-refraction of light in the $ j $ layer. The parameter $ \eta_ {j} $
-for layer j is defined as:
-\begin{equation}\label{Eq:Mt1}
-\eta_j=\sqrt{\frac{\epsilon_0}{\mu_0}}\tilde{n}_j cos\theta_j \hspace{1cm} (TE \ \ mode)
-\end{equation}
-y
-\begin{equation}\label{Eq:Mt2}
-\eta_j=\sqrt{\frac{\epsilon_0}{\mu_0}} \frac{\tilde{n}_j}{cos\theta_j} \hspace{1cm} (TM \ \ mode)
-\end{equation}
-where $ \epsilon_0 $ and $ \mu_0 $ are permittivity and free space
-permeability, respectively. The transfer matrix of all the photonic
-crystal is given by:
-\begin{equation}
-\textbf{M}=\textbf{M}_1,\textbf{M}_2,...,\textbf{M}_N= \left[
-\begin{matrix}
-m_{11} & m_{12} \\
-m_{21} & m_{22}
-\end{matrix}
-\right]
-\end{equation}
-We can write the reflection and transmission coefficients in a
-one-dimensional photonic crystal nanocavity as:
-\begin{equation}
-r=\frac{\eta_0(m_{11}m_{12}\eta_m)
-  -(m_{21}+m_{22}\eta_m)}{\eta_0(m_{11}m_{12}\eta_m)
-  -(m_{21}+m_{22}\eta_m)}
-\end{equation}
-end
-\begin{equation}
-t=\frac{2\eta_0}{\eta_0(m_{11}m_{12}\eta_m)+(m_{21}m_{22}\eta_m)}
-\end{equation}
-where $ \eta_0 $ and $ \eta_m $ are parameters for air and outlet
-layers, respectively (as defined in equations \ref{Eq:Mt1} or
-\ref{Eq:Mt2}). Furthermore, the reflectivity R and transmittance T of
-the entire photonic crystal nanocavity is given by:
-\begin{equation}
-R=|r|^{2}
-\end{equation}
-y
-\begin{equation}
-T=\frac{\eta_m}{\eta_0}|t|^{2}
-\end{equation}
 \section{Experimental Details}
 \begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{Images/DE1}
-\caption{Schematic of the experimental set-up for
-      fabrication of porous silicon with GRIN. (a) Represents an
-      outline of the surface section, divided by three regions
-      A, B and C, corresponding to High, Medium and Low Porosity
-      respectively. (b) It is the diagram of the electrochemical
-      cell with its parts: silicon wafer, Teflon cell, platinum
-      point electrode, Electrochemical Aqueous solution and the
-      connection of the circuit with the cathode and anode. (c)
-      It is a schematic drawing of the Cross section of the
-      electrochemically attacked porous silicon seen in three
-      different regions as mentioned above. }
+  \includegraphics[width=.8\textwidth]{paper-3}\\[12pt]
+  \includegraphics[width=.8\textwidth]{paper-4}\\[12pt]
+  \includegraphics[width=.8\textwidth]{paper-5}
+  %\\[12pt]
+  %\includegraphics[scale=0.6]{Images/DE1}
+
+\caption{\notaL{reordené figura y rehice} Experimental set-up for
+      the fabrication of porous silicon with GRIN, consisting of a
+      rectangular electrochemical cell. We indicate the Si wafer (dark
+      gray), the teflon cell (light gray), the sealing o-ring (black
+      circles), the insulated feeding cable (white lines within black
+      lines), the uncovered platinum tip (white) within the
+      electrolyte (blue), the electrical contact below the sample
+      (yellow) and the current source. We indicate some geometrical
+      parameters of the arrangement $x0$, $z0$, $a$ and $c$
+      and the current source (upper panel) and a few current density
+      field lines. Top (middle panel) and
+      side (lower panel) schematic views of the resulting sample,
+      illustrating three regions $A$, $B$ and $C$ of relatively high, medium and
+      low porosity respectively illustrating the gradients in pore
+      size, density and depth. \notaL{Es $\nabla p$ razonable para el
+        gradiente de la porosidad}}
     \label{fig:DE1}
   \end{figure}
 
-In the Fig. \ref{fig:DE1} a shows schematic representation of the
-experimental setup where porous silicon can be manufactured with GRIN,
-taking into account the considerations of the electrode as tip, the
-rectangular cell and the sample (silicon wafer) with the largest
-rectangular attack area.
-In Fig. \ref{fig:DE1} a) we draw an outline of the surface section,
-divided by three regions A, B and C, dependes in therir porosity i.e.,
-High, Medium and Low Porosity. All this corresponding to  expected to
-be obtained in the experiments. Fig. \ref{fig:DE1} b) the scheme shows
-the electrochemical cell with its parts: silicon wafer, teflon cell,
-platinum point electrode, electrochemical Aqueous Solution and the
-connection of the circuit with the cathode and anode. Finally,
-Fig. \ref{fig:DE1} c) it is a schematic drawing of the Cross section
-of the electrochemically attacked porous silicon seen from three
-different regions as mentioned above. In section 3.1 we give the
-details used to carry out our experiments.
+In Fig. \ref{fig:DE1} we show a schematic representation of our
+experimental setup to manufacture porous silicon with GRIN.
+\notaL{Cambié las figuras} \notaL{La figura está feita. Hay un abultamiento extraño en la
+  punta. Debería verse el aislamiento y la punta descubierta y más
+  sumergida. La letra está demasiado chica. El gradiente de porosidad va
+  en la dirección opuesta. El panel (a) tiene una discontinuidad. ¿Tú
+  la hiciste o la adaptaste? Usa dos paréntesis (a), (b),
+  (c). Alínealos. Pon primero la preparación y luego los resultados
+  vistos de arriba y de lado. Está en desorden. Se ve muy descuidada. No dice nada sobre la
+  preparación que no esté en la figura 1. Dos páneles no ilustran el
+  método experimental, sino el resultado. Quizás yo la quitaría.}
+As dicussed above, we fabricated an electrolytic cell with the shape of a
+rectangular prism on the bottom of which we place a Si which makes an
+electrical contact to a gold plate \notaL{Lo inventé; de qué material es
+  el contacto bajo la muestra} which together make the anode. The
+catode consists of a platinum wire insulated except for a small region
+at its tip, which we take as a point current drain.
+We also show a schematic drawing of the expected GRIN PS structures,
+with a gradient in the porosity, and in the width, density and depth
+of the resulting pores.
 
 \subsection{Fabrication of Porous Silicon Monolayers GRIN}
 Some of the simulated photonic structures were made by electrochemical
