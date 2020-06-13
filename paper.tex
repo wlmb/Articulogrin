@@ -38,7 +38,7 @@
 \notaL{Cuida de no poner espacios al final de las líneas.}
 
 \begin{abstract}
-We propose a simple setup which allows the calculation of the current
+We propose a simple setup which that the calculation of the current
 density as a function of position within an electrochemical cell used
 to produce porous Silicon structures with a controlled gradient in their
 index of refraction. We produced samples under several conditions and
@@ -135,10 +135,12 @@ A gradient in the optical properties of porous Silicon (PS) systems may be
 obtained by electrochemically attacking a Si surface with a position dependent current
 density ${\bm j(\bm r)}$, as the porosity and refractive index depend on
 the current density, as well as the speed of attack and the width of the
-porous layer. Nevertheless, it is not a simple to task to measure the
+porous layer. Nevertheless, it is not a simple task to measure the
 {\em local} value of $\bm j(\bm r)$ along the surface. This hampers the
 design and optimization of well characterized reproducible GRIN PS
-structures. Thus, a system for which the current density field may be
+structures.\notaL{Tenemos referencias para afirmar esto?} Thus, we
+believe a
+system for which the current density field may be
 easily computed would be useful.
 Though $\bm j(\bm r)$ may be in principle be numerically calculated for a
 given arbitrary experimental setup,  here we propose a particularly
@@ -152,8 +154,8 @@ We assume that our electrolytic cell has the shape of a
 prism (see Fig. \ref{f:celda}) with a horizontal rectangular base of sides $a$ and $b$, and
 filled with the electrolyte up to a height $c$. We assume that the
 walls of the cell are insulating while the bottom is completely
-covered with the sample, which is a good conductor which is
-electrically grounded. Within the electrolyte we position an electrode
+covered with the sample, which is a which is an
+electrically grounded good conductor. Within the electrolyte we position an electrode
 which we assume is a thin conductor, insulated from the electrolyte
 but for a small area near its tip, which we thus approximate as a
 point current source.
@@ -165,12 +167,13 @@ point current source.
     walls of the cell are insulating and the bottom is completely
     covered by the sample, which is assumed to be a good
     conductor. The tip of the electrode is a thin insulated wire with
-    just the tip uncovered and located at $ \vec{r}_0 $ within the
+    just the tip uncovered and located at $\bm r_0=(x_0,y_0,z_0)$ within the
     liquid.\notaL{Quité el tipo de letra del pie de figura. Que la pongan en la
       revista.}\notaL{En la punta pusiste dos esferas. Quítalas y sólo
     pon un puntito dorado del ancho del cable. Muestra que la base
     está aterrizada}\notaL{Indica el voltaje y la
-    corriente}\notaL{¿Está bien la polaridad de la batería?}}
+    corriente}\notaL{Mejor pon una fuente de corriente en lugar de una
+  fuente de voltaje}}
   \label{f:celda}
 \end{figure}
 Within the electrolyte the current density is
@@ -197,7 +200,8 @@ electrode. Integrating $ \bm j$ over this surface we obtain
 \int_{\mathcal S'} d\bm a \cdot \bm j = -I,
 \end{equation}
 where the prime on $\mathcal S'$ means we remove from the surface a
-very small hole through which the wire that feeds the current gets
+very small hole through which the wire that feeds the current to the
+electrode gets
 through. Assuming the wire is narrower than any other relevant
 distance in the system, we may interpret Eq. \eqref{eq:I} as an
 integral over a closed surface of the current \eqref{eq:j} within the
@@ -238,8 +242,9 @@ E_{_{x}}(0, y ,z)= E_{_{x}}(a, y ,z)=E_{{_y}}(x, 0 ,z)=E_{{_y}}(x, b
 ,z)=E_{{_z}}(x, y ,c)=0.
 \end{equation}
 This problem may be solved readily using image charge theory
-\notaL{ref}. The potential within the electrolytic cell coincides the
-the field within an infinite vacuum containing the point charge
+\notaL{ref}. The potential within the electrolytic cell coincides
+within the region $0\le x\le a$, $0\le y \le b$, $0\le z\le c$
+with that an infinite fictitious empty space but for the point charge
 $q_0$ at the tip of the electrode at $\bm r_0$, and an array of its fictitious image
 charges. The images include a reflection on the conducting bottom of the
 cell, of the opposite charge $-q_0$ and situated at $(x_0, y_0,-z_0)$,
@@ -265,13 +270,13 @@ images.
     corresponding reflecting wall. The system may be interpreted as a
     periodic lattice with a rectangular unit cell of size $2a\times 2b$,
     one of which is indicated  by wide dashed lines, and with a basis of four equal
-    charges at $(\pm x_0, \pm y_0, z_0)$.}
+    charges $q_0$ at $(\pm x_0, \pm y_0, z_0)$.}
   \label{fig:topview}
 \end{figure}
 In Fig. \ref{fig:topview} we illustrate the real charge and all of
 its images within the plane $z=z_0$. They form a periodic rectangular
 lattice with a unit cell of size $2a\times 2b$ and with a basis of
-four equal charges situated at the positions $\bm r_0$, $\bm
+four equal charges $q_0$ situated at the positions $\bm r_0$, $\bm
 r_1=(-x_0, y_0, z_0)$, $\bm r_2=(x_0, -y_0, z_0)$ and $\bm r_3=(-x_0,
 -y_0, z_0)$. In Fig. \ref{fig:sideview} we show a lateral view of the
 image charges.
@@ -315,13 +320,14 @@ charges expressed as a sum in real space of Coulomb terms has ill
 convergence properties. The potential can be obtained
 using the Ewald summation technique \notaL{ref}, which yields two rapidly converging
 series, one in real space and another one in reciprocal space.
-Nevertheless, as we need the potential and the field to obtain the
-current density on the surface of the sample on which there are no
-real nor image charges, we may perform a somewhat simpler planewise
+Nevertheless, as we have to evaluate the potential and the field on
+the bottom of the cell to obtain the current density which attacks the
+surface of the sample, and as there are no
+real nor image charges there, we may perform a somewhat simpler planewise
 summation, where we first obtain the potential and field produced by a
 simple periodic lattice of charges using a fast convergent sum over the 2D
-reciprocal vectors, and then sum over the charges that form the basis
-of the 2D {\em crystal} plane and finally sum over all the planes \notaL{ref}.
+reciprocal vectors, we then sum over the charges that form the basis
+of the 2D {\em crystal} plane and we finally sum over all the planes \notaL{ref}.
 
 We consider first a system made of identical unit charges
 ocuppying the positions $\bm R$ of a 2D Bravais lattice $\{\bm R\}$,
@@ -364,7 +370,9 @@ conditions at infinity, we obtain
   \end{cases}
 \end{equation}
 The case $G=0$ corresponds to the potential produced by a uniformly charged plane,
-while the case $G\ne 0$ is the symmetric solution that decays far from
+while the case $G\ne 0$ is the potential produced by a sinusoidal
+charge density on a plane given by the
+symmetric solution that decays exponentially as we get away from
 the source plane. Substituting into Eq. \eqref{eq:phifourier} yields
 \begin{eqnarray}
   \label{eq:phiG1}
@@ -375,7 +383,7 @@ where the prime indicates that the term $G=0$ should be ommited from
 the sum.
 
 We consider now the basis of our 2D lattice, with equal charges at the
-four positions $(\pm x_0, \pm y_0)$. Each of the corresponding four
+four positions $(\pm x_0, \pm y_0,0)$. Each of the corresponding four
 sublattices produces a potential as that in Eq. \eqref{eq:phiG1} but
 shifted by the corresponding basis vector, yielding
 \begin{equation}
@@ -395,11 +403,11 @@ $-z_0+(4n+4)c$.
 We concentrate our attention only on the region $a\le z<z_0$. From
 Fig. \ref{fig:sideview} we see that the $G=0$
 field has contributions only from the charges at $z_0$ and their
-images ant $-z_0$, this contribution is like that of a parallel plate
+images at $-z_0$, and that this contribution is like that of a parallel plate
 capacitor $E_{0z}=-4\pi q_0/ab=-16\pi q_0/A$, which corresponds to the
 potential $\phi_0=16\pi q_0 z/A$. Other contiguous planes of with opposite charges
 contribute to the field elsewhere. The contributions to the potential
-from the $G\ne0$ are simple geometric sums that may be summed
+from the $G\ne0$ are simple geometric sums that may be added
 analytically over $n$ and yield the total potential
 \begin{equation}
   \label{eq:phitot}
@@ -413,15 +421,16 @@ analytically over $n$ and yield the total potential
 Notice that the terms of the sum above converge exponentially to zero
 as $G$ increases for any $z$ such that $0\le z <z_0 \le c$, and thus
 the sum is convergent. The divergence in the limit $ z
-\longrightarrow z_0 $ is not worrisome, as we are interested in the
-field close to bottom $z=0$ of the cell.
+\longrightarrow z_0 $ corresponds to the singularity of the potential
+at the position of a point charge, and it is not worrisome, as we are
+interested in the field close to bottom $z=0$ of the cell.
 
 The current density normal to the surface may now be obtained as
 $j_\perp=-\sigma\partial\phi/\partial z$,
 \begin{equation}
   \label{Eq:J}
   \begin{split}
-    j_\perp(\bm r) =& -\frac{I}{ab}\biggl(1+{\sum_{\bm G}}'\frac{2\sinh
+    j_\perp(\bm r) =& \frac{I}{ab}\biggl(1+{\sum_{\bm G}}'\frac{2\sinh
       Gc}{\sinh 2Gc}\cosh G(c-z_0)\cos G_x x_0 \cos G_y y_0\\
     &\times \cosh Gz\, e^{i\bm G\cdot\bm r_\|}\biggr).
   \end{split}
@@ -432,13 +441,11 @@ the substrate to produce the PS sample.
 Integrating over the surface of the sample we verify
 \begin{equation}
   \label{eq:intj}
-  \int_0^adx\int_0^bdy\,j_\perp(\bm r)=-I,
+  \int_0^adx\int_0^bdy\,j_\perp(\bm r)=I,
 \end{equation}
 as the contributions of opposite non-null reciprocal vectors cancel
-out. As expected, all of the current that leaves the electrode find
-its way to the substrate.
-\notaL{En este sistema, ¿cuál es el cátodo y cuál el ánodo? ¿de dónde
-  hacia dónde va la corriente? ¿$q_0$ es positiva o negativa?}
+out. As expected, all the current that leaves sample finds
+its way to the cathode.
 
 Using Eq. \eqref{Eq:J} we can correlate the local current density at
 the sample as it is prepared with its geometric and optical
@@ -459,13 +466,14 @@ well known transfer matrix method \notaL{refs}.
 
 \caption{\notaL{reordené figura y rehice} Experimental set-up for
       the fabrication of porous silicon with GRIN, consisting of a
-      rectangular electrochemical cell. We indicate the Si wafer (dark
+      electrochemical cell with the shape of a
+      rectangular prism. We indicate the Si wafer (dark
       gray), the teflon cell (light gray), the sealing o-ring (black
       circles), the insulated feeding cable (white lines within black
       lines), the uncovered platinum tip (white) within the
       electrolyte (blue), the electrical contact below the sample
-      (yellow) and the current source. We indicate some geometrical
-      parameters of the arrangement $x0$, $z0$, $a$ and $c$
+      (yellow) and the controlled current source. We indicate some geometrical
+      parameters of the arrangement $x_0$, $z_0$, $a$ and $c$
       and the current source (upper panel) and a few current density
       field lines. Top (middle panel) and
       side (lower panel) schematic views of the resulting sample,
@@ -478,17 +486,9 @@ well known transfer matrix method \notaL{refs}.
 
 In Fig. \ref{fig:DE1} we show a schematic representation of our
 experimental setup to manufacture porous silicon with GRIN.
-\notaL{Cambié las figuras} \notaL{La figura está feita. Hay un abultamiento extraño en la
-  punta. Debería verse el aislamiento y la punta descubierta y más
-  sumergida. La letra está demasiado chica. El gradiente de porosidad va
-  en la dirección opuesta. El panel (a) tiene una discontinuidad. ¿Tú
-  la hiciste o la adaptaste? Usa dos paréntesis (a), (b),
-  (c). Alínealos. Pon primero la preparación y luego los resultados
-  vistos de arriba y de lado. Está en desorden. Se ve muy descuidada. No dice nada sobre la
-  preparación que no esté en la figura 1. Dos páneles no ilustran el
-  método experimental, sino el resultado. Quizás yo la quitaría.}
+\notaL{Cambié las figuras}
 As dicussed above, we fabricated an electrolytic cell with the shape of a
-rectangular prism on the bottom of which we place a Si which makes an
+rectangular prism on the bottom of which we place a Si wafer which makes
 electrical contact to a gold plate \notaL{Lo inventé; de qué material es
   el contacto bajo la muestra} which together make the anode. The
 catode consists of a platinum wire insulated except for a small region
@@ -497,29 +497,31 @@ We also show a schematic drawing of the expected GRIN PS structures,
 with a gradient in the porosity, and in the width, density and depth
 of the resulting pores.
 
-\subsection{Fabrication of Porous Silicon Monolayers GRIN}
-Some of the simulated photonic structures were made by electrochemical
-anodization on an oriented (100) p-type crystalline Si wafer
-(resistivity 0.002 - 0.005 $ \Omega \cdot cm $), under galvanostatic
-conditions. The electrochemical anodization process was performed at
-room temperature, with an electrolytic mixture of aqueous hydrofluoric
+\subsection{Fabrication of PS  GRIN Monolayers}
+We manufactured single layer PS structures through an electrochemical
+anodization on a (100) $p$-type crystalline Si wafer
+(resistivity 0.002 - 0.005 $ \Omega\,\text{cm}$), under galvanostatic
+conditions. The process was performed at
+room temperature,\notaL{Controlaste/mediste la temperatura?} with an
+electrolytic mixture of aqueous hydrofluoric
 acid (HF) (concentration: 48 $ \% $ wt), glycerol (purity: 99.8 $ \% $
-wt) and ethanol (purity: 99.9 $ \%$ wt ) in 3: 7: 1 volume ratio,
-respectively. After the anodizing process, the samples are rinsed with
-ethanol (purity: 99.9 $ \% $  wt). The layout of the cell used is as
-seen in Fig. \ref{fig:DE1} b), with an area of $ 1,206 \ \ cm^2 $
-(this is the area attacked in the process), has a rectangular shape ($
-0.62 \ \ cm \times 2.03 \ \ cm $)  so that the current densities  that
-attacks has a lateral gradient with a greater surface area. They were
-manufactured with a fixed current of $ 5 \ \ mA $ to generate
-different current densities ranging from $ 6  $ to $ 2.5 \ \ mA / cm^2
-$. Similarly, we use the current from $ 40 \ \ mA $ to generate $ 50 $
-to $ 20 \ \ mA / cm ^ 2 $. The cathode is made of a platinum wire that
-was arranged in the form of a tip with an approximate diameter of ($
-0.5 \ \ mm $).
+wt) and ethanol (purity: 99.9 $ \%$ wt ) in a 3:7:1 volume ratio,
+respectively. After the anodizing process, the samples were rinsed with
+ethanol (purity: 99.9 $ \% $  wt). The electrolytic cell had the shape
+of a rectangular prism as shown in Fig. \ref{fig:DE1}, with a base of
+size $0.62\text{cm}\times2.03\text{cm}$) with an uncovered sample area
+of $1.206\text{cm}^2$. \notaL{¿Cuáles fueron las coordenadas del
+  electrodo?} We manufactured samples using a current $I=5\text{mA}$
+which yielded current densities in the range
+$j_\perp=2.5-6.0\text{mA}/\text{cm}^2$ and other smples using a larger
+current $I=40\text{mA}$ corresponding to current densities in the
+range $j_\perp=20-50\text{mA}/\text{cm}^2$. The cathode was a
+platinum wire that with an approximate diameter of $0.5\text{mm}$.
 \subsection{Reflectance Measurement}
-In the experiemental parte the reflectivity measurements were carried
-out with a Perkin Elmer Lambda 950 UV-Vis-NIR spectrophotometer. To
+We measured the reflectivity spectra using a {\em Perkin Elmer Lambda 950}
+UV-Vis-NIR spectrophotometer.
+
+To
 calculate the complex refractive index $ \tilde{n}_{_{PS}} = n_{_
   {PS}} - ik_{_{PS}} $ of a porous layer with homogeneous porosity
 and thickness with smooth interfaces to throughout the entire
