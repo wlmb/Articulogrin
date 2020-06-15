@@ -39,7 +39,7 @@
 \notaL{Cuida de no poner espacios al final de las líneas.}
 
 \begin{abstract}
-We propose a simple setup which allows the calculation of the current
+We propose a simple setup which that the calculation of the current
 density as a function of position within an electrochemical cell used
 to produce porous Silicon structures with a controlled gradient in their
 index of refraction. We produced samples under several conditions and
@@ -136,10 +136,12 @@ A gradient in the optical properties of porous Silicon (PS) systems may be
 obtained by electrochemically attacking a Si surface with a position dependent current
 density ${\bm j(\bm r)}$, as the porosity and refractive index depend on
 the current density, as well as the speed of attack and the width of the
-porous layer. Nevertheless, it is not a simple to task to measure the
+porous layer. Nevertheless, it is not a simple task to measure the
 {\em local} value of $\bm j(\bm r)$ along the surface. This hampers the
 design and optimization of well characterized reproducible GRIN PS
-structures. Thus, a system for which the current density field may be
+structures.\notaL{Tenemos referencias para afirmar esto?} Thus, we
+believe a
+system for which the current density field may be
 easily computed would be useful.
 Though $\bm j(\bm r)$ may be in principle be numerically calculated for a
 given arbitrary experimental setup,  here we propose a particularly
@@ -153,8 +155,8 @@ We assume that our electrolytic cell has the shape of a
 prism (see Fig. \ref{f:celda}) with a horizontal rectangular base of sides $a$ and $b$, and
 filled with the electrolyte up to a height $c$. We assume that the
 walls of the cell are insulating while the bottom is completely
-covered with the sample, which is a good conductor which is
-electrically grounded. Within the electrolyte we position an electrode
+covered with the sample, which is a which is an
+electrically grounded good conductor. Within the electrolyte we position an electrode
 which we assume is a thin conductor, insulated from the electrolyte
 but for a small area near its tip, which we thus approximate as a
 point current source.
@@ -172,6 +174,13 @@ point current source.
     pon un puntito dorado del ancho del cable. Muestra que la base
     está aterrizada}}\notaL{\sout{Indica el voltaje y la
     corriente}}\notaL{\sout{¿Está bien la polaridad de la batería?}}}
+    just the tip uncovered and located at $\bm r_0=(x_0,y_0,z_0)$ within the
+    liquid.\notaL{Quité el tipo de letra del pie de figura. Que la pongan en la
+      revista.}\notaL{En la punta pusiste dos esferas. Quítalas y sólo
+    pon un puntito dorado del ancho del cable. Muestra que la base
+    está aterrizada}\notaL{Indica el voltaje y la
+    corriente}\notaL{Mejor pon una fuente de corriente en lugar de una
+  fuente de voltaje}}
   \label{f:celda}
 \end{figure}
 Within the electrolyte the current density is
@@ -198,7 +207,8 @@ electrode. Integrating $ \bm j$ over this surface we obtain
 \int_{\mathcal S'} d\bm a \cdot \bm j = -I,
 \end{equation}
 where the prime on $\mathcal S'$ means we remove from the surface a
-very small hole through which the wire that feeds the current gets
+very small hole through which the wire that feeds the current to the
+electrode gets
 through. Assuming the wire is narrower than any other relevant
 distance in the system, we may interpret Eq. \eqref{eq:I} as an
 integral over a closed surface of the current \eqref{eq:j} within the
@@ -210,9 +220,9 @@ electrolyte, ignoring the actual current within the wire. Thus
 Using Gauss's law, we interpret this equation as a source for the
 potential in the form of a point charge
 \begin{equation}
-  q_{_{0}} = -\frac{I}{4 \pi \sigma}
+  q_0 = -\frac{I}{4 \pi \sigma}
 \end{equation}
-at the position $\vec{r}_{_{0}}=(x_{_{0}}, y_{_{0}}, z_{_{0}})$ of the
+at the position $\bm r_0=(x_0, y_0, z_0)$ of the
 tip of the electrode. Note that $q_0$ would be the total charge,
 and it shouldn't be further screened through the permittivity of the
 electrolyte.
@@ -235,12 +245,16 @@ with mixed boundary conditions
 \end{equation}
 and
 \begin{equation}
-E_{_{x}}(0, y ,z)= E_{_{x}}(a, y ,z)=E_{{_y}}(x, 0 ,z)=E_{{_y}}(x, b
+E_x(0, y ,z)= E_x(a, y ,z)=E_{{_y}}(x, 0 ,z)=E_{{_y}}(x, b
 ,z)=E_{{_z}}(x, y ,c)=0.
 \end{equation}
 This problem may be solved readily using image charge theory \cite{T1,T2}
 \notaL{\sout{ref}}. The potential within the electrolytic cell coincides the
 the field within an infinite vacuum containing the point charge
+This problem may be solved readily using image charge theory
+\notaL{ref}. The potential within the electrolytic cell coincides
+within the region $0\le x\le a$, $0\le y \le b$, $0\le z\le c$
+with that an infinite fictitious empty space but for the point charge
 $q_0$ at the tip of the electrode at $\bm r_0$, and an array of its fictitious image
 charges. The images include a reflection on the conducting bottom of the
 cell, of the opposite charge $-q_0$ and situated at $(x_0, y_0,-z_0)$,
@@ -266,13 +280,13 @@ images.
     corresponding reflecting wall. The system may be interpreted as a
     periodic lattice with a rectangular unit cell of size $2a\times 2b$,
     one of which is indicated  by wide dashed lines, and with a basis of four equal
-    charges at $(\pm x_0, \pm y_0, z_0)$.}
+    charges $q_0$ at $(\pm x_0, \pm y_0, z_0)$.}
   \label{fig:topview}
 \end{figure}
 In Fig. \ref{fig:topview} we illustrate the real charge and all of
 its images within the plane $z=z_0$. They form a periodic rectangular
 lattice with a unit cell of size $2a\times 2b$ and with a basis of
-four equal charges situated at the positions $\bm r_0$, $\bm
+four equal charges $q_0$ situated at the positions $\bm r_0$, $\bm
 r_1=(-x_0, y_0, z_0)$, $\bm r_2=(x_0, -y_0, z_0)$ and $\bm r_3=(-x_0,
 -y_0, z_0)$. In Fig. \ref{fig:sideview} we show a lateral view of the
 image charges.
@@ -324,6 +338,16 @@ simple periodic lattice of charges using a fast convergent sum over the 2D
 reciprocal vectors, and then sum over the charges that form the basis
 of the 2D {\em crystal} plane and finally sum over all the
  planes \cite{T6,T7} \notaL{\sout{ref}}.
+using the Ewald summation technique \notaL{ref}, which yields two rapidly converging
+series, one in real space and another one in reciprocal space.
+Nevertheless, as we have to evaluate the potential and the field on
+the bottom of the cell to obtain the current density which attacks the
+surface of the sample, and as there are no
+real nor image charges there, we may perform a somewhat simpler planewise
+summation, where we first obtain the potential and field produced by a
+simple periodic lattice of charges using a fast convergent sum over the 2D
+reciprocal vectors, we then sum over the charges that form the basis
+of the 2D {\em crystal} plane and we finally sum over all the planes \notaL{ref}.
 
 We consider first a system made of identical unit charges
 ocuppying the positions $\bm R$ of a 2D Bravais lattice $\{\bm R\}$,
@@ -352,6 +376,7 @@ the height $z$. Substitution in Eq. \eqref{eq:poissonRed} yields the
 ordinary differential equation \notaL{El signo estaba mal. Chécalo.}
  \begin{eqnarray}
  \frac{d^2}{dz^2}\phi_{_{\bm G}}(z)-G^2\phi_{_{\bm G}}(z)=
+ \frac{d^2}{dz^2}\phi_{\bm G}(z)-G^2\phi_G(z)=
    -\frac{4 \pi}{A} \delta(z),
  \end{eqnarray}
 an homogeneous equation for $z\ne0$ which may be trivially
@@ -366,7 +391,9 @@ conditions at infinity, we obtain
   \end{cases}
 \end{equation}
 The case $G=0$ corresponds to the potential produced by a uniformly charged plane,
-while the case $G\ne 0$ is the symmetric solution that decays far from
+while the case $G\ne 0$ is the potential produced by a sinusoidal
+charge density on a plane given by the
+symmetric solution that decays exponentially as we get away from
 the source plane. Substituting into Eq. \eqref{eq:phifourier} yields
 \begin{eqnarray}
   \label{eq:phiG1}
@@ -377,7 +404,7 @@ where the prime indicates that the term $G=0$ should be ommited from
 the sum.
 
 We consider now the basis of our 2D lattice, with equal charges at the
-four positions $(\pm x_0, \pm y_0)$. Each of the corresponding four
+four positions $(\pm x_0, \pm y_0,0)$. Each of the corresponding four
 sublattices produces a potential as that in Eq. \eqref{eq:phiG1} but
 shifted by the corresponding basis vector, yielding
 \begin{equation}
@@ -397,11 +424,11 @@ $-z_0+(4n+4)c$.
 We concentrate our attention only on the region $a\le z<z_0$. From
 Fig. \ref{fig:sideview} we see that the $G=0$
 field has contributions only from the charges at $z_0$ and their
-images ant $-z_0$, this contribution is like that of a parallel plate
+images at $-z_0$, and that this contribution is like that of a parallel plate
 capacitor $E_{0z}=-4\pi q_0/ab=-16\pi q_0/A$, which corresponds to the
 potential $\phi_0=16\pi q_0 z/A$. Other contiguous planes of with opposite charges
 contribute to the field elsewhere. The contributions to the potential
-from the $G\ne0$ are simple geometric sums that may be summed
+from the $G\ne0$ are simple geometric sums that may be added
 analytically over $n$ and yield the total potential
 \begin{equation}
   \label{eq:phitot}
@@ -415,15 +442,16 @@ analytically over $n$ and yield the total potential
 Notice that the terms of the sum above converge exponentially to zero
 as $G$ increases for any $z$ such that $0\le z <z_0 \le c$, and thus
 the sum is convergent. The divergence in the limit $ z
-\longrightarrow z_0 $ is not worrisome, as we are interested in the
-field close to bottom $z=0$ of the cell.
+\longrightarrow z_0 $ corresponds to the singularity of the potential
+at the position of a point charge, and it is not worrisome, as we are
+interested in the field close to bottom $z=0$ of the cell.
 
 The current density normal to the surface may now be obtained as
 $j_\perp=-\sigma\partial\phi/\partial z$,
 \begin{equation}
   \label{Eq:J}
   \begin{split}
-    j_\perp(\bm r) =& -\frac{I}{ab}\biggl(1+{\sum_{\bm G}}'\frac{2\sinh
+    j_\perp(\bm r) =& \frac{I}{ab}\biggl(1+{\sum_{\bm G}}'\frac{2\sinh
       Gc}{\sinh 2Gc}\cosh G(c-z_0)\cos G_x x_0 \cos G_y y_0\\
     &\times \cosh Gz\, e^{i\bm G\cdot\bm r_\|}\biggr).
   \end{split}
@@ -434,13 +462,11 @@ the substrate to produce the PS sample.
 Integrating over the surface of the sample we verify
 \begin{equation}
   \label{eq:intj}
-  \int_0^adx\int_0^bdy\,j_\perp(\bm r)=-I,
+  \int_0^adx\int_0^bdy\,j_\perp(\bm r)=I,
 \end{equation}
 as the contributions of opposite non-null reciprocal vectors cancel
-out. As expected, all of the current that leaves the electrode find
-its way to the substrate.
-\notaL{En este sistema, ¿cuál es el cátodo y cuál el ánodo? ¿de dónde
-  hacia dónde va la corriente? ¿$q_0$ es positiva o negativa?}
+out. As expected, all the current that leaves sample finds
+its way to the cathode.
 
 Using Eq. \eqref{Eq:J} we can correlate the local current density at
 the sample as it is prepared with its geometric and optical
@@ -450,47 +476,42 @@ well known transfer matrix method \notaL{refs}.
   transferencia. No hay nada original ahí.}
 
 
-\section{Experimental Details}
+\section{Procedures}
 \begin{figure}
   \centering
   \includegraphics[width=.8\textwidth]{paper-3}\\[12pt]
   \includegraphics[width=.8\textwidth]{paper-4}\\[12pt]
   \includegraphics[width=.8\textwidth]{paper-5}
-  %\\[12pt]
-  %\includegraphics[scale=0.6]{Images/DE1}
+  % \\[12pt]
+  % \includegraphics[scale=0.6]{Images/DE1}
 
-\caption{\notaL{reordené figura y rehice} Experimental set-up for
-      the fabrication of porous silicon with GRIN, consisting of a
-      rectangular electrochemical cell. We indicate the Si wafer (dark
-      gray), the teflon cell (light gray), the sealing o-ring (black
-      circles), the insulated feeding cable (white lines within black
-      lines), the uncovered platinum tip (white) within the
-      electrolyte (blue), the electrical contact below the sample
-      (yellow) and the current source. We indicate some geometrical
-      parameters of the arrangement $x0$, $z0$, $a$ and $c$
-      and the current source (upper panel) and a few current density
-      field lines. Top (middle panel) and
-      side (lower panel) schematic views of the resulting sample,
-      illustrating three regions $A$, $B$ and $C$ of relatively high, medium and
-      low porosity respectively illustrating the gradients in pore
-      size, density and depth. \notaL{Es $\nabla p$ razonable para el
-        gradiente de la porosidad}}
-    \label{fig:DE1}
-  \end{figure}
+  \caption{\notaL{reordené figura y rehice} Experimental set-up for
+    the fabrication of porous silicon with GRIN, consisting of a
+    electrochemical cell with the shape of a
+    rectangular prism. We indicate the Si wafer (dark
+    gray), the teflon cell (light gray), the sealing o-ring (black
+    circles), the insulated feeding cable (white lines within black
+    lines), the uncovered platinum tip (white) within the
+    electrolyte (blue), the electrical contact below the sample
+    (yellow) and the controlled current source. We indicate some geometrical
+    parameters of the arrangement $x_0$, $z_0$, $a$ and $c$
+    and the current source (upper panel) and a few current density
+    field lines. Top (middle panel) and
+    side (lower panel) schematic views of the resulting sample,
+    illustrating three regions $A$, $B$ and $C$ of relatively high, medium and
+    low porosity respectively illustrating the gradients in pore
+    size, density and depth. \notaL{Es $\nabla p$ razonable para el
+      gradiente de la porosidad}}
+  \label{fig:DE1}
+\end{figure}
 
+\notaL{Cambié el título, pues tienes una mezcla de experimento y
+  teoría aquí}
 In Fig. \ref{fig:DE1} we show a schematic representation of our
 experimental setup to manufacture porous silicon with GRIN.
-\notaL{Cambié las figuras} \notaL{La figura está feita. Hay un abultamiento extraño en la
-  punta. Debería verse el aislamiento y la punta descubierta y más
-  sumergida. La letra está demasiado chica. El gradiente de porosidad va
-  en la dirección opuesta. El panel (a) tiene una discontinuidad. ¿Tú
-  la hiciste o la adaptaste? Usa dos paréntesis (a), (b),
-  (c). Alínealos. Pon primero la preparación y luego los resultados
-  vistos de arriba y de lado. Está en desorden. Se ve muy descuidada. No dice nada sobre la
-  preparación que no esté en la figura 1. Dos páneles no ilustran el
-  método experimental, sino el resultado. Quizás yo la quitaría.}
+\notaL{Cambié las figuras}
 As dicussed above, we fabricated an electrolytic cell with the shape of a
-rectangular prism on the bottom of which we place a Si which makes an
+rectangular prism on the bottom of which we place a Si wafer which makes
 electrical contact to a gold plate \notaL{Lo inventé; de qué material es
   el contacto bajo la muestra} which together make the anode. The
 catode consists of a platinum wire insulated except for a small region
@@ -499,115 +520,94 @@ We also show a schematic drawing of the expected GRIN PS structures,
 with a gradient in the porosity, and in the width, density and depth
 of the resulting pores.
 
-\subsection{Fabrication of Porous Silicon Monolayers GRIN}
-Some of the simulated photonic structures were made by electrochemical
-anodization on an oriented (100) p-type crystalline Si wafer
-(resistivity 0.002 - 0.005 $ \Omega \cdot cm $), under galvanostatic
-conditions. The electrochemical anodization process was performed at
-room temperature, with an electrolytic mixture of aqueous hydrofluoric
+\subsection{Fabrication of PS  GRIN Single Layers}
+We manufactured single layer PS structures through an electrochemical
+anodization on a (100) $p$-type crystalline Si wafer
+(resistivity 0.002 - 0.005 $ \Omega\,\text{cm}$), under galvanostatic
+conditions. The process was performed at
+room temperature,\notaL{Controlaste/mediste la temperatura?} with an
+electrolytic mixture of aqueous hydrofluoric
 acid (HF) (concentration: 48 $ \% $ wt), glycerol (purity: 99.8 $ \% $
-wt) and ethanol (purity: 99.9 $ \%$ wt ) in 3: 7: 1 volume ratio,
-respectively. After the anodizing process, the samples are rinsed with
-ethanol (purity: 99.9 $ \% $  wt). The layout of the cell used is as
-seen in Fig. \ref{fig:DE1} b), with an area of $ 1,206 \ \ cm^2 $
-(this is the area attacked in the process), has a rectangular shape ($
-0.62 \ \ cm \times 2.03 \ \ cm $)  so that the current densities  that
-attacks has a lateral gradient with a greater surface area. They were
-manufactured with a fixed current of $ 5 \ \ mA $ to generate
-different current densities ranging from $ 6  $ to $ 2.5 \ \ mA / cm^2
-$. Similarly, we use the current from $ 40 \ \ mA $ to generate $ 50 $
-to $ 20 \ \ mA / cm ^ 2 $. The cathode is made of a platinum wire that
-was arranged in the form of a tip with an approximate diameter of ($
-0.5 \ \ mm $).
-\subsection{Reflectance Measurement}
-In the experiemental parte the reflectivity measurements were carried
-out with a Perkin Elmer Lambda 950 UV-Vis-NIR spectrophotometer. To
-calculate the complex refractive index $ \tilde{n}_{_{PS}} = n_{_
-  {PS}} - ik_{_{PS}} $ of a porous layer with homogeneous porosity
-and thickness with smooth interfaces to throughout the entire
-structure, the more suitable is the adjustment procedure of the
-experimental reflectance or transmittance spectrum, this is for the
-theoretical part. In the case of the reflectance spectrum. The
-corresponding theoretical calculations were carried using procedure
-for single  smooth layer (monolayer).
- \begin{eqnarray}\label{Eq:ECMR}
-R=\dfrac{r _ {_ {01}}r _ {_ {12}} e^{-2i\delta}}{1+r _ {_ {01}}r _ {_ {12}} e^{-2i\delta}}
-\end{eqnarray}
-where $ r_{_ {01}} $ y $ r_{_ {12}} $ are the Fresnel reflectance
-coefficients at the interfaces $aire/PS$ y $PS/c-Si$ which are
-defined in terms of their complex refractive index ($\tilde{n}_{_ {1}}
-$, $\tilde{n}_{_ {2}} $ y $ \tilde{n}_{_ {3}} $), for them
-$r_{_{ij}}=(\tilde{n}_{_{i}}\cos\theta_i-\tilde{n}_{_{j}}\cos\theta_j)/(\tilde{n}_{_{i}}\cos\theta_i+\tilde{n}_{_{j}}\cos\theta_j)$,
-($j=i=0,1,2$), whilst $\delta=2\pi
-d/\lambda\sqrt{\tilde{n}^2_{_{2}}-\tilde{n}^2_{_{1}}\sin \theta_1}$.
- To adjust the reflectance spectrum, the layer thickness is an input
- parameter in the Eq.\ref{Eq:ECMR}. The advantage of this method is
- the possibility of taking into account the interface roughness effect
- by including the Davies-Bennett factor in the coefficient of each
- Fresnel \cite{I17, I18, I19}, which represents the roughness of a
- Gaussian distribution.
+wt) and ethanol (purity: 99.9 $ \%$ wt ) in a 3:7:1 volume ratio,
+respectively. After the anodizing process, the samples were rinsed with
+ethanol (purity: 99.9 $ \% $  wt). The electrolytic cell had the shape
+of a rectangular prism as shown in Fig. \ref{fig:DE1}, with a base of
+size $0.62\text{cm}\times2.03\text{cm}$) with an uncovered sample area
+of $1.206\text{cm}^2$. \notaL{¿Cuáles fueron las coordenadas del
+  electrodo?} We manufactured samples using a current $I=5\text{mA}$
+which yielded current densities in the range
+$j_\perp=2.5-6.0\text{mA}/\text{cm}^2$ and other smples using a larger
+current $I=40\text{mA}$ corresponding to current densities in the
+range $j_\perp=20-50\text{mA}/\text{cm}^2$. The cathode was a
+platinum wire that with an approximate diameter of $0.5\text{mm}$.
 \subsection{Morphological studies}
-The morphologies of the etched porous layers (cross-sectional) was
-observed using SEM Hitachi SU1510 scanning electron microscopes
-(Hitachi High Technologies Canada, Inc., Toronto, Canada), the
-thickness  and porosity  of each fabricated  film was measured.
- \subsection{Refraction Indices Monolayer of Porous Silicon GRIN }
-Through the electrochemical anodization of c-Si wafers, Psi monolayers
-were obtained. For the refractive index of each monolayer Psi
-calcalated by ussing  Bruggeman effective medium theory, as we
-consider that we have a homogeneous medium associated with effective
-dielectric function \cite{I20}. This effective dielectric function is
-related to the dielectric functions of the two media, consisting of
-two materials (air and silicon), where it is assumed that all the
-pores or islands of the bulk material experience an average electric
-field; the equation is expressed as follows:
- \begin{eqnarray}\label{Eq:Brugg}
- p\dfrac{\varepsilon_{_{air}}-\varepsilon_{_{PS}}}{\varepsilon_{_{air}}+\varepsilon_{_{PS}}}+(1-p)\dfrac{\varepsilon_{_{Si}}-\varepsilon_{_{PS}}}{\varepsilon_{_{Si}}+
-   \varepsilon_{_{PS}}}
- \end{eqnarray}
- where $ p $ is the volume fraction of air within the PS layer
- (porosity); $\varepsilon_{_{air}}$ is the dielectric function of air;
- $\varepsilon_{_{Si}}$ is the dielectric function of c-Si, and
- $\varepsilon_{_{PS}}$ represents the dielectric function of PS. The
- dielectric function is a complex number and is related to the complex
- refractive index ($\tilde{n} = n - ik$), which is made up of real and
- imaginary parts, as follows $\varepsilon=\tilde{n}^2$. Its real part
- ($ n $) represents the ordinary refractive index when no light
- absorption occurs. The imaginary part ($ k $) is known as the
- extinction coefficient. The extinction coefficient determines the
- absorption rate in the medium \cite{I21}. Porosity can be estimated
- using the Bruggeman approximation, from Eq. \ref{Eq:Brugg} provided
- that the dielectric functions of each component (air and c-Si) are
- known.
+\notaL{Cambié el orden}
+The morphologies of the etched porous layers were
+observed using a Hitachi SU1510 scanning electron microscope (SEM)
+with which we measured the thickness $d$ and the porosity $p$ of the
+films at different positions along the sample from its top and side
+views (Fig. \ref{fig:DE1}).
 
- \subsection{Fabrication  of Microcavities of Porous Silicon GRIN }
- A conventional way to fabricate the porous silicon microcavity (MC)
- is a defect with a mode located between two DBRs (Distributed Bragg
- Reflector). Alternate layers of high refractive index (H) and low (L)
- refractive index are obtained, satisfying the Bragg condition
- $n_{_{i}}d_{_{i}}=\frac{\lambda_{_{c}}}{4}$  where $ i = H, L $. The
- defect must meet the condition
- $n_{_{L}}d_{_{L}}=\frac{\lambda_{_{c}}}{2}$, and the MC has the
- following sequence: $$ (HL)_6 HH (LH )_6 $$
- Initial data for conventional design we use $\lambda_{_{c}}= 0.67 \mu
- m$, $n_{_{H}} =2,6$, $P_{_{H}} =0.46$, $d_{_{H}}=0.066 \mu m  $,
- $t_{_{H}}=35 s  $ and for $n_{_{L}}= 1,4$,  $P_{_{L}} =0.75$,
- $d_{_{L}}=0.117 \mu m  $, $t_{_{L}}=11 s  $. All of this data is for
- the $ 0 $ point of the sample that is located at one end of the
- sample just below the tip counter-electrode.\\
- Our proposal for the fabrication of porous silicon GRIN microcavities
- uses the same conditions for fabrications of porous silicon GRIN
- monolayers as in section 3.1, and taking the conventional data
- mentioned above. The porous silicon microcavities (PSMC) with
- gradient refractive index (GRIN), were manufactured with different
- current densities ranging from $ 6 $ to $ 2.5 \ \ mA / cm ^ 2 $ for a
- current of $ 5 \ \ mA $, with high refractive index $n_{_{H}} \sim
- 2,761 $ to $ 2,808 $ and porosities from $ 0.44 $ to $ 0.39 $. Also
- for $ 50  $ to $ 20 \ \ mA / cm ^ 2 $, current of $ 38 \ \ mA $, for
- low refractive index $n_{_{L}}\sim 1,448 $ to $ 2,267 $ and with the
- corresponding  porosities of $ 0.75 $ to $ 0.64 $. Using our
- calibration ratio to design GRIN structures,  the corresponding
- current density for each measurement point.
+\subsection{Reflectance Measurement}
+We measured the reflectivity spectra using a {\em Perkin Elmer Lambda 950}
+UV-Vis-NIR spectrophotometer. For iterpretation of the data in the
+case of a single PS layer we used
+the standard formula \notaL{referencia} for three media air (0), PS
+(1) and c-Si (2),
+ \begin{eqnarray}\label{Eq:ECMR}
+   R=\frac{r _ {_ {01}}r _ {_ {12}} e^{2i\delta}}{1+r _ {_ {01}}r _ {_ {12}} e^{2i\delta}}
+\end{eqnarray}
+where $ r_{01} $ y $ r_{12}$ are the Fresnel reflectance
+coefficients at the air/PS and PS/c-Si interfaces \notaL{referencias}
+and $\delta=k_{PS}^\perp d$, where $k_{PS}^\perp$ is
+the component of the wavevector perpendicular to the surface within
+the porous layer of width $d$.
+\notaL{Me tienes que explicar dónde y cómo usaste lo que mencionas en
+  la siguiente frase:
+The advantage of this method is
+the possibility of taking into account the interface roughness effect
+by including the Davies-Bennett factor in the coefficient of each
+Fresnel \cite{I17, I18, I19}, which represents the roughness of a
+Gaussian distribution.}
+\subsection{Refraction Index of PS GRIN Single Layers}
+The local refractive index $n_{PS}$ of the PS layer was calculated from its
+porosity $p$ through
+Bruggeman's effective medium theory \cite{I20} \notaL{Elegir y checar:
+  varepsilon o epsilon para funciones dieléctricas}
+\begin{eqnarray}\label{Eq:Brugg}
+ p\frac{1-\varepsilon_{PS}} {1+\varepsilon_{PS}} + (1-p)
+  \frac{\varepsilon_{\text{Si}} - \varepsilon_{PS}}
+  {\varepsilon_{\text{Si}}+\varepsilon_{PS}}
+\end{eqnarray}
+where the porosity $p$ is the volume fraction of air within the PS
+layer, $\varepsilon_{Si}$ is the dielectric function of c-Si, and
+$\varepsilon_{PS}=n_{PS}^2$ is the dielectric function of the PS.
+\notaL{Quité frases irrelevantes.}
+\subsection{Fabrication  of GRIN PS Microcavities}
+After characterizing the preparation of single PS GRIN layers, we
+fabricated PS GRIN microcavities (MC) as specific defects between two distributed Bragg
+mirrors  (DBR). Alternate quarter wavelength plates of high (H) and low (L)
+refractive indices $n_i$ of widths $d_i$, $i=H,L$ were prepared satisfying the Bragg condition
+$n_id_i=\frac{\lambda_c}{4}$ at a given design
+wavelength $\lambda_c$ and at a position $A$ (Fig. \ref{fig:DE1} which
+we chose as that directly below the point-like electrode. The defect
+was chosen as a half-wavelength low index layer of width $d_d$ such that
+$n_Ld_L=\lambda_c/2$, and the MC has the
+following sequence: $(HL)_6HH(LH )_6$. \notaL{Hay algo mal. La
+  película de $\lambda/2$ fue de alto o de bajo índice? En una parte
+  dices una cosa y en otra otra. ¿Será $(HL)_jHLLH(LH)_6$? ¿O será
+  $(LH)_6LL(HL)_6$? ¡Muy descuidado!}
+We chose $\lambda_c= 0.67 \mu\text{m}$. For the high index layers we
+chose a current $I_H=5\text{mA}$ which corresponded to a current density
+$j_{HA\perp}= 6\text{mA}/\text{cm}^2$ below the tip \notaL{checar}, and yielded
+$n_H =2.6$, corresponding to a porosity \notaL{P mayúscula
+  es porosidad, o p minúscula. Checar consistencia} $P_H =0.46$, and a
+width $d_H=0.066 \mu\text{m}$, which required an attack time of
+$t_H=35 \text{s}$. The corresponding parameters for the low density
+layers were $I_L=38\text{mA}$, $j_{LA\perp}=50\text{mA}/\text{cm}^2$, $n_L= 1.4$,  $P_L =0.75$,
+$d_L=0.117 \mu \text{m}$, and $t_L=11 \text{s}$. For the rest of the
+sample the current density, porosity, index of refraction and width
+varied, yielding a GRIN MC.
 
 \section{Discussion and Results}
 \subsection{Simulation of  the current density}
@@ -843,18 +843,21 @@ for each of the chosen currents.
 	\includegraphics[width=\textwidth]{Images/MicrGrin}
 	\caption{Diagram of a microcavity of porous silicon
             GRIN. Alternate layers are obtained of high (H) refractive
-            index $n_{_{Hi}}$ and low (L) refractive index
-            $n_{_{Li}}$, where $N_{_{H}}$ is the number of layers for
-            $n_{_{Hi}}$ and $N_{_{L}}$ is the number of layers for
-            $n_{_{Li}}$. Then,  $d_{_{Hi}}$ is the monolayer thickness
-            of  $n_{_{Hi}}$ at that measurement point and $d_{_{Li}}$
-            is the monolayer thickness of $n_{_{Hi}}$ at that
-            measurement point. Therefore,  $d_{_{i}}$ is the total
+            index $n_{Hi}$ and low (L) refractive index
+            $n_{Li}$, where $N_H$ is the number of layers for
+            $n_{Hi}$ and $N_L$ is the number of layers for
+            $n_{Li}$. Then,  $d_{Hi}$ is the monolayer thickness
+            of  $n_{Hi}$ at that measurement point and $d_{Li}$
+            is the monolayer thickness of $n_{Hi}$ at that
+            measurement point. Therefore,  $d_i$ is the total
             thickness calculated for each of the measurements,
             defining a i = $ A, B, C$. Having the following
             relationship $d_{_{i}} =
             (N_{_{Hi}}d_{_{Hi}})+(N_{_{Li}}d_{_{Li}}) +
             (2d_{_{Hi}})$. }
+            relationship $d_i =
+            (N_{Hi}d_{Hi})+(N_{Li}d_{Li}) +
+            (2d_{Hi})$. }}
 	\label{fig:MCGRIN0}
 \end{figure}
 The Fig. \ref{fig:MCGRIN0} the scheme of  a initially proposed lateral
@@ -866,19 +869,19 @@ Porous silicon microcavities GRIN, taking into account that we start
 from having a tip electrode almost on the surface and by making a
 variation of currents we can achieve the effect of alternating the
 layers. Alternate layers are obtained of high (H) refractive index
-$n_{_{Hi}}$ and low (L) refractive index $n_{_{Li}}$, where $N_{_{H}}$
-is the number of layers for  $n_{_{Hi}}$ and $N_{_{L}}$ is the number
-of layers for $n_{_{Li}}$. Then,  $d_{_{Hi}}$ is the monolayer
-thickness of  $n_{_{Hi}}$ at that measurement point and $d_{_{Li}}$ is
-the monolayer thickness of $n_{_{Hi}}$ at that measurement
-point. Therefore,  $d_{_{i}}$ is the total thickness calculated for
+$n_{Hi}$ and low (L) refractive index $n_{Li}$, where $N_{H}$
+is the number of layers for  $n_{Hi}$ and $N_L$ is the number
+of layers for $n_{Li}$. Then,  $d_{Hi}$ is the monolayer
+thickness of  $n_{Hi}$ at that measurement point and $d_{Li}$ is
+the monolayer thickness of $n_{Hi}$ at that measurement
+point. Therefore,  $d_i$ is the total thickness calculated for
 each of the measurements, defining a i = $ A, B, C$. Having the
-following relationship $d_{_{i}} =
-(N_{_{Hi}}d_{_{Hi}})+(N_{_{Li}}d_{_{Li}}) + (2d_{_{Hi}})$.
-Initial data for conventional design we use  $\lambda_{_{c}}= 0.67 \ \
-\mu m$, $n_{_{H}} =2.6$, $P_{_{H}} =0.46$, $d_{_{H}}=0.066 \ \ \mu m
-$, $t_{_{H}}=35 s  $ y para  $n_{_{L}}= 1.4$,  $P_{_{L}} =0.75$,
-$d_{_{L}}=0.117 \ \ \mu m  $, $t_{_{L}}=11 s  $. All these data are
+following relationship $d_i =
+(N_{Hi}d_{Hi})+(N_{Li}d_{Li}) + (2d_{Hi})$.
+Initial data for conventional design we use  $\lambda_c= 0.67 \ \
+\mu m$, $n_H =2.6$, $P_H =0.46$, $d_H=0.066 \ \ \mu m
+$, $t_H=35 s  $ y para  $n_L= 1.4$,  $P_L =0.75$,
+$d_L=0.117 \ \ \mu m  $, $t_L=11 s  $. All these data are
 for the point $ 0 $ which is located at one end of the sample just
 below the tip counter-electrode.
 \begin{figure}
@@ -942,12 +945,12 @@ the porosity and the thicknesses shown in Table 1. The porous silicon
 microcavities (MCSP) with refractive index with gradient (GRIN), were
 manufactured with different current densities ranging from $ 6 \ \ mA
 / cm ^ 2 $ to $ 2.5 \ \ mA / cm ^ 2 $ for a current of $ 5 \ \ mA $,
-for a $t_{_{H}}=35 s $, with a high refractive index $n_{_{H}} \sim$ $
-2,661$ to $ 2,808$ and porosities of $P_{_{H}} \sim$ $ 0.45 $ to $
+for a $t_H=35 s $, with a high refractive index $n_H \sim$ $
+2,661$ to $ 2,808$ and porosities of $P_H \sim$ $ 0.45 $ to $
 0.39 $. Also for $ 44 \ \ mA /cm^2 $ to $ 24 \ \ mA / cm^2 $, current
-of $ 38 \ \ mA $, using $t_{_{H}}=11 s$  for low refractive index
-$n_{_{L}}\sim$ $ 1,448 $ to $ 2,267 $ and with porosities of
-$P_{_{H}} \sim$ $0.75 $ to $ 0.64 $. The porosity was calculated with
+of $ 38 \ \ mA $, using $t_H=11 s$  for low refractive index
+$n_L\sim$ $ 1,448 $ to $ 2,267 $ and with porosities of
+$P_H \sim$ $0.75 $ to $ 0.64 $. The porosity was calculated with
 the calibration curve exposed in the ($ P = 0.3J^{0.24} $). And the
 attack time could be obtained with the relation of $ V = 0.53J^{0.79}
 $ where $ t = d / V $ and the refractive index using the Bruggeman
@@ -963,8 +966,8 @@ free parameters to fit the experimental refractive spectra (Section
        simulations taken from $ V = 0.53J ^ {0.79} $ where $d_j=Vt_j$
        ($j=H,L$), which are the thicknesses of each of the monolayer
        of the porous silicon microcavity GRIN at the measurement
-       points and the total thickness we find it as $d_{_{i}} =
-       (N_{_{Hi}}d_{_{Hi}})+(N_{_{Li}}d_{_{Li}}) + (2d_{_{Hi}})$
+       points and the total thickness we find it as $d_i =
+       (N_{Hi}d_{Hi})+(N_{Li}d_{Li}) + (2d_{Hi})$
        defining $ i = $ A, B, C. Which resulted in (measured /
        simulation) $ 2.25 / 2.31 \ \ \mu m $ (for structure at Point
        A), $ 2.17 / 2.08 \ \ \mu m $ (for structure at point B) and $
@@ -981,8 +984,8 @@ complete multi-film structures showed good agreement with the
 simulations taken from $ V = 0.53J^{0.79} $ where $d_j=Vt_j$
 ($j=H,L$), which are the thicknesses of each of the monolayer of the
 porous silicon microcavity GRIN at the measurement points and the
-total thickness we find it as $d_{_{i}} =
-(N_{_{Hi}}d_{_{Hi}})+(N_{_{Li}}d_{_{Li}}) + (2d_{_{Hi}})$ defining $ i
+total thickness we find it as $d_i =
+(N_{Hi}d_{Hi})+(N_{Li}d_{Li}) + (2d_{Hi})$ defining $ i
 = $ A, B, C. Which resulted in (measured / simulation) $ 2.25 / 2.31 \
 \ \mu m $ (for structure at Point A), $ 2.17 / 2.08 \ \ \mu m $ (for
 structure at point B) and $ 1.87 / 1.65 \ \ \mu m $ (for structure at

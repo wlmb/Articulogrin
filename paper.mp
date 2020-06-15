@@ -236,7 +236,7 @@ beginfig(3)
   drawdblarrow (-.5u,-1.5u)--(-.5u,.9u);
   label.rt(btex $z_0$ etex scaled 2, (-.5u,0u));
   drawdblarrow (1u,-2.2u)--(9u,-2.2u);
-  label.bot(btex $c$ etex scaled 2, (5u,-2.2u));
+  label.bot(btex $a$ etex scaled 2, (5u,-2.2u));
 endfig;
 
 beginfig(4)
