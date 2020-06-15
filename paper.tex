@@ -55,7 +55,9 @@ Keywords: Porous Silicon; GRIN; Reflectance Spectra.
 \end{abstract}
 \notaL{Cambié el abstract, pero habrá que revisarlo después.}
 \section{Introduction}
-
+\label{sec:introduction}
+\notaL{Debiste poner etiquetas en todas las subsecciones y secciones, y
+  ecuaciones y figuras.}
 \notaL{No entiendo nada de la introducción}
 The structural properties of nanostructured materials  has  received a
 considerable attention,  and a large research effort has been devoted
@@ -129,8 +131,9 @@ multilayers and Section 4 we shows the comparison of numerical and
 experimental results followed. Finally,  the conclusions given in
 Section. 5
 
-\section{Theory}
+\section{Theory} \label{sec:theory}
 \subsection{Calculation of the current density}
+\label{sec:calc-curr-dens}
 \notaL{check where acronyms are first defined}
 A gradient in the optical properties of porous Silicon (PS) systems may be
 obtained by electrochemically attacking a Si surface with a position dependent current
@@ -369,7 +372,7 @@ periodically repeated delta function. We introduce a 2D Fourier representation f
 the potential \notaL{Checar consistencia entre phi y varphi en todos lados}
 \begin{equation}
   \label{eq:phifourier}
-  \phi(\bm r)=\sum_{\bm G}\phi_{_{\bm G}}(z)e^{i\bm G\cdot\bm r_\|} 
+  \phi(\bm r)=\sum_{\bm G}\phi_{_{\bm G}}(z)e^{i\bm G\cdot\bm r_\|}
 \end{equation}
 where $\phi_{_{\bm G}}(z)$ is the Fourier coefficient of the potential at
 the height $z$. Substitution in Eq. \eqref{eq:poissonRed} yields the
@@ -477,6 +480,7 @@ well known transfer matrix method \notaL{refs}.
 
 
 \section{Procedures}
+\label{sec:procedures}
 \begin{figure}
   \centering
   \includegraphics[width=.8\textwidth]{paper-3}\\[12pt]
@@ -521,15 +525,16 @@ with a gradient in the porosity, and in the width, density and depth
 of the resulting pores.
 
 \subsection{Fabrication of PS  GRIN Single Layers}
+\label{sec:fabrication-ps-grin}
 We manufactured single layer PS structures through an electrochemical
 anodization on a (100) $p$-type crystalline Si wafer
 (resistivity 0.002 - 0.005 $ \Omega\,\text{cm}$), under galvanostatic
 conditions. The process was performed at
 room temperature,\notaL{Controlaste/mediste la temperatura?} with an
 electrolytic mixture of aqueous hydrofluoric
-acid (HF) (concentration: 48 $ \% $ wt), glycerol (purity: 99.8 $ \% $
-wt) and ethanol (purity: 99.9 $ \%$ wt ) in a 3:7:1 volume ratio,
-respectively. After the anodizing process, the samples were rinsed with
+acid (HF) (concentration 48\% wt), glycerol (purity 99.8 \% wt) and
+ethanol (purity 99.9\% wt) in a 3:7:1 volume ratio. After the
+anodizing process, the samples were rinsed with
 ethanol (purity: 99.9 $ \% $  wt). The electrolytic cell had the shape
 of a rectangular prism as shown in Fig. \ref{fig:DE1}, with a base of
 size $0.62\text{cm}\times2.03\text{cm}$) with an uncovered sample area
@@ -541,6 +546,7 @@ current $I=40\text{mA}$ corresponding to current densities in the
 range $j_\perp=20-50\text{mA}/\text{cm}^2$. The cathode was a
 platinum wire that with an approximate diameter of $0.5\text{mm}$.
 \subsection{Morphological studies}
+\label{sec:morph-stud}
 \notaL{Cambié el orden}
 The morphologies of the etched porous layers were
 observed using a Hitachi SU1510 scanning electron microscope (SEM)
@@ -549,6 +555,7 @@ films at different positions along the sample from its top and side
 views (Fig. \ref{fig:DE1}).
 
 \subsection{Reflectance Measurement}
+\label{sec:refl-meas}
 We measured the reflectivity spectra using a {\em Perkin Elmer Lambda 950}
 UV-Vis-NIR spectrophotometer. For iterpretation of the data in the
 case of a single PS layer we used
@@ -569,7 +576,9 @@ the possibility of taking into account the interface roughness effect
 by including the Davies-Bennett factor in the coefficient of each
 Fresnel \cite{I17, I18, I19}, which represents the roughness of a
 Gaussian distribution.}
+
 \subsection{Refraction Index of PS GRIN Single Layers}
+\label{sec:refraction-index-ps}
 The local refractive index $n_{PS}$ of the PS layer was calculated from its
 porosity $p$ through
 Bruggeman's effective medium theory \cite{I20} \notaL{Elegir y checar:
@@ -577,13 +586,15 @@ Bruggeman's effective medium theory \cite{I20} \notaL{Elegir y checar:
 \begin{eqnarray}\label{Eq:Brugg}
  p\frac{1-\varepsilon_{PS}} {1+\varepsilon_{PS}} + (1-p)
   \frac{\varepsilon_{\text{Si}} - \varepsilon_{PS}}
-  {\varepsilon_{\text{Si}}+\varepsilon_{PS}}
+  {\varepsilon_{\text{Si}}+\varepsilon_{PS}}=0
 \end{eqnarray}
+\notaL{Te faltaba la igualdad}
 where the porosity $p$ is the volume fraction of air within the PS
 layer, $\varepsilon_{Si}$ is the dielectric function of c-Si, and
 $\varepsilon_{PS}=n_{PS}^2$ is the dielectric function of the PS.
 \notaL{Quité frases irrelevantes.}
 \subsection{Fabrication  of GRIN PS Microcavities}
+\label{sec:fabrication-grin-ps}
 After characterizing the preparation of single PS GRIN layers, we
 fabricated PS GRIN microcavities (MC) as specific defects between two distributed Bragg
 mirrors  (DBR). Alternate quarter wavelength plates of high (H) and low (L)
@@ -610,130 +621,109 @@ sample the current density, porosity, index of refraction and width
 varied, yielding a GRIN MC.
 
 \section{Discussion and Results}
-\subsection{Simulation of  the current density}
- To test the developed  idea in the theoretical section, we find a
- relation of the tip of the counter electrode that acts similarly as a
- point charge and the current density for a geometry in an
- electrolytic box and solve the electrostatic equations with suitable
- boundary conditions. Resulting in an electrostatic model for photonic
- crystals with a refractive index with gradient (EMPCGRIN).
+\label{sec:discussion-results}
+\subsection{Current Density}
+\label{sec:current-density}
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Images/G123}
-  \caption{Simulation to calculate the current density in
-      a structure with gradient refractive index (GRIN) produced
-      by electrochemical attack on crystalline silicon to
-      produce porous silicon (PS), with a current density
-      profile $ J (mA / cm ^ 2 ) $ normalized with the electric
-      current $ I (mA) $, we have $ J / I \sim 0.5 \ \ a \ \ 1.2
-      (cm^{-2}) $, for a cell of $ a = 2.03 \ \ cm $ y $ b =
-      0.62 \ \ cm $, with an electrode height $ Z_0 = 0.96 \ \
-      cm $ Eq. (\ref{Eq:J})}.
+  \caption{Normalized current density $j_\perp(z,0,0)/I$ calculated through
+    Eq. (\ref{Eq:J}) for a
+    system as in Figs. \ref{f:celda} and \ref{fig:DE1} for a cell of
+    length $a = 2.03\text{cm}$ and width $b=0.62\text{cm}$, for a
+    point-like electrode at $\bm r_0=(0.2\text{cm},
+    0.4\text{cm},0.96\text{cm})$ (top panel). Normalized current
+    along the line $y=?$ (bottom panel). \notaL{qué valor de $y$ usaste para la
+      gráfica de abajo?} \notaL{Puse $x_0$
+      y $y_0$ que faltaban. Checale. Se me hace raro que no esté
+      centrado en la celda a lo ancho. ¿No está debería estar en
+      $y_0=0.31\text{cm}?$} \notaL{Cambia los letreros, $J$ por
+      $j_\perp$. La ordenada no es a, sino $x$ y la abcisa no es b
+      sino $y$}. }
   \label{fig:DR1}
 \end{figure}
-We consider Fig. \ref{fig:DR1} which come from solving
-Eq. (\ref{Eq:J}), calculating the current density as a function of the
-rectangular cell area of $1,206 \ \ cm^2 $,  the programming with the
-PERL PDL package and corresponding graph in gnuplot. We optimize the
+\notaL{Checar consistencia notación. $x_0$, $y_0$ y $z_0$ en
+  minúsculas. Igual $j_\perp$.}
+In Fig. \ref{fig:DR1} we show the current density $j_\perp(x,y,0)$ calculated through
+Eq. \eqref{Eq:J} at the surface of the sample for the cell we built
+(see Figs. \ref{f:celda} and \ref{fig:DE1}) with length
+$a=2.03\text{cm}$ and width $b = 0.62\text{cm}$, the height of the
+solution was taken as $c=1\text{cm}$ and we set the tip of the
+electrode at $\bm
+r_0=(x_0,y_0,z_0)=(0.2\text{cm},0.4\text{cm},0.96\text{cm})$
+\notaL{Descuidado. En la figura dice 0.98, no 0.96}.
+\notaL{¿Por qué usaste estos valores?}
+\notaL{Esto no es interesante: the programming with the
+  PERL PDL package and corresponding graph in gnuplot.}
+\notaL{¿Qué significa esto?:We optimize the
 appropriate values so that our current density adequately attacks
-crystalline silicon, giving the gradient effect. We use as length $a =
-2.03 \ \ cm $ and width $b = 0.62 \ \ cm $ the height of the solution
-is $ c = 1 \ \ cm $ and we could locate the tip of the electrode at $
-R_0 = (X_0 = 0.2 , \ \ Y_0 = 0.4 \ \, Z_0 = 0.96) \ \ cm $ and
-evaluated at the surface on the silicon interface, in the plane $ Z =
-0 $. In this same Figure \ref{fig:DR1}, we obtain a current density
-profile $ J (mA / cm^2) $ normalized with the electric current $ I
-(mA) $, we have $ J / I \sim 1.2 \ \ a \ \ 0.5 (cm ^{-2}) $, as we see
-in Fig. \ref{fig:DR1} a) an effect that happens on the surface of the
-sample, a change of contrate due to the different densities of
-attacked currents. We see the decay behavior that the profile has as
-Fig. \ref{fig:DR1} b) which is a cut on the axis of $ a $. When we
-vary the currents we can observe the behavior of changes in the
-normalized current density, with the data obtained through the
-simulation we could have a better optimization in the design of porous
-silicon proposing a new and novel experimental arrangement, in the
-same way we can give ourselves an idea by means of the graph of how
-the attack would be and the formal side of the pores in the silicon.
+crystalline silicon, giving the gradient effect.}
+For these parameters we obtained $ j_\perp/I\sim
+0.5-1.2\text{cm}^{-2}$
+\notaL{Quité el resto del párrafo pues no entendí nada.}
 
-\subsection{Monolayers GRIN Porous Silicon }
-\begin{figure}
-	\centering
-	\includegraphics[width=\textwidth]{Images/celdan2}
-	\caption{Mechanical 3D modeling, design of the
-            electrochemical cell where we can see the shape of a prism
-            giving the required and necessary data for the
-            experiments. The design of the cell used is $ 1,206 \ \ cm
-            ^ 2 $ (this is the area attacked in the process), the area
-            attacked is rectangular ($ 0.62 \ \ cm \times 2.03 \ \ cm
-            $) and a height ( $ 1.2 \ \ cm $) a) Complete cell b) Cell
-            without top cover and c) Top view}
-	\label{fig:por1}
-\end{figure}
-We can see in Fig. \ref{fig:por1}, 3D modeling the mechanical design
-for the electrochemical cell  better optimization in manufacturing
-silicon pores where we can see the shape of a prism giving the
-required data. The design of the cell used is $ 1,206 \ \ cm ^ 2 $
-(this is the area attacked in the process), the area attacked is
-rectangular ($ 0.62 \ \ cm \times 2.03 \ \ cm $) and a height ( $ 1.2
-\ \ cm $), all this in order to optimize our experiments adjusted to
-all the needs that this required.
+\subsection{PS GRIN Single Layer }
+\label{sec:ps-grin-single}
+\notaL{Quité la figura pues no añade nada}
+\notaL{Quité la descripción, pues está arriba}
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Images/SPgrin51}
-  \caption{a) Silicon sample attacked with an electrolytic
-      mixture of aqueous hydrofluoric acid (HF) (concentration:
-      48 $ \% $  wt), glycerol (purity: 99.8 $ \% $  wt) and
-      ethanol (purity: 99.9 $ \% $  wt ) in 3: 7: 1 volume
-      ratio, respectively. Obtaining a monolayer of porous
-      Silicon with GRIN G1 with an initial current of G1 (5 mA),
-      with an attack time of 600s. Three different locations are
-      considered, denoted as follows, A (0.3cm) and B (0.8cm)
-      and C (1.7cm). b) Reflectance measurements to know the
-      optical properties at each of the points and the
-      adjustments that were produced by means of the equation
-      \ref{Eq:ECMR}. c) We have the indices of refraction of the
-      complex porous silicon GRIN, where we calculate the real
-      and imaginary part by means of the equation
-      \ref{Eq:Brugg}. for different porosities at each point, A
-      (P = 0.44), B (P = 0.42) and C (P = 0.40) }
+  \caption{(a)  Sample $G_1$ prepared as described in
+     \ref{sec:fabrication-ps-grin} using a current $I=5 \text{mA}$
+    during a time $t=600\text{s}$. We indicate three regions $A$,
+    $B$, and $C$ centered at positions at positions,
+    $x_A=0.3\text{cm}$ \notaL{Atrás habías dicho que era justo abajo
+      del electrodo. ¿Es cierto o no? ¿Dónde estaba el electrodo? ¿Qué
+    altura tenía el agua? ¿Igual que en la sección previa?}, $x_B=0.8\text{cm}$ and
+    $x_C=1.7\text{cm}$. \notaL{¿Cuánto vale $y$?} (b) Reflectance
+    spectra measured at the center of regions $A$, $B$, and $C$ and fit
+    using Eq. \eqref{Eq:ECMR}.\notaL{¿Cuáles parámetros se ajustaron y
+      cuáles se midieron independientemente}\notaL{Para que no se vean
+      tan chicas las figuras, quita las R's y los números en el segundo
+      renglon, excepto en el extremo izquierdo, y pega las tres
+      figuras una tras la otra. Haz lo mismo en el tercer renglón,
+      quitando dos de los letreros Refractive index, pero antes
+      asegúrate de usar la misma escala en las tres figuras} (c)
+    Corresponding complex indices of refraction $n+ik$ obtained from
+    Eq. \eqref{Eq:Brugg} using the fitted porosities $p_A=0.44$,
+    $p_B=0.42$, and $p_C= 0.40$ at the chosen positions. \notaL{En las
+      figuras escribe A, B y C en lugar de
+      Point A, Point B y Point C. Escribe $p_A$, $p_B$ y $p_C$ en lugar
+      de la palabra Porosity. Escribe $n$ y $k$ nada más, sin la
+      palabra Real ni Imaginary. Usa Theory en lugar de
+      Simulation. Usa línea a trazos para la parte
+      imaginaria. Alínea todos los letreros. En inglés, los rótulos
+      a), b) y c) se escriben como (a), (b) y (c), aunque creo que se
+      pueden eliminar (porque además, no los alineaste bien). }
+  \notaL{A ojo no se notan las diferencias en epsilon. Mejor junta las
+  tres partes reales en una sola gráfica y las tres partes imaginarias
+en otra y ponerlas una al lado de la otra.}}
   \label{fig:DR3}
 \end{figure}
- The Fig. \ref{fig:DR3} a) three locations at different points are
- considered, denoted as follows, $ A (0.3 \ \ cm) $ and $ B (0.8 \ \
- cm) $ and $ C (1.7 \ \ cm) $, from the sample of PS GRIN $ G1 (I = 5
- mA) $. Also the Fig. \ref{fig:DR3}. b), we have the reflectance
- measurements to know the optical properties and the adjustments that
- were produced by means of the equation \ref{Eq:ECMR}. In the
- Fig. \ref{fig:DR3} c) are indices of refraction of the porous silicon
- complex GRIN, where we calculate the real and imaginary part by means
- of Eq. \ref{Eq:Brugg} for different porosities at each point, $ A (P
- = 0.44) $, $ B (P = 0.42) $ and $ C (P = 0.40) $. Location $ A $ is
- closest to the electrode, while location $ C $ is furthest to the
- other end of the sample. Since the current density is applied from
- one end, the field lines attack the sample laterally to the silicon
- wafer, in the present configuration, an assembly was made based on
- the simulated data shown in Fig. \ref{fig:DR1} the experimental part
- was taken a platinum electrode covering its surface, leaving only a
- very small area, as if it were a tip. The electrochemical reaction
- takes place when we apply currents from an anode end (electrode tip)
- to the silicon substrate (resistivity $ 0.002 - 0.005  \Omega \cdot
- cm $), through an electrolyte forming a current circuit. The
- reflectance spectra of the newly recorded G1 samples measured at
- points $ A (0.3 \ \ cm) $ and $ B (0.8 \ \ cm) $ and $ C (1.7 \ \ cm)
- $ are presented in Fig. \ref{fig:DR3} b), a numerical reflectivity
- adjustment was performed using the transfer matrix method for the
- case of a porous monolayer in Si. It should be noted that the
- adjustment made was considered a spectral range of the wavelength of
- the experimental reflectivity spectra for which the silicon can be
- considered the complex index and thus find the refractive index of
- the complex porous silicon with the purpose of determining the
- porosity and the experimental physical thickness (nm) by means of the
- SEM. The formation of PS GRIN in the thickness occurs due to the
- variation in the concentration of the voids available at the Si
- electrolyte interface, therefore, an increase in the applied lateral
- current density increases the dimension of the pores and their
- depth. Thus, the extent of the porous film showing a gradient that
- can be controlled from the lateral current density.
+ In Fig. \ref{fig:DR3} we show a photograph of one of our single layer PS GRIN
+ structures, $G_1$, prepared as described in
+ \ref{sec:fabrication-ps-grin} applying a current $I=5\text{mA}$ for
+ $t=600\text{s}$. We employed the same geometry as described in
+ Sec. \ref{sec:current-density} \notaL{Lo inventé. ¿Es cierto?}
+The position of electrode corresponds to the upper left side of the
+photograph. The variation of the optical properties across the
+sample is evident. We chose three positions $x_A=0.3\text{cm}$,
+$x_B=0.8\text{cm}$ and $x_C=1.7\text{cm}$ \notaL{¿valor de y?} on
+which we measured the reflectance spectra, also shown in the figure.
+We fitted the measurements using Eqs. \eqref{Eq:ECMR} and
+\eqref{Eq:Brugg} using the local porosity and the depth of the layer
+as adjustable parameters. We obtained $p_A=0.44$, $p_B=0.42$, and
+$p_C= 0.40$. \notaL{Falta decir cuáles fueron las profundidades}
+Location $A$ is
+closest to the electrode, while location $ C $ is the furthest.
+\notaL{Quité una frase sin sentido.}
+We also show in Fig. \ref{fig:DR3} the wavelength dependence of
+ the complex index of refraction corresponding to the fitted porosities.
+\notaL{Quité otra frase que no entendí, pero que me generó una duda:
+  la profundidad la ajustaste ópticamente o la mediste en SEM y luego
+  hiciste el ajuste a la reflectancia?}
+
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Images/semD11}
@@ -838,7 +828,8 @@ of the layers that are manufactured, by controlling the attack time
 for each of the chosen currents.
 
 \subsection{GRIN Porous Silicon Microcavities}
- \begin{figure}
+\label{sec:grin-porous-silicon}
+\begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{Images/MicrGrin}
 	\caption{Diagram of a microcavity of porous silicon
@@ -993,6 +984,7 @@ gradient product of our experiment.
 
 
 \section{conclusion}
+\label{sec:conclusion}
 The necessary expressions for the potential components were derived,
 finding a relationship of the tip of the counter electrode that acts
 similarly as a point charge and the current density for a geometry in
@@ -1017,6 +1009,7 @@ correspond to different calculated current densities, which correspond
 to different thicknesses, clearly seeing the lateral gradient product
 of our experiment.
 \section{Acknowledgments}
+\label{sec:acknowledgments}
 % \backmatter
 %\nocite{*}
 %\bibliographystyle{plain}
@@ -1116,37 +1109,37 @@ of our experiment.
   P. V. (2017).\textquotedblleft \emph{Tunable visibly transparent
     optics derived from porous silicon.}\textquotedblright ACS
   Photonics, 4(4), 909-914.
-  
-   
-  \bibitem{T1}Jackson, John David. \textquotedblleft 
+
+
+  \bibitem{T1}Jackson, John David. \textquotedblleft
   \emph{Classical electrodynamics.}\textquotedblright (1999): 841-842.
-  
-\bibitem{T2}Griffiths, David J. \textquotedblleft 
-\emph{Introduction to electrodynamics.}\textquotedblright 
- New Jersey: Prentice Hall, 1962.  
- 
- \bibitem{T3} Mahfoud Belhadj, Howard E. Alper, and Ronald M. Levy. \textquotedblleft 
- \emph{ Molecular dynamics simulations of water with Ewald summation 
+
+\bibitem{T2}Griffiths, David J. \textquotedblleft
+\emph{Introduction to electrodynamics.}\textquotedblright
+ New Jersey: Prentice Hall, 1962.
+
+ \bibitem{T3} Mahfoud Belhadj, Howard E. Alper, and Ronald M. Levy. \textquotedblleft
+ \emph{ Molecular dynamics simulations of water with Ewald summation
  	for the long range electrostatic interactions.}\textquotedblright Chemical
   Physics Letters, 179(1-2):13–20, 1991.
-   \bibitem{T4}A. Bródka.\textquotedblleft 
+   \bibitem{T4}A. Bródka.\textquotedblleft
    \emph{ Ewald summation method with electrostatic layer correction for
-  interactions of point dipoles in slab geometry.}\textquotedblright Chemical 
+  interactions of point dipoles in slab geometry.}\textquotedblright Chemical
 Physics Letters, 400(1):62–67, December 2004.
- \bibitem{T5} A. Grzybowski, E. Gwóźdź, and A. Bródka.\textquotedblleft 
+ \bibitem{T5} A. Grzybowski, E. Gwóźdź, and A. Bródka.\textquotedblleft
  \emph{ Ewald summation of electrostatic interactions in molecular dynamics
- 	 of a three-dimensional system with periodicity in two directions.}\textquotedblright 
+ 	 of a three-dimensional system with periodicity in two directions.}\textquotedblright
   Physical Review B, 61(10):6706–6712, March 2000.
-  
- \bibitem{T6} Kratzer, Peter, and Jörg Neugebauer. \textquotedblleft \emph{The basics of 
- 	electronic structure theory for periodic systems.}\textquotedblright 
+
+ \bibitem{T6} Kratzer, Peter, and Jörg Neugebauer. \textquotedblleft \emph{The basics of
+ 	electronic structure theory for periodic systems.}\textquotedblright
   Frontiers in chemistry 7 (2019).
  \bibitem{T7} Charles Kittel. \textquotedblleft \emph{Introduction to Solid State
  	 Physics.}\textquotedblright Wiley, Hoboken, NJ, 8 edition, 2005.
-  
-  
-  
-  
+
+
+
+
 \bibitem{I17} Dariani RS, Ebrahimnasab S (2014). \textquotedblleft
   \emph{Root Mean Square Roughness of Nano Porous Silicon by
     Scattering Spectra.}\textquotedblright The
