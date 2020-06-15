@@ -32,8 +32,8 @@ my $I; #corriente
 # $M; #2*$M+1=size of mask in reciprocal space
 Getopt::Long::Configure('no_ignore_case');
 GetOptions(
-    'a=f'=>\$a, 
-    'b=f'=>\$b,   
+    'a=f'=>\$a,
+    'b=f'=>\$b,
     'C=f'=>\$C,
     'X0=f'=>\$X0,
     'Y0=f'=>\$Y0,
@@ -47,7 +47,7 @@ GetOptions(
 usage("Undefined parameters") unless List::Util::all {defined $_}
 ($a, $b, $C, $X0, $Y0, $Z0, $Z, $I, $N); #, $M);
 my $A=$a*$b; #area celda
-my $u=sqrt($A); #unidades 
+my $u=sqrt($A); #unidades
 my $a1=$a/$u; # largo adimensional
 my $c=$C/$u;  # altura de liquido adimensional
 my $x0=$X0/$u;
@@ -84,8 +84,8 @@ my $Y=$y*$u;
 my $w=gpwin;
 #figura 3d Grin
 $w->plot3d({title=>["{/Time*2 a=$a cm, b=$b cm, C=$C cm, R0=($X0,$Y0,$Z0)cm, Z=$Z}",textcolor=>'"black"'],
-	   xrange=>[0,$a], yrange=>[0,$b], view=>['equal','xy'],xlabel=>["{/Times*2 a(cm)}", textcolor=>'"black"'] ,ylabel=>["{/Times*2 b (cm)}",textcolor=>'"black"'],xtics=>{font=>"Time,12"}, ytics=>{font=>"Time,12"}}, 
-	  with=>'pm3d', $X, $Y, $jR); 
+	   xrange=>[0,$a], yrange=>[0,$b], view=>['equal','xy'],xlabel=>["{/Times*2 a(cm)}", textcolor=>'"black"'] ,ylabel=>["{/Times*2 b (cm)}",textcolor=>'"black"'],xtics=>{font=>"Time,12"}, ytics=>{font=>"Time,12"}},
+	  with=>'pm3d', $X, $Y, $jR);
 
 #figura vista desde arriba
 my $gw=PDL::Graphics::Gnuplot->new();
@@ -119,8 +119,8 @@ my $N; #2N+1=number of points along each direction
 my $I; #corriente
 #my $M; #2*$M+1=size of mask in reciprocal space
 GetOptions(
-    'a=f'=>\$a, 
-    'b=f'=>\$b,   
+    'a=f'=>\$a,
+    'b=f'=>\$b,
     'C=f'=>\$C,
     'X0=f'=>\$X0,
     'Y0=f'=>\$Y0,
@@ -171,5 +171,5 @@ BEGIN {
 
 
 
-	
+
 	   # xrange=>[0,$ax], yrange=>[0,$ay], view=>['equal','xy'],xlabel=>
