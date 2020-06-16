@@ -10,6 +10,7 @@
 \newcommand{\abs}[1]{\lvert#1\rvert}
 \usepackage{xcolor}
 \newcommand{\notaL}[1]{{\color{blue}+L:#1+}}
+\newcommand{\notaC}[1]{{\color{red}+C:#1+}}
 \title{\textbf{Optimization of Porous Silicon Gradient Refractive
     Index Structures.} }
 % A comparison with computational schemes with experimental results
@@ -192,14 +193,14 @@ Within the electrolyte the current density is
   \bm j=\sigma\bm E,
 \end{equation}
 with
-$\sigma$ the conductivity, $\bm E=-\nabla\varphi$ the electric field,
-and $\varphi$ the electric potential. For a
+$\sigma$ the conductivity, $\bm E=-\nabla\phi$ the electric field,
+and $\phi$ the electric potential. For a
 stationary situation\notaL{Latex usa nabla como el nombre de
   $\nabla$}
 $\nabla\cdot \bm j = \sigma\nabla\cdot\bm E=0$. Thus, within the electrolyte,
 \begin{equation}
   \label{eq:laplace}
-\nabla^{2} \varphi=0.
+\nabla^{2} \phi=0.
 \end{equation}
 Consider now an arbitrary closed surface
 $\mathcal S$
@@ -239,12 +240,12 @@ free surface of the liquid at $z=c$. Thus, the problem to solve is Poisson's
 equation with a point charge source
 \begin{equation}
   \label{eq:poisson}
-  \nabla^2\varphi=-4\pi q_0\delta(\bm r-\bm r_0),
+  \nabla^2\phi=-4\pi q_0\delta(\bm r-\bm r_0),
 \end{equation}
 with mixed boundary conditions
 \begin{equation}
   \label{eq:ground}
-  \varphi(x,y,0)=0,
+  \phi(x,y,0)=0,
 \end{equation}
 and
 \begin{equation}
@@ -252,10 +253,7 @@ E_x(0, y ,z)= E_x(a, y ,z)=E_{{_y}}(x, 0 ,z)=E_{{_y}}(x, b
 ,z)=E_{{_z}}(x, y ,c)=0.
 \end{equation}
 This problem may be solved readily using image charge theory \cite{T1,T2}
-\notaL{\sout{ref}}. The potential within the electrolytic cell coincides the
-the field within an infinite vacuum containing the point charge
-This problem may be solved readily using image charge theory
-\notaL{ref}. The potential within the electrolytic cell coincides
+\notaL{\sout{ref}}. The potential within the electrolytic cell coincides
 within the region $0\le x\le a$, $0\le y \le b$, $0\le z\le c$
 with that an infinite fictitious empty space but for the point charge
 $q_0$ at the tip of the electrode at $\bm r_0$, and an array of its fictitious image
@@ -341,17 +339,6 @@ simple periodic lattice of charges using a fast convergent sum over the 2D
 reciprocal vectors, and then sum over the charges that form the basis
 of the 2D {\em crystal} plane and finally sum over all the
  planes \cite{T6,T7} \notaL{\sout{ref}}.
-using the Ewald summation technique \notaL{ref}, which yields two rapidly converging
-series, one in real space and another one in reciprocal space.
-Nevertheless, as we have to evaluate the potential and the field on
-the bottom of the cell to obtain the current density which attacks the
-surface of the sample, and as there are no
-real nor image charges there, we may perform a somewhat simpler planewise
-summation, where we first obtain the potential and field produced by a
-simple periodic lattice of charges using a fast convergent sum over the 2D
-reciprocal vectors, we then sum over the charges that form the basis
-of the 2D {\em crystal} plane and we finally sum over all the planes \notaL{ref}.
-
 We consider first a system made of identical unit charges
 ocuppying the positions $\bm R$ of a 2D Bravais lattice $\{\bm R\}$,
 which we will take as a rectangular lattice with lattice parameters
@@ -359,7 +346,7 @@ $2a$ and $2b$, and lying, for the time being, at the $z=0$ plane.
 The potential it produces obeys
 \begin{equation}
   \label{eq:poissonRed}
-  \nabla^2\varphi(\bm r)=-4\pi\sum_{\bm R}\delta(\bm r_\|-\bm
+  \nabla^2\phi(\bm r)=-4\pi\sum_{\bm R}\delta(\bm r_\|-\bm
   R)\delta(z)=-\frac{4\pi}{A}\sum_{\bm G}e^{i\bm G\cdot\bm r_\|}\delta(z),
 \end{equation}
 where $\bm r_\|$ is the projection of the observation position $\bm
@@ -369,16 +356,17 @@ reciprocal lattice defined through $e^{i\bm G\cdot\bm R}=1$ for all
 $\bm R$ and $\bm G$, $A=4ab$ is the area of the unit cell
 and we used the Fourier representation of the 2D
 periodically repeated delta function. We introduce a 2D Fourier representation for
-the potential \notaL{Checar consistencia entre phi y varphi en todos lados}
+the potential \notaL{\sout{Checar consistencia entre phi y varphi en todos lados}}
 \begin{equation}
   \label{eq:phifourier}
   \phi(\bm r)=\sum_{\bm G}\phi_{_{\bm G}}(z)e^{i\bm G\cdot\bm r_\|}
 \end{equation}
 where $\phi_{_{\bm G}}(z)$ is the Fourier coefficient of the potential at
 the height $z$. Substitution in Eq. \eqref{eq:poissonRed} yields the
-ordinary differential equation \notaL{El signo estaba mal. Chécalo.}
+ordinary differential equation \notaL{\sout{El signo estaba mal. Chécalo.}} \notaC{En efecto el sino 
+estaba mal yo tenia +, y es - por la ecuacion de segundo orden que sale en este caso, tenia tambien 
+derivadas parciales y son totales}
  \begin{eqnarray}
- \frac{d^2}{dz^2}\phi_{_{\bm G}}(z)-G^2\phi_{_{\bm G}}(z)=
  \frac{d^2}{dz^2}\phi_{\bm G}(z)-G^2\phi_G(z)=
    -\frac{4 \pi}{A} \delta(z),
  \end{eqnarray}
@@ -475,8 +463,8 @@ Using Eq. \eqref{Eq:J} we can correlate the local current density at
 the sample as it is prepared with its geometric and optical
 properties. For the calculation of the optical properties we use the
 well known transfer matrix method \notaL{refs}.
-\notaL{No necesitamos presentar la teoría de matrices de
-  transferencia. No hay nada original ahí.}
+\notaL{\sout{No necesitamos presentar la teoría de matrices de
+  transferencia. No hay nada original ahí.}}
 
 
 \section{Procedures}
@@ -509,17 +497,18 @@ well known transfer matrix method \notaL{refs}.
   \label{fig:DE1}
 \end{figure}
 
-\notaL{Cambié el título, pues tienes una mezcla de experimento y
-  teoría aquí}
+\notaL{\sout{Cambié el título, pues tienes una mezcla de experimento y
+  teoría aquí}}
 In Fig. \ref{fig:DE1} we show a schematic representation of our
 experimental setup to manufacture porous silicon with GRIN.
-\notaL{Cambié las figuras}
+\notaL{\sout{Cambié las figuras}}
 As dicussed above, we fabricated an electrolytic cell with the shape of a
 rectangular prism on the bottom of which we place a Si wafer which makes
-electrical contact to a gold plate \notaL{Lo inventé; de qué material es
-  el contacto bajo la muestra} which together make the anode. The
-catode consists of a platinum wire insulated except for a small region
-at its tip, which we take as a point current drain.
+electrical contact to a metal plate \notaC{\sout{gold plate} error de escritura} 
+\notaL{\sout{Lo inventé; de qué material es el contacto bajo la muestra}}
+ which together make the anode. The catode consists of a platinum wire 
+ insulated except for a small region at its tip, which we take as a 
+ point current drain.
 We also show a schematic drawing of the expected GRIN PS structures,
 with a gradient in the porosity, and in the width, density and depth
 of the resulting pores.
@@ -538,8 +527,11 @@ anodizing process, the samples were rinsed with
 ethanol (purity: 99.9 $ \% $  wt). The electrolytic cell had the shape
 of a rectangular prism as shown in Fig. \ref{fig:DE1}, with a base of
 size $0.62\text{cm}\times2.03\text{cm}$) with an uncovered sample area
-of $1.206\text{cm}^2$. \notaL{¿Cuáles fueron las coordenadas del
-  electrodo?} We manufactured samples using a current $I=5\text{mA}$
+of $1.206\text{cm}^2$. \notaC{Estan son las coordenadas del electrodo} The coordinates the tip of the
+electrode at $\bm
+r_0=(x_0,y_0,z_0)=(0.1\text{cm},0.3\text{cm},0.9\text{cm})$
+\notaL{\sout{¿Cuáles fueron las coordenadas del
+  electrodo?}} We manufactured samples using a current $I=5\text{mA}$
 which yielded current densities in the range
 $j_\perp=2.5-6.0\text{mA}/\text{cm}^2$ and other smples using a larger
 current $I=40\text{mA}$ corresponding to current densities in the
@@ -559,30 +551,32 @@ views (Fig. \ref{fig:DE1}).
 We measured the reflectivity spectra using a {\em Perkin Elmer Lambda 950}
 UV-Vis-NIR spectrophotometer. For iterpretation of the data in the
 case of a single PS layer we used
-the standard formula \notaL{referencia} for three media air (0), PS
+the standard formula \cite{T8,T9} \notaL{\sout{referencia}} for three media air (0), PS
 (1) and c-Si (2),
  \begin{eqnarray}\label{Eq:ECMR}
    R=\frac{r _ {_ {01}}r _ {_ {12}} e^{2i\delta}}{1+r _ {_ {01}}r _ {_ {12}} e^{2i\delta}}
 \end{eqnarray}
 where $ r_{01} $ y $ r_{12}$ are the Fresnel reflectance
-coefficients at the air/PS and PS/c-Si interfaces \notaL{referencias}
+coefficients at the air/PS and PS/c-Si interfaces \cite{T10,T11}\notaL{\sout{referencias}}
 and $\delta=k_{PS}^\perp d$, where $k_{PS}^\perp$ is
 the component of the wavevector perpendicular to the surface within
 the porous layer of width $d$.
-\notaL{Me tienes que explicar dónde y cómo usaste lo que mencionas en
+\notaL{\sout{Me tienes que explicar dónde y cómo usaste lo que mencionas en
   la siguiente frase:
 The advantage of this method is
 the possibility of taking into account the interface roughness effect
 by including the Davies-Bennett factor in the coefficient of each
-Fresnel \cite{I17, I18, I19}, which represents the roughness of a
-Gaussian distribution.}
+Fresnel cite{I17, I18, I19}, which represents the roughness of a
+Gaussian distribution.}} \notaC{No tenia ninguna relevancia en este 
+punto de la discusión, y si fue una equivocación dejarla hasta el 
+final}
 
 \subsection{Refraction Index of PS GRIN Single Layers}
 \label{sec:refraction-index-ps}
 The local refractive index $n_{PS}$ of the PS layer was calculated from its
 porosity $p$ through
 Bruggeman's effective medium theory \cite{I20} \notaL{Elegir y checar:
-  varepsilon o epsilon para funciones dieléctricas}
+  $\varepsilon o \epsilon$ para funciones dieléctricas}
 \begin{eqnarray}\label{Eq:Brugg}
  p\frac{1-\varepsilon_{PS}} {1+\varepsilon_{PS}} + (1-p)
   \frac{\varepsilon_{\text{Si}} - \varepsilon_{PS}}
@@ -603,19 +597,20 @@ $n_id_i=\frac{\lambda_c}{4}$ at a given design
 wavelength $\lambda_c$ and at a position $A$ (Fig. \ref{fig:DE1} which
 we chose as that directly below the point-like electrode. The defect
 was chosen as a half-wavelength low index layer of width $d_d$ such that
-$n_Ld_L=\lambda_c/2$, and the MC has the
-following sequence: $(HL)_6HH(LH )_6$. \notaL{Hay algo mal. La
+$n_Hd_H=\lambda_c/2$ \notaC{$n_Ld_L=\lambda_c/2$ error y
+ descuido de escritura.} and the MC has the
+following sequence: $(HL)_6HH(LH )_6$. \notaL{\sout{Hay algo mal. La
   película de $\lambda/2$ fue de alto o de bajo índice? En una parte
   dices una cosa y en otra otra. ¿Será $(HL)_jHLLH(LH)_6$? ¿O será
-  $(LH)_6LL(HL)_6$? ¡Muy descuidado!}
+  $(LH)_6LL(HL)_6$? ¡Muy descuidado!}}
 We chose $\lambda_c= 0.67 \mu\text{m}$. For the high index layers we
 chose a current $I_H=5\text{mA}$ which corresponded to a current density
 $j_{HA\perp}= 6\text{mA}/\text{cm}^2$ below the tip \notaL{checar}, and yielded
-$n_H =2.6$, corresponding to a porosity \notaL{P mayúscula
-  es porosidad, o p minúscula. Checar consistencia} $P_H =0.46$, and a
+$n_H =2.6$, corresponding to a porosity \notaL{\sout{P mayúscula
+  es porosidad, o p minúscula. Checar consistencia}} $p_H =0.46$, and a
 width $d_H=0.066 \mu\text{m}$, which required an attack time of
 $t_H=35 \text{s}$. The corresponding parameters for the low density
-layers were $I_L=38\text{mA}$, $j_{LA\perp}=50\text{mA}/\text{cm}^2$, $n_L= 1.4$,  $P_L =0.75$,
+layers were $I_L=38\text{mA}$, $j_{LA\perp}=50\text{mA}/\text{cm}^2$, $n_L= 1.4$,  $p_L =0.75$,
 $d_L=0.117 \mu \text{m}$, and $t_L=11 \text{s}$. For the rest of the
 sample the current density, porosity, index of refraction and width
 varied, yielding a GRIN MC.
@@ -650,17 +645,21 @@ Eq. \eqref{Eq:J} at the surface of the sample for the cell we built
 $a=2.03\text{cm}$ and width $b = 0.62\text{cm}$, the height of the
 solution was taken as $c=1\text{cm}$ and we set the tip of the
 electrode at $\bm
-r_0=(x_0,y_0,z_0)=(0.2\text{cm},0.4\text{cm},0.96\text{cm})$
-\notaL{Descuidado. En la figura dice 0.98, no 0.96}.
-\notaL{¿Por qué usaste estos valores?}
-\notaL{Esto no es interesante: the programming with the
-  PERL PDL package and corresponding graph in gnuplot.}
-\notaL{¿Qué significa esto?:We optimize the
+r_0=(x_0,y_0,z_0)=(0.1\text{cm},0.3\text{cm},0.9\text{cm})$ \notaC{ya lo corregi 
+$0.1\text{cm},0.3\text{cm},0.9\text{cm})$ }.
+\notaL{\sout{Descuidado. En la figura dice 0.98, no 0.96}}.
+\notaL{\sout{¿Por qué usaste estos valores?}}
+\notaL{\sout{Esto no es interesante: the programming with the
+  PERL PDL package and corresponding graph in gnuplot.}}
+\notaL{\sout{¿Qué significa esto?:We optimize the
 appropriate values so that our current density adequately attacks
-crystalline silicon, giving the gradient effect.}
+crystalline silicon, giving the gradient effect.}} \notaC{Yo quise volver a 
+reafirmar algo, pero se pierde el sentido real de la frease:"optimizamos los
+valores apropiados de fabricación para que nuestra densidad actual, atacará
+silicio cristalino, dando el efecto gradiente al silicio poroso"}
 For these parameters we obtained $ j_\perp/I\sim
 0.5-1.2\text{cm}^{-2}$
-\notaL{Quité el resto del párrafo pues no entendí nada.}
+\notaL{\sout{Quité el resto del párrafo pues no entendí nada.}}
 
 \subsection{PS GRIN Single Layer }
 \label{sec:ps-grin-single}
@@ -698,7 +697,7 @@ For these parameters we obtained $ j_\perp/I\sim
       pueden eliminar (porque además, no los alineaste bien). }
   \notaL{A ojo no se notan las diferencias en epsilon. Mejor junta las
   tres partes reales en una sola gráfica y las tres partes imaginarias
-en otra y ponerlas una al lado de la otra.}}
+en otra y ponerlas una al lado de la otra.}} 
   \label{fig:DR3}
 \end{figure}
  In Fig. \ref{fig:DR3} we show a photograph of one of our single layer PS GRIN
@@ -714,15 +713,21 @@ which we measured the reflectance spectra, also shown in the figure.
 We fitted the measurements using Eqs. \eqref{Eq:ECMR} and
 \eqref{Eq:Brugg} using the local porosity and the depth of the layer
 as adjustable parameters. We obtained $p_A=0.44$, $p_B=0.42$, and
-$p_C= 0.40$. \notaL{Falta decir cuáles fueron las profundidades}
+$p_C= 0.40$. The depth $ d_A= 1320nm $, $ d_B= 997nm $ and $ d_C= 605nm $ 
+respectively. \notaC{Las profundidades $ d_A= 1320nm $, $ d_B= 997nm $ 
+and $ d_C= 605nm $ }
+\notaL{\sout{Falta decir cuáles fueron las profundidades}}
 Location $A$ is
 closest to the electrode, while location $ C $ is the furthest.
 \notaL{Quité una frase sin sentido.}
 We also show in Fig. \ref{fig:DR3} the wavelength dependence of
  the complex index of refraction corresponding to the fitted porosities.
-\notaL{Quité otra frase que no entendí, pero que me generó una duda:
+\notaL{\sout{Quité otra frase que no entendí, pero que me generó una duda:
   la profundidad la ajustaste ópticamente o la mediste en SEM y luego
-  hiciste el ajuste a la reflectancia?}
+  hiciste el ajuste a la reflectancia?}} \notaC{Esta parte, siempre se midio la
+  profundida en SEM, por eso me costo poder ajustar el espectro de reflactacia
+  en un primer inicio, hasta que coloque la ecuacion de de fresnel
+  para una monopelicula.}
 
 \begin{figure}
   \centering
@@ -907,7 +912,7 @@ below the tip counter-electrode.
     C(L) & 0.54 & 2.302 & 0.001 & 0.64 & 24 & 11 \\
     \hline
   \end{tabular}
-  \caption{ \emph{We have different points denoted as follows, $ A
+  \caption{We have different points denoted as follows, $ A
       (0.3 \ \ cm) $ and $ B (0.8 \ \ cm) $ and $ C (1.2 \ \ cm) $,
       from the sample of a Porous Silicon Microcavity GRIN
       (PSMCGRIN) $ GMC $. Alternate layers of high refractive index
@@ -916,7 +921,7 @@ below the tip counter-electrode.
       PSMCGRIN were considered from the experimental and theoretical
       values that were obtained for the porosity ($ P =
       0.3J^{0.24}$). And we could obtain the attack time with the
-      relation of $ V = 0.53J ^ {0.79} $ where $ t = d / V $.}}
+      relation of $ V = 0.53J ^ {0.79} $ where $ t = d / V $.}
 	\label{tabla:1}
 \end{table}
 In Fig. \ref{fig:MCGRIN3} a) Three locations at different points are
@@ -1137,6 +1142,17 @@ Physics Letters, 400(1):62–67, December 2004.
  \bibitem{T7} Charles Kittel. \textquotedblleft \emph{Introduction to Solid State
  	 Physics.}\textquotedblright Wiley, Hoboken, NJ, 8 edition, 2005.
 
+ \bibitem{T8}Born, Max, and Emil Wolf. \textquotedblleft \emph{Basic properties of 
+   	the electromagnetic field.}\textquotedblright Principles of optics 44 (1980).
+  \bibitem{T9} Stenzel, Olaf. \textquotedblleft \emph{ The physics of thin film 
+  	optical spectra.}\textquotedblright Springer, 2015.
+  	
+  \bibitem{T10}Born, Max, and Emil Wolf.\textquotedblleft \emph{ Principles of optics: 
+  	electromagnetic theory of propagation, interference
+  	 and diffraction of light.}\textquotedblright Elsevier, 2013.
+  \bibitem{T11} Sattler, Klaus D., ed. \textquotedblleft \emph{ Silicon Nanomaterials 
+  	Sourcebook: Low-Dimensional Structures, Quantum Dots, and Nanowires }\textquotedblright,
+   Volume One. CRC Press, 2017.
 
 
 
