@@ -830,7 +830,8 @@ fabrication of PS photonic structures, GRIN or otherwise.
       horizontales sean horizontales.}
     PS GRIN microcavity made of layers of high (H) and low (L)
     refractive index $n_H$ and $n_L$ and widths $d_H$ and $d_L$
-    arranged in the sequence $(HL)_NHH(HL)_N$. Both the index of
+    arranged in the sequence $(HL)_NHH(HL)_N$. \notaL{CUánto vale $N$?
+    Antes habías dicho que 6, pero en la figura 12 parece otra cosa} Both the index of
     refraction and the widths depend on position along the
     sample and are chosen to obey a quarter wavelength
     condition at a given position $A$ and wavelength $\lambda_c$.
@@ -906,107 +907,120 @@ $d_L=0.117\mu\text{m}$, $t_L=11\text{s}$.
         tabla?}\notaL{quité digitos a n. quité k pues es chiquita,
         ¿no? quité los tiempos pues son los mismos. Quité las
         posiciones pues están descritas antes. Añade una columna
-        con las profundidades $d_H$ y $d_L$. }}
+        con las profundidades $d_H$ y $d_L$. }\notaL{De los rótulos de
+      la figura quita las palabras Point. Cambia simulation por Theory.}
 	\label{tabla:1}
 \end{table}
 In Fig. \ref{fig:MCGRIN3} we show a photograph of a PS GRIN MC
 sample, which displays a color that shifts towards the blue when we
 move towards its right, that is, away from where the electrode was
-positioned. In the figure we indicate three points with $x$ coordinate
-$x_A=0.3\text{cm)$ , $x_B=0.8\text{cm}$, and $x_C=1.2\text{cm}$.
-  \notaL{***Aquí voy***}
-  Likewise,
-Fig. \ref{fig:DR3} b), we have the reflectance measurements to know
-the optical properties with the proposed simulation. We can see how
-from an experimental setup we have some important results as a result
-of a whole calibration curve suitable for making GRIN porous
-silicon. The refractive index of the Porous Silicon Microcavities GRIN
-were considered the experimental and theoretical values obtained for
-the porosity and the thicknesses shown in Table 1. The porous silicon
-microcavities (MCSP) with refractive index with gradient (GRIN), were
-manufactured with different current densities ranging from $ 6 \ \ mA
-/ cm ^ 2 $ to $ 2.5 \ \ mA / cm ^ 2 $ for a current of $ 5 \ \ mA $,
-for a $t_H=35 s $, with a high refractive index $n_H \sim$ $
-2,661$ to $ 2,808$ and porosities of $P_H \sim$ $ 0.45 $ to $
-0.39 $. Also for $ 44 \ \ mA /cm^2 $ to $ 24 \ \ mA / cm^2 $, current
-of $ 38 \ \ mA $, using $t_H=11 s$  for low refractive index
-$n_L\sim$ $ 1,448 $ to $ 2,267 $ and with porosities of
-$P_H \sim$ $0.75 $ to $ 0.64 $. The porosity was calculated with
-the calibration curve exposed in the ($ P = 0.3J^{0.24} $). And the
-attack time could be obtained with the relation of $ V = 0.53J^{0.79}
-$ where $ t = d / V $ and the refractive index using the Bruggeman
-formula. For theoretical values, we use complex refractive indices as
-free parameters to fit the experimental refractive spectra (Section
-4.2).
+positioned. In the figure we indicate three points with $x$ coordinates
+$x_A=0.3\text{cm}$,  $x_B=0.8\text{cm}$, and $x_C=1.2\text{cm}$
+on we measured the reflectance spectra, also shown in the figure.
+\notaL{No dices cómo hiciste las curvas teóricas} The spectra have the
+expected shape: a high reflectance plateau corresponding to the
+photonic band gap of the Bragg mirror, with a deep narrow minimum due
+to the Fabry-Perot resonance of the cavity. We also present the
+calculated spectra. To that end, we calculated the current density
+using the theory developed in Sec. \ref{sec:calc-curr-dens}, i.e., by
+scaling Fig. \ref{fig:DR1} with the total current $I_H$ and $I_L$ used
+to fabricate each layer. From the current densities we obtained the
+corresponding etching rates and the porosities using
+Eqs.~\eqref{eq:etch} and  \eqref{eq:poros}, and from the, the
+thickness of each layer, the index of refraction
+(Eq. \eqref{Eq:Brugg}) and the reflectance,using standard transfer
+matrix theory \notaL{ref}. Notice the good agreement between theory
+and experiment. \notaL{No me lo creo. Me sospecho que más bien,
+  ajustaste el experimento no sé con qué parámetro. Explícame cómo
+  hiciste el cálculo.} The parameters used are shown in Table \ref{tabla:1}.
+\notaL{No entiendo qué quisiste decir aquí: For theoretical values, we
+  use complex refractive indices as free parameters to fit the
+  experimental refractive spectra (Section 4.2).} The band-gap, the
+resonance and the oscillations due to multiple reflections in the
+region of transparency are similar, though the experimental spectra is
+more rounded and the central resonance is wider. This might be due to
+the roughness of the interfaces, which would lead to some scattering
+whose effects are similar to those of an additional absorption
+\ref{cita el artículo en prensa de Guille y mío}.\notaL{Checar que no
+  diga mentiras arriba. El ajuste es demasiado bueno, pero no sé cómo
+  se hizo. Hay que explicar qué significan y de dónde salieron las
+  $\lambda_c$ de la tabla. }
+
  \begin{figure}
    \centering
    \includegraphics[width=\textwidth]{Images/MCGRINSEM}
-   \caption{SEM image of the cross section profile of the
-       microcavities with GRIN. The measured thicknesses of the
-       complete multi-film structures showed good agreement with the
-       simulations taken from $ V = 0.53J ^ {0.79} $ where $d_j=Vt_j$
-       ($j=H,L$), which are the thicknesses of each of the monolayer
-       of the porous silicon microcavity GRIN at the measurement
-       points and the total thickness we find it as $d_i =
-       (N_{Hi}d_{Hi})+(N_{Li}d_{Li}) + (2d_{Hi})$
-       defining $ i = $ A, B, C. Which resulted in (measured /
-       simulation) $ 2.25 / 2.31 \ \ \mu m $ (for structure at Point
-       A), $ 2.17 / 2.08 \ \ \mu m $ (for structure at point B) and $
-       1.87 / 1.65 \ \ \mu m $ (for structure at point C)}
-	\label{fig:MCGRIN4}
-\end{figure}
+   \caption{Cross section SEM images corresponding to the positions
+     $A$, $B$, and $C$ of the PS GRIN MC shown in
+     Fig. \ref{fig:MCGRIN3}. The total thickness of the system at
+     different positions, $d_A=2.25\mu\text{m}$,
+     $d_B=2.17\mu\text{m}$, and $d_C=1.87\mu\text{m}$ are
+     indicated. \notaL{Porque se ve una capa más ancha a la izquierda?
+       ¿Por qué el número de capas arriba no es igual que abajo? ¿Por
+       qué el número de capas no es el mismo en las distintas fotos?
+       ¿Por qué no es 6 como dice el texto en la
+       Sec. \ref{sec:fabrication-grin-ps}?}
+     }
+   \label{fig:MCGRIN4}
+ \end{figure}
+In Fig. \ref{fig:MCGRIN4} we show SEM cross-sectional images of
+the PS GRIN MC sample. We can appreciate a relatively small interface
+roughness and a clear contrast between the high and low porosity
+layers. The structure of the microcavity is also visible, with a
+central layer of twice the thickness of the corresponding layers
+within the Bragg mirrors. The gradient of the thickness is also
+evident, as $d_A>d_B>d_C$, with $d_A=2.25\mu\text{m}$,
+$d_B=2.17\mu\text{m}$, and $d_C=1.87\mu\text{m}$ the total thickness
+of the structure measured at the positions $A$, $B$, and $C$.
+The measured thickness are in good agreement with those computed from
+the current densities and the etching times $N(d_H+d_L)+2 d_H$ using
+Eq. \eqref{eq:etch}, where $N$ is the number of pairs of layers in the
+Bragg mirrors, which yield $d_A=2.31\mu\text{m}$,
+$d_B=2.08\mu\text{m}$, and $d_C=1.65\mu\text{m}$. \notaL{Por qué una
+  te dio más grande y las otras más chicas? Aquí tienes que decir
+  cuánto vale $N$ y no has dicho cuánto valieron $d_L$ y $d_H$}
 
-For the Fig. \ref{fig:MCGRIN4} shows the SEM cross-sectional images of
-the PS samples used in this work. Relatively small interface
-roughness and a clear contrast between the high and low porosity of
-the microcavity measured at different points (A, B and C), showing the
-change in thickness in each of these. The measured thicknesses of the
-complete multi-film structures showed good agreement with the
-simulations taken from $ V = 0.53J^{0.79} $ where $d_j=Vt_j$
-($j=H,L$), which are the thicknesses of each of the monolayer of the
-porous silicon microcavity GRIN at the measurement points and the
-total thickness we find it as $d_i =
-(N_{Hi}d_{Hi})+(N_{Li}d_{Li}) + (2d_{Hi})$ defining $ i
-= $ A, B, C. Which resulted in (measured / simulation) $ 2.25 / 2.31 \
-\ \mu m $ (for structure at Point A), $ 2.17 / 2.08 \ \ \mu m $ (for
-structure at point B) and $ 1.87 / 1.65 \ \ \mu m $ (for structure at
-point C).
-Being able to say that for each measurement point corresponds
-different calculated current densities, which correspond to different
-thicknesses at the end of manufacturing, clearly seeing the lateral
-gradient product of our experiment.
-
-\section{conclusion}
+\section{Conclusions}
 \label{sec:conclusion}
-The necessary expressions for the potential components were derived,
-finding a relationship of the tip of the counter electrode that acts
-similarly as a point charge and the current density for a geometry in
-a rectangular electrolytic box and we solve the electrostatic
-equations with suitable boundary conditions. Resulting in an
-electrostatic model for  Photonics crystals with a refractive index
-with gradient (EMPCGRIN).
-It is the first time that the formalism mentioned here has been
-applied to find the current density to design porous silicon. The
-shape of the electrode, the area of the cell produces a visible
-decrease in the size and density of the pores. Additionally,
-optimizing the structural properties for a single structure we could
-have a gradient with different depths, reflactances at differents
-measurement points. In this way, we were able to simulate the direct
-relationship of the attack speed with the current density at the
-points  the samples of interest. At the same time, we developed a
-characterization between porosity, refractive indices of porous
-silicon, with the different current densities. And in the end we were
-able to design and characterize Porous Silicon microcavities with
-refractive indices with gradients, which for each measurement point
-correspond to different calculated current densities, which correspond
-to different thicknesses, clearly seeing the lateral gradient product
-of our experiment.
-\section{Acknowledgments}
+By choosing a simple geometry for our electrochemical cell, namely, a
+rectangular prism, and employing a point-like electrode, we were able
+to derive a simplel expression for the calculation of the electric current
+density along the surface of a Si sample. The expression was obtained
+by using image charge theory and a planewise summation of Coulomb
+potentials in reciprocal space, and it is made up of
+a rapidly converging sum of analytical terms. This allowed us to
+characterize the porosity of a PS layer and the etching
+rate for different values of the etching current density by making
+optical experiments on just a
+few samples. We illustrated the procedure with two samples each of which we
+measured at three different positions. These calibration curves are
+very useful as the etching rate for the formation of porous silicon
+and the resulting porosity is very sensitive to the growth conditions
+and to the properties of the substrate, such as its doping. Thus,
+there are no universal calibration curves. Having obtained these calibration curves
+and being able to compute the current density at different positions
+allows the prediction of the properties of GRIN structures. We
+illustrated this by desigining a PS GRIN microcavity tuned at one
+position to a given wavelength. We found a good agreement between its
+measured reflectance spectra at different points with the spectra
+calculated from the values of the expected local current
+density using the calibration curves. We also found good agreement
+between the measured and the expected geometry of the system. These
+results show that the use of a simple electrolytic cell and our
+computational procedure does allow the accurate prediction of the
+optical properties of GRIN structures, and thus we believe it will
+prove helpful for the design fabrication and characterization of novel
+devices based on PS GRIN systems.
+
+\section*{Acknowledgments}
 \label{sec:acknowledgments}
+WLM acknowledges the support of DGAPA-UNAM under grant IN111119.
 % \backmatter
 %\nocite{*}
 %\bibliographystyle{plain}
 %\bibliography{bibliografía.bib} %Aquí ponen el nombre del archivo .bib
+\notaL{Manda toda la bibliografía a un archivo .bib}
+\notaL{Cuando esté listo, quiero que me expliques por qué incluiste
+  cada uno de los artículos citados}
 \bibliographystyle{unsrt}
 \begin{thebibliography}{X}
   % forma de biblio es MLA
