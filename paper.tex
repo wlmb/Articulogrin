@@ -784,7 +784,16 @@ Fig. \ref{fig:Indr1}.\notaL{\ldots Apenas aquí dijiste cuál fue el
   tiempo de ataque de la muestra dos: relating to depth and time ($
   200 \ \ s $ ). ¿Es correcto este tiempo? Ponlo en su lugar}
 We fitted the data points with simple power laws and found
-$v=0.53j_\perp^{0.79}$ and $p=0.3j_\perp^{0.24}$, where $v$ is
+\begin{equation}
+  \label{eq:etch}
+  v=0.53j_\perp^{0.79}
+\end{equation}
+and
+\begin{equation}
+  \label{eq:poros}
+  p=0.3j_\perp^{0.24},
+\end{equation}
+where $v$ is
 expressed in nm/s, $p$ is dimensionless and $j_\perp$ is expressed as
 mA/cm$^2$. The corresponding correlation coefficients are $r_v^2=0.993$
 and $r_p^2=0.989$. \notaL{Digresión teórica. El producto $pv$ es
@@ -804,101 +813,109 @@ different positions along just a few PS GRIN samples. Thus, it is much easier
 and faster to obtain calibration curves which are useful in the
 fabrication of PS photonic structures, GRIN or otherwise.
 
-\subsection{GRIN Porous Silicon Microcavities}
+\subsection{PS GRIN Microcavities}
 \label{sec:grin-porous-silicon}
 \begin{figure}
-	\centering
-	\includegraphics[width=\textwidth]{Images/MicrGrin}
-	\caption{Diagram of a microcavity of porous silicon
-            GRIN. Alternate layers are obtained of high (H) refractive
-            index $n_{Hi}$ and low (L) refractive index
-            $n_{Li}$, where $N_H$ is the number of layers for
-            $n_{Hi}$ and $N_L$ is the number of layers for
-            $n_{Li}$. Then,  $d_{Hi}$ is the monolayer thickness
-            of  $n_{Hi}$ at that measurement point and $d_{Li}$
-            is the monolayer thickness of $n_{Hi}$ at that
-            measurement point. Therefore,  $d_i$ is the total
-            thickness calculated for each of the measurements,
-            defining a i = $ A, B, C$. Having the following
-            relationship $d_i =(N_{Hi}d_{Hi})+(N_{Li}d_{Li}) +
-            (2d_{Hi})$. }
-	\label{fig:MCGRIN0}
+  \centering
+  \includegraphics[width=\textwidth]{Images/MicrGrin}
+  \caption{\notaL{Está bonita la figura, pero tiene errores. La
+      superficie del electrolito y la superficie de la muestra
+      deben ser ambas horizontales. Cambia la fuente por fuente
+      de corriente. La punta del electrodo no debe ser una
+      bola. Quita todo lo que está abajo del sustrato. Mejor pon
+      solamente una H en alguna región amarilla y una L en
+      alguna región azul. El electrolito tiene gotas o
+      burbujas. Tal vez sea mejor ponerle un color uniforme. Quita los
+      anchos totales, pues no creo que nos sean útiles. Haz que los cables
+      horizontales sean horizontales.}
+    PS GRIN microcavity made of layers of high (H) and low (L)
+    refractive index $n_H$ and $n_L$ and widths $d_H$ and $d_L$
+    arranged in the sequence $(HL)_NHH(HL)_N$. Both the index of
+    refraction and the widths depend on position along the
+    sample and are chosen to obey a quarter wavelength
+    condition at a given position $A$ and wavelength $\lambda_c$.
+  }
+  \label{fig:MCGRIN0}
 \end{figure}
-The Fig. \ref{fig:MCGRIN0} the scheme of  a initially proposed lateral
-gradient for monolayers should be shown in section 4.2, where we
-designed an electolytic cell suitable for our experiments and giving
-us the expected results of the simulation in section 4.1. Now our
-purpose is to manufacture more complex photonic structures such as the
-Porous silicon microcavities GRIN, taking into account that we start
-from having a tip electrode almost on the surface and by making a
-variation of currents we can achieve the effect of alternating the
-layers. Alternate layers are obtained of high (H) refractive index
-$n_{Hi}$ and low (L) refractive index $n_{Li}$, where $N_{H}$
-is the number of layers for  $n_{Hi}$ and $N_L$ is the number
-of layers for $n_{Li}$. Then,  $d_{Hi}$ is the monolayer
-thickness of  $n_{Hi}$ at that measurement point and $d_{Li}$ is
-the monolayer thickness of $n_{Hi}$ at that measurement
-point. Therefore,  $d_i$ is the total thickness calculated for
-each of the measurements, defining a i = $ A, B, C$. Having the
-following relationship $d_i =
-(N_{Hi}d_{Hi})+(N_{Li}d_{Li}) + (2d_{Hi})$.
-Initial data for conventional design we use  $\lambda_c= 0.67 \ \
-\mu m$, $n_H =2.6$, $P_H =0.46$, $d_H=0.066 \ \ \mu m
-$, $t_H=35 s  $ y para  $n_L= 1.4$,  $P_L =0.75$,
-$d_L=0.117 \ \ \mu m  $, $t_L=11 s  $. All these data are
-for the point $ 0 $ which is located at one end of the sample just
-below the tip counter-electrode.
+
+As a simple application of our preparation and calibration methods, we
+prepare a PS GRIN microcavity (MC), as illustrated in
+Fig. \ref{fig:MCGRIN0}.  Alternate layers of relatively high (H) and low and low
+(L) refractive indices $n_H$ and $n_L$, of corresponding thicknesses
+$d_H$ and $d_L$, are prepared by alternatingly etching a Si sample in our
+electrolytic cell with a current $I_H$ during a time $t_H$ and with a
+current $I_L$ during a time $t_L$. We chose the currents $I_H=5\text{mA}$
+and $I_L=40\text{mA}$ \notaL{¿son correctos estos valores?}, the same
+that were used above to prepare samples $G_1$ and $G_2$.
+We chose the etching times to obtain a MC at the given
+position $A$ tuned to a given wavelength
+$\lambda_c=0.67\mu\text{m}$. Thus, we chose the thicknesses so they
+correspond to quarter wavelength plates, $n_Hd_H=n_Ld_L=\lambda_c/4$,
+at this position and wavelength, yielding $n_H =2.6$,\notaL{Por qué no
+  coincide con el dato de la tabla 1?} $p_H =0.46$,
+$d_H=0.066\mu\text{m}$, $t_H=35\text{s}$, $n_L= 1.4$, $p_L =0.75$,
+$d_L=0.117\mu\text{m}$, $t_L=11\text{s}$.
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Images/MCGRIN2}
-  \caption{a) Three locations at different points are
-      considered, denoted as follows, $ A (0.3 \ \ cm) $ and $ B
-      (0.8 \ \ cm) $ and $ C (1.2 \ \ cm) $, from the PSMCGRIN
-      sample $ GMC $. b) We have the reflectance measurements to
-      know the optical properties with the proposed
-      simulation. We were able to show that in a Porous Silicon
-      GRIN structure, for a microcavity the data is very
-      consistent with the simulation and the experiment, we
-      found the refractive indices and the porosities as a
-      function of the current density at each measurement point,
-      see Table \ref{tabla:1}. }
+  \caption{(a)Top view photograph of a PS GRIN MC showing the position
+    of the three measuring points $A$, $B$ and $C$. The cavity was
+    tuned to the wavelength $\lambda_c=0.67\mu\text{m}$ at position
+    $A$ (see text). We chose $x_A=0.3\text{cm}$, $x_B=0.8\text{cm}$,
+    and $x_C=1.2\text{cm}$. (b-d) Reflectance spectra measured and
+    calculated at positions $A-C$. For the calculation, the porosity
+    and etching rates were obtained from Fig. \ref{fig:Indr1},
+    the dielectric functions and indices of refracton from
+    Eqs. \eqref{Eq:Brugg} and the reflectance from standard transfer
+    matrix theory. \notaL{Quizás haya que usar D E F en lugar de A B
+      C, pues A B C se usó para otras posiciones sobre la muestra
+      $G_1$ y $G_2$. ¿Son correctas las posiciones aquí?}}
   \label{fig:MCGRIN3}
 \end{figure}
 
 \begin{table}
   \centering
-  \begin{tabular}{|c|c|c|c|c|c|c|}
+  \begin{tabular}{ccccccc}
     \hline
-    \textbf{Points} & $\lambda_c (\mu m)$ & \textbf{n} & \textbf{k} & \textbf{Porosity} & \textbf{J}$(mA/cm^2)$ & \textbf{t(s)}\\
+    Pos(kind)&Current(mA/cm$^2$)&Porosity&Index&Wavelength($\mu\text{m}$)\\
     \hline
-    A(H) & 0.65 & 2.661 & 0.0264 & 0.45 & 5.5 & 35 \\
     \hline
-    B(H) & 0.58 & 2.762 & 0.0135 & 0.41 & 4.0 & 35 \\
-    \hline
-    C(H) & 0.54 & 2.808 & 0.0178 & 0.39 & 3.0 & 35 \\
-    \hline
-    A(L) & 0.65 & 1.442 & 0.0015 & 0.74 & 44 & 11 \\
-    \hline
-    B(L) & 0.58 & 2.295 & 0.0091 & 0.68 & 32 & 11 \\
-    \hline
-    C(L) & 0.54 & 2.302 & 0.001 & 0.64 & 24 & 11 \\
-    \hline
+    A(H) & 5.5 & 0.45& 2.66& 0.65   \\
+    A(L) & 44  & 0.74& 1.44& 0.65   \\
+    B(H) & 4.0 & 0.41& 2.76& 0.58   \\
+    B(L) & 32  & 0.68& 2.29& 0.58   \\
+    C(H) & 3.0 & 0.39& 2.81&0.54    \\
+    C(L) & 24  & 0.64& 2.30&0.54    \\
   \end{tabular}
-  \caption{ \emph{We have different points denoted as follows, $ A
-      (0.3 \ \ cm) $ and $ B (0.8 \ \ cm) $ and $ C (1.2 \ \ cm) $,
-      from the sample of a Porous Silicon Microcavity GRIN
-      (PSMCGRIN) $ GMC $. Alternate layers of high refractive index
-      (H) and low refractive index (L) are obtained at each of the
-      measurement points (A, B and C). The refractive indexes of the
-      PSMCGRIN were considered from the experimental and theoretical
-      values that were obtained for the porosity ($ P =
-      0.3J^{0.24}$). And we could obtain the attack time with the
-      relation of $ V = 0.53J ^ {0.79} $ where $ t = d / V $.}}
+  \caption{Some properties of the PS GRIN MC corresponding to the
+    positions $A$, $B$ and $C$ and the corresponding high ($H$) and
+    low ($L$) index layers. The current densities were obtained by
+    scaling the results in Fig. \ref{fig:DR1} with $I_H$ and
+    $I_L$, the depths were obtained from the etching
+    times and the current density using \eqref{eq:etch}, the porosity
+    was obtained from Eq. \eqref{eq:poros}, the indices of refraction
+    were obtained from Eq. \eqref{Eq:Brugg} using the porosity, and
+    the resonant wavelengths of the cavity were read from
+    Fig. \ref{fig:MCGRIN3}.
+    \notaL{Inventé lo de arriba. Qué es cierto y qué
+      mentira?}\notaL{Por qué resuenas en 0.65 si habías diseñado
+      0.67 en A?} \notaL{¿De dónde sacaste
+        $\lambda_c$ para los otros puntos? ¿Cómo le hiciste para que
+        $\lambda_c$ diera lo mismo en $H$ y en $L$? $n$ y $k$ dependen de la
+        frecuencia. ¿Qué frecuencia usaste para darles valores en esta
+        tabla?}\notaL{quité digitos a n. quité k pues es chiquita,
+        ¿no? quité los tiempos pues son los mismos. Quité las
+        posiciones pues están descritas antes. Añade una columna
+        con las profundidades $d_H$ y $d_L$. }}
 	\label{tabla:1}
 \end{table}
-In Fig. \ref{fig:MCGRIN3} a) Three locations at different points are
-considered, denoted as follows, $ A (0.3 \ \ cm) $ , $ B (0.8 \ \ cm)
-$ and $ C (1.2 \ \ cm) $, from the PSMCGRIN sample $ GMC $. Likewise,
+In Fig. \ref{fig:MCGRIN3} we show a photograph of a PS GRIN MC
+sample, which displays a color that shifts towards the blue when we
+move towards its right, that is, away from where the electrode was
+positioned. In the figure we indicate three points with $x$ coordinate
+$x_A=0.3\text{cm)$ , $x_B=0.8\text{cm}$, and $x_C=1.2\text{cm}$.
+  \notaL{***Aquí voy***}
+  Likewise,
 Fig. \ref{fig:DR3} b), we have the reflectance measurements to know
 the optical properties with the proposed simulation. We can see how
 from an experimental setup we have some important results as a result
