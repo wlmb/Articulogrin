@@ -10,7 +10,8 @@
 \newcommand{\abs}[1]{\lvert#1\rvert}
 \usepackage{xcolor}
 \newcommand{\notaL}[1]{{\color{blue}+L:#1+}}
-\newcommand{\notaC}[1]{{\color{red}+C:#1+}}
+\newcommand{\notaC}[1]{{\color{green}+C:#1+}}
+\newcommand{\notaV}[1]{{\color{red}+V:#1+}}
 \title{\textbf{Optimization of Porous Silicon Gradient Refractive
     Index Structures.} }
 % A comparison with computational schemes with experimental results
@@ -31,13 +32,6 @@
 \begin{document}
 
 \maketitle
-\notaL{Quité los intentos de tipografiar. Que de eso se encargue la
-  revista.}
-\notaL{Cambié la codificación a utf8; ya no uses latin1, es obsoleto.}
-\notaL{Quité las líneas kilométricas. No te ocupes de su longitud y no
-  juntes mis líneas.}
-\notaL{Quité paquetes no escenciales}
-\notaL{Cuida de no poner espacios al final de las líneas.}
 
 \begin{abstract}
 We propose a simple setup which that the calculation of the current
@@ -55,6 +49,8 @@ built.
 Keywords: Porous Silicon; GRIN; Reflectance Spectra.
 \end{abstract}
 \notaL{Cambié el abstract, pero habrá que revisarlo después.}
+\notaL{Si quieres ponerme algún comentario en el manuscrito usa el
+  comando notaC, similar al comando notaL que uso yo}
 \section{Introduction}
 \label{sec:introduction}
 \notaL{Debiste poner etiquetas en todas las subsecciones y secciones, y
@@ -139,7 +135,7 @@ Section. 5
 A gradient in the optical properties of porous Silicon (PS) systems may be
 obtained by electrochemically attacking a Si surface with a position dependent current
 density ${\bm j(\bm r)}$, as the porosity and refractive index depend on
-the current density, as well as the speed of attack and the width of the
+the current density, as well as the speed of attack and the thickness of the
 porous layer. Nevertheless, it is not a simple task to measure the
 {\em local} value of $\bm j(\bm r)$ along the surface. This hampers the
 design and optimization of well characterized reproducible GRIN PS
@@ -171,20 +167,10 @@ point current source.
     sides $a$, $b$ filled with electrolyte up to a height $c$. The
     walls of the cell are insulating and the bottom is completely
     covered by the sample, which is assumed to be a good
-    conductor. The tip of the electrode is a thin insulated wire with
-    just the tip uncovered and located at $ \vec{r}_0 $ within the
-    liquid.\notaL{\sout{Quité el tipo de letra del pie de figura. Que la pongan en la
-      revista.}}\notaL{\sout{En la punta pusiste dos esferas. Quítalas y sólo
-    pon un puntito dorado del ancho del cable. Muestra que la base
-    está aterrizada}}\notaL{\sout{Indica el voltaje y la
-    corriente}}\notaL{\sout{¿Está bien la polaridad de la batería?}}
-    just the tip uncovered and located at $\bm r_0=(x_0,y_0,z_0)$ within the
-    liquid.\notaL{Quité el tipo de letra del pie de figura. Que la pongan en la
-      revista.}\notaL{En la punta pusiste dos esferas. Quítalas y sólo
-    pon un puntito dorado del ancho del cable. Muestra que la base
-    está aterrizada}\notaL{Indica el voltaje y la
-    corriente}\notaL{Mejor pon una fuente de corriente en lugar de una
-  fuente de voltaje}}
+    conductor. The tip of the electrode is a thin insulated wire
+    \notaL{El punto del electrodo hazlo más chico que el ancho
+      del cable.} with just the tip uncovered and located at $\bm r_0=(x_0,y_0,z_0)$ within the
+    liquid.}
   \label{f:celda}
 \end{figure}
 Within the electrolyte the current density is
@@ -252,8 +238,8 @@ and
 E_x(0, y ,z)= E_x(a, y ,z)=E_{{_y}}(x, 0 ,z)=E_{{_y}}(x, b
 ,z)=E_{{_z}}(x, y ,c)=0.
 \end{equation}
-This problem may be solved readily using image charge theory \cite{T1,T2}
-\notaL{\sout{ref}}. The potential within the electrolytic cell coincides
+This problem may be solved readily using image charge theory \cite{T1,T2}.
+The potential within the electrolytic cell coincides
 within the region $0\le x\le a$, $0\le y \le b$, $0\le z\le c$
 with that an infinite fictitious empty space but for the point charge
 $q_0$ at the tip of the electrode at $\bm r_0$, and an array of its fictitious image
@@ -329,16 +315,17 @@ q_0$ arranged in positive and negative planes.
 The electrostatic potential produced by an infinite array of
 charges expressed as a sum in real space of Coulomb terms has ill
 convergence properties. The potential can be obtained
-using the Ewald summation technique \cite{T3,T4,T5}\notaL{\sout{ref}}, which yields
- two rapidly convergingseries, one in real space and another one in reciprocal space.
+using the Ewald summation technique \cite{T3,T4,T5}, which yields
+two rapidly converging series, one in real space and another one in reciprocal space.
 Nevertheless, as we need the potential and the field to obtain the
 current density on the surface of the sample on which there are no
 real nor image charges, we may perform a somewhat simpler planewise
 summation, where we first obtain the potential and field produced by a
 simple periodic lattice of charges using a fast convergent sum over the 2D
-reciprocal vectors, and then sum over the charges that form the basis
-of the 2D {\em crystal} plane and finally sum over all the
- planes \cite{T6,T7} \notaL{\sout{ref}}.
+reciprocal vectors, then sum over the charges that form the basis
+of the 2D {\em crystal} plane, and finally sum over all the
+ planes \cite{T6,T7}.
+
 We consider first a system made of identical unit charges
 ocuppying the positions $\bm R$ of a 2D Bravais lattice $\{\bm R\}$,
 which we will take as a rectangular lattice with lattice parameters
@@ -359,9 +346,9 @@ periodically repeated delta function. We introduce a 2D Fourier representation f
 the potential \notaL{\sout{Checar consistencia entre phi y varphi en todos lados}}
 \begin{equation}
   \label{eq:phifourier}
-  \phi(\bm r)=\sum_{\bm G}\phi_{_{\bm G}}(z)e^{i\bm G\cdot\bm r_\|}
+  \phi(\bm r)=\sum_{\bm G}\phi_{\bm G}(z)e^{i\bm G\cdot\bm r_\|}
 \end{equation}
-where $\phi_{_{\bm G}}(z)$ is the Fourier coefficient of the potential at
+where $\phi_{\bm G}(z)$ is the Fourier coefficient of the potential at
 the height $z$. Substitution in Eq. \eqref{eq:poissonRed} yields the
 ordinary differential equation \notaL{\sout{El signo estaba mal. Chécalo.}} \notaC{En efecto el sino 
 estaba mal yo tenia +, y es - por la ecuacion de segundo orden que sale en este caso, tenia tambien 
@@ -510,7 +497,7 @@ electrical contact to a metal plate \notaC{\sout{gold plate} error de escritura}
  insulated except for a small region at its tip, which we take as a 
  point current drain.
 We also show a schematic drawing of the expected GRIN PS structures,
-with a gradient in the porosity, and in the width, density and depth
+with a gradient in the porosity, and in the thickness, density and depth
 of the resulting pores.
 
 \subsection{Fabrication of PS  GRIN Single Layers}
@@ -519,7 +506,7 @@ We manufactured single layer PS structures through an electrochemical
 anodization on a (100) $p$-type crystalline Si wafer
 (resistivity 0.002 - 0.005 $ \Omega\,\text{cm}$), under galvanostatic
 conditions. The process was performed at
-room temperature,\notaL{Controlaste/mediste la temperatura?} with an
+room temperature,\notaL{OJO. No controlaste la temperatura} with an
 electrolytic mixture of aqueous hydrofluoric
 acid (HF) (concentration 48\% wt), glycerol (purity 99.8 \% wt) and
 ethanol (purity 99.9\% wt) in a 3:7:1 volume ratio. After the
@@ -533,10 +520,9 @@ r_0=(x_0,y_0,z_0)=(0.1\text{cm},0.3\text{cm},0.9\text{cm})$
 \notaL{\sout{¿Cuáles fueron las coordenadas del
   electrodo?}} We manufactured samples using a current $I=5\text{mA}$
 which yielded current densities in the range
-$j_\perp=2.5-6.0\text{mA}/\text{cm}^2$ and other smples using a larger
+$j_\perp=2.5-6.0\text{mA}/\text{cm}^2$ and other samples using a larger
 current $I=40\text{mA}$ corresponding to current densities in the
-range $j_\perp=20-50\text{mA}/\text{cm}^2$. The cathode was a
-platinum wire that with an approximate diameter of $0.5\text{mm}$.
+range $j_\perp=20-50\text{mA}/\text{cm}^2$.
 \subsection{Morphological studies}
 \label{sec:morph-stud}
 \notaL{Cambié el orden}
@@ -560,8 +546,8 @@ where $ r_{01} $ y $ r_{12}$ are the Fresnel reflectance
 coefficients at the air/PS and PS/c-Si interfaces \cite{T10,T11}\notaL{\sout{referencias}}
 and $\delta=k_{PS}^\perp d$, where $k_{PS}^\perp$ is
 the component of the wavevector perpendicular to the surface within
-the porous layer of width $d$.
-\notaL{\sout{Me tienes que explicar dónde y cómo usaste lo que mencionas en
+the porous layer of thickness $d$.
+\notaL{Me tienes que explicar dónde y cómo usaste lo que mencionas en
   la siguiente frase:
 The advantage of this method is
 the possibility of taking into account the interface roughness effect
@@ -589,30 +575,31 @@ $\varepsilon_{PS}=n_{PS}^2$ is the dielectric function of the PS.
 \notaL{Quité frases irrelevantes.}
 \subsection{Fabrication  of GRIN PS Microcavities}
 \label{sec:fabrication-grin-ps}
-After characterizing the preparation of single PS GRIN layers, we
+After characterizing the fabrication process through measurements and
+calculations corresponding to single PS GRIN layers, we
 fabricated PS GRIN microcavities (MC) as specific defects between two distributed Bragg
 mirrors  (DBR). Alternate quarter wavelength plates of high (H) and low (L)
-refractive indices $n_i$ of widths $d_i$, $i=H,L$ were prepared satisfying the Bragg condition
-$n_id_i=\frac{\lambda_c}{4}$ at a given design
-wavelength $\lambda_c$ and at a position $A$ (Fig. \ref{fig:DE1} which
-we chose as that directly below the point-like electrode. The defect
-was chosen as a half-wavelength low index layer of width $d_d$ such that
-$n_Hd_H=\lambda_c/2$ \notaC{$n_Ld_L=\lambda_c/2$ error y
- descuido de escritura.} and the MC has the
-following sequence: $(HL)_6HH(LH )_6$. \notaL{\sout{Hay algo mal. La
-  película de $\lambda/2$ fue de alto o de bajo índice? En una parte
-  dices una cosa y en otra otra. ¿Será $(HL)_jHLLH(LH)_6$? ¿O será
-  $(LH)_6LL(HL)_6$? ¡Muy descuidado!}}
-We chose $\lambda_c= 0.67 \mu\text{m}$. For the high index layers we
+refractive indices $n_i$ of thickness $d_i$, $i=H,L$ were prepared satisfying the Bragg condition
+$n_id_i=\lambda_c/4$ at a given design
+wavelength $\lambda_c$ and at a position $A$ (Fig. \ref{fig:DE1}) which
+we chose as that directly below the point-like electrode.\notaL{Checar
+  veracidad} The defect
+was chosen as a half-wavelength high index layer of thickness $d_d=2d_H$ such that
+$n_Hd_h=\lambda_c/2$. The MC corresponds to the
+sequence $(HL)_6HH(LH )_6$ where each letter $H$ or $L$ corresponds to
+a quarter wavelength plate of high and low index of refraction correspondingly.
+We chose $\lambda_c= 0.67 \mu\text{m}$.\notaL{Algún motivo para esta
+  elección?} For preparing the high index layers we
 chose a current $I_H=5\text{mA}$ which corresponded to a current density
 $j_{HA\perp}= 6\text{mA}/\text{cm}^2$ below the tip \notaL{checar}, and yielded
-$n_H =2.6$, corresponding to a porosity \notaL{\sout{P mayúscula
-  es porosidad, o p minúscula. Checar consistencia}} $p_H =0.46$, and a
-width $d_H=0.066 \mu\text{m}$, which required an attack time of
+$n_H =2.6$, corresponding to a porosity \notaL{Explicar esta
+  correspondencia entre $p$ y $n$} \notaL{P mayúscula
+  es porosidad, o p minúscula. Checar consistencia} $p_H =0.46$, and a
+thickness $d_H=0.066 \mu\text{m}$, which required an attack time of
 $t_H=35 \text{s}$. The corresponding parameters for the low density
 layers were $I_L=38\text{mA}$, $j_{LA\perp}=50\text{mA}/\text{cm}^2$, $n_L= 1.4$,  $p_L =0.75$,
 $d_L=0.117 \mu \text{m}$, and $t_L=11 \text{s}$. For the rest of the
-sample the current density, porosity, index of refraction and width
+sample the current density, porosity, index of refraction and thickness
 varied, yielding a GRIN MC.
 
 \section{Discussion and Results}
@@ -626,15 +613,14 @@ varied, yielding a GRIN MC.
     Eq. (\ref{Eq:J}) for a
     system as in Figs. \ref{f:celda} and \ref{fig:DE1} for a cell of
     length $a = 2.03\text{cm}$ and width $b=0.62\text{cm}$, for a
-    point-like electrode at $\bm r_0=(0.2\text{cm},
-    0.4\text{cm},0.96\text{cm})$ (top panel). Normalized current
-    along the line $y=?$ (bottom panel). \notaL{qué valor de $y$ usaste para la
-      gráfica de abajo?} \notaL{Puse $x_0$
-      y $y_0$ que faltaban. Checale. Se me hace raro que no esté
-      centrado en la celda a lo ancho. ¿No está debería estar en
-      $y_0=0.31\text{cm}?$} \notaL{Cambia los letreros, $J$ por
+    point-like electrode at $\bm r_0=(0.1\text{cm},
+    0.31\text{cm},0.9\text{cm})$ (top panel). Normalized current
+    along the line $y=?$ (bottom panel). \notaL{Escoger el valor de
+      $y$ y poner la figura correspondiente} \notaL{Cambia los letreros, $J$ por
       $j_\perp$. La ordenada no es a, sino $x$ y la abcisa no es b
-      sino $y$}. }
+      sino $y$}.\notaL{Volverla a hacer con los datos
+      correctos. Rotular la figura con la misma notación que en el
+      texto. Preparar la figura como dos figuras independientes.}. }
   \label{fig:DR1}
 \end{figure}
 \notaL{Checar consistencia notación. $x_0$, $y_0$ y $z_0$ en
@@ -645,21 +631,10 @@ Eq. \eqref{Eq:J} at the surface of the sample for the cell we built
 $a=2.03\text{cm}$ and width $b = 0.62\text{cm}$, the height of the
 solution was taken as $c=1\text{cm}$ and we set the tip of the
 electrode at $\bm
-r_0=(x_0,y_0,z_0)=(0.1\text{cm},0.3\text{cm},0.9\text{cm})$ \notaC{ya lo corregi 
-$0.1\text{cm},0.3\text{cm},0.9\text{cm})$ }.
-\notaL{\sout{Descuidado. En la figura dice 0.98, no 0.96}}.
-\notaL{\sout{¿Por qué usaste estos valores?}}
-\notaL{\sout{Esto no es interesante: the programming with the
-  PERL PDL package and corresponding graph in gnuplot.}}
-\notaL{\sout{¿Qué significa esto?:We optimize the
-appropriate values so that our current density adequately attacks
-crystalline silicon, giving the gradient effect.}} \notaC{Yo quise volver a 
-reafirmar algo, pero se pierde el sentido real de la frease:"optimizamos los
-valores apropiados de fabricación para que nuestra densidad actual, atacará
-silicio cristalino, dando el efecto gradiente al silicio poroso"}
+r_0=(x_0,y_0,z_0)=(0.1\text{cm},0.31\text{cm},0.9\text{cm})$
+\notaL{¿Por qué usaste estos valores?}
 For these parameters we obtained $ j_\perp/I\sim
-0.5-1.2\text{cm}^{-2}$
-\notaL{\sout{Quité el resto del párrafo pues no entendí nada.}}
+0.5-1.2\text{cm}^{-2}$.
 
 \subsection{PS GRIN Single Layer }
 \label{sec:ps-grin-single}
@@ -669,8 +644,8 @@ For these parameters we obtained $ j_\perp/I\sim
   \centering
   \includegraphics[width=\textwidth]{Images/SPgrin51}
   \caption{(a)  Sample $G_1$ prepared as described in
-     \ref{sec:fabrication-ps-grin} using a current $I=5 \text{mA}$
-    during a time $t=600\text{s}$. We indicate three regions $A$,
+     \ref{sec:fabrication-ps-grin} using a current $I_1=5 \text{mA}$
+    during a time $t_1=600\text{s}$. We indicate three regions $A$,
     $B$, and $C$ centered at positions at positions,
     $x_A=0.3\text{cm}$ \notaL{Atrás habías dicho que era justo abajo
       del electrodo. ¿Es cierto o no? ¿Dónde estaba el electrodo? ¿Qué
@@ -685,10 +660,10 @@ For these parameters we obtained $ j_\perp/I\sim
       quitando dos de los letreros Refractive index, pero antes
       asegúrate de usar la misma escala en las tres figuras} (c)
     Corresponding complex indices of refraction $n+ik$ obtained from
-    Eq. \eqref{Eq:Brugg} using the fitted porosities $p_A=0.44$,
-    $p_B=0.42$, and $p_C= 0.40$ at the chosen positions. \notaL{En las
+    Eq. \eqref{Eq:Brugg} using the fitted porosities $p_{1A}=0.44$,
+    $p_{1B}=0.42$, and $p_{1C}= 0.40$ at the chosen positions. \notaL{En las
       figuras escribe A, B y C en lugar de
-      Point A, Point B y Point C. Escribe $p_A$, $p_B$ y $p_C$ en lugar
+      Point A, Point B y Point C. Escribe $p_{1A}$, $p_{1B}$ y $p_{1C}$ en lugar
       de la palabra Porosity. Escribe $n$ y $k$ nada más, sin la
       palabra Real ni Imaginary. Usa Theory en lugar de
       Simulation. Usa línea a trazos para la parte
@@ -697,28 +672,30 @@ For these parameters we obtained $ j_\perp/I\sim
       pueden eliminar (porque además, no los alineaste bien). }
   \notaL{A ojo no se notan las diferencias en epsilon. Mejor junta las
   tres partes reales en una sola gráfica y las tres partes imaginarias
-en otra y ponerlas una al lado de la otra.}} 
+en otra y ponerlas una al lado de la otra.}\notaL{Las letras A, B y C
+están colocadas en el lugar preciso, a escala?}\notaL{Quizás sea mejor
+que hagas tres figuras distintas, una para cada panel, y las alineamos
+con latex}}
   \label{fig:DR3}
 \end{figure}
  In Fig. \ref{fig:DR3} we show a photograph of one of our single layer PS GRIN
  structures, $G_1$, prepared as described in
- \ref{sec:fabrication-ps-grin} applying a current $I=5\text{mA}$ for
- $t=600\text{s}$. We employed the same geometry as described in
+ \ref{sec:fabrication-ps-grin} applying a current $I_1=5\text{mA}$ for
+ $t_1=600\text{s}$.\notaL{Quizás podamos quitar la repetición de I y
+   t} We employed the same geometry as that described in
  Sec. \ref{sec:current-density} \notaL{Lo inventé. ¿Es cierto?}
 The position of electrode corresponds to the upper left side of the
 photograph. The variation of the optical properties across the
 sample is evident. We chose three positions $x_A=0.3\text{cm}$,
-$x_B=0.8\text{cm}$ and $x_C=1.7\text{cm}$ \notaL{¿valor de y?} on
+$x_B=0.8\text{cm}$ and $x_C=1.7\text{cm}$ \notaL{¿Son correctos estos
+  valores? Antes dijiste que $A$ estaba abajo del electrodo}\notaL{¿valor de y?} on
 which we measured the reflectance spectra, also shown in the figure.
 We fitted the measurements using Eqs. \eqref{Eq:ECMR} and
 \eqref{Eq:Brugg} using the local porosity and the depth of the layer
-as adjustable parameters. We obtained $p_A=0.44$, $p_B=0.42$, and
-$p_C= 0.40$. The depth $ d_A= 1320nm $, $ d_B= 997nm $ and $ d_C= 605nm $ 
-respectively. \notaC{Las profundidades $ d_A= 1320nm $, $ d_B= 997nm $ 
-and $ d_C= 605nm $ }
-\notaL{\sout{Falta decir cuáles fueron las profundidades}}
+as adjustable parameters. \notal{¿Es cierto?} We obtained $p_{1A}=0.44$, $p_{1B}=0.42$, and
+$p_{1C}= 0.40$. \notaL{Falta decir cuáles fueron las profundidades}
 Location $A$ is
-closest to the electrode, while location $ C $ is the furthest.
+closest to the electrode, while location $C$ is the furthest.
 \notaL{Quité una frase sin sentido.}
 We also show in Fig. \ref{fig:DR3} the wavelength dependence of
  the complex index of refraction corresponding to the fitted porosities.
@@ -732,50 +709,48 @@ We also show in Fig. \ref{fig:DR3} the wavelength dependence of
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Images/semD11}
-  \caption{Characterization of a monolayer of PS GRIN G1
-      with an initial current of $ 5 \ \ mA $, seeing the
-      morphology and depth of the cross section of several SEM
-      micrographs, at different points, $ A (0.3 \ \ cm) $ and $
-      B (0.8 \ \ cm) $ and $ C (1.7 \ \ cm) $. We can see the
-      sample size for each measurement point, the depth $ d (A)
-      = 1320 \ \ nm $, $ d (B) = 997 \ \ nm $ and $ d (C) = 605
-      \ \ nm $ }
+  \caption{Side-view SEM micrographs of the PS GRIN single layer
+    taken at positions $A$, $B$, and $C$ of sample $G_1$ shown in
+    Fig. \ref{fig:DR3}.
+    \notaL{Quité la info redundante}}
   \label{fig:DR4}
 \end{figure}
-In the Fig. \ref{fig:DR4} shows the cross section views   at points $
-A (0.3 \ \ cm) $, $ B (0.8 \ \ cm) $ and $ C (1.7 \ \ cm) $, we can
-measure the thickness for each point of the sample $ G1 (I = 5 \ \ mA)
-$, $ d (A) = 1320 \ \ nm $, $ d (B) = 997 \ \ nm $ and $ d (C) = 605 \
-\ nm $. Likewise, we could check it for a second sample $ G2 (I = 40 \
-\ mA) $, with porosities for each point, $ A (P = 0.76) $, $ B (P =
-0.73) $ and $ C (P = 0.68) $ and the depths $ d (A) = 1950 \ \ nm $, $
-d (B) = 1690 \ \ nm $ and $ d (C) = 1430 \ \ nm $, designed in the
-same way as the shows G1, only varying the current taking into account
-the current density ratio for each point. Apart from that, a
-structural gradient was formed, along the direction \emph{ a}  of the
-axis of the $ x $, where the tip of the electrode is near the point $
-A $ and away from the point $ C $ of the substrate, using the proposed
-experimental setup. In addition, it was possible to control the
-current density based on the position of the sample and the depth,
-seen in the SEM micrographs.
- \begin{figure}
-   \centering
+
+In Fig. \ref{fig:DR4} we shows side-view SEM micrographs taken at
+positions $A$, $B$, and $C$ of sample $G_1$ shown in
+Fig. \ref{fig:DR3}. From these micrographs we can
+obtain the thicknesses of the porous layer at different
+positions. Thus, we obtained that for our sample $G_1$
+$d_{1A}= 1320\text{nm}$, $ d_{1B} = 997\text{nm}$, and $d_{1c} = 605
+\text{nm}$. Similarly, for a second sample $G_2$, attacked with a
+larger current $I_2 =40 \text{mA}$, for a time $t_2=$?\notaL{El ancho no
+  tiene sentido si no especificas el tiempo} we obtained the
+porosities \notaL{las posiciones ¿fueron las mismas?}, $p_{2A}= 0.76$, $p_{2B}=
+0.73$, and $p_{2C}= 0.68$, and the corresponding depths $d_{2A}=1950\text{nm}$,
+$d_{2B}=1690\text{nm}$, and $d_{2C}= 1430\text{nm}$. \notaL{Quité otra
+  frase vacía}\notaL{Me es importante entenderte: La profundidad la
+  obtuviste de SEM. ¿También la obtuviste de R, o primero la obtuviste
+  de SEM y luego la sustituiste en la fórmula de R? Recuerdo que nos
+  presentaste alguna vez que la profundidad obtenida de la óptica
+  correspondía a la medida por SEM. ¿Fue así? Si sí, por qué no lo
+  escribes aquí?}
+
+\begin{figure}
+  \centering
    \includegraphics[width=\textwidth]{Images/grinJDR}
-   \caption{a) It is the relation of the current density $
-       J (mA / cm ^ 2) $ normalized with the electric current $ I
-       (mA) $, we have $ J / I \ sim 1.2 \ \ a \ \ 0.5 ( cm^{-2})
-       $, when we apply it to two samples $ G1 (I = 5 \ \ mA) $
-       and $ G2 (I = 40 \ \ mA) $ depending on the axis $ a $ $
-       (0.1 ... 2.0 \ \ cm) $, measured at points $ A (0.3 \ \
-       cm) $ , $ B (0.8 \ \ cm) $ and $ C (1.7 \ \ cm) $. b) The
-       attack speed $ v = d (J_i) / t (nm / sec) $, the depths
-       (thickness $ d (J_i) $, $ i = $ $ A (0.3 \ \ cm) $, $ B (
-       0.8 \ \ cm) $ y $ C (1.7 \ \ cm)) $ taken in SEM
-       micrographs $ d (J_i) (nm) $ and attack times $ G1 (t =
-       600 \ \ s) $ y $ G2 (t = 200 \ \ s) $, depending on the
-       axis $ a $ $ (0.1 ... 2.0 \ \ cm) $ }
-   \label{fig:JDR}
- \end{figure}
+  \caption{(a)Current density calulated on different positions
+    $A$, $B$, and $C$ along the samples $G_1$ and $G_2$ (as shown in
+    Fig. \ref{fig:DR3}), for attack currents $I_1=5\text{mA}$ and
+    $I_2=40\text{mA}$ (left panel), obtained by properly scaling the
+    results of Fig. \ref{fig:DR1}. \notaL{Pon paréntesis de ambos
+      lados (a) y (b). El eje horizontal es $x$, no $a$. El eje
+      vertical es $j_\perp$.}
+    (b)Attack speed $v=d/t$ obtained at different positions $A$, $B$,
+    and $C$ over samples $G_1$ and $G_2$, where $d$ is the thickness
+    as measured from SEM micrographs, as in Fig. \ref{fig:DR4},
+    and $t$ is the attack time.}
+  \label{fig:JDR}
+\end{figure}
 In Fig. \ref{fig:JDR} a) It is the relation of the current density $ J
 (mA / cm ^ 2) $ normalized with the electric current $ I (mA) $, we
 have $ J / I \ sim 1.2 \ \ a \ \ 0.5 (1 / cm ^ 2) $, when we apply it
