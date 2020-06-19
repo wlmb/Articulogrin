@@ -447,8 +447,8 @@ Using Eq. \eqref{Eq:J} we can correlate the local current density at
 the sample as it is prepared with its geometric and optical
 properties. For the calculation of the optical properties we use the
 well known transfer matrix method \notaL{refs}.
-\notaL{No necesitamos presentar la teoría de matrices de
-  transferencia. No hay nada original ahí.}
+\notaL{\sout{No necesitamos presentar la teoría de matrices de
+  transferencia. No hay nada original ahí.}}
 
 
 \section{Procedures}
@@ -480,8 +480,8 @@ well known transfer matrix method \notaL{refs}.
   \label{fig:DE1}
 \end{figure}
 
-\notaL{Cambié el título, pues tienes una mezcla de experimento y
-  teoría aquí}
+\notaL{\sout{Cambié el título, pues tienes una mezcla de experimento y
+  teoría aquí}}
 In Fig. \ref{fig:DE1} we show a schematic representation of our
 experimental setup to manufacture porous silicon with GRIN.
 As dicussed above, we fabricated an electrolytic cell with the shape of a
@@ -514,11 +514,13 @@ platinum wire that with a diameter of $0.41\text{mm}$ insulated by a
 teflon cylinder of external diameter $2\text{mm}$. \notaL{¿Están
   bien estos diámetros?} with an uncovered tip located at $\bm r_0=(x_0,
 y_0,z_0)=(0.1,0.31,0.9)$.
-We manufactured samples using a current $I=5\text{mA}$
+We manufactured a sample applying a current $I=5\text{mA}$,
 which yielded current densities in the range
-$j_\perp=2.5-6.0\text{mA}/\text{cm}^2$ and other samples using a larger
-current $I=40\text{mA}$ corresponding to current densities in the
-range $j_\perp=20-50\text{mA}/\text{cm}^2$.
+$j_\perp=2.5-6.0\text{mA}/\text{cm}^2$,\notaL{verificar} during an attack time
+$t_1=600 \text{s}$, and another sample using a larger
+current $I=40\text{mA}$, corresponding to current densities in the
+range $j_\perp=20-50\text{mA}/\text{cm}^2$, for a time $t_2=200 \text{s}$ . \notaC{
+Coloque los tiempo de ataque para $t_1$ y $t_2$}
 \subsection{Morphological studies}
 \label{sec:morph-stud}
 The morphologies of the etched porous layers were
@@ -532,13 +534,13 @@ views (Fig. \ref{fig:DE1}). \notaL{¿Sí se midió la porosidad con SEM?}
 We measured the reflectivity spectra using a {\em Perkin Elmer Lambda 950}
 UV-Vis-NIR spectrophotometer. For iterpretation of the data in the
 case of a single PS layer we used
-the standard formula \notaL{referencia} for three media air (0), PS
+the standard formula \cite{T8,T9} \notaL{\sout{referencia}} for three media air (0), PS
 (1) and c-Si (2),
  \begin{eqnarray}\label{Eq:ECMR}
    R=\frac{r _ {_ {01}}r _ {_ {12}} e^{2i\delta}}{1+r _ {_ {01}}r _ {_ {12}} e^{2i\delta}}
 \end{eqnarray}
-where $ r_{01} $ y $ r_{12}$ are the Fresnel reflectance
-coefficients at the air/PS and PS/c-Si interfaces \notaL{referencias}
+%where $ r_{01} $ y $ r_{12}$ are the Fresnel reflectance
+coefficients at the air/PS and PS/c-Si interfaces \cite{T10,T11}
 and $\delta=k_{PS}^\perp d$, where $k_{PS}^\perp$ is
 the component of the wavevector perpendicular to the surface within
 the porous layer of thickness $d$.
@@ -685,9 +687,12 @@ as adjustable parameters. \notaL{¿Es cierto?} We obtained $p_{1A}=0.44$, $p_{1B
 $p_{1C}= 0.40$. \notaL{Falta decir cuáles fueron las profundidades}
 We also show in Fig. \ref{fig:DR3} the wavelength dependence of
  the complex index of refraction corresponding to the fitted porosities.
-\notaL{Quité otra frase que no entendí, pero que me generó una duda:
+\notaL{\sout{Quité otra frase que no entendí, pero que me generó una duda:
   la profundidad la ajustaste ópticamente o la mediste en SEM y luego
-  hiciste el ajuste a la reflectancia?}
+  hiciste el ajuste a la reflectancia?}} \notaC{Esta parte, siempre se midio la
+  profundida en SEM, por eso me costo poder ajustar el espectro de reflactacia
+  en un primer inicio, hasta que coloque la ecuacion de de fresnel
+  para una monopelicula.}
 
 \begin{figure}
   \centering
@@ -1130,6 +1135,17 @@ Physics Letters, 400(1):62–67, December 2004.
  \bibitem{T7} Charles Kittel. \textquotedblleft \emph{Introduction to Solid State
  	 Physics.}\textquotedblright Wiley, Hoboken, NJ, 8 edition, 2005.
 
+ \bibitem{T8}Born, Max, and Emil Wolf. \textquotedblleft \emph{Basic properties of
+   	the electromagnetic field.}\textquotedblright Principles of optics 44 (1980).
+  \bibitem{T9} Stenzel, Olaf. \textquotedblleft \emph{ The physics of thin film
+  	optical spectra.}\textquotedblright Springer, 2015.
+
+  \bibitem{T10}Born, Max, and Emil Wolf.\textquotedblleft \emph{ Principles of optics:
+  	electromagnetic theory of propagation, interference
+  	 and diffraction of light.}\textquotedblright Elsevier, 2013.
+  \bibitem{T11} Sattler, Klaus D., ed. \textquotedblleft \emph{ Silicon Nanomaterials
+  	Sourcebook: Low-Dimensional Structures, Quantum Dots, and Nanowires }\textquotedblright,
+   Volume One. CRC Press, 2017.
 
 
 
