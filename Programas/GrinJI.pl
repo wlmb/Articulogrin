@@ -58,45 +58,55 @@ my $b1=1/$a1; #So area=1, this is our unit of area, and from here, distance
 #Real space
 my $x=zeroes(2*$N+1, 2*$N+1)->xvals*2*$a1/(2*$N+1);
 my $y=zeroes(2*$N+1, 2*$N+1)->yvals*2*$b1/(2*$N+1);
-#mask in reciprocal space
-#my $mask=zeroes(2*$N+1, 2*$N+1);
-#$mask=(($mask->xvals>=($N-$M)) & ($mask->xvals <= ($N+$M))
-#       & ($mask->yvals>=($N-$M)) & ($mask->yvals <= ($N+$M)))
-#    ->rotate(-$N)->mv(1,0)->rotate(-$N)->mv(0,1);
 #Reciprocal lattice shifted for Fourier transforms.
 my $G=((zeroes(2*$N+1, 2*$N+1)->ndcoords-$N)*PI/pdl($a1, $b1))
     ->mv(1,0)->rotate(-$N)->mv(0,1)->mv(2,0)->rotate(-$N)->mv(0,2);
 my $Gn=($G*$G)->sumover->sqrt; #norm;
 my $sinh2Gc=sinh(mymin(2*$Gn*$c, LM));
 $sinh2Gc->((0),(0)).=1; #to avoid division by 0 down
-my $jG=cosh(mymin($Gn*$z,LM))*
-    (exp(-mymin($Gn*$z0,LM))
-     -exp(-mymin(3*$Gn*$c,LM))*cosh(mymin($Gn*$c,LM))*sinh(mymin($Gn*$z0,LM))
-     /$sinh2Gc)
-    *cos($G->((0))*$x0)*cos($G->((1))*$y0); #*$mask;
-$jG->((0),(0)).=1; #Special value for G=0;
+#my $jG=cosh(mymin($Gn*$z,LM))*
+#    (exp(-mymin($Gn*$z0,LM))
+#     -exp(-mymin(3*$Gn*$c,LM))*cosh(mymin($Gn*$c,LM))*sinh(mymin($Gn*$z0,LM))
+#     /$sinh2Gc)
+#    *cos($G->((0))*$x0)*cos($G->((1))*$y0); #*$mask;
+#$jG->((0),(0)).=1; #Special value for G=0;
 #my $jR=fft2($jG->r2C->real)->complex->re;
-my $j1=fft2($jG->r2C->real)->complex->re;
-my $jR=$j1/$A;
-#my $jR=$j1*$I/$A;
+#my $j1=fft2($jG->r2C->real)->complex->re;
+#my $jR=$j1/$A;
+my $jG1=2*cosh(mymin($Gn*$z,LM))*
+    sinh(mymin($Gn*$c, LM))*cosh(mymin($Gn*($c-$z0), LM))/$sinh2Gc
+    *cos($G->((0))*$x0)*cos($G->((1))*$y0); #*$mask;
+$jG1->((0),(0)).=1; #Special value for G=0;
+my $jR1=fft2($jG1->r2C->real)->complex->re;
+#my $jR=$jR1*$I/$A; #Se calcula j para cualquier I
 my $X=$x*$u;
 my $Y=$y*$u;
-my $w=gpwin;
-#figura 3d Grin
-$w->plot3d({title=>["{/Time*2 a=$a cm, b=$b cm, C=$C cm, R0=($X0,$Y0,$Z0)cm, Z=$Z}",textcolor=>'"black"'],
-	   xrange=>[0,$a], yrange=>[0,$b], view=>['equal','xy'],xlabel=>["{/Times*2 a(cm)}", textcolor=>'"black"'] ,ylabel=>["{/Times*2 b (cm)}",textcolor=>'"black"'],xtics=>{font=>"Time,12"}, ytics=>{font=>"Time,12"}},
-	  with=>'pm3d', $X, $Y, $jR);
 
 #figura vista desde arriba
+my $ny=$N/2; #0 is y=0, N is y=b, 2N=2b
 my $gw=PDL::Graphics::Gnuplot->new();
-$gw->plot({title=>["{/Time*2 a=$a cm, b=$b cm, C=$C, R0=($X0,$Y0,$Z0)cm, Z=$Z}",textcolor=>'"black"'], xrange=>[0,$a], yrange=>[0,$b],view=>['equal','xy'], xlabel=>["{/Times*4 a(cm)}", textcolor=>'"black"'] ,ylabel=>["{/Times*4 b (cm)}",textcolor=>'"black"'], zlabel=>["{/Times*4 J/I(1/cm²)}",textcolor=>'"black"'],xtics=>{font=>"Time,18"},ytics=>{font=>"Time,12"}, ztics=>{font=>"Time,12"}},with=>'image', $X, $Y, $jR);
-# figura de un solo eje x ,
-my $D1X=PDL::Graphics::Gnuplot->new();
-$D1X->plot( {title=>["{/Time*2 a=$a cm, b=$b cm, C=$C cm, R_0=($X0,$Y0,$Z0)cm, Z=$Z}",textcolor=>'"black"'],
-xrange=>[0,$a],xlabel=>["{/Times*2 a(cm)}", textcolor=>'"black"']  ,ylabel=>["{/Times*2 J/I(1/cm²)}",textcolor=>'"black"'],xtics=>{font=>"Time,12"},ytics=>{font=>"Time,12"}},
-	   {with=>'lines', lt=>-1, lw=>5}, $X(:,(0)),$jR(:,(0)));
-
-
+$gw->multiplot;
+$gw->plot({
+    #title=>["{/Times*2 a=$a cm, y=$b cm, C=$C, R0=($X0,$Y0,$Z0)cm, Z=$Z}",textcolor=>'"blue"'], #
+    xrange=>[0,$a], yrange=>[0,$b],
+    #view=>['equal','xy'], #parece no funcionar
+    #size=>['ratio',-1],
+    size=>'1,.5',
+    origin=>[0,.5],
+    justify=>1,
+    label=>[1, "(a)", at=>"screen .8,.95", textcolor=>'"white"'],
+    xlabel=>["x(cm)"] ,ylabel=>["y (cm)"], cblabel=>["j_⟂/I(1/cm²)"]
+	  }
+	  ,with=>'image', $X, $Y, $jR1);
+# figura cortada en el  eje x ,
+$gw->plot( {
+    #title=>["{/Times*2 x=$a cm, y=$Y0 cm, C=$C cm, R_0=($X0,$Y0,$Z0)cm, Z=$Z}",textcolor=>'"black"'],
+    xrange=>[0,$a], xlabel=>["x(cm)"], yrange=>[],
+    ylabel=>["j_⟂/I(1/cm²)"], size=>'.875,.5', origin=>[0,0],
+    label=>[2, "(b)", at=>"screen .8,.45"],
+},
+	   {with=>'lines'}, $X(:,($ny)),$jR1(:,($ny)));
+$gw->end_multi;
 
 prompt "Ya casi!", -single, -void;
 
@@ -167,9 +177,4 @@ BEGIN {
     };
 }
 
-#perl GrinJI.pl --a=2.03 --b=0.62 --C=1 --X0=0.2 --Y0=0.4 --Z0=0.9 --Z=0 --I=5 --N=100
-
-
-
-
-	   # xrange=>[0,$ax], yrange=>[0,$ay], view=>['equal','xy'],xlabel=>
+#perl GrinJIN.pl --a=2.03 --b=0.62 --C=1 --X0=0.1 --Y0=0.31 --Z0=0.9 --Z=0 --I=5 --N=100
