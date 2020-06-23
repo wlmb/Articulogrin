@@ -2,7 +2,8 @@
 \usepackage{amsmath}
 \usepackage{graphicx} % gráficos
 \usepackage[noblocks]{authblk}
-%\usepackage{float}
+%\usepackage{authblk}
+%\usepackage[•]{•}ckage{float}
 %\usepackage{cite}% para contraer referencias
 %\usepackage[usenames]{color}
 \usepackage{bm}
@@ -14,7 +15,6 @@
 \newcommand{\notaV}[1]{{\color{red}+V:#1+}}
 \title{\textbf{Optimization of Porous Silicon Gradient Refractive
     Index Structures.} }
-% A comparison with computational schemes with experimental results
 \author[1]{C. A. Ospina de la Cruz}
 \author[2]{W. L. Mochán }
 \author[3]{V. Agarwal }
@@ -753,9 +753,12 @@ $d$ measured as in Fig. \ref{fig:DR4} by the etching time.
   \caption{(a) Etching rate $v$ and (b) porosity $p$ as a function of the
     density current $j_\perp$, obtained from Fig. \ref{fig:JDR}. We
     show the data points and the results of power
-    law fits, yielding $v=0.53j_\perp^{0.79}$ and
-    $p=0.3j_\perp^0.24$, with corresponding correlation coefficients
-      $r_v^2=0.993$ and $r_p^2=0.989$ (here $v$ is in nm/s, $p$ is
+    law fits, yielding $v=0.68j_\perp^{0.69}$ and
+    $p=0.33j_\perp^0.21$, \notaC{cambie las expresiones $v=0.53j_\perp^{0.79}$ 
+    and $p=0.3j_\perp^0.24$}
+    with corresponding correlation coefficients
+      $r_v^2=0.951$ and $r_p^2=0.989$ \notaC{ tambien cambie $r_v^2=0.993$ 
+      and $r_p^2=0.0.847$ }(here $v$ is in nm/s, $p$ is
       dimensionless and $j_\perp$ is in mA/cm$^2$). \notaL{cambia J por $j_\perp$, V por $v$ y P
       por $p$. Quita el letrero fitting data, la ecuación y el valor
       de $R^2$}\notaL{Los ajustes ¿son correctos con estas unidades?}}
@@ -770,17 +773,19 @@ Fig. \ref{fig:Indr1}.\notaL{\ldots Apenas aquí dijiste cuál fue el
 We fitted the data points with simple power laws and found
 \begin{equation}
   \label{eq:etch}
-  v=0.53j_\perp^{0.79}
+  v=0.68j_\perp^{0.69} \notaC{cambie v=0.53j_\perp^{0.79}}
 \end{equation}
 and
 \begin{equation}
   \label{eq:poros}
-  p=0.3j_\perp^{0.24},
+  p=0.33j_\perp^{0.21}, \notaC{cambie p=0.3j_\perp^{0.24}}
 \end{equation}
 where $v$ is
 expressed in nm/s, $p$ is dimensionless and $j_\perp$ is expressed as
-mA/cm$^2$. The corresponding correlation coefficients are $r_v^2=0.993$
-and $r_p^2=0.989$. \notaL{Digresión teórica. El producto $pv$ es
+mA/cm$^2$. The corresponding correlation coefficients are $r_v^2=0.951$
+and $r_p^2=0.847$. \notaC{cambie $r_v^2=0.993$
+and $r_p^2=0.989$.}
+\notaL{Digresión teórica. El producto $pv$ es
   proporcional a la cantidad de materia removida por segundo. En mi
   opinión, esto debería ser proporcional a la corriente $pv\propto
   j_\perp$. ¿Es correcto? A tí te sale algo parecido pero no
