@@ -676,24 +676,22 @@ The position of the electrode corresponds to the left side of the
 photograph. The variation of the optical properties across the
 sample is evident. \notaL{Tenemos algo sensato que decir sobre el
   gradiente en la dirección vertical cerca de los bordes?}
- We chose three positions $x_A=0.3\text{cm}$,
-$x_B=0.8\text{cm}$ and $x_C=1.7\text{cm}$ \notaL{¿Son correctos estos
+We chose three positions $x_A=0.3\text{cm}$,
+$x_B=0.8\text{cm}$ and $x_C=1.7\text{cm}$ and
+$y_A=y_B=y_C=0.31\text{cm}$  \notaL{¿Son correctos estos
   valores? Antes dijiste que $A$ estaba abajo del electrodo}\notaL{¿valor de y?} on
 which we measured the reflectance spectra, also shown in the figure. Location $A$ is
 closest to the electrode, while location $C$ is the furthest.
-We fitted the measurements using Eqs. \eqref{Eq:ECMR} and
-\eqref{Eq:Brugg} using the local porosity and the depth of the layer
-as adjustable parameters. \notaL{¿Es cierto?} We obtained $p_{1A}=0.44$, $p_{1B}=0.42$, and
-$p_{1C}= 0.40$. \notaL{Falta decir cuáles fueron las profundidades}
-We also show in Fig. \ref{fig:DR3} the wavelength dependence of
- the complex index of refraction corresponding to the fitted porosities.
-\notaL{\sout{Quité otra frase que no entendí, pero que me generó una duda:
-  la profundidad la ajustaste ópticamente o la mediste en SEM y luego
-  hiciste el ajuste a la reflectancia?}} \notaC{Esta parte, siempre se midio la
-  profundida en SEM, por eso me costo poder ajustar el espectro de reflactacia
-  en un primer inicio, hasta que coloque la ecuacion de de fresnel
-  para una monopelicula.}
 
+The thicknesses of the layer were measured
+using SEM. In Fig. \ref{fig:DR4} we show side-view SEM micrographs of sample
+$G_1$ taken at the
+positions $A$, $B$, and $C$ shown in
+Fig. \ref{fig:DR3}. From these micrographs we can
+obtain the thicknesses of the porous layer at different
+positions. Thus, we obtained that for our sample $G_1$
+$d_{1A}= 1320\text{nm}$, $ d_{1B} = 997\text{nm}$, and $d_{1c} = 605
+\text{nm}$.
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Images/semD11}
@@ -703,26 +701,21 @@ We also show in Fig. \ref{fig:DR3} the wavelength dependence of
     \notaL{Quité la info redundante}}
   \label{fig:DR4}
 \end{figure}
-
-In Fig. \ref{fig:DR4} we show side-view SEM micrographs of sample
-$G_1$ taken at the
-positions $A$, $B$, and $C$ shown in
-Fig. \ref{fig:DR3}. From these micrographs we can
-obtain the thicknesses of the porous layer at different
-positions. Thus, we obtained that for our sample $G_1$
-$d_{1A}= 1320\text{nm}$, $ d_{1B} = 997\text{nm}$, and $d_{1c} = 605
-\text{nm}$. Similarly, for a second sample $G_2$, attacked with a
+We fitted then reflectance measurements using Eqs. \eqref{Eq:ECMR} and
+\eqref{Eq:Brugg} using the local porosities $p_{1A}$, $p_{1B}$ and $p_{1C}$ as
+adjustable parameters and using Eqs. \eqref{Eq:ECMR} and
+\eqref{Eq:Brugg}. We obtained $p_{1A}=0.44$, $p_{1B}=0.42$, and
+$p_{1C}= 0.40$. The fitted reflectance has a good agreement with the
+measured one, though its interference oscillations are larger towards
+the blue region probably due to the lack of surface scattering in our
+calculation. We also show in Fig. \ref{fig:DR3} the wavelength dependence of
+the complex index of refraction corresponding to the fitted porosities.
+Similarly, for a second sample $G_2$, etched with a
 larger current $I_2 =40 \text{mA}$, for a time $t_2=$?\notaL{El ancho no
   tiene sentido si no especificas el tiempo} we obtained the
-porosities \notaL{las posiciones ¿fueron las mismas que para $G_1$?}, $p_{2A}= 0.76$, $p_{2B}=
-0.73$, and $p_{2C}= 0.68$, and the corresponding depths $d_{2A}=1950\text{nm}$,
-$d_{2B}=1690\text{nm}$, and $d_{2C}= 1430\text{nm}$. \notaL{Quité otra
-  frase vacía}\notaL{Me es importante entenderte: La profundidad la
-  obtuviste de SEM. ¿También la obtuviste de R, o primero la obtuviste
-  de SEM y luego la sustituiste en la fórmula de R? Recuerdo que nos
-  presentaste alguna vez que la profundidad obtenida de la óptica
-  correspondía a la medida por SEM. ¿Fue así? Si sí, por qué no lo
-  escribes aquí?}
+depths $d_{2A}=1950\text{nm}$, $d_{2B}=1690\text{nm}$, and $d_{2C}=
+1430\text{nm}$, and the corresponding porosities \notaL{las posiciones ¿fueron las mismas que para $G_1$?}, $p_{2A}= 0.76$, $p_{2B}=
+0.73$, and $p_{2C}= 0.68$.
 
 \begin{figure}
   \centering
@@ -745,7 +738,8 @@ $d_{2B}=1690\text{nm}$, and $d_{2C}= 1430\text{nm}$. \notaL{Quité otra
     correpondientes a A, B y C de las dos muestras}}
   \label{fig:JDR}
 \end{figure}
-In Fig. \ref{fig:JDR}(a) we show the actual current density
+
+In Fig. \ref{fig:JDR}(a) we show the current density
 $j_\perp$ obtained from Fig. \ref{fig:DR1} by scaling by the actual
 current $I_1=5\text{mA}$ and $I_2=40\text{mA}$ employed to prepare
 samples $G_1$ and $G_2$, respectively (Eq. \eqref{Eq:J}). We indicate the values
@@ -753,7 +747,6 @@ corresponding to positions $A$, $B$, and $C$ on the samples.
 In Fig. \ref{fig:JDR} (b) we show the etching rate $v = d/t$ on
 selected positions of both samples obtained by dividing the thickness
 $d$ measured as in Fig. \ref{fig:DR4} by the etching time.
-
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Images/grinJD31}
@@ -869,7 +862,7 @@ $d_L=0.117\mu\text{m}$, $t_L=11\text{s}$.
   \centering
   \begin{tabular}{ccccccc}
     \hline
-    Pos(kind)&Current(mA/cm$^2$)&Porosity&Index&Wavelength($\mu\text{m}$)\\
+    Pos.(kind)&Curr. dens.(mA/cm$^2$)&Porosity&Index&Wavelength($\mu\text{m}$)\\
     \hline
     \hline
     A(H) & 5.5 & 0.45& 2.66& 0.65   \\
@@ -908,7 +901,13 @@ move towards its right, that is, away from where the electrode was
 positioned. In the figure we indicate three points with $x$ coordinates
 $x_A=0.3\text{cm}$,  $x_B=0.8\text{cm}$, and $x_C=1.2\text{cm}$
 on which we measured the reflectance spectra, also shown in the figure.
-\notaL{No dices cómo hiciste las curvas teóricas} The spectra have the
+\notaL{Estas $x_A$ y $x_B$ son iguales a las anteriores, pero $x_C$
+  no. ¿Es correcto? Me dice que sí, pues no podría irse al
+  ultravioleta} \notaL{No dices cómo hiciste las curvas teóricas. Ya
+  me explicó. {\bf la teoría es trampa} Dado el mínimo de reflectancia
+medido, calculó una microcavidad {\em diseñada} para ese mínimo, en
+lugar de usar los anchos predichos} The
+spectra have the
 expected shape: a high reflectance plateau corresponding to the
 photonic band gap of the Bragg mirrors, with a deep narrow minimum due
 to the Fabry-Perot resonance of the cavity. We also present the
@@ -920,7 +919,10 @@ corresponding etching rates and the porosities using
 Eqs.~\eqref{eq:etch} and  \eqref{eq:poros}, and from them, the
 thickness of each layer, the index of refraction
 (Eq. \eqref{Eq:Brugg}) and the reflectance,using standard transfer
-matrix theory \notaL{ref}. Notice the good agreement between theory
+matrix theory \notaL{ref}. \notaL{Esto sería innecesario para los
+  puntos A y B, aunque tal vez sí se necesita para C, oyes $x_C$
+  parece ser distinto.}
+Notice the good agreement between theory
 and experiment. \notaL{No me lo creo. Me sospecho que más bien,
   ajustaste el experimento no sé con qué parámetro. Explícame cómo
   hiciste el cálculo.} The parameters used are shown in Table \ref{tabla:1}.
