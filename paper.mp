@@ -1,6 +1,7 @@
 g_use_svg = 0; %0 for postscript, 1 for svg
 prologues:=3;
 u=1cm;
+input TEX;
 
 outputtemplate := "%j-%c.eps";
 if g_use_svg > 0:
@@ -242,9 +243,9 @@ endfig;
 beginfig(4)
   picture pic[];
   fill unitsquare xscaled 30u yscaled 10u withcolor .9white;
-  fill fullcircle scaled 6u shifted (5u,5u) withcolor .6white;
-  fill fullcircle scaled 6u shifted (15u,5u) withcolor .6white;
-  fill fullcircle scaled 6u shifted (25u,5u) withcolor .6white;
+  for i=1 upto 8:
+    fill fullcircle scaled 2u shifted (-u+3.5*i*u,5u) withcolor .6white;
+  endfor
   for i=0 upto 30:
     begingroup
       save n;
@@ -258,12 +259,10 @@ beginfig(4)
       endfor;
     endgroup;
   endfor;
-  pic0=thelabel(btex A etex scaled 7, (5u,5u));
-  draw pic0 withcolor white;
-  pic1=thelabel(btex B etex scaled 7, (15u,5u));
-  draw pic1 withcolor white;
-  pic2=thelabel(btex C etex scaled 7, (25u,5u));
-  draw pic2 withcolor white;
+  for i=1 upto 8:
+    pic0:=thelabel(TEX("$"&decimal(i)&"$") scaled 7, (-u+3.5*i*u,5u));
+    draw pic0 withcolor white;
+  endfor
   clip currentpicture to unitsquare xscaled 30u yscaled 10u;
 endfig;
 
@@ -271,9 +270,10 @@ endfig;
 beginfig(5)
   picture pic[];
   fill unitsquare shifted (0,-1) xscaled 30u yscaled 10u withcolor .9white;
-  fill unitsquare shifted (-.5,-1) xscaled 6u yscaled 10u shifted (5u,0) withcolor .6white;
-  fill unitsquare shifted (-.5,-1) xscaled 6u yscaled 10u shifted (15u,0) withcolor .6white;
-  fill unitsquare shifted (-.5,-1) xscaled 6u yscaled 10u shifted (25u,0) withcolor .6white;
+  for i=1 upto 8:
+    fill unitsquare shifted (-.5,-1) xscaled 2u yscaled 10u shifted (-u+3.5*i*u,0)
+      withcolor .6white;
+  endfor
   for i=0 upto 60:
     begingroup
       save n;
@@ -284,12 +284,10 @@ beginfig(5)
       fill porolat(10,n2*8u+uniformdeviate(n2*1.2u), n2*.2u) shifted (i*.5u+uniformdeviate(.7u), 0);
     endgroup;
   endfor;
-  pic0=thelabel(btex A etex scaled 7, (5u,-5u));
-  draw pic0 withcolor white;
-  pic1=thelabel(btex B etex scaled 7, (15u,-5u));
-  draw pic1 withcolor white;
-  pic2=thelabel(btex C etex scaled 7, (25u,-5u));
-  draw pic2 withcolor white;
+  for i=1 upto 8:
+    pic0:=thelabel(TEX("$"&decimal(i)&"$") scaled 7, (-u+3.5*i*u,-5u));
+    draw pic0 withcolor white;
+  endfor
   clip currentpicture to unitsquare shifted(0,-1) xscaled 30u yscaled
     10u;
   interim ahlength:=2*ahlength;

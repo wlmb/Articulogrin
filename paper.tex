@@ -6,13 +6,17 @@
 %\usepackage[•]{•}ckage{float}
 %\usepackage{cite}% para contraer referencias
 %\usepackage[usenames]{color}
+\usepackage{showkeys}
 \usepackage{bm}
+\usepackage{hyperref}
 \usepackage[normalem]{ulem} %opcional para la correcciones
 \newcommand{\abs}[1]{\lvert#1\rvert}
 \usepackage{xcolor}
+\newif{\ifexclude}
 \newcommand{\notaL}[1]{{\color{blue}+L:#1+}}
 \newcommand{\notaC}[1]{{\color{green}+C:#1+}}
 \newcommand{\notaV}[1]{{\color{red}+V:#1+}}
+
 \title{\textbf{Optimization of Porous Silicon Gradient Refractive
     Index Structures.} }
 \author[1]{C. A. Ospina de la Cruz}
@@ -100,7 +104,8 @@ technique is required allowing the identification and separation of
 these biological compounds \cite{I15}. Recent studies  have shown that
 the  combination  of thermal  oxidation  and infiltration of TiO2   by
 ALD offers the  opportunity to manufacture  a high index of refraction
-of contrast, visibly transparent GRIN optical elements from PS
+of contrast, visibly transparent GRIN \notaL{Define acrónimos antes de
+  usarlos}. optical elements from PS
 absorbent structures \cite{I16}. A Despite previous research on the
 formation of porous silicon with GRIN, type p in manufacturing and
 characterization, there was no control of current densities, much less
@@ -126,10 +131,11 @@ of light in a one-dimensional photonic crystal. In Section 3 we
 provide experimental  details about the manufacture of PS dielectric
 multilayers and Section 4 we shows the comparison of numerical and
 experimental results followed. Finally,  the conclusions given in
-Section. 5
+Section. 5 \notaL{Checar que esto corresponda a lo que sigue del
+  artículo}
 
-\section{Theory} \label{sec:theory}
-\subsection{Calculation of the current density}
+\section{Theory: current density}
+\label{sec:theory}
 \label{sec:calc-curr-dens}
 \notaL{check where acronyms are first defined}
 A gradient in the optical properties of porous Silicon (PS) systems may be
@@ -157,7 +163,7 @@ filled with the electrolyte up to a height $c$. We assume that the
 walls of the cell are insulating while the bottom is completely
 covered with the sample, which is an
 electrically grounded good conductor. Within the electrolyte we position an electrode
-which we assume is a thin conductor, insulated from the electrolyte
+which we assume is a thin conducting wire, insulated from the electrolyte
 but for a small area near its tip, which we thus approximate as a
 point current source.
 \begin{figure}
@@ -168,9 +174,9 @@ point current source.
     walls of the cell are insulating and the bottom is completely
     covered by the sample, which is assumed to be a good
     conductor. The tip of the electrode is a thin insulated wire
-    \notaL{El punto del electrodo hazlo más chico que el ancho
-      del cable.} with just the tip uncovered and located at $\bm r_0=(x_0,y_0,z_0)$ within the
-    liquid.}
+    with just the tip uncovered and located at $\bm r_0=(x_0,y_0,z_0)$ within the
+    liquid. The current flows through the electrolyte from the sample
+    to the tip.}
   \label{f:celda}
 \end{figure}
 Within the electrolyte the current density is
@@ -180,7 +186,7 @@ Within the electrolyte the current density is
 \end{equation}
 with
 $\sigma$ the conductivity, $\bm E=-\nabla\phi$ the electric field,
-and $\phi$ the electric potential. For a
+and $\phi$ the electric potential. In a
 stationary situation
 $\nabla\cdot \bm j = \sigma\nabla\cdot\bm E=0$. Thus, within the electrolyte,
 \begin{equation}
@@ -198,7 +204,8 @@ electrode. Integrating $ \bm j$ over this surface we obtain
 where the prime on $\mathcal S'$ means we remove from the surface a
 very small hole through which the wire that feeds the current to the
 electrode gets
-through. Assuming the wire is narrower than any other relevant
+through, and the sign is consistent with the current direction in
+Fig. \ref{f:celda}. Assuming the wire is narrower than any other relevant
 distance in the system, we may interpret Eq. \eqref{eq:I} as an
 integral over a closed surface of the current \eqref{eq:j} within the
 electrolyte, ignoring the actual current within the wire. Thus
@@ -246,7 +253,7 @@ charges. The images include a reflection on the conducting bottom of the
 cell, of the opposite charge $-q_0$ and situated at $(x_0, y_0,-z_0)$,
 to guarantee that the bottom stays at potential zero.
 There are further images on the four walls of the cell, of the same charge $q_0$
-and situated at $(-x_0,Y_0,z_0)$, $(x_0,-y_0, z_0)$, $(2a-x_0, y_0,
+and situated at $(-x_0,y_0,z_0)$, $(x_0,-y_0, z_0)$, $(2a-x_0, y_0,
 z_0)$ and $(x_0, 2b-y_0,z_0)$ to guarantee that no current goes across
 them. Similarly, there is an image of the same charge $q_0$ at
 $(x_0,y_0,2c-z_0)$ to guarantee that no current goes across the
@@ -323,7 +330,9 @@ summation, where we first obtain the potential and field produced by a
 simple periodic lattice of charges using a fast convergent sum over the 2D
 reciprocal vectors, then sum over the charges that form the basis
 of the 2D {\em crystal} plane, and finally sum over all the
- planes \cite{T6,T7}.
+ planes \cite{T6,T7}.\notaL{¿Estas referencias son relevantes? ¿En verdad
+   se define en ellas la suma de Ewald por planos? Dime dónde p.f., en qué
+   página. Y checa que todas las referencias tengan que ver con lo que decimos}
 
 We consider first a system made of identical unit charges
 ocuppying the positions $\bm R$ of a 2D Bravais lattice $\{\bm R\}$,
@@ -367,8 +376,9 @@ conditions at infinity, we obtain
 \end{equation}
 The case $G=0$ corresponds to the potential produced by a uniformly charged plane,
 while the case $G\ne 0$ is the potential produced by a sinusoidal
-charge density on a plane given by the
-symmetric solution that decays exponentially as we get away from
+charge density on a plane, given by the
+symmetric solution that decays exponentially as we get away, upwards
+or downwards, from
 the source plane. Substituting into Eq. \eqref{eq:phifourier} yields
 \begin{eqnarray}
   \label{eq:phiG1}
@@ -393,15 +403,15 @@ Fig. \ref{fig:sideview} and multiply by the corresponding charge $q_0$
 or $-q_0$ to obtain the contribution to the total potential. The charge $q_0$ corresponds to
 the planes with heights of the form $z_0+4nc$ and $-z_0+(4n+2)c$, with
 $n=\ldots-2,-1,0,1,2\ldots$ an arbitrary integer, while the charge
-$-q_0$ corresponds to the planes with height $z_0+(4n+2)c$ and
+$-q_0$ corresponds to the planes with heights $z_0+(4n+2)c$ and
 $-z_0+4(n+1)c$.
 
-We concentrate our attention only on the region $a\le z<z_0$. From
+We concentrate our attention only on the region $0\le z<z_0$. From
 Fig. \ref{fig:sideview} we see that the $G=0$
 field has contributions only from the charges at $z_0$ and their
 images at $-z_0$, and that this contribution is like that of a parallel plate
 capacitor $E_{0z}=-4\pi q_0/ab=-16\pi q_0/A$, which corresponds to the
-potential $\phi_0=16\pi q_0 z/A$. Other contiguous planes of with opposite charges
+potential $\phi_0=16\pi q_0 z/A$. Other pairs of contiguous planes of with opposite charges
 contribute to the field elsewhere. The contributions to the potential
 from the $G\ne0$ are simple geometric sums that may be added
 analytically over $n$ and yield the total potential
@@ -444,11 +454,11 @@ out. As expected, all the charges that leave the sample find
 their way  to the cathode across the electrolyte.
 
 Using Eq. \eqref{Eq:J} we can correlate the local current density at
-the sample as it is prepared with its geometric and optical
-properties. For the calculation of the optical properties we use the
-well known transfer matrix method \notaL{refs}.
-\notaL{\sout{No necesitamos presentar la teoría de matrices de
-  transferencia. No hay nada original ahí.}}
+the sample as it is prepared with its geometric, structural and optical
+properties.
+
+\notaL{Quizás ni merece ser mencionado aquí: For the calculation of the optical properties we use the
+well known transfer matrix method \notaL{refs}.}
 
 
 \section{Procedures}
@@ -458,43 +468,39 @@ well known transfer matrix method \notaL{refs}.
   \includegraphics[width=.8\textwidth]{paper-3}\\[12pt]
   \includegraphics[width=.8\textwidth]{paper-4}\\[12pt]
   \includegraphics[width=.8\textwidth]{paper-5}
-  % \\[12pt]
-  % \includegraphics[scale=0.6]{Images/DE1}
 
   \caption{Experimental set-up for
-    the fabrication of porous silicon with GRIN, consisting of a
+    the fabrication of GRIN PS structures. We show a side view of the
     electrochemical cell with the shape of a
-    rectangular prism. We indicate the Si wafer (dark
+    rectangular prism (top panel). We indicate the Si wafer (dark
     gray), the teflon cell (light gray), the sealing o-ring (black
     circles), the insulated feeding cable (white lines within black
     lines), the uncovered platinum tip (white) within the
     electrolyte (blue), the electrical contact below the sample
     (yellow) and the controlled current source. We indicate some geometrical
     parameters of the arrangement $x_0$, $z_0$, $a$ and $c$
-    and the current source (upper panel) and a few current density
-    field lines. Top (middle panel) and
-    side (lower panel) schematic views of the resulting sample,
-    illustrating three regions $A$, $B$ and $C$ of relatively high, medium and
-    low porosity respectively illustrating the gradients in pore
-    size, density and depth.}
+    and the current source and a few schematic current flux
+    lines. Top and side schematic views of the resulting sample
+    (middle and lower panels),
+    illustrating eght regions $1\ldots8$ of decreasing porosity,
+    illustrating the changes in pore radii,
+    length, and density and the porosity gradient.}
   \label{fig:DE1}
 \end{figure}
 
-\notaL{\sout{Cambié el título, pues tienes una mezcla de experimento y
-  teoría aquí}}
 In Fig. \ref{fig:DE1} we show a schematic representation of our
-experimental setup to manufacture porous silicon with GRIN.
+experimental setup to manufacture GRIN PS structures.
 As dicussed above, we fabricated an electrolytic cell with the shape of a
 rectangular prism on the bottom of which we place a Si wafer which makes
 electrical contact to a gold plate \notaL{Lo inventé; de qué material es
-  el contacto bajo la muestra} which together make the anode. The
+  el contacto bajo la muestra?} which together make the anode. The
 cathode consists of a platinum wire insulated except for a small region
 at its tip, which we take as a point current drain.
 We also show a schematic drawing of the expected GRIN PS structures,
 with a gradient in the porosity, and in the thickness, density and depth
 of the resulting pores.
 
-\subsection{Fabrication of PS  GRIN Single Layers}
+\subsection{Fabrication of GRIN  PS Single Layers}
 \label{sec:fabrication-ps-grin}
 We manufactured single layer PS structures through an electrochemical
 anodization on a (100) $p$-type crystalline Si wafer
@@ -503,63 +509,70 @@ conditions. The process was performed at
 room temperature,\notaL{OJO. No controlaste la temperatura} with an
 electrolytic mixture of aqueous hydrofluoric
 acid (HF) (concentration 48\% wt), glycerol (purity 99.8 \% wt) and
-ethanol (purity 99.9\% wt) in a 3:7:1 volume ratio. After the
+ethanol (purity 99.9\% wt) in a 3:7:1 volume ratio. \notaL{Checa que
+  todo esto sí corresponda a tus últimas muestras} After the
 anodizing process, the samples were rinsed with
 ethanol (purity: 99.9 $ \% $  wt). The electrolytic cell had the shape
 of a rectangular prism as shown in Fig. \ref{fig:DE1}, with a base of
-size $6.2\text{mm}\times2.03\text{cm}$) with an uncovered sample area
-of about $1.21\text{cm}^2$. The height of the liquid was set at
-$c=1\text{cm}$. The cathode was a
-platinum wire that with a diameter of $0.41\text{mm}$ insulated by a
-teflon cylinder of external diameter $2\text{mm}$. \notaL{¿Están
-  bien estos diámetros?} with an uncovered tip located at $\bm r_0=(x_0,
-y_0,z_0)=(0.1,0.31,0.9)$.
-We manufactured a sample applying a current $I=5\text{mA}$,
-which yielded current densities in the range
-$j_\perp=2.5-6.0\text{mA}/\text{cm}^2$,\notaL{verificar} during an attack time
-$t_1=600 \text{s}$, and another sample using a larger
-current $I=40\text{mA}$, corresponding to current densities in the
-range $j_\perp=20-50\text{mA}/\text{cm}^2$, for a time $t_2=200 \text{s}$ . \notaC{
-Coloque los tiempo de ataque para $t_1$ y $t_2$}
-\subsection{Morphological studies}
+sides $a=2.03\,\text{cm}$ and $b=1.48\,\text{cm}$, with an uncovered sample area
+of about $3\,\text{cm}^2$. The height of the liquid was set at
+$c=1\,\text{cm}$. The cathode was a
+platinum wire that with a diameter of $0.41\,\text{mm}$ insulated by a
+teflon cylinder of external diameter $\,2\text{mm}$, with an uncovered
+tip located at $\bm r_0=(x_0,
+y_0,z_0)=(0.2\,\text{cm},0.74\,\text{cm},0.9\,\text{cm})$. \notaL{Checa todos estos datos}
+We manufactured three samples $G_1$, $G_2$ and $G_3$ by applying a
+current $I_1=5\,\text{mA}$, $I_2=10\,\text{mA}$ and
+$I_3=20\,\text{mA}$, respectively, during a time of $t=250s$.
+
+\ifexclude
+\notaL{Tal vez esto no lo hicimos:
+  \subsection{Morphological studies}
 \label{sec:morph-stud}
 The morphologies of the etched porous layers were
 observed using a Hitachi SU1510 scanning electron microscope (SEM)
 with which we measured the thickness $d$ and the porosity $p$ of the
 films at different positions along the sample from its top and side
-views (Fig. \ref{fig:DE1}). \notaL{¿Sí se midió la porosidad con SEM?}
+views (Fig. \ref{fig:DE1}).} \notaL{¿Sí se midió la porosidad con SEM?}
+\fi %exclude
 
 \subsection{Reflectance Measurement}
 \label{sec:refl-meas}
-We measured the reflectivity spectra using a {\em Perkin Elmer Lambda 950}
-UV-Vis-NIR spectrophotometer. For iterpretation of the data in the
-case of a single PS layer we used
-the standard formula \cite{T8,T9} \notaL{\sout{referencia}} for three media air (0), PS
-(1) and c-Si (2),
- \begin{eqnarray}\label{Eq:ECMR}
-   R=\frac{r _ {_ {01}}r _ {_ {12}} e^{2i\delta}}{1+r _ {_ {01}}r _ {_ {12}} e^{2i\delta}}
-\end{eqnarray}
-%where $ r_{01} $ y $ r_{12}$ are the Fresnel reflectance
-coefficients at the air/PS and PS/c-Si interfaces \cite{T10,T11}
-and $\delta=k_{PS}^\perp d$, where $k_{PS}^\perp$ is
+We measured the reflectivity spectra at different positions over our
+samples using a {\em Perkin Elmer Lambda 950}
+UV-Vis-NIR spectrophotometer.\notaL{Finalmente, ¿fue éste el que se
+  usó? Si sí, ¿hay algo internesante que decir sobre el? Cosas como el
+tamaño de mancha, resolución espectral, etc.} For interpretation of the
+data layer we used
+the standard formula \cite{T8,T9} for the reflectance of three media:
+air (0) environment, the PS film (1) and the c-Si substrate (2),
+ \begin{equation}\label{Eq:ECMR}
+   R=\left |\frac{r _ {_ {01}}r _ {_ {12}} e^{2i\delta}}{1+r _ {_
+   {01}}r _ {_ {12}} e^{2i\delta}}\right |^2
+\end{equation}
+where $r_{01}$ and $r_{12}$ are the Fresnel reflectance
+coefficients of the air/PS and PS/c-Si interfaces \cite{T10,T11}
+and $\delta=k_1^\perp d$, where $k_1^\perp$ is
 the component of the wavevector perpendicular to the surface within
-the porous layer of thickness $d$.
+the porous layer of thickness $d$. The reflectance depends on the
+thickness of the film and on the index of refraction $n_1=n_{\text{PS}}$ of the porous
+layer, which we relate to the porosity through Bruggeman's
+effective medium theory \cite{I20},
+\begin{equation}\label{Eq:Brugg}
+ p\frac{1-\epsilon_1} {1+\epsilon_1} + (1-p)
+  \frac{\epsilon_2 - \epsilon_1}
+  {\epsilon_2+\epsilon_1}=0,
+\end{equation}
+where $\epsilon_2=\epsilon_{\text{Si}}$ is the dielectric function of
+the c-Si substrate, and
+$\epsilon_1=n_{\text{PS}}^2$ is the dielectric function of the PS layer.
+We fitted the reflectance spectra using the porosity $p$ and the
+thickness $d$ and a scale calibration factor $s$ as fitting
+parameters, and thus, we related the porosity
+$p$ and the etching rate $v=d/t$ to the local current density $j_\perp$.
 
-
-\subsection{Refraction Index of PS GRIN Single Layers}
-\label{sec:refraction-index-ps}
-The local refractive index $n_{PS}$ of the PS layer was calculated from its
-porosity $p$ through
-Bruggeman's effective medium theory \cite{I20}
-\begin{eqnarray}\label{Eq:Brugg}
- p\frac{1-\epsilon_{PS}} {1+\epsilon_{PS}} + (1-p)
-  \frac{\epsilon_{\text{Si}} - \epsilon_{PS}}
-  {\epsilon_{\text{Si}}+\epsilon_{PS}}=0
-\end{eqnarray}
-where the porosity $p$ is the volume fraction of air within the PS
-layer, $\epsilon_{Si}$ is the dielectric function of c-Si, and
-$\epsilon_{PS}=n_{PS}^2$ is the dielectric function of the PS.
-
+\ifexclude
+\notaL{Quitar esta sección:
 \subsection{Fabrication  of GRIN PS Microcavities}
 \label{sec:fabrication-grin-ps}
 After characterizing the fabrication process through measurements and
@@ -579,17 +592,19 @@ sequence $(HL)_6HH(LH )_6$ \notaL{Esto no corresponde a la
 a quarter-wave plate of high and low index of refraction correspondingly.
 We chose $\lambda_c= 0.67 \mu\text{m}$.\notaL{Algún motivo para esta
   elección?} For preparing the high index layers we
-chose a current $I_H=5\text{mA}$ applied during  time
-$t_H=35 \text{s}$. The current density was
-$j_{HA\perp}= 6\text{mA}/\text{cm}^2$ below the tip \notaL{checar},
+chose a current $I_H=5\,\text{mA}$ applied during  time
+$t_H=35 \,\text{s}$. The current density was
+$j_{HA\perp}= 6\,\text{mA}/\,\text{cm}^2$ below the tip \notaL{checar},
 and yielded (see Sec. \ref{sec:ps-grin-single} below)
 $n_H =2.6$, corresponding to a porosity $p_H =0.46$, and a
-thickness $d_H=0.066 \mu\text{m}$. The corresponding parameters for the low density
-layers were $I_L=38\text{mA}$, $j_{LA\perp}=50\text{mA}/\text{cm}^2$, $n_L= 1.4$,  $p_L =0.75$,
-$d_L=0.117 \mu \text{m}$, and $t_L=11 \text{s}$. For the rest of the
+thickness $d_H=0.066 \mu\,\text{m}$. The corresponding parameters for the low density
+layers were $I_L=38\,\text{mA}$, $j_{LA\perp}=50\,\text{mA}/\,\text{cm}^2$, $n_L= 1.4$,  $p_L =0.75$,
+$d_L=0.117 \mu \,\text{m}$, and $t_L=11 \,\text{s}$. For the rest of the
 sample the current density, porosity, index of refraction and thickness
 varied, yielding a PS GRIN MC. \notaL{Los datos de arriba ¿son
   consistentes con los de la sección \ref{sec:grin-porous-silicon}?}
+}
+\fi %exclude
 
 \section{Discussion and Results}
 \label{sec:discussion-results}
@@ -597,48 +612,86 @@ varied, yielding a PS GRIN MC. \notaL{Los datos de arriba ¿son
 \label{sec:current-density}
 \begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{Images/G123}
-  \caption{Normalized current density $j_\perp(z,0,0)/I$ calculated through
+  \includegraphics[width=1.2\textwidth]{j_Ivsxy.png}
+  \includegraphics[width=\textwidth]{j_Ivsx.png}
+  \caption{Normalized current density $j_\perp(x,y,0)/I$ calculated a
+    the surface of the sample through
     Eq. (\ref{Eq:J}) for a
     system as in Figs. \ref{f:celda} and \ref{fig:DE1} for a cell of
-    length $a = 2.03\text{cm}$ and width $b=0.62\text{cm}$, for a
-    point-like electrode at $\bm r_0=(0.1\text{cm},
-    0.31\text{cm},0.9\text{cm})$ (top panel). Normalized current
-    along the line $y=?$ (bottom panel). \notaL{Escoger el valor de
-      $y$ y poner la figura correspondiente} \notaL{Cambia los letreros, $J$ por
-      $j_\perp$. La ordenada no es a, sino $x$ y la abcisa no es b
-      sino $y$}.\notaL{Volverla a hacer con los datos
-      correctos. Rotular la figura con la misma notación que en el
-      texto. Preparar la figura como dos figuras independientes.}. }
+    length $a = 2.03\,\text{cm}$ and width $b=1.48\,\text{cm}$, with
+    the surface of the electrolyte at a heigth $c=1.0\,\text{cm}$, with a
+    point-like electrode at $\bm r_0=(0.2\,\text{cm},
+    0.74\,\text{cm},0.9\,\text{cm})$ (top panel). Normalized current
+    along the center line $y=0.74\,\text{cm}$ (bottom
+    panel).}
   \label{fig:DR1}
 \end{figure}
 In Fig. \ref{fig:DR1} we show the current density $j_\perp(x,y,0)$ calculated through
-Eq. \eqref{Eq:J} at the surface of the sample for the cell we built
-(see Figs. \ref{f:celda} and \ref{fig:DE1}) with length
-$a=2.03\text{cm}$ and width $b = 0.62\text{cm}$, the height of the
-solution was taken as $c=1\text{cm}$ and we set the tip of the
-electrode at $\bm
-r_0=(x_0,y_0,z_0)=(0.1\text{cm},0.31\text{cm},0.9\text{cm})$
-\notaL{¿Por qué usaste estos valores? Asegurarte de usar valores
-  relevantes a lo que sigue y rehacer las gráficas.}
-For these parameters we obtained $ j_\perp/I\sim
-0.5-1.2\text{cm}^{-2}$.
+Eq. \eqref{Eq:J} at the surface of the sample for our cell, as shown
+in Figs. \ref{f:celda} and \ref{fig:DE1} and described in
+Sect. \ref{sec:fabrication-ps-grin}). For these parameters we obtained
+a large range of values for $ j_\perp/I\sim 0.11-.72\,\text{cm}^{-2}$
+that vary mostly along the $x$ direction. Of course, this would differ
+for cells with aspect ratios closer to 1.
 
-\subsection{PS GRIN Single Layer }
+\subsection{PS GRIN Films }
 \label{sec:ps-grin-single}
-\notaL{Quité la figura pues no añade nada}
-\notaL{Quité la descripción, pues está arriba}
+\begin{figure}
+ \centering
+  \includegraphics[width=\textwidth]{G3I20proc}
+  \caption{ Photograph of sample $G_3$ prepared as described in
+    Sec. \ref{sec:fabrication-ps-grin} using the same parameters as
+    in Fig. \ref{fig:DR1} with a current $ I_3=20 \text{mA}$,
+    during a time $t=250\text{s}$. We indicate eight regions $x_i$
+    $(i=1, 2,...8)$ centered at positions,
+    $x_1=0.2\text{cm}$,  $x_2=0.4\text{cm}$, $x_3=0.6\text{cm}$,
+    $x_4=0.8\text{cm}$, $x_5=1\text{cm}$, $x_6=1.2\text{cm}$,
+    $x_7=1.4\text{cm}$, $x_8=1.6\text{cm}$, with $y_n=0.74\,\text{cm}$
+    on which we measured reflectance spectra. During the preparation the cathode was over
+    the leftmost point $x_1$.}
+  \label{fig:SI3}
+\end{figure}
+
+In Fig. \ref{fig:SI3} we show a photograph of one of our samples,
+prepared as described in Sec. \ref{sec:fabrication-ps-grin}, with the
+same conditions as those corresponding to Fig. \ref{fig:SI3} applying a current
+$I_3=20\,\text{mA}$ during a time $t=250\,s$. We notice a series of
+visible interference fringes that get wider as we move towards the
+right end of the sample, consistent with a inhomogeneous film that
+gets thinner towards the right, and qualitatively consistent with
+Fig. \ref{fig:DR1} that shows a current density that decays towards
+the right. Equal color lines seem to correspond to iso-current lines of
+Fig. \ref{fig:SI3}, except very close to the the walls of the cell,
+where the film rapidly becomes very narrow. The reason is that there
+is a small region below the cell walls where the electrolyte penetrates
+up to the sealing o-ring (see upper panel of
+Fig. \ref{fig:DE1}) and towards which the current leaks from the
+neighborhood of the wall. Thus, we may expect our formula \eqref{Eq:J}
+to fail close to the border, at distances of the order of the radius
+of the cross-section of the o-ring.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{R20vslambda}
+  \caption{Reflectance spectra at different positions $(x,y)$
+    on sample $G_3$ (shown in Fig. \ref{fig:SI3}), where
+    $x=0.2-1.6\,\text{cm}$ and $y=0.74\,\text{cm}$. We show
+  experimental results and results fitted through
+  equations~\eqref{Eq:ECMR}} and \eqref{Eq:Brugg}.
+  \label{fig:R20}
+\end{figure}
+
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Images/SPgrin51}
   \caption{(a)  Sample $G_1$ prepared as described in
-     \ref{sec:fabrication-ps-grin} using a current $I_1=5 \text{mA}$
-    during a time $t_1=600\text{s}$. We indicate three regions $A$,
+     \ref{sec:fabrication-ps-grin} using a current $I_1=5 \,\text{mA}$
+    during a time $t_1=600\,\text{s}$. We indicate three regions $A$,
     $B$, and $C$ centered at positions at positions,
-    $x_A=0.3\text{cm}$ \notaL{Atrás habías dicho que era justo abajo
+    $x_A=0.3\,\text{cm}$ \notaL{Atrás habías dicho que era justo abajo
       del electrodo. ¿Es cierto o no? ¿Dónde estaba el electrodo? ¿Qué
-    altura tenía el agua? ¿Igual que en la sección previa?}, $x_B=0.8\text{cm}$ and
-    $x_C=1.7\text{cm}$. \notaL{¿Cuánto vale $y$?} (b) Reflectance
+    altura tenía el agua? ¿Igual que en la sección previa?}, $x_B=0.8\,\text{cm}$ and
+  $x_C=1.7\,\text{cm}$. \notaL{¿Cuánto vale $y$?} (b) Reflectance
     spectra measured at the center of regions $A$, $B$, and $C$ and fit
     using Eq. \eqref{Eq:ECMR}.\notaL{¿Cuáles parámetros se ajustaron y
       cuáles se midieron independientemente}\notaL{Para que no se vean
@@ -667,21 +720,18 @@ con latex}}
   \label{fig:DR3}
 \end{figure}
  In Fig. \ref{fig:DR3} we show a photograph of one of our single layer PS GRIN
- structures, $G_1$, prepared as described in
- \ref{sec:fabrication-ps-grin} applying a current $I_1=5\text{mA}$ for
- $t_1=600\text{s}$.\notaL{Quizás podamos quitar la repetición de I y
-   t} We employed the same geometry as that described in
- Sec. \ref{sec:current-density} \notaL{Lo inventé. ¿Es cierto?}
-The position of the electrode corresponds to the left side of the
+ structures, $G_3$, prepared as described in
+ \ref{sec:fabrication-ps-grin} applying a current $I_3=20\,\text{mA}$
+ for a time $t=250\,\text{s}$. We employed the same geometry as that described in
+ Sec. \ref{sec:current-density}
+The positions $\bm R_n=(x_n,y_n)$, $n=1\ldots8$  with
+$x_n=0.2n\,\text{cm}$ and $y_n=0.74\,\text{cm}$ on which reflectance
+spectra were measured are indicated. The electrode was situated above
+the position $\bm R_1$  corresponds to the left side of the
 photograph. The variation of the optical properties across the
 sample is evident. \notaL{Tenemos algo sensato que decir sobre el
   gradiente en la dirección vertical cerca de los bordes?}
-We chose three positions $x_A=0.3\text{cm}$,
-$x_B=0.8\text{cm}$ and $x_C=1.7\text{cm}$ and
-$y_A=y_B=y_C=0.31\text{cm}$  \notaL{¿Son correctos estos
-  valores? Antes dijiste que $A$ estaba abajo del electrodo}\notaL{¿valor de y?} on
-which we measured the reflectance spectra, also shown in the figure. Location $A$ is
-closest to the electrode, while location $C$ is the furthest.
+
 
 The thicknesses of the layer were measured
 using SEM. In Fig. \ref{fig:DR4} we show side-view SEM micrographs of sample
@@ -690,8 +740,8 @@ positions $A$, $B$, and $C$ shown in
 Fig. \ref{fig:DR3}. From these micrographs we can
 obtain the thicknesses of the porous layer at different
 positions. Thus, we obtained that for our sample $G_1$
-$d_{1A}= 1320\text{nm}$, $ d_{1B} = 997\text{nm}$, and $d_{1c} = 605
-\text{nm}$.
+$d_{1A}= 1320\,\text{nm}$, $ d_{1B} = 997\,\text{nm}$, and $d_{1c} = 605
+\,\text{nm}$.
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{Images/semD11}
@@ -711,10 +761,10 @@ the blue region probably due to the lack of surface scattering in our
 calculation. We also show in Fig. \ref{fig:DR3} the wavelength dependence of
 the complex index of refraction corresponding to the fitted porosities.
 Similarly, for a second sample $G_2$, etched with a
-larger current $I_2 =40 \text{mA}$, for a time $t_2=$?\notaL{El ancho no
+larger current $I_2 =40 \,\text{mA}$, for a time $t_2=$?\notaL{El ancho no
   tiene sentido si no especificas el tiempo} we obtained the
-depths $d_{2A}=1950\text{nm}$, $d_{2B}=1690\text{nm}$, and $d_{2C}=
-1430\text{nm}$, and the corresponding porosities \notaL{las posiciones ¿fueron las mismas que para $G_1$?}, $p_{2A}= 0.76$, $p_{2B}=
+depths $d_{2A}=1950\,\text{nm}$, $d_{2B}=1690\,\text{nm}$, and $d_{2C}=
+1430\,\text{nm}$, and the corresponding porosities \notaL{las posiciones ¿fueron las mismas que para $G_1$?}, $p_{2A}= 0.76$, $p_{2B}=
 0.73$, and $p_{2C}= 0.68$.
 
 \begin{figure}
@@ -741,7 +791,7 @@ depths $d_{2A}=1950\text{nm}$, $d_{2B}=1690\text{nm}$, and $d_{2C}=
 
 In Fig. \ref{fig:JDR}(a) we show the current density
 $j_\perp$ obtained from Fig. \ref{fig:DR1} by scaling by the actual
-current $I_1=5\text{mA}$ and $I_2=40\text{mA}$ employed to prepare
+current $I_1=5\,\text{mA}$ and $I_2=40\,\text{mA}$ employed to prepare
 samples $G_1$ and $G_2$, respectively (Eq. \eqref{Eq:J}). We indicate the values
 corresponding to positions $A$, $B$, and $C$ on the samples.
 In Fig. \ref{fig:JDR} (b) we show the etching rate $v = d/t$ on
@@ -754,10 +804,10 @@ $d$ measured as in Fig. \ref{fig:DR4} by the etching time.
     density current $j_\perp$, obtained from Fig. \ref{fig:JDR}. We
     show the data points and the results of power
     law fits, yielding $v=0.68j_\perp^{0.69}$ and
-    $p=0.33j_\perp^0.21$, \notaC{cambie las expresiones $v=0.53j_\perp^{0.79}$ 
+    $p=0.33j_\perp^0.21$, \notaC{cambie las expresiones $v=0.53j_\perp^{0.79}$
     and $p=0.3j_\perp^0.24$}
     with corresponding correlation coefficients
-      $r_v^2=0.951$ and $r_p^2=0.989$ \notaC{ tambien cambie $r_v^2=0.993$ 
+      $r_v^2=0.951$ and $r_p^2=0.989$ \notaC{ tambien cambie $r_v^2=0.993$
       and $r_p^2=0.0.847$ }(here $v$ is in nm/s, $p$ is
       dimensionless and $j_\perp$ is in mA/cm$^2$). \notaL{cambia J por $j_\perp$, V por $v$ y P
       por $p$. Quita el letrero fitting data, la ecuación y el valor
@@ -802,6 +852,8 @@ different positions along just a few PS GRIN samples. Thus, it is much easier
 and faster to obtain calibration curves which are useful in the
 fabrication of PS photonic structures, GRIN or otherwise.
 
+\notaL{Removí lo de grinMC}
+\ifexclude
 \subsection{PS GRIN Microcavities}
 \label{sec:grin-porous-silicon}
 \begin{figure}
@@ -834,12 +886,12 @@ Fig. \ref{fig:MCGRIN0}.  Alternate layers of relatively high (H) and low and low
 (L) refractive indices $n_H$ and $n_L$, of corresponding thicknesses
 $d_H$ and $d_L$, are prepared by alternatingly etching a Si sample in our
 electrolytic cell with a current $I_H$ during a time $t_H$ and with a
-current $I_L$ during a time $t_L$. We chose the currents $I_H=5\text{mA}$
-and $I_L=40\text{mA}$ \notaL{¿son correctos estos valores?}, the same
+current $I_L$ during a time $t_L$. We chose the currents $I_H=5\,\text{mA}$
+and $I_L=40\,\text{mA}$ \notaL{¿son correctos estos valores?}, the same
 that were used above to prepare samples $G_1$ and $G_2$.
 We chose the etching times to obtain a MC at the given
 position $A$ tuned to a given wavelength
-$\lambda_c=0.67\mu\text{m}$. Thus, we chose the thicknesses so they
+$\lambda_c=0.67\mu\,\text{m}$. Thus, we chose the thicknesses so they
 correspond to quarter wavelength plates, $n_Hd_H=n_Ld_L=\lambda_c/4$,
 at this position and wavelength, yielding $n_H =2.6$,\notaL{Por qué no
   coincide con el dato de la tabla 1?} $p_H =0.46$,
@@ -850,9 +902,9 @@ $d_L=0.117\mu\text{m}$, $t_L=11\text{s}$.
   \includegraphics[width=\textwidth]{Images/MCGRIN2}
   \caption{(a)Top view photograph of a PS GRIN MC showing the position
     of the three measuring points $A$, $B$ and $C$. The cavity was
-    tuned to the wavelength $\lambda_c=0.67\mu\text{m}$ at position
-    $A$ (see text). We chose $x_A=0.3\text{cm}$, $x_B=0.8\text{cm}$,
-    and $x_C=1.2\text{cm}$. (b-d) Reflectance spectra measured and
+    tuned to the wavelength $\lambda_c=0.67\mu\,\text{m}$ at position
+    $A$ (see text). We chose $x_A=0.3\,\text{cm}$, $x_B=0.8\,\text{cm}$,
+    and $x_C=1.2\,\text{cm}$. (b-d) Reflectance spectra measured and
     calculated at positions $A-C$. For the calculation, the porosity
     and etching rates were obtained from Fig. \ref{fig:Indr1},
     the dielectric functions and indices of refracton from
@@ -904,7 +956,7 @@ In Fig. \ref{fig:MCGRIN3} we show a photograph of a PS GRIN MC
 sample, which displays a color that shifts towards the blue when we
 move towards its right, that is, away from where the electrode was
 positioned. In the figure we indicate three points with $x$ coordinates
-$x_A=0.3\text{cm}$,  $x_B=0.8\text{cm}$, and $x_C=1.2\text{cm}$
+$x_A=0.3\,\text{cm}$,  $x_B=0.8\,\text{cm}$, and $x_C=1.2\,\text{cm}$
 on which we measured the reflectance spectra, also shown in the figure.
 \notaL{Estas $x_A$ y $x_B$ son iguales a las anteriores, pero $x_C$
   no. ¿Es correcto? Me dice que sí, pues no podría irse al
@@ -944,13 +996,14 @@ whose effects are similar to those of an additional absorption
   se hizo. Hay que explicar qué significan y de dónde salieron las
   $\lambda_c$ de la tabla. }
 
- \begin{figure}
+
+\begin{figure}
    \centering
    \includegraphics[width=\textwidth]{Images/MCGRINSEM}
    \caption{Cross section SEM images corresponding to the positions
      $A$, $B$, and $C$ of the PS GRIN MC shown in
      Fig. \ref{fig:MCGRIN3}. The total thickness of the system at
-     different positions, $d_A=2.25\mu\text{m}$,
+     different positions, $d_A=2.25\mu\,\text{m}$,
      $d_B=2.17\mu\text{m}$, and $d_C=1.87\mu\text{m}$ are
      indicated. \notaL{Porque se ve una capa más ancha a la izquierda?
        ¿Por qué el número de capas arriba no es igual que abajo? ¿Por
@@ -976,6 +1029,7 @@ Bragg mirrors, which yield $d_A=2.31\mu\text{m}$,
 $d_B=2.08\mu\text{m}$, and $d_C=1.65\mu\text{m}$. \notaL{Por qué una
   te dio más grande y las otras más chicas? Aquí tienes que decir
   cuánto vale $N$ y no has dicho cuánto valieron $d_L$ y $d_H$}
+\fi %exclude
 
 \section{Conclusions}
 \label{sec:conclusion}
