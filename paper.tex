@@ -149,7 +149,7 @@ structures.\notaL{Tenemos referencias para afirmar esto?} Thus, we
 believe a
 system for which the current density field may be
 easily computed would be useful.
-Though $\bm j(\bm r)$ may be in principle be numerically calculated for a
+Though $\bm j(\bm r)$ may be numerically calculated for any
 given arbitrary experimental setup,  here we propose a particularly
 simple setup that allows an expression for the current in terms
 of a series that is rapidly convergent and each of whose terms is a
@@ -157,14 +157,14 @@ simple analytic function. With this setup it is easy to characterize
 the dependence of different properties of interest on the current, and
 this allows the design and optimization of diverse GRIN PS devices.
 
-We assume that our electrolytic cell has the shape of a
-prism (see Fig. \ref{f:celda}) with a horizontal rectangular base of sides $a$ and $b$, and
+We assume that our electrolytic cell has the shape of a rectangular
+prism (see Fig. \ref{f:celda}) with a horizontal base of sides $a$ and $b$, and
 filled with the electrolyte up to a height $c$. We assume that the
 walls of the cell are insulating while the bottom is completely
 covered with the sample, which is an
-electrically grounded good conductor. Within the electrolyte we position an electrode
+electrically grounded relatively good conductor. Within the electrolyte we position an electrode
 which we assume is a thin conducting wire, insulated from the electrolyte
-but for a small area near its tip, which we thus approximate as a
+but for a small tip, which we approximate as a
 point current source.
 \begin{figure}
   \centering
@@ -188,7 +188,8 @@ with
 $\sigma$ the conductivity, $\bm E=-\nabla\phi$ the electric field,
 and $\phi$ the electric potential. In a
 stationary situation
-$\nabla\cdot \bm j = \sigma\nabla\cdot\bm E=0$. Thus, within the electrolyte,
+$\nabla\cdot \bm j = \sigma\nabla\cdot\bm E=0$. Thus, the potential
+obeys Laplace's equation within the electrolyte,
 \begin{equation}
   \label{eq:laplace}
 \nabla^{2} \phi=0.
@@ -224,7 +225,7 @@ and it shouldn't be further screened through the permittivity of the
 electrolyte.
 
 The effective conductivity of the relatively thin sample in contact
-with the grounded counterelectrode is large enough that we may assume its
+with the grounded counter-electrode is large enough that we may assume its
 surface $z=0$ is an equipotential.
 On the other hand, no current can go across the insulating walls of
 the cell, situated at $x=0$, $x=a$,, $y=0$ and $y=b$, nor through the
@@ -241,6 +242,7 @@ with mixed boundary conditions
 \end{equation}
 and
 \begin{equation}
+  \label{eq:E0}
 E_x(0, y ,z)= E_x(a, y ,z)=E_y(x, 0 ,z)=E_y(x, b
 ,z)=E_z(x, y ,c)=0.
 \end{equation}
@@ -249,21 +251,22 @@ The potential within the electrolytic cell coincides
 within the region $0\le x\le a$, $0\le y \le b$, $0\le z\le c$
 with that an infinite fictitious empty space but for the point charge
 $q_0$ at the tip of the electrode at $\bm r_0$, and an array of its fictitious image
-charges. The images include a reflection on the conducting bottom of the
+charges situated out of the cell. They include an image on the conducting bottom of the
 cell, of the opposite charge $-q_0$ and situated at $(x_0, y_0,-z_0)$,
 to guarantee that the bottom stays at potential zero.
 There are further images on the four walls of the cell, of the same charge $q_0$
 and situated at $(-x_0,y_0,z_0)$, $(x_0,-y_0, z_0)$, $(2a-x_0, y_0,
-z_0)$ and $(x_0, 2b-y_0,z_0)$ to guarantee that no current goes across
-them. Similarly, there is an image of the same charge $q_0$ at
-$(x_0,y_0,2c-z_0)$ to guarantee that no current goes across the
+z_0)$ and $(x_0, 2b-y_0,z_0)$ so that, taken one at a time, no current goes across
+the corresponding wall. Similarly, there is an image of the same charge $q_0$ at
+$(x_0,y_0,2c-z_0)$ so that no current goes across the
 surface of the electrolyte. Furthermore, each image charge has to be
-further reflected by each of the aforementioned surfaces, yielding new
-images.
+further reflected by each of the aforementioned surfaces, yielding
+infinitely many new images so that Eqs. \eqref{eq:ground} and
+\eqref{eq:E0} hold when all charges are considered together.
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{paper-1}
-  \caption{Top view of the fictitious system formed by reflections of
+  \caption{Top view of the $z=z_0$ plane of the fictitious system formed by reflections of
     the electrolytic cell (light blue) showing the charge at the
     tip of the electrode (red dot) and its images on the walls of the
     rectangular cell, the images of its images and so on (blue
@@ -282,11 +285,11 @@ lattice with a unit cell of size $2a\times 2b$ and with a basis of
 four equal charges $q_0$ situated at the positions $\bm r_0$, $\bm
 r_1=(-x_0, y_0, z_0)$, $\bm r_2=(x_0, -y_0, z_0)$ and $\bm r_3=(-x_0,
 -y_0, z_0)$. In Fig. \ref{fig:sideview} we show a lateral view of the
-image charges.
+image charges within the plane $y=y_0$.
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{paper-2}
-  \caption{Side view of the fictitious system formed by reflections of
+  \caption{Side view of the $y=y_0$ plane of the fictitious system formed by reflections of
     the electrolytic cell (light blue)
     showing the charge at the tip of the electrode (red dot), its
     images within the plane $z=z_0$ (blue dots), and its images at the
@@ -307,7 +310,7 @@ image charges.
 \end{figure}
 Each plane of charges upon reflection on the surface of the sample at
 the bottom of the cell yields an
-plane of image charges of the opposite sign, while reflections
+plane of image charges of the opposite sign, while each reflection
 on the surface of the liquid yields a plane of charges of the same
 sign. The side view may be interpreted as a periodic rectangular
 lattice with a unit cell of size $2a\times 4c$ containing a basis of eight point
@@ -324,8 +327,8 @@ convergence properties. The potential can be obtained
 using the Ewald summation technique \cite{T3,T4,T5}, which yields
 two rapidly converging series, one in real space and another one in reciprocal space.
 Nevertheless, as we need the potential and the field to obtain the
-current density on the surface of the sample on which there are no
-real nor image charges, we may perform a somewhat simpler planewise
+current density on the surface of the sample on which  no
+real nor image charges lie, we may perform a somewhat simpler planewise
 summation, where we first obtain the potential and field produced by a
 simple periodic lattice of charges using a fast convergent sum over the 2D
 reciprocal vectors, then sum over the charges that form the basis
@@ -334,7 +337,7 @@ of the 2D {\em crystal} plane, and finally sum over all the
    se define en ellas la suma de Ewald por planos? Dime dónde p.f., en qué
    página. Y checa que todas las referencias tengan que ver con lo que decimos}
 
-We consider first a system made of identical unit charges
+We consider first a system made of identical {\em unit} charges
 ocuppying the positions $\bm R$ of a 2D Bravais lattice $\{\bm R\}$,
 which we will take as a rectangular lattice with lattice parameters
 $2a$ and $2b$, and lying, for the time being, at the $z=0$ plane.
@@ -363,7 +366,7 @@ ordinary differential equation
  \frac{d^2}{dz^2}\phi_{\bm G}(z)-G^2\phi_G(z)=
    -\frac{4 \pi}{A} \delta(z),
  \end{eqnarray}
-an homogeneous equation for $z\ne0$ which may be trivially
+for each coefficient, an homogeneous equation for $z\ne0$ which may be trivially
 solved. After applying boundary conditions at $z=0$ and regularity
 conditions at infinity, we obtain
 \begin{equation}
@@ -406,15 +409,16 @@ $n=\ldots-2,-1,0,1,2\ldots$ an arbitrary integer, while the charge
 $-q_0$ corresponds to the planes with heights $z_0+(4n+2)c$ and
 $-z_0+4(n+1)c$.
 
-We concentrate our attention only on the region $0\le z<z_0$. From
+We concentrate our attention only on the region $0\le z<z_0$ above the
+sample but below the electrode. From
 Fig. \ref{fig:sideview} we see that the $G=0$
 field has contributions only from the charges at $z_0$ and their
 images at $-z_0$, and that this contribution is like that of a parallel plate
 capacitor $E_{0z}=-4\pi q_0/ab=-16\pi q_0/A$, which corresponds to the
 potential $\phi_0=16\pi q_0 z/A$. Other pairs of contiguous planes of with opposite charges
 contribute to the field elsewhere. The contributions to the potential
-from the $G\ne0$ are simple geometric sums that may be added
-analytically over $n$ and yield the total potential
+from the $G\ne0$ terms are simple geometric series that may be summed
+over $n$ analytically and yield the total potential
 \begin{equation}
   \label{eq:phitot}
   \begin{split}
@@ -450,7 +454,7 @@ Integrating over the surface of the sample we verify
   \int_0^adx\int_0^bdy\,j_\perp(\bm r)=I,
 \end{equation}
 as the contributions of opposite non-null reciprocal vectors cancel
-out. As expected, all the charges that leave the sample find
+out: as expected, all the charges that leave the sample find
 their way  to the cathode across the electrolyte.
 
 Using Eq. \eqref{Eq:J} we can correlate the local current density at
@@ -502,8 +506,8 @@ of the resulting pores.
 
 \subsection{Fabrication of GRIN  PS Single Layers}
 \label{sec:fabrication-ps-grin}
-We manufactured single layer PS structures through an electrochemical
-anodization on a (100) $p$-type crystalline Si wafer
+We manufactured single layer PS structures through electrochemical
+anodization of a (100) $p$-type crystalline Si wafer
 (resistivity 0.002 - 0.005 $ \Omega\,\text{cm}$), under galvanostatic
 conditions. The process was performed at
 room temperature,\notaL{OJO. No controlaste la temperatura} with an
@@ -514,7 +518,8 @@ ethanol (purity 99.9\% wt) in a 3:7:1 volume ratio. \notaL{Checa que
 anodizing process, the samples were rinsed with
 ethanol (purity: 99.9 $ \% $  wt). The electrolytic cell had the shape
 of a rectangular prism as shown in Fig. \ref{fig:DE1}, with a base of
-sides $a=2.03\,\text{cm}$ and $b=1.48\,\text{cm}$, with an uncovered sample area
+sides $a=2.01\,\text{cm}$ \notaL{Cambié el número, de acuerdo a unas
+  mediciones de Cristian} and $b=1.48\,\text{cm}$, with an uncovered sample area
 of about $3\,\text{cm}^2$. The height of the liquid was set at
 $c=1\,\text{cm}$. The cathode was a
 platinum wire that with a diameter of $0.41\,\text{mm}$ insulated by a
@@ -568,43 +573,10 @@ the c-Si substrate, and
 $\epsilon_1=n_{\text{PS}}^2$ is the dielectric function of the PS layer.
 We fitted the reflectance spectra using the porosity $p$ and the
 thickness $d$ and a scale calibration factor $s$ as fitting
-parameters, and thus, we related the porosity
-$p$ and the etching rate $v=d/t$ to the local current density $j_\perp$.
-
-\ifexclude
-\notaL{Quitar esta sección:
-\subsection{Fabrication  of GRIN PS Microcavities}
-\label{sec:fabrication-grin-ps}
-After characterizing the fabrication process through measurements and
-calculations corresponding to single PS GRIN layers, we
-fabricated PS GRIN microcavities (MC) as specific defects between two distributed Bragg
-mirrors  (DBR). Alternate quarter wavelength plates of high (H) and low (L)
-refractive indices $n_H$ and $n_L$ and of thicknesses $d_H$ and $d_L$,
-respectively, were prepared satisfying the Bragg condition
-$n_Hd_H=n_Ld_L=\lambda_c/4$ at a given design
-wavelength $\lambda_c$ and at a position $A$ (Fig. \ref{fig:DE1}) which
-we chose as that directly below the point-like electrode.\notaL{Checar
-  veracidad} The defect
-was chosen as a half-wavelength high index layer of thickness $d_d=2d_H$ such that
-$n_Hd_d=\lambda_c/2$. The MC corresponds to the
-sequence $(HL)_6HH(LH )_6$ \notaL{Esto no corresponde a la
-  realidad. Cambiar.} where each letter $H$ or $L$ corresponds to
-a quarter-wave plate of high and low index of refraction correspondingly.
-We chose $\lambda_c= 0.67 \mu\text{m}$.\notaL{Algún motivo para esta
-  elección?} For preparing the high index layers we
-chose a current $I_H=5\,\text{mA}$ applied during  time
-$t_H=35 \,\text{s}$. The current density was
-$j_{HA\perp}= 6\,\text{mA}/\,\text{cm}^2$ below the tip \notaL{checar},
-and yielded (see Sec. \ref{sec:ps-grin-single} below)
-$n_H =2.6$, corresponding to a porosity $p_H =0.46$, and a
-thickness $d_H=0.066 \mu\,\text{m}$. The corresponding parameters for the low density
-layers were $I_L=38\,\text{mA}$, $j_{LA\perp}=50\,\text{mA}/\,\text{cm}^2$, $n_L= 1.4$,  $p_L =0.75$,
-$d_L=0.117 \mu \,\text{m}$, and $t_L=11 \,\text{s}$. For the rest of the
-sample the current density, porosity, index of refraction and thickness
-varied, yielding a PS GRIN MC. \notaL{Los datos de arriba ¿son
-  consistentes con los de la sección \ref{sec:grin-porous-silicon}?}
-}
-\fi %exclude
+parameters, and thus, we obtained the porosity
+$p$ and the etching rate $v=d/t$ for different values of the local
+current density $j_\perp$ expected at several positions on different
+samples.
 
 \section{Discussion and Results}
 \label{sec:discussion-results}
