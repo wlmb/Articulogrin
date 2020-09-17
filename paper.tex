@@ -590,7 +590,7 @@ samples.
     the surface of the sample through
     Eq. (\ref{Eq:J}) for a
     system as in Figs. \ref{f:celda} and \ref{fig:DE1} for a cell of
-    length $a = 2.03\,\text{cm}$ and width $b=1.48\,\text{cm}$, with
+    length $a = 2.01\,\text{cm}$ and width $b=1.48\,\text{cm}$, with
     the surface of the electrolyte at a heigth $c=1.0\,\text{cm}$, with a
     point-like electrode at $\bm r_0=(0.2\,\text{cm},
     0.74\,\text{cm},0.9\,\text{cm})$ (top panel). Normalized current
@@ -604,7 +604,7 @@ in Figs. \ref{f:celda} and \ref{fig:DE1} and described in
 Sect. \ref{sec:fabrication-ps-grin}). For these parameters we obtained
 a large range of values for $ j_\perp/I\sim 0.11-.72\,\text{cm}^{-2}$
 that vary mostly along the $x$ direction. Of course, this would differ
-for cells with aspect ratios closer to 1.
+for cells with different aspect ratios.
 
 \subsection{PS GRIN Films }
 \label{sec:ps-grin-single}
@@ -616,17 +616,19 @@ for cells with aspect ratios closer to 1.
     in Fig. \ref{fig:DR1} with a current $ I_3=20 \text{mA}$,
     during a time $t=250\text{s}$. We indicate eight regions $x_i$
     $(i=1, 2,...8)$ centered at positions,
-    $x_1=0.2\text{cm}$,  $x_2=0.4\text{cm}$, $x_3=0.6\text{cm}$,
-    $x_4=0.8\text{cm}$, $x_5=1\text{cm}$, $x_6=1.2\text{cm}$,
-    $x_7=1.4\text{cm}$, $x_8=1.6\text{cm}$, with $y_n=0.74\,\text{cm}$
-    on which we measured reflectance spectra. During the preparation the cathode was over
-    the leftmost point $x_1$.}
+    $x'_1=0.2\text{cm}$,  $x'_2=0.4\text{cm}$, $x'_3=0.6\text{cm}$,
+    $x'_4=0.8\text{cm}$, $x'_5=1\text{cm}$, $x'_6=1.2\text{cm}$,
+    $x'_7=1.4\text{cm}$, $x'_8=1.6\text{cm}$, with $y_n=0.74\,\text{cm}$
+    on which we measured reflectance spectra. Here,
+    $x'_n=x_n+0.14\,\text{cm}$ is the position from the sealing o-ring.}
   \label{fig:SI3}
 \end{figure}
 
 In Fig. \ref{fig:SI3} we show a photograph of one of our samples,
+$G_3$
 prepared as described in Sec. \ref{sec:fabrication-ps-grin}, with the
-same conditions as those corresponding to Fig. \ref{fig:SI3} applying a current
+same conditions as those corresponding to Fig.~\ref{fig:DR1} applying
+a current
 $I_3=20\,\text{mA}$ during a time $t=250\,s$. We notice a series of
 visible interference fringes that get wider as we move towards the
 right end of the sample, consistent with a inhomogeneous film that
@@ -638,16 +640,23 @@ where the film rapidly becomes very narrow. The reason is that there
 is a small region below the cell walls where the electrolyte penetrates
 up to the sealing o-ring (see upper panel of
 Fig. \ref{fig:DE1}) and towards which the current leaks from the
-neighborhood of the wall. Thus, we may expect our formula \eqref{Eq:J}
+neighborhood of the wall. The width of this region is
+$0.14\,\text{cm}$. Thus, we may expect our formula \eqref{Eq:J}
 to fail close to the border, at distances of the order of the radius
-of the cross-section of the o-ring.
+of the cross-section of the o-ring, of the order of a milimeter. The
+figure shows eight positions
+$x'_n=0.2\,\text{cm},0.4\,\text{cm},\ldots,1.6\,\text{cm}$ on which we
+measured the near normal incidence reflection spectra of the
+sample. Here, we defined $x'_n$ as the distance to the sealing o-ring,
+which differed by $0.14\,\text{cm}$ from the corresponding distance
+$x_n$ to the wall of the cell.
 
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{R20vslambda}
-  \caption{Reflectance spectra at different positions $(x,y)$
+  \caption{Reflectance spectra at different positions
     on sample $G_3$ (shown in Fig. \ref{fig:SI3}), where
-    $x=0.2-1.6\,\text{cm}$ and $y=0.74\,\text{cm}$. We show
+    $x'_n=0.2-1.6\,\text{cm}$ and $y=0.74\,\text{cm}$. We show
   experimental results and results fitted through
   equations~\eqref{Eq:ECMR}} and \eqref{Eq:Brugg}.
   \label{fig:R20}
@@ -691,20 +700,8 @@ que hagas tres figuras distintas, una para cada panel, y las alineamos
 con latex}}
   \label{fig:DR3}
 \end{figure}
- In Fig. \ref{fig:DR3} we show a photograph of one of our single layer PS GRIN
- structures, $G_3$, prepared as described in
- \ref{sec:fabrication-ps-grin} applying a current $I_3=20\,\text{mA}$
- for a time $t=250\,\text{s}$. We employed the same geometry as that described in
- Sec. \ref{sec:current-density}
-The positions $\bm R_n=(x_n,y_n)$, $n=1\ldots8$  with
-$x_n=0.2n\,\text{cm}$ and $y_n=0.74\,\text{cm}$ on which reflectance
-spectra were measured are indicated. The electrode was situated above
-the position $\bm R_1$  corresponds to the left side of the
-photograph. The variation of the optical properties across the
-sample is evident. \notaL{Tenemos algo sensato que decir sobre el
-  gradiente en la dirección vertical cerca de los bordes?}
 
-
+\ifexclude
 The thicknesses of the layer were measured
 using SEM. In Fig. \ref{fig:DR4} we show side-view SEM micrographs of sample
 $G_1$ taken at the
@@ -723,10 +720,14 @@ $d_{1A}= 1320\,\text{nm}$, $ d_{1B} = 997\,\text{nm}$, and $d_{1c} = 605
     \notaL{Quité la info redundante}}
   \label{fig:DR4}
 \end{figure}
-We fitted then reflectance measurements using Eqs. \eqref{Eq:ECMR} and
-\eqref{Eq:Brugg} using the local porosities $p_{1A}$, $p_{1B}$ and $p_{1C}$ as
-adjustable parameters and using Eqs. \eqref{Eq:ECMR} and
-\eqref{Eq:Brugg}. We obtained $p_{1A}=0.44$, $p_{1B}=0.42$, and
+\fi %exclude
+We fitted the reflectance measurements using Eqs. \eqref{Eq:ECMR} and
+\eqref{Eq:Brugg} using the local porosity $p$, and the thickness of the
+film  as
+adjustable parameters. We also fitted a scaling parameter $s$ to allow
+for calibration variations among spectra. ****AQUIVOY***
+
+ We obtained $p_{1A}=0.44$, $p_{1B}=0.42$, and
 $p_{1C}= 0.40$. The fitted reflectance has a good agreement with the
 measured one, though its interference oscillations are larger towards
 the blue region probably due to the lack of surface scattering in our
