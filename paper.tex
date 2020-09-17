@@ -12,7 +12,7 @@
 \usepackage[normalem]{ulem} %opcional para la correcciones
 \newcommand{\abs}[1]{\lvert#1\rvert}
 \usepackage{xcolor}
-\newif{\ifexclude}
+\newif{\ifinclude}
 \newcommand{\notaL}[1]{{\color{blue}+L:#1+}}
 \newcommand{\notaC}[1]{{\color{green}+C:#1+}}
 \newcommand{\notaV}[1]{{\color{red}+V:#1+}}
@@ -530,7 +530,7 @@ We manufactured three samples $G_1$, $G_2$ and $G_3$ by applying a
 current $I_1=5\,\text{mA}$, $I_2=10\,\text{mA}$ and
 $I_3=20\,\text{mA}$, respectively, during a time of $t=250s$.
 
-\ifexclude
+\ifinclude
 \notaL{Tal vez esto no lo hicimos:
   \subsection{Morphological studies}
 \label{sec:morph-stud}
@@ -539,7 +539,7 @@ observed using a Hitachi SU1510 scanning electron microscope (SEM)
 with which we measured the thickness $d$ and the porosity $p$ of the
 films at different positions along the sample from its top and side
 views (Fig. \ref{fig:DE1}).} \notaL{¿Sí se midió la porosidad con SEM?}
-\fi %exclude
+\fi %include
 
 \subsection{Reflectance Measurement}
 \label{sec:refl-meas}
@@ -606,7 +606,7 @@ a large range of values for $ j_\perp/I\sim 0.11-.72\,\text{cm}^{-2}$
 that vary mostly along the $x$ direction. Of course, this would differ
 for cells with different aspect ratios.
 
-\subsection{PS GRIN Films }
+\subsection{Samples }
 \label{sec:ps-grin-single}
 \begin{figure}
  \centering
@@ -641,15 +641,41 @@ is a small region below the cell walls where the electrolyte penetrates
 up to the sealing o-ring (see upper panel of
 Fig. \ref{fig:DE1}) and towards which the current leaks from the
 neighborhood of the wall. The width of this region is
-$0.14\,\text{cm}$. Thus, we may expect our formula \eqref{Eq:J}
-to fail close to the border, at distances of the order of the radius
+$w=0.14\,\text{cm}$. Thus, we may expect our formula \eqref{Eq:J}
+to fail within that region and close to the border, at distances of the order of the radius
 of the cross-section of the o-ring, of the order of a milimeter. The
 figure shows eight positions
 $x'_n=0.2\,\text{cm},0.4\,\text{cm},\ldots,1.6\,\text{cm}$ on which we
 measured the near normal incidence reflection spectra of the
-sample. Here, we defined $x'_n$ as the distance to the sealing o-ring,
-which differed by $0.14\,\text{cm}$ from the corresponding distance
-$x_n$ to the wall of the cell.
+sample. Here, we defined $x'_n=x_n+w$ as the distance to the sealing o-ring,
+where $x_n$ is the corresponding distance to the wall of the
+cell.
+
+From Eq. \eqref{Eq:J} we evaluate the
+normalized current density $j_\perp/I$ expected at the positions $n$ indicated in
+Fig. \ref{fig:SI3}.
+(Table \ref{t:xj}).
+\begin{table}
+  \centering
+  \begin{tabular}{rrr}
+    \(x'\)(cm) & \(x\)(cm)& \(j_\perp/I\) (\(\text{cm}^{-2})\)\\
+    from edge& from wall&\\
+    \hline
+    0.2 & 0.06 & 0.7219\\
+    0.4 & 0.26 & 0.6723\\
+    0.6 & 0.46 & 0.5769\\
+    0.8 & 0.66 & 0.4645\\
+    1.0 & 0.86 & 0.3599\\
+    1.2 & 1.06 & 0.2749\\
+    1.4 & 1.26 & 0.2112\\
+    1.6 & 1.46 & 0.1666\\
+  \end{tabular}
+  \caption{Normalized current density expected at different positions on
+    different samples.}
+  \label{t:xj}
+\end{table}
+
+\subsection{Reflectance}
 
 \begin{figure}
   \centering
@@ -658,76 +684,73 @@ $x_n$ to the wall of the cell.
     on sample $G_3$ (shown in Fig. \ref{fig:SI3}), where
     $x'_n=0.2-1.6\,\text{cm}$ and $y=0.74\,\text{cm}$. We show
   experimental results and results fitted through
-  equations~\eqref{Eq:ECMR}} and \eqref{Eq:Brugg}.
+  equations~\eqref{Eq:ECMR} and \eqref{Eq:Brugg}}.
   \label{fig:R20}
 \end{figure}
 
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{Images/SPgrin51}
-  \caption{(a)  Sample $G_1$ prepared as described in
-     \ref{sec:fabrication-ps-grin} using a current $I_1=5 \,\text{mA}$
-    during a time $t_1=600\,\text{s}$. We indicate three regions $A$,
-    $B$, and $C$ centered at positions at positions,
-    $x_A=0.3\,\text{cm}$ \notaL{Atrás habías dicho que era justo abajo
-      del electrodo. ¿Es cierto o no? ¿Dónde estaba el electrodo? ¿Qué
-    altura tenía el agua? ¿Igual que en la sección previa?}, $x_B=0.8\,\text{cm}$ and
-  $x_C=1.7\,\text{cm}$. \notaL{¿Cuánto vale $y$?} (b) Reflectance
-    spectra measured at the center of regions $A$, $B$, and $C$ and fit
-    using Eq. \eqref{Eq:ECMR}.\notaL{¿Cuáles parámetros se ajustaron y
-      cuáles se midieron independientemente}\notaL{Para que no se vean
-      tan chicas las figuras, quita las R's y los números en el segundo
-      renglon, excepto en el extremo izquierdo, y pega las tres
-      figuras una tras la otra. Haz lo mismo en el tercer renglón,
-      quitando dos de los letreros Refractive index, pero antes
-      asegúrate de usar la misma escala en las tres figuras} (c)
-    Corresponding complex indices of refraction $n+ik$ obtained from
-    Eq. \eqref{Eq:Brugg} using the fitted porosities $p_{1A}=0.44$,
-    $p_{1B}=0.42$, and $p_{1C}= 0.40$ at the chosen positions. \notaL{En las
-      figuras escribe A, B y C en lugar de
-      Point A, Point B y Point C. Escribe $p_{1A}$, $p_{1B}$ y $p_{1C}$ en lugar
-      de la palabra Porosity. Escribe $n$ y $k$ nada más, sin la
-      palabra Real ni Imaginary. Usa Theory en lugar de
-      Simulation. Usa línea a trazos para la parte
-      imaginaria. Alínea todos los letreros. En inglés, los rótulos
-      a), b) y c) se escriben como (a), (b) y (c), aunque creo que se
-      pueden eliminar (porque además, no los alineaste bien). }
-  \notaL{A ojo no se notan las diferencias en epsilon. Mejor junta las
-  tres partes reales en una sola gráfica y las tres partes imaginarias
-en otra y ponerlas una al lado de la otra.}\notaL{Las letras A, B y C
-están colocadas en el lugar preciso, a escala?}\notaL{Quizás sea mejor
-que hagas tres figuras distintas, una para cada panel, y las alineamos
-con latex}}
-  \label{fig:DR3}
-\end{figure}
-
-\ifexclude
-The thicknesses of the layer were measured
-using SEM. In Fig. \ref{fig:DR4} we show side-view SEM micrographs of sample
-$G_1$ taken at the
-positions $A$, $B$, and $C$ shown in
-Fig. \ref{fig:DR3}. From these micrographs we can
-obtain the thicknesses of the porous layer at different
-positions. Thus, we obtained that for our sample $G_1$
-$d_{1A}= 1320\,\text{nm}$, $ d_{1B} = 997\,\text{nm}$, and $d_{1c} = 605
-\,\text{nm}$.
-\begin{figure}
-  \centering
-  \includegraphics[width=\textwidth]{Images/semD11}
-  \caption{Side-view SEM micrographs of the PS GRIN single layer
-    taken at positions $A$, $B$, and $C$ of sample $G_1$ shown in
-    Fig. \ref{fig:DR3}.
-    \notaL{Quité la info redundante}}
-  \label{fig:DR4}
-\end{figure}
-\fi %exclude
+We measured the reflectance spectra of sample $G_3$ at the positions
+indicated in Fig. \ref{fig:SI3}. The results are shown in
+Fig. \ref{fig:R20}.
 We fitted the reflectance measurements using Eqs. \eqref{Eq:ECMR} and
 \eqref{Eq:Brugg} using the local porosity $p$, and the thickness of the
-film  as
+film  $d$ as
 adjustable parameters. We also fitted a scaling parameter $s$ to allow
-for calibration variations among spectra. ****AQUIVOY***
+for calibration variations among spectra. From the thickness we
+obtained the etching rate $v=d/t$. Notice that the fit is reasonably
+good. The contrast of the reflectance in the experiment is smaller
+than the fit. We believe this is due to the finite width
+\notaL{beams width=?} of the illuminating beam of our
+spectrometer. Thus, as our GRIN sample is not homogeneous, the
+experimental results show an average over regions with slightly
+different porosities and thicknesses, averaging out the interference
+maxima and minima. This is most notable for the thicker regions
+towards the left side of Fig. \ref{fig:SI3} and for smaller
+wavelengths. Similar remarks apply to the fits to the reflectance
+spectra of the other samples, incorporated in our supplemental
+material (Figs. \ref{fig:R5} and \ref{figR10}).
+The results obtained from the reflectance fits are summarized in table
+\ref{t:jpdv}.
 
- We obtained $p_{1A}=0.44$, $p_{1B}=0.42$, and
+\begin{table}
+\centering
+\begin{tabular}{lrrrrrr}
+  Sample & current &  density \(j\) & porosity &
+  thickness & scale \(s\)& etching rate\\
+       & $I$ (mA)      & $j$ ($\text{mA}/\text{cm}^2$) & $p$
+       & $d$ ($\mu\text{m}$) & $s$ & $v$ (nm/s)\\
+\hline
+$G_1$ & 5  & 3.609 & 0.4943 & 0.3402 & 0.8493&  1.3608 \\
+      &    & 3.361 & 0.5713 & 0.3895 & 0.9789&  1.558  \\
+      &    & 2.884 & 0.5657 & 0.3312 & 0.9569&  1.3248 \\
+      &    & 2.322 & 0.5555 & 0.2732 & 0.9536&  1.0928 \\
+      &    & 1.799 & 0.5592 & 0.2236 & 0.9951&  0.8944 \\
+      &    & 1.374 & 0.5557 & 0.1886 & 0.9729&  0.7544 \\
+      &    & 1.056 & 0.5491 & 0.1512 & 0.9606&  0.6048 \\
+      &    & 0.833 & 0.5519 & 0.1238 & 0.9897&  0.4952 \\
+$G_2$ & 10 & 7.219 & 0.5910 & 0.6347 & 0.8559&  2.5388 \\
+      &    & 6.723 & 0.6437 & 0.6934 & 0.9914&  2.7736 \\
+      &    & 5.769 & 0.6383 & 0.5907 & 0.9523&  2.3628 \\
+      &    & 4.645 & 0.6265 & 0.5327 & 0.9798&  2.1308 \\
+      &    & 3.599 & 0.5991 & 0.4587 & 0.9389&  1.8348 \\
+      &    & 2.749 & 0.5902 & 0.4044 & 0.9449&  1.6176 \\
+      &    & 2.112 & 0.5753 & 0.3378 & 0.9361&  1.3512 \\
+      &    & 1.666 & 0.5711 & 0.2958 & 0.9481&  1.1832 \\
+$G_3$ & 20 & 14.438& 0.6860 & 1.2044 & 1.1491&  4.8176 \\
+      &    & 13.44 & 0.7129 & 1.1931 & 1.0767&  4.7724 \\
+      &    &11.538 & 0.7031 & 1.0443 & 1.0588&  4.1772 \\
+      &    & 9.29  & 0.6258 & 0.7516 & 1.0063&  3.0064 \\
+      &    & 7.198 & 0.6247 & 0.5380 & 1.0104&  2.152  \\
+      &    & 5.498 & 0.5927 & 0.4387 & 0.9625&  1.7548 \\
+      &    & 4.224 & 0.5844 & 0.3633 & 0.9625&  1.4532 \\
+      &    & 3.332 & 0.5909 & 0.3392 & 1.0112&  1.3568 \\
+\end{tabular}
+\caption{\label{t:jpdv}
+  Names of data files, current, current density and fitted parameters:
+  porosity, thickness and scale factor.}
+\end{table}
+
+\ifinclude
+We obtained $p_{1A}=0.44$, $p_{1B}=0.42$, and
 $p_{1C}= 0.40$. The fitted reflectance has a good agreement with the
 measured one, though its interference oscillations are larger towards
 the blue region probably due to the lack of surface scattering in our
@@ -824,9 +847,9 @@ porosity to the current density by taking measurements at
 different positions along just a few PS GRIN samples. Thus, it is much easier
 and faster to obtain calibration curves which are useful in the
 fabrication of PS photonic structures, GRIN or otherwise.
-
+\fi %include
 \notaL{Removí lo de grinMC}
-\ifexclude
+\ifinclude
 \subsection{PS GRIN Microcavities}
 \label{sec:grin-porous-silicon}
 \begin{figure}
@@ -1002,7 +1025,7 @@ Bragg mirrors, which yield $d_A=2.31\mu\text{m}$,
 $d_B=2.08\mu\text{m}$, and $d_C=1.65\mu\text{m}$. \notaL{Por qué una
   te dio más grande y las otras más chicas? Aquí tienes que decir
   cuánto vale $N$ y no has dicho cuánto valieron $d_L$ y $d_H$}
-\fi %exclude
+\fi %include
 
 \section{Conclusions}
 \label{sec:conclusion}
@@ -1210,5 +1233,28 @@ Physics Letters, 400(1):62–67, December 2004.
   (1995): 2983-2985
 
 \end{thebibliography}
+
+\section{Supplementary material}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{R5vslambda}
+  \caption{Reflectance spectra at different positions
+    on sample $G_1$ (shown in Fig. \ref{fig:SI3}), where
+    $x'_n=0.2-1.6\,\text{cm}$ and $y=0.74\,\text{cm}$. We show
+  experimental results and results fitted through
+  equations~\eqref{Eq:ECMR} and \eqref{Eq:Brugg}}.
+  \label{fig:R5}
+\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics[width=\textwidth]{R10vslambda}
+  \caption{Reflectance spectra at different positions
+    on sample $G_2$ (shown in Fig. \ref{fig:SI3}), where
+    $x'_n=0.2-1.6\,\text{cm}$ and $y=0.74\,\text{cm}$. We show
+  experimental results and results fitted through
+  equations~\eqref{Eq:ECMR} and \eqref{Eq:Brugg}}.
+  \label{fig:R10}
+\end{figure}
 
 \end{document}
