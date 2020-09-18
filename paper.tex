@@ -233,7 +233,7 @@ free surface of the liquid at $z=c$. Thus, the problem to solve is Poisson's
 equation with a point charge source
 \begin{equation}
   \label{eq:poisson}
-  \nabla^2\phi=-4\pi q_0\delta(\bm r-\bm r_0),
+  \nabla^2\phi=-4\pi q_0\delta^{(3)}(\bm r-\bm r_0),
 \end{equation}
 with mixed boundary conditions
 \begin{equation}
@@ -246,6 +246,7 @@ and
 E_x(0, y ,z)= E_x(a, y ,z)=E_y(x, 0 ,z)=E_y(x, b
 ,z)=E_z(x, y ,c)=0.
 \end{equation}
+Here, $\delta^{(D)}$ is Dirac's delta function in $D$ dimensions.
 This problem may be solved readily using image charge theory \cite{T1,T2}.
 The potential within the electrolytic cell coincides
 within the region $0\le x\le a$, $0\le y \le b$, $0\le z\le c$
@@ -344,12 +345,11 @@ $2a$ and $2b$, and lying, for the time being, at the $z=0$ plane.
 The potential it produces obeys
 \begin{equation}
   \label{eq:poissonRed}
-  \nabla^2\phi(\bm r)=-4\pi\sum_{\bm R}\delta(\bm r_\|-\bm
-  R)\delta(z)=-\frac{4\pi}{A}\sum_{\bm G}e^{i\bm G\cdot\bm r_\|}\delta(z),
+  \nabla^2\phi(\bm r)=-4\pi\sum_{\bm R}\delta^{(2)}(\bm r_\|-\bm
+  R)\delta^{(1)}(z)=-\frac{4\pi}{A}\sum_{\bm G}e^{i\bm G\cdot\bm r_\|}\delta^{(1)}(z),
 \end{equation}
 where $\bm r_\|$ is the projection of the observation position $\bm
-r=(x,y,z)$ onto the $xy$ plane,
-$\delta(\ldots)$ is Dirac's delta function, $\{\bm G\}$ is the
+r=(x,y,z)$ onto the $xy$ plane, $\{\bm G\}$ is the
 reciprocal lattice defined through $e^{i\bm G\cdot\bm R}=1$ for all
 $\bm R$ and $\bm G$, $A=4ab$ is the area of the unit cell
 and we used the Fourier representation of the 2D
@@ -364,7 +364,7 @@ the height $z$. Substitution in Eq. \eqref{eq:poissonRed} yields the
 ordinary differential equation
  \begin{eqnarray}
  \frac{d^2}{dz^2}\phi_{\bm G}(z)-G^2\phi_G(z)=
-   -\frac{4 \pi}{A} \delta(z),
+   -\frac{4 \pi}{A} \delta^{(1)}(z),
  \end{eqnarray}
 for each coefficient, an homogeneous equation for $z\ne0$ which may be trivially
 solved. After applying boundary conditions at $z=0$ and regularity
@@ -541,12 +541,12 @@ data layer we used
 the standard formula \cite{T8,T9} for the reflectance of three media:
 air (0) environment, the PS film (1) and the c-Si substrate (2),
  \begin{equation}\label{Eq:ECMR}
-   R=\left |\frac{r _ {_ {01}}r _ {_ {12}} e^{2i\delta}}{1+r _ {_
-   {01}}r _ {_ {12}} e^{2i\delta}}\right |^2
+   R=\left |\frac{r _ {_ {01}}r _ {_ {12}} e^{2i\psi}}{1+r _ {_
+   {01}}r _ {_ {12}} e^{2i\psi}}\right |^2
 \end{equation}
 where $r_{01}$ and $r_{12}$ are the Fresnel reflectance
 coefficients of the air/PS and PS/c-Si interfaces \cite{T10,T11}
-and $\delta=k_1^\perp d$, where $k_1^\perp$ is
+and $\psi=k_1^\perp d$, where $k_1^\perp$ is
 the component of the wavevector perpendicular to the surface within
 the porous layer of thickness $d$. The reflectance depends on the
 thickness of the film and on the index of refraction $n_1=n_{\text{PS}}$ of the porous
@@ -650,14 +650,14 @@ Fig. \ref{fig:SI3}.
     \(x'_n\)(cm) & \(x\)(cm)& \(j_\perp/I\) (\(\text{cm}^{-2})\)\\
     from edge& from wall&\\
     \hline
-    0.2 & 0.06 & 0.7219\\
-    0.4 & 0.26 & 0.6723\\
-    0.6 & 0.46 & 0.5769\\
-    0.8 & 0.66 & 0.4645\\
-    1.0 & 0.86 & 0.3599\\
-    1.2 & 1.06 & 0.2749\\
-    1.4 & 1.26 & 0.2112\\
-    1.6 & 1.46 & 0.1666\\
+    0.2 & 0.06 & 0.722\\
+    0.4 & 0.26 & 0.672\\
+    0.6 & 0.46 & 0.577\\
+    0.8 & 0.66 & 0.464\\
+    1.0 & 0.86 & 0.360\\
+    1.2 & 1.06 & 0.275\\
+    1.4 & 1.26 & 0.211\\
+    1.6 & 1.46 & 0.167\\
   \end{tabular}
   \caption{Normalized current density $j_\perp/I$ expected at different positions $x'_n$.}
   \label{t:xj}
@@ -669,8 +669,8 @@ Fig. \ref{fig:SI3}.
   \centering
   \includegraphics[width=\textwidth]{R5vslambda}
   \caption{Reflectance spectra at different positions
-    on sample $G_1$ ($I_1=5\,\text{mA}$), where
-    $x'_n=0.2-1.6\,\text{cm}$ and $y=0.74\,\text{cm}$. We show
+    ($x'_n=0.2-1.6\,\text{cm}$, $y=0.74\,\text{cm}$)
+    on sample $G_1$ ($I_1=5\,\text{mA}$). We show
   experimental results and results fitted through
   equations~\eqref{Eq:ECMR} and \eqref{Eq:Brugg}}.
   \label{fig:R5}
@@ -679,8 +679,8 @@ Fig. \ref{fig:SI3}.
   \centering
   \includegraphics[width=\textwidth]{R10vslambda}
   \caption{Reflectance spectra at different positions
-    on sample $G_2$ (shown in Fig. \ref{fig:SI3}), where
-    $x'_n=0.2-1.6\,\text{cm}$ and $y=0.74\,\text{cm}$. We show
+    ($x'_n=0.2-1.6\,\text{cm}$, $y=0.74\,\text{cm}$)
+    on sample $G_2$ ($I_1=10\,\text{mA}$). We show
   experimental results and results fitted through
   equations~\eqref{Eq:ECMR} and \eqref{Eq:Brugg}}.
   \label{fig:R10}
@@ -690,16 +690,17 @@ Fig. \ref{fig:SI3}.
   \centering
   \includegraphics[width=\textwidth]{R20vslambda}
   \caption{Reflectance spectra at different positions
-    on sample $G_3$ (shown in Fig. \ref{fig:SI3}), where
-    $x'_n=0.2-1.6\,\text{cm}$ and $y=0.74\,\text{cm}$. We show
-  experimental results and results fitted through
-  equations~\eqref{Eq:ECMR} and \eqref{Eq:Brugg}}.
+    ($x'_n=0.2-1.6\,\text{cm}$, $y=0.74\,\text{cm}$)
+    on sample $G_3$ ($I_3=20\,\text{mA}$) (Fig. \ref{fig:SI3}),
+    We show
+    experimental results and results fitted through
+    equations~\eqref{Eq:ECMR} and \eqref{Eq:Brugg}}.
   \label{fig:R20}
 \end{figure}
 
 We measured the reflectance spectra  at the positions indicated in
 Fig. \ref{fig:SI3} on our three samples $G_1$, $G_2$,
-and$G_3$, prepared using the same procedure
+and $G_3$, prepared using the same procedure
 (Sec. \ref{sec:fabrication-ps-grin}) but applying different currents
 $I_1=5\,\text{mA}$, $I_2=10\,\text{mA}$, and $I_3=20\,\text{mA}$, . The results are shown in
 Figs. \ref{fig:R5}, \ref{fig:R10}, and \ref{fig:R20}.
@@ -708,7 +709,7 @@ We fitted the reflectance measurements using Eqs. \eqref{Eq:ECMR} and
 film  $d$ as
 adjustable parameters. We also fitted a scaling parameter $s$ to allow
 for calibration variations among spectra. From the thickness we
-obtained the etching rate $v=d/t$ at each position. Notice that the fit is reasonably
+obtained the etching rate $v=d/t$ at each position. Notice that the fits are reasonably
 good. The contrast of the reflectance in the experiment is somewhat smaller
 than in our fitted curves. We believe this is due to the finite width
 \notaL{beams width=?} of the illuminating beam of our
@@ -716,9 +717,10 @@ spectrometer. Thus, as our GRIN sample is not macroscopically homogeneous and it
 properties have a gradient, the
 experimental results have contributions from regions with slightly
 different porosities and thicknesses, averaging out the interference
-maxima and minima. We also expect microscopic inhomogeneities such as
-interface roughness that might also reduce the contrast.
-This is most notable for the thicker regions
+maxima and minima. We expect microscopic inhomogeneities such as
+interface roughness might also reduce the contrast through scattering
+and its corresponding apparent dissipation \notaL{citar a Guille}.
+The loss of contrast is most notable for the thicker regions
 towards the left side of Fig. \ref{fig:SI3} and for smaller
 wavelengths.
 
@@ -730,34 +732,34 @@ showing that the calibration was adequate. \notaL{Is this meaningful?}.
 \centering
 \begin{tabular}{lrrrrrr}
   Sample/ & position & density & porosity &
-  thickness & scale & etching rate\\
+  thickness & scale & rate\\
   $I$ (mA) &$x'_n$ (cm)&  $j$ ($\text{mA}/\text{cm}^2$) & $p$
        & $d$ ($\mu\text{m}$) & $s$ & $v$ (nm/s)\\
 \hline
-$G_1$/ 5 &0.2 & 3.609 & 0.4943 & 0.3402 & 0.8493&  1.3608 \\
-         &0.4 & 3.361 & 0.5713 & 0.3895 & 0.9789&  1.558  \\
-         &0.6  & 2.884 & 0.5657 & 0.3312 & 0.9569&  1.3248 \\
-         &0.8 & 2.322 & 0.5555 & 0.2732 & 0.9536&  1.0928 \\
-         &1.0 & 1.799 & 0.5592 & 0.2236 & 0.9951&  0.8944 \\
-         &1.2 & 1.374 & 0.5557 & 0.1886 & 0.9729&  0.7544 \\
-         &1.4 & 1.056 & 0.5491 & 0.1512 & 0.9606&  0.6048 \\
-         &1.6 & 0.833 & 0.5519 & 0.1238 & 0.9897&  0.4952 \\
-$G_2$/10&0.2 & 7.219 & 0.5910 & 0.6347 & 0.8559&  2.5388 \\
-         &0.4 & 6.723 & 0.6437 & 0.6934 & 0.9914&  2.7736 \\
-         &0.6 & 5.769 & 0.6383 & 0.5907 & 0.9523&  2.3628 \\
-         &0.8 & 4.645 & 0.6265 & 0.5327 & 0.9798&  2.1308 \\
-         &1.0 & 3.599 & 0.5991 & 0.4587 & 0.9389&  1.8348 \\
-         &1.2 & 2.749 & 0.5902 & 0.4044 & 0.9449&  1.6176 \\
-         &1.4 & 2.112 & 0.5753 & 0.3378 & 0.9361&  1.3512 \\
-         &1.6 & 1.666 & 0.5711 & 0.2958 & 0.9481&  1.1832 \\
-$G_3$/20 &0.2 & 14.438& 0.6860 & 1.2044 & 1.1491&  4.8176 \\
-          &0.4 & 13.44 & 0.7129 & 1.1931 & 1.0767&  4.7724 \\
-          &0.6 &11.538 & 0.7031 & 1.0443 & 1.0588&  4.1772 \\
-          &0.8 & 9.29  & 0.6258 & 0.7516 & 1.0063&  3.0064 \\
-          &1.0 & 7.198 & 0.6247 & 0.5380 & 1.0104&  2.152  \\
-          &1.2 & 5.498 & 0.5927 & 0.4387 & 0.9625&  1.7548 \\
-          &1.4 & 4.224 & 0.5844 & 0.3633 & 0.9625&  1.4532 \\
-          &1.6 & 3.332 & 0.5909 & 0.3392 & 1.0112&  1.3568 \\
+$G_1$/ 5 &0.2 & 3.61 & 0.494 & 0.340 & 0.849&  1.361 \\
+         &0.4 & 3.36 & 0.571 & 0.390 & 0.979&  1.558  \\
+         &0.6  & 2.88& 0.566 & 0.331 & 0.957&  1.325 \\
+         &0.8 & 2.32 & 0.556 & 0.273 & 0.954&  1.093 \\
+         &1.0 & 1.80 & 0.559 & 0.227 & 0.995&  0.894 \\
+         &1.2 & 1.37 & 0.556 & 0.189 & 0.973&  0.754 \\
+         &1.4 & 1.06 & 0.549 & 0.151 & 0.961&  0.605 \\
+         &1.6 & 0.83 & 0.552 & 0.124 & 0.990&  0.495 \\
+$G_2$/10 &0.2 & 7.22 & 0.591 & 0.635 & 0.856&  2.539 \\
+         &0.4 & 6.72 & 0.644 & 0.693 & 0.991&  2.774 \\
+         &0.6 & 5.77 & 0.638 & 0.591 & 0.952&  2.363 \\
+         &0.8 & 4.64 & 0.626 & 0.533 & 0.980&  2.131 \\
+         &1.0 & 3.60 & 0.599 & 0.459 & 0.939&  1.835 \\
+         &1.2 & 2.75 & 0.590 & 0.404 & 0.945&  1.618 \\
+         &1.4 & 2.11 & 0.575 & 0.338 & 0.936&  1.351 \\
+         &1.6 & 1.67 & 0.571 & 0.296 & 0.948&  1.183 \\
+$G_3$/20 &0.2 &14.45 & 0.686 & 1.204 & 1.149&  4.818 \\
+         &0.4 & 13.44 & 0.713 & 1.193 & 1.078&  4.772 \\
+         &0.6 & 11.54 & 0.703 & 1.044 & 1.059&  4.177 \\
+         &0.8 &  9.29 & 0.626 & 0.752 & 1.006&  3.006 \\
+         &1.0 &  7.20 & 0.625 & 0.538 & 1.010&  2.152  \\
+         &1.2 &  5.50 & 0.593 & 0.439 & 0.962&  1.755 \\
+         &1.4 &  4.22 & 0.584 & 0.363 & 0.962&  1.453 \\
+         &1.6 &  3.33 & 0.591 & 0.339 & 1.011&  1.357 \\
 \end{tabular}
 \caption{\label{t:jpdv}
   Current density and fitted parameters for saveral positions on
@@ -773,8 +775,8 @@ samples in Fig. \ref{fig:p}.
   \caption{Porosity as a function of current density for three samples
     $G_1$, $G_2$, $G_3$. The data points for each sample are joined by
     thick lines. The arrows point to data that correspond to
-    position $x'_1=0.2\,\text{cm}$, joined to the other data by a thin
-    line (see text). We include linear fits to the data from
+    position $x'_1=0.2\,\text{cm}$, joined to the other data by thin
+    lines (see text). We include linear fits to the data from
     sample $G_3$ (thick straight line) and to that from all the
     samples (thin straight line). }
   \label{fig:p}
@@ -803,8 +805,8 @@ samples in Fig. \ref{fig:v}.
   \caption{Etching rate as a function of current density for three samples
     $G_1$, $G_2$, $G_3$. The data points for each sample are joined by
     thick lines. The arrows point to data that correspond to
-    position $x'_1=0.2\,\text{cm}$, joined to the other data by a thin
-    line (see text). We include linear fits to the data from
+    position $x'_1=0.2\,\text{cm}$, joined to the other data by thin
+    lines (see text). We include linear fits to the data from
     sample $G_3$ (thick straight line) and to that from all the
     samples (thin straight line). }
   \label{fig:v}
@@ -819,8 +821,8 @@ sample, $G_3$, from which we get
   \frac{\text{nm}}{\text{s}}j_\perp + 0.092\frac{\text{nm}}{{s}}.
 \end{equation}
 
-Using Eqs. \eqref{eq:p}, \eqref{eq:v}, \eqref{Eq:ECMR}, and
-\eqref{Eq:Brugg}, we can calculate the reflectance spectra for any
+Using Eqs.  \eqref{Eq:ECMR}-\eqref{eq:v} we can calculate the
+reflectance spectra for any
 desired current density $j_\perp$ and etching time. This is
 illustrated in Fig. \ref{fig:Rvsjl} for the parameters that correspond
 to our samples.
@@ -852,8 +854,7 @@ those expected theoretically, though the experimental bands are somewhat shifted
 especially for low current densities, and the minima are not as low.
 
 The theoretical reflectance coudl as well be calculated using
-Eqs. \eqref{eq:p}, \eqref{eq:v}, \eqref{Eq:ECMR}, and
-\eqref{Eq:Brugg}, for more complicated structures, in which the
+\eqref{Eq:ECMR}-\eqref{eq:v} for more complicated structures, in which the
 current $I$ is modulated in time, allowing the design and analysis of
 non-trivial multilayered GRIN PS structures.
 
