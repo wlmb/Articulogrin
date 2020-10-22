@@ -7,6 +7,7 @@
 %\usepackage{cite}% para contraer referencias
 %\usepackage[usenames]{color}
 %\usepackage{showkeys}
+%\usepackage{ieeetr}
 \usepackage{bm}
 \usepackage{hyperref}
 \usepackage[normalem]{ulem} %opcional para la correcciones
@@ -16,6 +17,7 @@
 \newcommand{\notaL}[1]{{\color{blue}+L:#1+}}
 \newcommand{\notaC}[1]{{\color{green}+C:#1+}}
 \newcommand{\notaV}[1]{{\color{red}+V:#1+}}
+
 
 \title{\textbf{Optimization of Porous Silicon Gradient Refractive
     Index Structures.} }
@@ -49,21 +51,35 @@ samples a full characterization of the dependence of porosity,
 dielectric function and speed of attack on the current density and on
 position, so that novel nonhomogeneous devices may be designed and
 built.
-
+\notaV{ABSTRACT :  Surfaces with the gradient in the refractive index 
+have attracted attention due to their ability to unpair the relation
+ between the shape of the optical lens with its optical response. 
+  For enhancing the versatility  of electrochemical gradients and its possible usage in
+different kinds of devices and applications, it is
+desirable to predesign GRIN structures with spatial 
+predictability of porosity and the corresponding etching rate.  
+In this work, we propose a simple model for the calculation of the current
+density as a function of position within an electrochemical cell used
+to produce porous silicon structures with a controlled gradient in their
+index of refraction. The characterization of some typical PS samples with 
+lateral porosity and thickness gradient (produced using pin Pt electrode) 
+with scanning electron microscopy and
+ultraviolet-visible-near infrared reflectance spectroscopy was 
+found to be in conformity with the properties predicted through 
+the proposed model. In addition,
+as the results allow us to obtain the complete dependence of
+porosity, dielectric function and the corresponding etching rate for each 
+current density from some measurements performed on a single or 
+a couple of samples, the proposed model can facilitate the designing 
+of novel sensing devices based on surfaces with lateral gradient in refractive indices.}
 Keywords: Porous Silicon; GRIN; Reflectance Spectra.
 \end{abstract}
 \notaL{Cambié el abstract, pero habrá que revisarlo después.}
 
-\notaV{Surfaces with gradient in refractive index has attracted attention due
- ti its ability to unpair the relation between the shape of the optical 
-lens with its optical response. In spite of its possible usage in 
-different kinds of devices and applications, it still remains
-desirable to predesign GRIN structures with spacial predictability 
-of electrochemical gradients.  In this work we report}
 
 \section{Introduction}
 \label{sec:introduction}
-\notaV{$
+\notaV{
 Introduction 
 
 Surfaces with gradient in the refractive index (GRIN) are of 
@@ -71,86 +87,102 @@ importance not only due to the possibility of being able to
 engineer/tune the propagation of light within the structure’s 
 surface for applications such as flat lenses, but also for several 
 interesting biological applications where the continual topographical 
-variation is being exploited [X]. As an example, roughness dependent 
-response of the cells has been tested on such materials for applications 
-in medical implants [Y].   Gradients have also been employed for several 
+variation is being exploited \cite{pierscionek2012gradient}. As an example, 
+roughness dependent  response of the cells has been tested on such 
+materials for applications in medical implants \cite{bai2020bioinspired}.  
+ Gradients have also been employed for several 
 technological applications such as high-yield screening of catalysts, 
-sensing materials and biomolecules [W. F. Maier, K. Stçwe, S. Sieg, Angew. 
-Chem. 2007, 119, 6122; Angew. Chem. Int. Ed. 2007, 46, 6016. ;  S. Jayaraman, 
-A. C. Hillier, J. Comb. Chem. 2004, 6, 27; S. Jayaraman, A. C. Hillier, Meas. 
-Sci. Technol. 2005, 16, 5. ; R. A. Potyrailo, V. M. Mirsky, Chem. Rev. 2008, 108, 770.]
-
-Apart from some methods developed by S.E. Fosdick et al [JACS  2010, 132, 9226-9227], 
+sensing materials and biomolecules \cite{maier2007combinatorial, jayaraman2004construction, 
+potyrailo2008combinatorial}
+%[W. F. Maier, K. Stçwe, S. Sieg, Angew. 
+%Chem. 2007, 119, 6122; Angew. Chem. Int. Ed. 2007, 46, 6016. ;  S. Jayaraman, 
+%A. C. Hillier, J. Comb. Chem. 2004, 6, 27; S. Jayaraman, A. C. Hillier, Meas. 
+%Sci. Technol. 2005, 16, 5. ; R. A. Potyrailo, V. M. Mirsky, Chem. Rev. 2008, 108, 770.]
+%%
+Apart from some methods developed by S.E. Fosdick et al \cite{fosdick2010two},
+%[JACS  2010, 132, 9226-9227], 
 synthesis of  Ag-Au alloy gradients on steel and chemical composition gradients of CdS 
-on gold electrode have been made by Shannon’s group[].  Among the electrochemical methods, 
-compositional and doping density changes in the conducting polymer have been used to 
-produce the gradients using Indium tin oxide electrode [S. Inagi, Y. Ishiguro et al 
-Angew Chem Int. Ed. 2010, 49, 10136-10139; Angew Chem 2010 122, 10334-10337].   
+on gold electrode have been made by Shannon’s group\cite{wang2019fabrication}.  
+Among the electrochemical methods, compositional and doping density changes 
+in the conducting polymer have been used to produce the gradients using Indium tin 
+oxide electrode \cite{inagi2010bipolar}
+%[S. Inagi, Y. Ishiguro et al Angew Chem Int. Ed. 2010, 49, 10136-10139;
+%Angew Chem 2010 122, 10334-10337].   
 Electrochemically induced potential gradients have been shown to catalyze the 
-reactions and gradient doping of the polymers [Gradient Doping of Conducting Polymer 
-Films by Means of Bipolar Electrochemistry Y. Ishiguro, S. Inagi, and T.Fuchigami 
-Langmuir 2011 27 (11), 7158-7162].   (PENDING : few MORE EXAMPLES from last couple of years)
+reactions and gradient doping of the polymers \cite{qin2020bipolar, ishiguro2011gradient}
+%[Gradient Doping of Conducting Polymer 
+%Films by Means of Bipolar Electrochemistry Y. Ishiguro, S. Inagi, and T.Fuchigami 
+%Langmuir 2011 27 (11), 7158-7162].   (PENDING : few MORE EXAMPLES from last couple of years)
 As compared to the above mentioned techniques, a relatively economical, 
 fast and easy approach with an additional advantage of being compatible 
-with VLSI devices & integrable with microelectronics, for the fabrication 
+with VLSI devices and integrable with microelectronics, for the fabrication 
 of refractive index (pore size) gradient has been the development of asymmetric 
-electrode configuration in the electrochemical synthesis of porous silicon [].  
+electrode configuration in the electrochemical synthesis of porous silicon \cite{sailor2012porous}.  
 Although porous silicon initially stimulated the interest of the scientific 
 community due to visible PL at room temperature, presently it has 
 been accepted as a multifaceted optical material due to its large surface 
 area, biocompatibility, ease of fabrication and tunable refractive index. 
 Porous silicon emanating applications now cover various fields such as 
-chemical and biosensor [Porous Silicon Fabry–Pérot Interferometer for
-N-Acetyl-β-d-Glucosaminidase Biomarker Monitoring  D. Nanda Kumar, 
-Nofar Pinker, and Giorgi Shtenberg  ACS Sensors 2020 5 (7), 1969-1976; DOI: 
-10.1021/acssensors.0c00348], microelectronics and MEMS[xx], as well as a 
-range of optical[XXX] and optoelectronic applications[XXX].  Specifically, 
+chemical and biosensor \cite{kumar2020porous},
+%[Porous Silicon Fabry–Pérot Interferometer for
+%N-Acetyl-β-d-Glucosaminidase Biomarker Monitoring  D. Nanda Kumar, 
+%Nofar Pinker, and Giorgi Shtenberg  ACS Sensors 2020 5 (7), 1969-1976; DOI: 
+%10.1021/acssensors.0c00348], 
+microelectronics and MEMS \cite{martinez2016dual},as well as a 
+range of optical \cite{estevez2014porous} and optoelectronic applications
+\cite{ramadan2020fabrication}. Specifically, 
 the temporal variation of current density results in the variation of 
 porosity along the depth for the easy fabrication of different kinds 
-[xxX] of 1D photonics crystals. 
+\cite{perez2018reflectivity} of 1D photonics crystals. 
 Although the conventional fabrication of PS requires laterally 
 homogeneous samples (with same structural characteristics on the 
 porous surface), asymmetric configuration to produce porous silicon 
-with a lateral gradient (in terms of optical thickness/ pore size and t
-hickness of the porous layer) has also been exploited for different applications 
-[REF… ]. In this configuration, a small platinum electrode (cathode)  
+with a lateral gradient (in terms of optical thickness/ pore size and thickness 
+of the porous layer) has also been exploited for different applications 
+\cite{collins2002determining}. In this configuration, a small platinum electrode (cathode)  
 is positioned perpendicular  to the surface of the Si substrate (anode) 
 at one end or the center  of the cell, resulting  in a decrease in current 
-density  with an increase in the distance from the electrode \cite{I102, I103}. 
+density  with an increase in the distance from the electrode
+ \cite{khung2008using, clements2011mesenchymal}. 
 The resulting porous surface can have pore sizes ranging from a few nanometers  
-to  few micrometers  \cite{I104}. The range of the dimensions of the pores and 
+to  few micrometers  \cite{wang2015screening}. The range of the dimensions of the pores and 
 the corresponding  thickness obtained on the same chip can be controlled by 
 adjusting the location of the pin/circular electrode,  anodizing current density
 and etching time period for a given silicon wafer.   Sailor Group 
-in 2002 \cite{I101} applied it for the determination of protein size. 
+in 2002 \cite{collins2002determining, sailor2012porous} applied it 
+for the determination of protein size. 
 Additionally, due to the biocompatible nature of PS, possible gating of 
 the optical response by variation in pH of the solution was shown to 
 trap/release the biomolecule for possible drug delivery applications. 
  Similar asymmetric electrode configuration was used to fabricate 
- optical filters (multilayered structures) with lateral gradient 
- [Li, Yang Yang, Peter Kim, and Michael J. Sailor. 
- "Painting a rainbow on silicon–a simple method to 
- generate a porous silicon band filter gradient.
- " physica status solidi (a) 202.8 (2005): 1616-1618.] for 
- developing ethanol sensor (Sailor 2012...). Additionally it 
- has been shown that the combination of thermal  oxidation  and 
+ optical filters (multilayered structures) with lateral gradient \cite{li2005painting}
+% [Li, Yang Yang, Peter Kim, and Michael J. Sailor. 
+% "Painting a rainbow on silicon–a simple method to 
+% generate a porous silicon band filter gradient.
+% " physica status solidi (a) 202.8 (2005): 1616-1618.] 
+for developing ethanol sensor (Sailor 2012)\cite{sailor2012porous}. 
+ Additionally it has been shown that the combination of thermal  oxidation  and 
  infiltration of TiO2  by ALD offers the  opportunity to manufacture 
 a high refractive indices contrast in visibly transparent GRIN 
-optical elements from PS \cite{I16}.    Kruger et al showed 
-the ...  [ Krueger, Neil A., et al. "Porous silicon gradient 
-refractive index micro-optics." Nano letters 16.12 (2016): 7402-7407.] 
-In addition the same group ...[Krueger, Neil A., et al. 
- "Electrochemical Fabrication of Flat, Polymer‐Embedded 
-Porous Silicon 1D Gradient Refractive Index Microlens 
-Arrays." physica status solidi (a) 215.13 (2018): 1800088].  
+optical elements from PS \cite{ocier2017tunable}.    
+Kruger et al showed the \cite{krueger2016porous}
+%the ...  [ Krueger, Neil A., et al. "Porous silicon gradient 
+%refractive index micro-optics." Nano letters 16.12 (2016): 7402-7407.] 
+In addition the same group \cite{krueger2018electrochemical}
+%[Krueger, Neil A., et al. 
+% "Electrochemical Fabrication of Flat, Polymer‐Embedded 
+%Porous Silicon 1D Gradient Refractive Index Microlens 
+%Arrays." physica status solidi (a) 215.13 (2018): 1800088].  
 Recently, J Wang et al. has shown the fabrication of 
 miniature spectrometer with PS based rugate filter using 
-radial interfacial potential distribution (Wang, Joanna, 
-Michael J. Sailor, and Byoung‐Yong Chang. "Fabrication of a lateral 
-gradient rugate in porous silicon for a miniature spectrometer
-application." ChemElectroChem 6.24 (2019): 5967-5972. On the other 
-hand, the effect of different topographical features present on the 
-same chip, has also been used to culture / adhesion of certain cells \cite{I14}
+radial interfacial potential distribution \cite{wang2019fabrication}
+%(Wang, Joanna, 
+%Michael J. Sailor, and Byoung‐Yong Chang. "Fabrication of a lateral 
+%gradient rugate in porous silicon for a miniature spectrometer
+%application." ChemElectroChem 6.24 (2019): 5967-5972.
+On the other hand, the effect of different topographical
+features present on the same chip, has also been 
+used to culture / adhesion of certain cells \cite{khung2008using}
 In the investigation of such practically applicable systems, 
 the spacial predictability of electrochemical gradients can 
 be useful for predesigning the devices for different applications.  
@@ -165,58 +197,59 @@ with lateral gradient in refractive index  ...with predictable  depth and porosi
 at any point on surface.   In Section 3 we provide experimental details for the 
 synthesis of porous silicon samples with lateral refractive index gradient.  
 Section 4 includes experimental results and its comparison with numerically 
-evaluated parameters . Finally,  the conclusions are given in Section X
-
-$}
-
-\notaV{$ Painting a rainbow on silicon - A simple method to 
-\notaV{generate a porous silicon 
-band filter gradient. / Li, Yang Yang; Kim, Peter; Sailor, Michael J.
-In: Physica Status Solidi (A) Applications and Materials Science, 
-Vol. 202, No. 8, 06.2005, p. 1616-1618.  (https://doi.org/10.1002/pssa.200461200)
-
-Electrochemical Preparation of Pore Wall Modification Gradients 
-across Thin Porous Silicon Layers
-Corrina M. Thompson, Michel Nieuwoudt, Anne M. Ruminski, 
-Michael J. Sailor, and Gordon M. Miskelly
-Langmuir 2010 26 (10), 7598-7603
-DOI: 10.1021/la904408h
-
- Richardson, Kathleen A., et al. "Advances in infrared gradient 
- refractive index (GRIN) materials: a review." Optical Engineering 59.11 (2020): 112602.
- 
-
-Lavanant, Enora, et al. "Radial gradient refractive index 
-(GRIN) infrared lens based on spatially resolved crystallization 
-of chalcogenide glass." Optical Materials Express 10.4 (2020): 860-867.
-While widely used in the visible, radial gradient refractive 
-index (GRIN) lenses are still elusive in the IR waveband. 
-In this paper we introduce a new method based on spatially
-resolved crystallization of chalcogenide glass to produce such lenses. 
-Optical and structural
-
-Yoon, Sun Mi, et al. "Subwavelength Hollow-Nanopillared Glass 
-with Gradient Refractive Index for Ultralow Diffuse Reflectance 
-and Antifogging." ACS applied materials & interfaces 12.5 (2020): 6234-6242.
-Nanostructured glass with subwavelength hollow nanopillars 
-of diameters of sub-65 nm was fabricated, showing high optical 
-transmittance and ultralow diffuse reflectance. A simple
-process involving single-step plasma etching was used on a 
-glass slide coated with a SiO2...
-
-Perez, Julius C., Tahmid H. Talukdar, and Judson D. Ryckman. 
-"Patterning Refractive Index on the Surface of a Chip by Direct 
-Nanoimprinting." CLEO: QELS_Fundamental Science. Optical Society of America, 2020.
-
-Szymanowski, Hieronim, et al. "Thin SiNC/SiOC Coatings with a 
-Gradient of Refractive Index Deposited from Organosilicon Precursor." Coatings 10.8 (2020): 794.
-  
-Perez, Julius C., Tahmid H. Talukdar, and Judson D. Ryckman.
- "Patterning Refractive Index on the Surface of a Chip by Direct 
- Nanoimprinting." CLEO: QELS_Fundamental Science. Optical Society of America, 2020.
-
-$
+evaluated parameters. Finally,  the conclusions are given in Section 5
+%$ 
+%
 }
+
+%\notaV{ $Painting a rainbow on silicon - A simple method to  generate a porous silicon 
+%band filter gradient. / Li, Yang Yang; Kim, Peter; Sailor, Michael J.
+%In: Physica Status Solidi (A) Applications and Materials Science, 
+%Vol. 202, No. 8, 06.2005, p. 1616-1618.  (https://doi.org/10.1002/pssa.200461200)
+%
+%Electrochemical Preparation of Pore Wall Modification Gradients 
+%across Thin Porous Silicon Layers
+%Corrina M. Thompson, Michel Nieuwoudt, Anne M. Ruminski, 
+%Michael J. Sailor, and Gordon M. Miskelly
+%Langmuir 2010 26 (10), 7598-7603
+%DOI: 10.1021/la904408h
+%
+% Richardson, Kathleen A., et al. "Advances in infrared gradient 
+% refractive index (GRIN) materials: a review." Optical Engineering 59.11 (2020): 112602.
+% 
+%
+%Lavanant, Enora, et al. "Radial gradient refractive index 
+%(GRIN) infrared lens based on spatially resolved crystallization 
+%of chalcogenide glass." Optical Materials Express 10.4 (2020): 860-867.
+%While widely used in the visible, radial gradient refractive 
+%index (GRIN) lenses are still elusive in the IR waveband. 
+%In this paper we introduce a new method based on spatially
+%resolved crystallization of chalcogenide glass to produce such lenses. 
+%Optical and structural
+%
+%Yoon, Sun Mi, et al. "Subwavelength Hollow-Nanopillared Glass 
+%with Gradient Refractive Index for Ultralow Diffuse Reflectance 
+%and Antifogging." ACS applied materials & interfaces 12.5 (2020): 6234-6242.
+%Nanostructured glass with subwavelength hollow nanopillars 
+%of diameters of sub-65 nm was fabricated, showing high optical 
+%transmittance and ultralow diffuse reflectance. A simple
+%process involving single-step plasma etching was used on a 
+%glass slide coated with a SiO2...
+%
+%Perez, Julius C., Tahmid H. Talukdar, and Judson D. Ryckman. 
+%"Patterning Refractive Index on the Surface of a Chip by Direct 
+%Nanoimprinting." CLEO: QELS_Fundamental Science. Optical Society of America, 2020.
+%
+%Szymanowski, Hieronim, et al. "Thin SiNC/SiOC Coatings with a 
+%Gradient of Refractive Index Deposited from Organosilicon Precursor." Coatings 10.8 (2020): 794.
+%  
+%Perez, Julius C., Tahmid H. Talukdar, and Judson D. Ryckman.
+% "Patterning Refractive Index on the Surface of a Chip by Direct 
+% Nanoimprinting." CLEO: QELS_Fundamental Science. Optical Society of America, 2020.
+% $
+%}
+
+
 
 
 \section{Theory: current density}
@@ -253,7 +286,7 @@ but for a small tip, which we approximate as a
 point current source.
 \begin{figure}
   \centering
-  \includegraphics[width=\textwidth]{celdan1}
+  \includegraphics[width=\textwidth]{celdan1.png}
   \caption{Prism shaped electrolytic cell with a rectangular base of
     sides $a$, $b$ filled with electrolyte up to a height $c$. The
     walls of the cell are insulating and the bottom is completely
@@ -332,7 +365,7 @@ E_x(0, y ,z)= E_x(a, y ,z)=E_y(x, 0 ,z)=E_y(x, b
 ,z)=E_z(x, y ,c)=0.
 \end{equation}
 Here, $\delta^{(D)}$ is Dirac's delta function in $D$ dimensions.
-This problem may be solved readily using image charge theory \cite{T1,T2}.
+This problem may be solved readily using image charge theory \cite{jackson1999classical}.
 The potential within the electrolytic cell coincides
 within the region $0\le x\le a$, $0\le y \le b$, $0\le z\le c$
 with that an infinite fictitious empty space but for the point charge
@@ -410,18 +443,19 @@ q_0$ arranged in positive and negative planes.
 The electrostatic potential produced by an infinite array of
 charges expressed as a sum in real space of Coulomb terms has ill
 convergence properties. The potential can be obtained
-using the Ewald summation technique \cite{T3,T4,T5}, which yields
+using the Ewald summation technique \cite{brodka2004ewald}, which yields
 two rapidly converging series, one in real space and another one in reciprocal space.
 Nevertheless, as we need the potential and the field to obtain the
 current density on the surface of the sample on which  no
 real nor image charges lie, we may perform a somewhat simpler planewise
 summation, where we first obtain the potential and field produced by a
 simple periodic lattice of charges using a fast convergent sum over the 2D
-reciprocal vectors, then sum over the charges that form the basis
+reciprocal vectors \cite{kratzer2019basics}, then sum over the charges that form the basis
 of the 2D {\em crystal} plane, and finally sum over all the
- planes \cite{T6,T7}.\notaL{¿Estas referencias son relevantes? ¿En verdad
-   se define en ellas la suma de Ewald por planos? Dime dónde p.f., en qué
-   página. Y checa que todas las referencias tengan que ver con lo que decimos}
+ planes \notaC{cite{T6,T7}, esta citas las quite porque no puedo contestar esa pregunta de 
+ abajo}.\notaL{¿Estas referencias son relevantes? ¿En verdad
+ se define en ellas la suma de Ewald por planos? Dime dónde p.f., en qué
+ página. Y checa que todas las referencias tengan que ver con lo que decimos}
 
 We consider first a system made of identical {\em unit} charges
 ocuppying the positions $\bm R$ of a 2D Bravais lattice $\{\bm R\}$,
@@ -581,7 +615,8 @@ In Fig. \ref{fig:DE1} we show a schematic representation of our
 experimental setup to manufacture GRIN PS structures.
 As dicussed above, we fabricated an electrolytic cell with the shape of a
 rectangular prism on the bottom of which we place a Si wafer which makes
-electrical contact to a gold plate \notaL{Lo inventé; de qué material es
+electrical contact to a brass \notaC{ laton. gold plate} 
+\notaL{Lo inventé; de qué material es
   el contacto bajo la muestra?} which together make the anode. The
 cathode consists of a platinum wire insulated except for a small region
 at its tip, which we take as a point current drain.
@@ -595,12 +630,13 @@ We manufactured single layer PS structures through electrochemical
 anodization of a (100) $p$-type crystalline Si wafer
 (resistivity 0.002 - 0.005 $ \Omega\,\text{cm}$), under galvanostatic
 conditions. The process was performed at
-room temperature,\notaL{OJO. No controlaste la temperatura} with an
+\notaC{room temperature, no controle latempertaura}
+,\notaL{OJO. No controlaste la temperatura} with an
 electrolytic mixture of aqueous hydrofluoric
 acid (HF) (concentration 48\% wt), glycerol (purity 99.8 \% wt) and
 ethanol (purity 99.9\% wt) in a 3:7:1 volume ratio. \notaL{Checa que
-  todo esto sí corresponda a tus últimas muestras} After the
-anodizing process, the samples were rinsed with
+  todo esto sí corresponda a tus últimas muestras} \notaC{SI corresponde}
+   After the anodizing process, the samples were rinsed with
 ethanol (purity: 99.9 $ \% $  wt). The electrolytic cell had the shape
 of a rectangular prism as shown in Fig. \ref{fig:DE1}, with a base of
 sides $a=2.01\,\text{cm}$ \notaL{Cambié el número, de acuerdo a unas
@@ -621,22 +657,26 @@ We measured the reflectivity spectra at different positions over our
 samples using a {\em Perkin Elmer Lambda 950}
 UV-Vis-NIR spectrophotometer.\notaL{Finalmente, ¿fue éste el que se
   usó? Si sí, ¿hay algo internesante que decir sobre el? Cosas como el
-tamaño de mancha, resolución espectral, etc.} For interpretation of the
-data layer we used
-the standard formula \cite{T8,T9} for the reflectance of three media:
+tamaño de mancha, resolución espectral, etc.} \notaC{Data collection absoluto
+reflectance mode. Spot size, physical setting, width (0.7mm) and length (2.0mm).
+Instrument setting, slit width (0.6mm). Method settings 
+wavelength from(1400nm) to(300nm)}
+ 
+ For interpretation of the data layer we used
+the standard formula \cite{stenzel2015physics} for the reflectance of three media:
 air (0) environment, the PS film (1) and the c-Si substrate (2),
  \begin{equation}\label{Eq:ECMR}
    R=\left |\frac{r _ {_ {01}}r _ {_ {12}} e^{2i\psi}}{1+r _ {_
    {01}}r _ {_ {12}} e^{2i\psi}}\right |^2
 \end{equation}
 where $r_{01}$ and $r_{12}$ are the Fresnel reflectance
-coefficients of the air/PS and PS/c-Si interfaces \cite{T10,T11}
+coefficients of the air/PS and PS/c-Si interfaces \cite{sattler2017silicon}
 and $\psi=k_1^\perp d$, where $k_1^\perp$ is
 the component of the wavevector perpendicular to the surface within
 the porous layer of thickness $d$. The reflectance depends on the
 thickness of the film and on the index of refraction $n_1=n_{\text{PS}}$ of the porous
 layer, which we relate to the porosity through Bruggeman's
-effective medium theory \cite{I20},
+effective medium theory \cite{theiss1997optical},
 \begin{equation}\label{Eq:Brugg}
  p\frac{1-\epsilon_1} {1+\epsilon_1} + (1-p)
   \frac{\epsilon_2 - \epsilon_1}
@@ -797,14 +837,16 @@ for calibration variations among spectra. From the thickness we
 obtained the etching rate $v=d/t$ at each position. Notice that the fits are reasonably
 good. The contrast of the reflectance in the experiment is somewhat smaller
 than in our fitted curves. We believe this is due to the finite width
-\notaL{beams width=?} of the illuminating beam of our
+\notaL{beams width=?} \notaC{beams width width (0.7mm) and length (2.0mm)}
+of the illuminating beam of our
 spectrometer. Thus, as our GRIN sample is not macroscopically homogeneous and its
 properties have a gradient, the
 experimental results have contributions from regions with slightly
 different porosities and thicknesses, averaging out the interference
 maxima and minima. We expect microscopic inhomogeneities such as
 interface roughness might also reduce the contrast through scattering
-and its corresponding apparent dissipation \notaL{citar a:
+and its corresponding apparent dissipation \cite{missoni2020rough}
+\notaL{citar a:
   Missoni, Leandro L., Guillermo P. Ortiz, María Luz Martínez Ricci,
   Victor J. Toranzos, and W. Luis Mochán. 2020. “Rough 1D Photonic
   Crystals: A Transfer Matrix Approach.” Optical Materials 109
@@ -980,181 +1022,57 @@ there are no universal calibration curves. Thus, it is useful to have
 a procedure that from just one sample can produce calibration curves
 that may be employed for other samples grown in the same conditions.
 
+\notaV{By choosing a simple geometry for our electrochemical cell, namely, a
+rectangular prism, and employing a point-like electrode, we were able
+to derive a simple expression for the calculation of the electric current
+density along the surface of a Si sample. The expression was obtained
+by using image charge theory and a plane-wise summation of Coulomb
+potentials in reciprocal space, and it is made up of
+a rapidly converging sum of analytical terms. This allowed us to
+characterize the porosity of a PS layer and the etching
+rate for different values of the etching current density by making
+optical experiments on just a
+few samples. We illustrated the procedure with two samples each of which we
+measured at three different positions. These calibration curves are
+very useful as the etching rate for the formation of porous silicon
+and the resulting porosity is very sensitive to the growth conditions
+and to the properties of the substrate, such as its doping. Thus,
+there are no universal calibration curves. Having obtained these calibration curves
+and being able to compute the current density at different positions
+allows the prediction of the properties of GRIN structures. We
+illustrated this by desigining a PS GRIN microcavity tuned at one
+position to a given wavelength. (Q. for Dr. Mochan : Do we intend 
+to illustrate the design?) We found a good agreement between its
+measured reflectance spectra at different points with the spectra
+calculated from the values of the expected local current
+density using the calibration curves. We also found good agreement
+between the measured and the expected geometry of the system. These
+results show that the use of a simple electrolytic cell and our
+computational procedure does allow the accurate prediction of the
+optical properties of GRIN structures, and thus we believe it will
+prove helpful for the design fabrication and characterization of novel}
+
 \section*{Acknowledgments}
 \label{sec:acknowledgments}
 WLM acknowledges the support of DGAPA-UNAM under grant
 IN111119. \notaL{Cristian debe agradecer a conacyt y faltan
   agradecimientos de Vivechna (quizás incluyendo al icf)}
-% \backmatter
-%\nocite{*}
-%\bibliographystyle{plain}
-%\bibliography{bibliografía.bib} %Aquí ponen el nombre del archivo .bib
+\nocite{*}
 \notaL{Manda toda la bibliografía a un archivo .bib}
 \notaL{Cuando esté listo, quiero que me expliques por qué incluiste
   cada uno de los artículos citados}
+% \bibliography{bibligrin} %Bibliographie
+%\printbibliography
+%\bibliographystyle{plain}
+%\bibliography{bibligrin.bib}
+%\medskip
+%
+
 \bibliographystyle{unsrt}
-\begin{thebibliography}{XX}
-  % forma de biblio es MLA
-\bibitem{I1} P. Yeh,\textquotedblleft \emph{Optical Waves in Layered
-    Media} \textquotedblright, 2nd edn. (Wiley-Interscience
-  Publication,
-  USA, 2005).
-\bibitem{I2}Canham, L. 1997.\textquotedblleft \emph{Properties of
-    Porous Silicon} \textquotedblright. Edited by Canham L. DERA,
-  Malvern, UK.
-\bibitem{I3}{Beale, M.I.J, J.D Benjamin, M.J Uren, N.G Chew, and A.G
-    Cullis. 1985. \emph{ \textquotedblleft An Experimental and
-      Theoretical Study of the Formation and Microstructure of
-      Porous Silicon.\textquotedblright} J. Crystal Growth 73:
-    622?36. doi:10.1021/jp0706984. }
-\bibitem{I4}Canham, L. T. 1990. \emph{\textquotedblleft Silicon
-    Quantum Wire Array Fabrication by Electrochemical and Chemical
-    Dissolution of Wafers.\textquotedblright} Applied Physics
-  Letters 57 (10): 1046. doi:10.1063/1.103561.
-\bibitem{I5} J. D. Joannopoulos et al.,\textquotedblleft
-  \emph{Photonic Crystals: Molding the Flow of
-    Light}\textquotedblright, 2nd edn.
-  (Princeton University Press, UK, 2008).
-\bibitem{I6} E. Yablonovitch, \textquotedblleft \emph{Photonic
-    band-gap structures,}\textquotedblright J. Opt. Soc. Am. B 10,
-  283-295 (1993)
-\bibitem{I7} Ilyas, S., and M. Gal.  \textquotedblleft \emph{
-    Optical devices from porous silicon having continuously varying
-    refractive index.}\textquotedblright Journal of Materials
-  Science: Materials in Electronics 18.1 (2007): 61-64.
-\bibitem{I8} Tran, P. \textquotedblleft \emph{Optical switching with
-    a nonlinear photonic crystal: a numerical
-    study.}\textquotedblright Optics letters 21.15 (1996):
-  1138-1140.
-\bibitem{I9} Ariza-Flores, A. David, L. M. Gaggero-Sager, and
-  V. Agarwal. \textquotedblleft \emph{White metal-like
-    omnidirectional mirror from porous silicon dielectric
-    multilayers.}\textquotedblright Applied Physics Letters 101.3
-  (2012): 031119.
-\bibitem{I10} Johnson, Steven G., et al.  \textquotedblleft
-  \emph{Linear waveguides in photonic-crystal
-    slabs.}\textquotedblright Physical Review B 62.12 (2000): 8212.
-
-  % asimetrica
-\bibitem{I101}Collins, Boyce E., et al. \textquotedblleft \emph{
-    Determining protein size using an electrochemically machined
-    pore gradient in silicon.}\textquotedblright Advanced Functional
-  Materials 12.3 (2002): 187-191.
-
-\bibitem{I102} Khung, Y. L., G. Barritt, and
-  N. H. Voelcker. \textquotedblleft \emph{Using continuous porous
-    silicon gradients to study the influence of surface topography
-    on the behaviour of neuroblastoma cells.}\textquotedblright
-  Experimental cell research 314.4 (2008): 789-800.
-
-\bibitem{I103} Clements, Lauren R., et al. \textquotedblleft
-  \emph{Mesenchymal stem cell attachment to peptide density
-    gradients on porous silicon generated by
-    electrografting.}\textquotedblright physica status solidi (a)
-  208.6 (2011): 1440-1445.
-
-\bibitem{I104} Wang, Peng-Yuan, et al. \textquotedblleft
-  \emph{Screening the attachment and spreading of bone
-    marrow-derived and adipose-derived mesenchymal stem cells on
-    porous silicon gradients.}\textquotedblright Rsc Advances 2.33
-  (2012): 12857-12865.
-\bibitem{I11} Canham, L. \textquotedblleft \emph{Properties of
-    Porous Silicon.}\textquotedblright Edited by Canham L. DERA,
-  Malvern, UK. (1997).
-\bibitem{I12} Li, Yang Yang, Peter Kim, and Michael J
-  Sailor.\textquotedblleft \emph{Painting a Rainbow on Silicon A
-    Simple Method to Generate a Porous Silicon Band Filter
-    Gradient}\textquotedblright Physica Status Solidi (a) 1618 (8):
-  161618. doi:10.1002/pssa.200461200.(2005)
-\bibitem{I13} Khung, Y L, and N H
-  Voelcker. 2009.\textquotedblleft\emph{ Multidirectional Lateral
-    Gradient Films with Position-Dependent Photonic Signatures Made
-    from Porous Silicon.}\textquotedblright Optical Materials 32
-  (1): 23442. doi:10.1016/j.optmat.2009.07.015.
-\bibitem{I14}  Khung, Y L, G Barritt, and N H Voelcker.
-  \textquotedblleft \emph{Using Continuous Porous Silicon Gradients
-    to Study the Influence of Surface Topography on the Behaviour of
-    Neuroblastoma Cells.}\textquotedblright Experimental Cell
-  Research 314 (4): 78900. doi:10.1016/j.yexcr.2007.10.015.(2008.)
-\bibitem{I15} Collins, B.E., K.-P.S. Dancil, G. Abbi, and
-  M.J. Sailor. 2002.\textquotedblleft \emph{Determining Protein Size
-    Using an Electrochemically Machined Pore Gradient in
-    Silicon.}\textquotedblright Advanced Functional Materials 12 (3):
-  187. doi:10.1002/1616-3028(200203)12:3,187::AID-ADFM187,3.0.CO;2-E.(
-  2002.)
-
-\bibitem{I16} Ocier, C. R., Krueger, N. A., Zhou, W. and  Braun,
-  P. V. (2017).\textquotedblleft \emph{Tunable visibly transparent
-    optics derived from porous silicon.}\textquotedblright ACS
-  Photonics, 4(4), 909-914.
-
-
-  \bibitem{T1}Jackson, John David. \textquotedblleft
-  \emph{Classical electrodynamics.}\textquotedblright (1999): 841-842.
-
-\bibitem{T2}Griffiths, David J. \textquotedblleft
-\emph{Introduction to electrodynamics.}\textquotedblright
- New Jersey: Prentice Hall, 1962.
-
- \bibitem{T3} Mahfoud Belhadj, Howard E. Alper, and Ronald M. Levy. \textquotedblleft
- \emph{ Molecular dynamics simulations of water with Ewald summation
- 	for the long range electrostatic interactions.}\textquotedblright Chemical
-  Physics Letters, 179(1-2):13–20, 1991.
-   \bibitem{T4}A. Bródka.\textquotedblleft
-   \emph{ Ewald summation method with electrostatic layer correction for
-  interactions of point dipoles in slab geometry.}\textquotedblright Chemical
-Physics Letters, 400(1):62–67, December 2004.
- \bibitem{T5} A. Grzybowski, E. Gwóźdź, and A. Bródka.\textquotedblleft
- \emph{ Ewald summation of electrostatic interactions in molecular dynamics
- 	 of a three-dimensional system with periodicity in two directions.}\textquotedblright
-  Physical Review B, 61(10):6706–6712, March 2000.
-
- \bibitem{T6} Kratzer, Peter, and Jörg Neugebauer. \textquotedblleft \emph{The basics of
- 	electronic structure theory for periodic systems.}\textquotedblright
-  Frontiers in chemistry 7 (2019).
- \bibitem{T7} Charles Kittel. \textquotedblleft \emph{Introduction to Solid State
- 	 Physics.}\textquotedblright Wiley, Hoboken, NJ, 8 edition, 2005.
-
- \bibitem{T8}Born, Max, and Emil Wolf. \textquotedblleft \emph{Basic properties of
-   	the electromagnetic field.}\textquotedblright Principles of optics 44 (1980).
-  \bibitem{T9} Stenzel, Olaf. \textquotedblleft \emph{ The physics of thin film
-  	optical spectra.}\textquotedblright Springer, 2015.
-
-  \bibitem{T10}Born, Max, and Emil Wolf.\textquotedblleft \emph{ Principles of optics:
-  	electromagnetic theory of propagation, interference
-  	 and diffraction of light.}\textquotedblright Elsevier, 2013.
-  \bibitem{T11} Sattler, Klaus D., ed. \textquotedblleft \emph{ Silicon Nanomaterials
-  	Sourcebook: Low-Dimensional Structures, Quantum Dots, and Nanowires }\textquotedblright,
-   Volume One. CRC Press, 2017.
+%
+\bibliography{bibligrin} %Aquí ponen el nombre del archivo .bib
 
 
 
-\bibitem{I17} Dariani RS, Ebrahimnasab S (2014). \textquotedblleft
-  \emph{Root Mean Square Roughness of Nano Porous Silicon by
-    Scattering Spectra.}\textquotedblright The
-  European Physical Journal Plus 129: 129.
-\bibitem{I18} Lerondel G, Romestain R (1997).\textquotedblleft
-  \emph{Roughness of the Porous Silicon Dissolution
-    Interface.}\textquotedblright Journal of Applied Physics 81:
-  61716178.
-\bibitem{I19} Lérondel G, Romestain R, Barret S
-  (1997).\textquotedblleft \emph{Quantitative Analysis of the Light
-    Scattering Effect on Porous Silicon
-    Optical Measurements.}\textquotedblright Thin Solid Films 297:
-  114?117.
-
-\bibitem{I20} Thei, W. \textquotedblleft \emph{Optical Properties of porous silicon.}
-\textquotedblright Surf. Sci. Rep. 1997, 29, 91?93.
-\bibitem{I21} Van Groesen, E.; Sopaheluwakan, A.; Andonowati,
-  A. \textquotedblleft  \emph{Direct characterization of states and
-    modes in defect grating structures.}\textquotedblright
-  J. Nonlinear Opt. Phys. Mater. 2004, 13, 155173.
-
-\bibitem{In} Mazzoleni, C., and L. Pavesi. \textquotedblleft
-  \emph{Application to optical components of dielectric porous silicon
-    multilayers.}\textquotedblright Applied Physics Letters 67.20
-  (1995): 2983-2985
-
-\end{thebibliography}
 
 \end{document}
