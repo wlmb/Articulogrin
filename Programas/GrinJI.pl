@@ -91,8 +91,12 @@ $gw->plot({
     xrange=>[0,$a], yrange=>[0,$b],
     #view=>['equal','xy'], #parece no funcionar
     #size=>['ratio',-1],
-    size=>'1,.5',
-    origin=>[0,.5],
+    #mochan
+    #size=>'1,.5',
+    #origin=>[0,.5],
+    #cris
+    #size=>'1,.5',
+    #origin=>[0,.5],
     justify=>1,
     label=>[1, "(a)", at=>"screen .8,.95", textcolor=>'"white"'],
     xlabel=>["x(cm)"] ,ylabel=>["y (cm)"], cblabel=>["j_⟂/I(1/cm²)"]
@@ -177,4 +181,4 @@ BEGIN {
     };
 }
 
-#perl GrinJIN.pl --a=2.03 --b=0.62 --C=1 --X0=0.1 --Y0=0.31 --Z0=0.9 --Z=0 --I=5 --N=100
+#perl GrinJI.pl --a=2.03 --b=1.48 --C=1 --X0=0.2 --Y0=0.74 --Z0=0.9 --Z=0 --I=5 --N=100
