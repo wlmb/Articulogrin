@@ -756,7 +756,7 @@ We measured the reflectance spectra  at the positions indicated in
 Fig. \ref{fig:SI3} on our three samples $G_1$, $G_2$,
 and $G_3$, prepared using the same procedure
 (Sec. \ref{sec:fabrication-ps-grin}) but applying different currents
-$I_1=5\,\text{mA}$, $I_2=10\,\text{mA}$, and $I_3=20\,\text{mA}$, . The results are shown in
+$I_1=5\,\text{mA}$, $I_2=10\,\text{mA}$, and $I_3=20\,\text{mA}$. The results are shown in
 Figs. \ref{fig:R5}, \ref{fig:R10}, and \ref{fig:R20}.
 We fitted the reflectance measurements using Eqs. \eqref{Eq:ECMR} and
 \eqref{Eq:Brugg} using the local porosity $p$, and the thickness of the
@@ -766,21 +766,14 @@ for calibration variations among spectra. From the thickness we
 obtained the etching rate $v=d/t$ at each position. Notice that the fits are reasonably
 good. The contrast of the reflectance in the experiment is somewhat smaller
 than in our fitted curves. We believe this is due to the finite width
-\notaL{beams width=?} \notaC{beams width width (0.7mm) and length (2.0mm)}
-of the illuminating beam of our
+$0.7\text{mm}\times2.0\text{mm}$ of the illuminating beam of our
 spectrometer. Thus, as our GRIN sample is not macroscopically homogeneous and its
 properties have a gradient, the
 experimental results have contributions from regions with slightly
 different porosities and thicknesses, averaging out the interference
 maxima and minima. We expect microscopic inhomogeneities such as
 interface roughness might also reduce the contrast through scattering
-and its corresponding apparent dissipation \cite{missoni2020rough}
-\notaL{citar a:
-  Missoni, Leandro L., Guillermo P. Ortiz, María Luz Martínez Ricci,
-  Victor J. Toranzos, and W. Luis Mochán. 2020. “Rough 1D Photonic
-  Crystals: A Transfer Matrix Approach.” Optical Materials 109
-  (November): 110012. https://doi.org/10.1016/j.optmat.2020.110012.
-}.
+and its corresponding apparent dissipation \cite{missoni2020rough}.
 The loss of contrast is most notable for the thicker regions
 towards the left side of Fig. \ref{fig:SI3} and for smaller
 wavelengths.
@@ -856,6 +849,11 @@ preparation conditions
 \begin{equation}\label{eq:p}
   p\approx 0.013\frac{\text{cm}^2}{\text{mA}} j_\perp+0.53.
 \end{equation}
+The discrepancies may be due to the ill definition of the edge of the
+sample (the position of the sealing o-ring) with respect to which we
+measured the position of the illuminating spot. A rigid displacement along
+$x$ yields mostly a horizontal shift of the results shown in
+Fig. \ref{fig:p} and that can bring them into closer agreement.
 
 Similarly, we can plot the fitted etching rate as
 a function of the calculated density current, as shown for our three
@@ -881,6 +879,11 @@ sample, $G_3$, from which we get
   v\approx 0.35\frac{\text{cm}^2}{\text{mA}}
   \frac{\text{nm}}{\text{s}}j_\perp + 0.092\frac{\text{nm}}{{s}}.
 \end{equation}
+The discrepancies, as in Fig. \ref{fig:p} might be due to our poor
+definition of our reference position and may be eliminated by
+introducing a rigid displacement along $x$ between the samples. For
+multilayered samples, produced by modulating the current $I$ in time,
+without changing wafers, these error source would be absent.
 
 Using Eqs.  \eqref{Eq:ECMR}-\eqref{eq:v} we can calculate the
 reflectance spectra for any
@@ -914,7 +917,7 @@ be grouped along bright and dark bands and that they correspond closely to
 those expected theoretically, though the experimental bands are somewhat shifted,
 especially for low current densities, and the minima are not as low.
 
-The theoretical reflectance coudl as well be calculated using
+The theoretical reflectance could as well be calculated using
 \eqref{Eq:ECMR}-\eqref{eq:v} for more complicated structures, in which the
 current $I$ is modulated in time, allowing the design and analysis of
 non-trivial multilayered GRIN PS structures.
@@ -940,7 +943,10 @@ rate corresponding to each current density.
 We showed that an analysis of the data of just one of the samples, which we chose
 as that with the largest current density range, yielded calibration
 curves that allow the approximate prediction of the properties of the other
-samples. The calibration curves can be used to design and calculate the optical
+samples. We believe that the discrepancies we found between samples
+are due to difficulties in defining a common reference position and
+may be eliminated through a rigid shift along the $x$ direction.
+The calibration curves can be used to design and calculate the optical
 properties of other systems prepared under similar conditions, such as
 multilayered GRIN systems from which photonic crystals, microcavities
 and sensors with position dependent properties. This is the subject of
@@ -951,57 +957,11 @@ there are no universal calibration curves. Thus, it is useful to have
 a procedure that from just one sample can produce calibration curves
 that may be employed for other samples grown in the same conditions.
 
-\notaV{By choosing a simple geometry for our electrochemical cell, namely, a
-rectangular prism, and employing a point-like electrode, we were able
-to derive a simple expression for the calculation of the electric current
-density along the surface of a Si sample. The expression was obtained
-by using image charge theory and a plane-wise summation of Coulomb
-potentials in reciprocal space, and it is made up of
-a rapidly converging sum of analytical terms. This allowed us to
-characterize the porosity of a PS layer and the etching
-rate for different values of the etching current density by making
-optical experiments on just a
-few samples. We illustrated the procedure with two samples each of which we
-measured at three different positions. These calibration curves are
-very useful as the etching rate for the formation of porous silicon
-and the resulting porosity is very sensitive to the growth conditions
-and to the properties of the substrate, such as its doping. Thus,
-there are no universal calibration curves. Having obtained these calibration curves
-and being able to compute the current density at different positions
-allows the prediction of the properties of GRIN structures. We
-illustrated this by desigining a PS GRIN microcavity tuned at one
-position to a given wavelength. (Q. for Dr. Mochan : Do we intend
-to illustrate the design?) We found a good agreement between its
-measured reflectance spectra at different points with the spectra
-calculated from the values of the expected local current
-density using the calibration curves. We also found good agreement
-between the measured and the expected geometry of the system. These
-results show that the use of a simple electrolytic cell and our
-computational procedure does allow the accurate prediction of the
-optical properties of GRIN structures, and thus we believe it will
-prove helpful for the design fabrication and characterization of novel}
-
 \section*{Acknowledgments}
 \label{sec:acknowledgments}
 WLM acknowledges the support of DGAPA-UNAM under grant
 IN111119. \notaL{Cristian debe agradecer a conacyt y faltan
   agradecimientos de Vivechna (quizás incluyendo al icf)}
-\nocite{*}
-\notaL{Manda toda la bibliografía a un archivo .bib}
-\notaL{Cuando esté listo, quiero que me expliques por qué incluiste
-  cada uno de los artículos citados}
-% \bibliography{bibligrin} %Bibliographie
-%\printbibliography
-%\bibliographystyle{plain}
-%\bibliography{bibligrin.bib}
-%\medskip
-%
-
 \bibliographystyle{unsrt}
-%
 \bibliography{bibligrin} %Aquí ponen el nombre del archivo .bib
-
-
-
-
 \end{document}
