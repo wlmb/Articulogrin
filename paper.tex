@@ -361,7 +361,7 @@ image charges within the plane $y=y_0$.
   \label{fig:sideview}
 \end{figure}
 Each plane of charges upon reflection on the surface of the sample at
-the bottom of the cell yields an
+the bottom of the cell yields a
 plane of image charges of the opposite sign, while each reflection
 on the surface of the liquid yields a plane of charges of the same
 sign. The side view may be interpreted as a periodic rectangular
@@ -376,25 +376,28 @@ q_0$ arranged in positive and negative planes.
 The electrostatic potential produced by an infinite array of
 charges expressed as a sum in real space of Coulomb terms has ill
 convergence properties. The potential can be obtained
-using the Ewald summation technique \cite{brodka2004ewald}, which yields
+using the Ewald summation technique
+\cite{ewald1921calculation, belhadj1991molecular-dynamics,
+  schmidt1997multipole, grzybowski2000ewald, toukmaji2000efficient,
+  brodka2004ewald, campione2012ewald}, which yields
 two rapidly converging series, one in real space and another one in reciprocal space.
 Nevertheless, as we need the potential and the field to obtain the
 current density on the surface of the sample on which  no
 real nor image charges lie, we may perform a somewhat simpler planewise
 summation, where we first obtain the potential and field produced by a
 simple periodic lattice of charges using a fast convergent sum over the 2D
-reciprocal vectors \cite{kratzer2019basics}, then sum over the charges that form the basis
+reciprocal vectors \cite{nijboer1957calculation, nijboer1958internal,
+  de_wette1965internal, watson1981madelung, grindlay1981k}
+\notaL{¿De qué se trata esta referencia que pusiste
+  aquí: \cite{kratzer2019basics}?}, then sum over the charges that form the basis
 of the 2D {\em crystal} plane, and finally sum over all the
- planes \notaC{cite{T6,T7}, esta citas las quite porque no puedo contestar esa pregunta de
- abajo}.\notaL{¿Estas referencias son relevantes? ¿En verdad
- se define en ellas la suma de Ewald por planos? Dime dónde p.f., en qué
- página. Y checa que todas las referencias tengan que ver con lo que decimos}
+ planes.
 
 We consider first a system made of identical {\em unit} charges
 ocuppying the positions $\bm R$ of a 2D Bravais lattice $\{\bm R\}$,
 which we will take as a rectangular lattice with lattice parameters
 $2a$ and $2b$, and lying, for the time being, at the $z=0$ plane.
-The potential it produces obeys
+The potential $\phi$ it produces obeys
 \begin{equation}
   \label{eq:poissonRed}
   \nabla^2\phi(\bm r)=-4\pi\sum_{\bm R}\delta^{(2)}(\bm r_\|-\bm
@@ -467,7 +470,7 @@ Fig. \ref{fig:sideview} we see that the $G=0$
 field has contributions only from the charges at $z_0$ and their
 images at $-z_0$, and that this contribution is like that of a parallel plate
 capacitor $E_{0z}=-4\pi q_0/ab=-16\pi q_0/A$, which corresponds to the
-potential $\phi_0=16\pi q_0 z/A$. Other pairs of contiguous planes of with opposite charges
+potential $\phi_0=16\pi q_0 z/A$. Other pairs of contiguous planes with opposite charges
 contribute to the field elsewhere. The contributions to the potential
 from the $G\ne0$ terms are simple geometric series that may be summed
 over $n$ analytically and yield the total potential
@@ -513,10 +516,6 @@ Using Eq. \eqref{Eq:J} we can correlate the local current density at
 the sample as it is prepared with its geometric, structural and optical
 properties.
 
-\notaL{Quizás ni merece ser mencionado aquí: For the calculation of the optical properties we use the
-well known transfer matrix method \notaL{refs}.}
-
-
 \section{Procedures}
 \label{sec:procedures}
 \begin{figure}
@@ -548,7 +547,7 @@ In Fig. \ref{fig:DE1} we show a schematic representation of our
 experimental setup to manufacture GRIN PS structures.
 As dicussed above, we fabricated an electrolytic cell with the shape of a
 rectangular prism on the bottom of which we place a Si wafer which makes
-electrical contact to a brass \notaC{ laton. gold plate}\notaL{Porqué
+electrical contact to a brass \notaC{ laton.}\notaL{Porqué
   vivechna dice silver/copper?}
 \notaL{Lo inventé; de qué material es
   el contacto bajo la muestra?} which together make the anode. The
