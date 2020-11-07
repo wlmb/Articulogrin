@@ -54,10 +54,9 @@ simple model for the calculation of $j$
 as a function of position within an electrochemical cell. We prepared
 some graded single layer PS samples, measured their optical properties through
 ultraviolet-visible-near infrared reflectance
-spectroscopy, \notaL{Should we mention microscopy?}, and related them
+spectroscopy \notaL{Should we mention microscopy?}, and related them
 to their local porosity and thickness which, together with our model, were then used to obtain
-the $p$ vs. $j$ and $v$ vs. $j$ calibration curves.
-\notaV{Thickness was additionally viewed through scanning electron microscopy}. We corroborated
+the $p$ vs. $j$ and $v$ vs. $j$ calibration curves.  Thickness was additionally viewed through scanning electron microscopy. We corroborated
 our model by comparing the calibration curves for different samples. Thus, from
 measurements on only one, or a few simple systems, we may obtain full
 calibration curves which may be used to predict, design, and fabricate
@@ -90,9 +89,8 @@ Apart from some methods developed by S.E. Fosdick et al \cite{fosdick2010two},
 %[JACS  2010, 132, 9226-9227],
 synthesis of  Ag-Au alloy gradients on steel and chemical composition
 gradients of CdS layers
-on gold electrodes have been obtained made by Shannon’s
-group\cite{wang2019fabrication}. \notaL{Is this Shannon a big shot, or
-  why should we name him?} \notaV{R : Eliminated the name}
+on gold electrodes have also been obtained\cite{wang2019fabrication}. \notaL{Is this Shannon a big shot, or
+  why should we name him?; R : Eliminated the name}
 Among electrochemical methods, compositional and doping density changes
 in  conducting polymers have been used to produce gradients using Indium Tin
 Oxide electrodes \cite{inagi2010bipolar}
@@ -117,20 +115,16 @@ range of optical \cite{estevez2014porous} and optoelectronic applications
 \cite{ramadan2020fabrication}. Specifically,
 the temporal variation of the current density results in a variation of
 porosity along the depth, allowing the easy fabrication of different kinds
-\cite{perez2018reflectivity} of 1D photonics crystals and other
+\cite{perez2018reflectivity} of 1D dielectric multilayered
 structures. \notaL{Photonic crystals only in the periodic case.}
 Although the conventional fabrication of PS yields laterally
 homogeneous samples, with invariant structural and optical properties
-along the surface, an asymmetric configuration \notaL{Is it clear what
-  is asymmetric?} may produce porous
-Silicon structures with a lateral gradient in properties such as
+along the surface, another configuration where a Pt pin electrode is placed
+perpendicular to the silicon wafer (anode)\notaL{Is it clear what
+  is asymmetric?}, produces porous
+silicon structures with a lateral gradient in properties such as
 thickness, pore size and density, and thus, refractive index and
-optical thickness. In this configuration, a small platinum electrode (cathode)
-is positioned perpendicular  to the surface of a Si substrate (anode)
-near one end \notaL{ At the center wouldn't be asymmetric: or the
-  center} of the cell, resulting  in a current
-density  which decreases as the distance to the electrode increases
- \cite{khung2008using, clements2011mesenchymal}.
+optical thickness \cite{khung2008using, clements2011mesenchymal}.
 The resulting porous surface can have pore sizes ranging from a few nanometers
 to  few micrometers  \cite{wang2015screening}. The range of the dimensions of the pores and
 the corresponding  thickness range on the same chip can be controlled by
@@ -155,8 +149,7 @@ multilayered optical filters with lateral a gradient
 \cite{li2005painting} and
 for developing ethanol sensors \cite{sailor2012porous}.
 Additionally it has been shown that the combination of thermal  oxidation  and
-infiltration of TiO2  by \notaV{Atomic Layer Deposition} (ALD) \notaL{What is this acronym?}
-allows the manufacture
+infiltration of TiO2  by Atomic Layer Deposition \notaL{What is this acronym?} allows the manufacture
 of transparent GRIN
 optical elements with a high refractive index contrast \cite{ocier2017tunable}.
 Kruger et al. \cite{krueger2018electrochemical} used
@@ -202,14 +195,13 @@ A gradient in the optical properties of porous Silicon (PS) systems may be
 obtained by electrochemically attacking a Si surface with a position dependent current
 density ${\bm j(\bm r)}$, as the porosity and refractive index depend on
 the current density, as well as the etching rate and the thickness of the
-porous layer. Nevertheless, it is challeging to measure the
-{\em local} value of $\bm j(\bm r)$ along the surface. This hampers the
-design and optimization of well characterized reproducible GRIN PS
-structures.\notaL{Tenemos referencias para afirmar esto?}
-\notaV{NOT THAT I KNOW, so I changed the expression has been changed}
- Thus, we believe a
-system for which the current density field may be
-easily computed would be useful.
+porous layer. Nevertheless, it is challenging to measure the
+{\em local} value of $\bm j(\bm r)$ along the surface. As
+designing a GRIN structure with predefined parameters such as porosity
+and thickness at each point of a GRIN based optical device is desirable
+for reproducible device performance, we
+propose a simple method to compute the current density field at each point
+of the device.
 Though $\bm j(\bm r)$ may be numerically calculated for any
 given arbitrary experimental setup,  here we propose a particularly
 simple setup that allows an expression for the current in terms
@@ -397,15 +389,10 @@ real nor image charges lie, we may perform a somewhat simpler planewise
 summation, where we first obtain the potential and field produced by a
 simple periodic lattice of charges using a fast convergent sum over the 2D
 reciprocal vectors \cite{nijboer1957calculation, nijboer1958internal,
-  de_wette1965internal, watson1981madelung, grindlay1981k}
-\notaL{¿De qué se trata esta referencia que pusiste
-  aquí: \cite{kratzer2019basics}?}, \notaC{Lo que quiero con este paper
-es resaltar los Conceptos básicos de la cristalografía,
-grupo de puntos cristalográficos, la red recíproca y algunos relaciones de la
-zona de Brillouin.}
+  de_wette1965internal, watson1981madelung, grindlay1981k},
 then sum over the charges that form the basis
 of the 2D {\em crystal} plane, and finally sum over all the
- planes.
+planes.
 
 We consider first a system made of identical {\em unit} charges
 ocuppying the positions $\bm R$ of a 2D Bravais lattice $\{\bm R\}$,
@@ -561,10 +548,9 @@ In Fig. \ref{fig:DE1} we show a schematic representation of our
 experimental setup to manufacture GRIN PS structures.
 As dicussed above, we fabricated an electrolytic cell with the shape of a
 rectangular prism on the bottom of which we place a Si wafer which makes
-electrical contact to a silver plate\notaC{ plata.}\notaL{Porqué
-vivechna dice silver/copper? De qué era: latón, plata, cobre, una
-aleación de cobre y plata? Era un alambre o una placa?}
-\notaV{CRISTIAN :  POR FAVOR COLOCAS lo que usaste.}
+electrical contact to a brass plate\notaC{ laton.}\notaL{Porqué
+  vivechna dice silver/copper? De qué era: latón, plata, cobre, una
+  aleación de cobre y plata? Era un alambre o una placa?  CRISTIAN :  POR FAVOR COLOCAS lo que usaste.  }
 which together make the anode. The
 cathode consists of a platinum wire insulated except for a small region
 at its tip, which we take as a point current drain.
@@ -597,14 +583,13 @@ $I_3=20\,\text{mA}$, respectively, during a time of $t=250s$.
 
 \subsection{Reflectance Measurement}
 \label{sec:refl-meas}
-We measured the reflectivity spectra at different positions over our
-samples using a {\em Perkin Elmer Lambda 950}
-UV-Vis-NIR spectrophotometer in its data collection absolute
-reflectance mode, using a rectangular spot size of
-$0.7\text{mm}\times2.0\text{mm}$, a slit width of $0.6\text{mm}$ and
-a wavelength range from $1400\text{nm}$ to
-$300\text{nm}$.\notaL{Vivechna: puedes checar si así se reportan estos parámetros?}
-\notaV{CHANGED}
+We measured absolute reflectance at different positions over our
+samples using Universal reflectance accessory  equipped {\em Perkin Elmer Lambda 950}
+UV-Vis-NIR spectrophotometer, with a rectangular spot size of
+$0.7\text{mm}\times2.0\text{mm}$, a slit width of $0.6\text{mm}$ in
+a wavelength range from $300\text{nm}$ to
+$1400\text{nm}$.\notaL{Vivechna: puedes checar si así se reportan estos parámetros? CHANGED}
+
 For interpretation of the data we used
 the standard formula \cite{stenzel2015physics} for the reflectance of
 a three media system:
@@ -975,7 +960,7 @@ that may be employed for other samples grown in the same conditions.
 \section*{Acknowledgments}
 \label{sec:acknowledgments}
 WLM acknowledges the support of DGAPA-UNAM under grant
-IN111119. \notaL{Cristian debe agradecer a conacyt y faltan
+IN111119. VA acknowledges support from CONACyT Basic Sciences project A-S1 30393, PRODEP and ICF. \notaL{Cristian debe agradecer a conacyt y faltan
   agradecimientos de Vivechna (quizás incluyendo al icf)}
 \notaV{ acknowledges support from CONACyT Basic Sciences project A-S1 30393,
 PRODEP and ICF.}
