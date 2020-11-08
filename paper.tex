@@ -21,7 +21,7 @@
 
 \title{Model for Porous Silicon Structures with a Lateral Gradient}
 \author[1]{C. A. Ospina de la Cruz}
-\author[2]{V. Agarwal}
+\author[2,3]{V. Agarwal}
 \author[3]{W. L. Mochán}
 
 \affil[1]{Posgrado en Ingenier\'ia y Ciencias Aplicadas del Centro de
@@ -37,10 +37,7 @@
 \begin{document}
 
 \maketitle
-\notaV{Index Structures (NOTE: WE NEED TO CHANGE THE NAME;
-  Probably "Analytical model for  porous silicon structures with 1D
-  gradient refractive index)}
-\notaL{The calculation is 2D, seems 1D due to the narrow geometry chosen.}
+
 \begin{abstract}
 
 A variety of optical devices and applications may be based on layered
@@ -54,10 +51,11 @@ simple model for the calculation of $j$
 as a function of position within an electrochemical cell. We prepared
 some graded single layer PS samples, measured their optical properties through
 ultraviolet-visible-near infrared reflectance
-spectroscopy \notaL{Should we mention microscopy?}, and related them
+spectroscopy, and related them
 to their local porosity and thickness which, together with our model, were then used to obtain
-the $p$ vs. $j$ and $v$ vs. $j$ calibration curves.  Thickness was additionally viewed through scanning electron microscopy. We corroborated
-our model by comparing the calibration curves for different samples. Thus, from
+the $p$ vs. $j$ and $v$ vs. $j$ calibration curves.  The dependence of
+porosity and thickness with position was corroborated through scanning electron microscopy. We
+compared the calibration curves for different samples. Thus, from
 measurements on only one, or a few simple systems, we may obtain full
 calibration curves which may be used to predict, design, and fabricate
 more complex novel nonhomogenous devices with lateral gradients which can be used
@@ -75,11 +73,9 @@ lenses. Furtheremore, there are important biological applications
 which combine topographical features with index of refraction
 gradients \cite{pierscionek2012gradient}. Preparation of structures
 with gradients in other properties have also shown their
-usefulness. \notaL{I believe the examples below are unrelated to GRIN,
-  thats why I added the previous remark.} \notaV{Response :
-ALL the examples are related to GRIN} As an example, the
+usefulness. As an example, the
 roughness dependent  response of cells has been tested on
-materials used applications in medical implants
+materials used for applications in medical implants
 \cite{bai2020bioinspired}.
 Gradients have also been employed for several
 technological applications such as high-yield screening of catalysts,
@@ -89,11 +85,10 @@ Apart from some methods developed by S.E. Fosdick et al \cite{fosdick2010two},
 %[JACS  2010, 132, 9226-9227],
 synthesis of  Ag-Au alloy gradients on steel and chemical composition
 gradients of CdS layers
-on gold electrodes have also been obtained\cite{wang2019fabrication}. \notaL{Is this Shannon a big shot, or
-  why should we name him?; R : Eliminated the name}
+on gold electrodes have also been obtained \cite{wang2019fabrication}.
 Among electrochemical methods, compositional and doping density changes
 in  conducting polymers have been used to produce gradients using Indium Tin
-Oxide electrodes \cite{inagi2010bipolar}
+Oxide electrodes \cite{inagi2010bipolar}.
 Electrochemically induced potential gradients have been shown to catalyze the
 reactions and gradient doping of polymers \cite{qin2020bipolar, ishiguro2011gradient}.
 As compared to the above mentioned techniques, a relatively economical,
@@ -101,7 +96,7 @@ fast and easy approach for the fabrication
 of gradient materials has been the use  of asymmetrical
 electrode configurations in the electrochemical synthesis of porous silicon \cite{sailor2012porous}.
 This technique has the additional advantage of being compatible
-with VLSI devices and integrable with microelectronics.
+with very large scale integration (VLSI) devices and integrable with microelectronics.
 
 Although porous silicon (PS) initially stimulated the interest of the scientific
 community due to its photoluminiscence in the visible range at room
@@ -110,18 +105,17 @@ been recognized as a multifaceted optical material due to its large surface
 area, biocompatibility, ease of fabrication and tunable refractive index.
 Applications based on porous silicon now cover various fields such as
 chemical sensors and biosensors \cite{kumar2020porous},
-microelectronics and MEMS \cite{martinez2016dual},as well as a
+microelectronics and micromechanical systems (MEMS) \cite{martinez2016dual},as well as a
 range of optical \cite{estevez2014porous} and optoelectronic applications
 \cite{ramadan2020fabrication}. Specifically,
 the temporal variation of the current density results in a variation of
 porosity along the depth, allowing the easy fabrication of different kinds
 \cite{perez2018reflectivity} of 1D dielectric multilayered
-structures. \notaL{Photonic crystals only in the periodic case.}
+structures.
 Although the conventional fabrication of PS yields laterally
 homogeneous samples, with invariant structural and optical properties
 along the surface, another configuration where a Pt pin electrode is placed
-perpendicular to the silicon wafer (anode)\notaL{Is it clear what
-  is asymmetric?}, produces porous
+perpendicular to the silicon wafer, produces porous
 silicon structures with a lateral gradient in properties such as
 thickness, pore size and density, and thus, refractive index and
 optical thickness \cite{khung2008using, clements2011mesenchymal}.
@@ -132,31 +126,25 @@ adjusting the location of the electrode, the  anodizing current
 and the etching time. Different
 applications have been found for the resulting structures
 \cite{collins2002determining}. For example, Sailor's group
-\cite{collins2002determining, sailor2012porous} applied it
+\cite{sailor2012porous, collins2002determining} applied it
 for the determination of protein size.
-Additionally, gating of
-the optical response through a variation in pH of the solution was shown to
-trap/release biomolecules for possible drug delivery
-applications, given the biocompatible nature of PS, . \notaL{How is this related to the gradient?}
-\notaV{ The idea
-here was to mention the usefulness of GRIN in portion
-size determination followed by its delivery through the variation of pH ;
-If you find this comment too way off, further applicability of protein
-size determination in drug delivery application can
- be removed "ADDITIONALLY.....applications" }
+Additionally, a variation in pH of the solution could gate the
+trapping/release of biomolecules at regions with different porosity, a
+result potentially useful for drug delivery
+applications given the biocompatible nature of PS.
 A similar asymmetric electrode configuration was used to fabricate
 multilayered optical filters with lateral a gradient
 \cite{li2005painting} and
 for developing ethanol sensors \cite{sailor2012porous}.
-Additionally it has been shown that the combination of thermal  oxidation  and
-infiltration of TiO2  by Atomic Layer Deposition \notaL{What is this acronym?} allows the manufacture
+Additionally, it has been shown that the combination of thermal  oxidation  and
+infiltration of TiO2  by atomic layer deposition allows the manufacture
 of transparent GRIN
 optical elements with a high refractive index contrast \cite{ocier2017tunable}.
 Kruger et al. \cite{krueger2018electrochemical} used
 a porous silicon 1D GRIN structure infiltrated with polymer to
 synthesize flat microlens arrays.
 Recently, J Wang et al. has shown the fabrication of
-a miniature spectrometer with PS based rugate filter using a
+a miniature spectrometer with a PS based rugate filter using a
 radial interfacial potential distribution \cite{wang2019fabrication}
 On the other hand, the effect of different topographical
 features present on the same chip, has also been
@@ -175,31 +163,31 @@ etching rate. Thus, for a given etching current acting over a given
 time, we may predict the position dependence of the index of
 refraction and optical thickness of the resulting inhomogeneous
 layer, thus allowing the prediction of the optical properties of
-multilayered GRIN structure. The structure of the paper is the
+multilayered GRIN structures. The structure of the paper is the
 following.
-\notaL{Check when finished}. In Section \ref{sec:theory} we develop a
+In Section \ref{sec:theory} we develop a
 simple analytical model to calculate
-the current density at any point over the GRIN structure under preparation.
+the current density at any point over the GRIN structure under
+preparation for the case of an electrolytic cell with a simple shape.
 In Section \ref{sec:procedures} we provide experimental details for the
 synthesis of porous silicon samples with lateral refractive index gradient.
 Section \ref{sec:discussion-results} includes experimental results and
-it's comparison with numerically evaluated parameters. Finally, we
+their comparison with numerically evaluated parameters. Finally, we
 devote Section \ref{sec:conclusions} to our conclusions.
 
 
 \section{Theory}
 \label{sec:theory}
 \label{sec:calc-curr-dens}
-\notaL{check where acronyms are first defined}
-A gradient in the optical properties of porous Silicon (PS) systems may be
+A gradient in the optical properties of PS systems may be
 obtained by electrochemically attacking a Si surface with a position dependent current
 density ${\bm j(\bm r)}$, as the porosity and refractive index depend on
-the current density, as well as the etching rate and the thickness of the
+the current density, as does the etching rate and the thickness of the
 porous layer. Nevertheless, it is challenging to measure the
 {\em local} value of $\bm j(\bm r)$ along the surface. As
 designing a GRIN structure with predefined parameters such as porosity
 and thickness at each point of a GRIN based optical device is desirable
-for reproducible device performance, we
+for reproducible device fabrication, we
 propose a simple method to compute the current density field at each point
 of the device.
 Though $\bm j(\bm r)$ may be numerically calculated for any
@@ -286,7 +274,7 @@ free surface of the liquid at $z=c$. Thus, the problem to solve is Poisson's
 equation with a point charge source
 \begin{equation}
   \label{eq:poisson}
-  \nabla^2\phi=-4\pi q_0\delta^{(3)}(\bm r-\bm r_0),
+  \nabla^2\phi(\bm r)=-4\pi q_0\delta^{(3)}(\bm r-\bm r_0),
 \end{equation}
 with mixed boundary conditions
 \begin{equation}
@@ -303,7 +291,7 @@ Here, $\delta^{(D)}$ is Dirac's delta function in $D$ dimensions.
 This problem may be solved readily using image charge theory \cite{jackson1975classical}.
 The potential within the electrolytic cell coincides
 within the region $0\le x\le a$, $0\le y \le b$, $0\le z\le c$
-with that an infinite fictitious empty space but for the point charge
+with that within an infinite fictitious empty space but for the point charge
 $q_0$ at the tip of the electrode at $\bm r_0$, and an array of its fictitious image
 charges situated out of the cell. They include an image on the conducting bottom of the
 cell, of the opposite charge $-q_0$ and situated at $(x_0, y_0,-z_0)$,
@@ -387,7 +375,8 @@ Nevertheless, as we need the potential and the field to obtain the
 current density on the surface of the sample on which  no
 real nor image charges lie, we may perform a somewhat simpler planewise
 summation, where we first obtain the potential and field produced by a
-simple periodic lattice of charges using a fast convergent sum over the 2D
+simple periodic lattice of charges using a fast convergent sum over
+the two dimensional (2D)
 reciprocal vectors \cite{nijboer1957calculation, nijboer1958internal,
   de_wette1965internal, watson1981madelung, grindlay1981k},
 then sum over the charges that form the basis
@@ -405,7 +394,7 @@ The potential $\phi$ it produces obeys
   R)\delta^{(1)}(z)=-\frac{4\pi}{A}\sum_{\bm G}e^{i\bm G\cdot\bm r_\|}\delta^{(1)}(z),
 \end{equation}
 where $\bm r_\|$ is the projection of the observation position $\bm
-r=(x,y,z)$ onto the $xy$ plane, $\{\bm G\}$ is the
+r=(x,y,z)$ onto the $xy$ plane, $\{\bm G\}$ is the 2D
 reciprocal lattice defined through $e^{i\bm G\cdot\bm R}=1$ for all
 $\bm R$ and $\bm G$, $A=4ab$ is the area of the unit cell
 and we used the Fourier representation of the 2D
@@ -424,7 +413,7 @@ ordinary differential equation
  \end{eqnarray}
 for each coefficient, an homogeneous equation for $z\ne0$ which may be trivially
 solved. After applying boundary conditions at $z=0$ and regularity
-conditions at infinity, we obtain
+conditions at infinity (for $G\ne 0$), we obtain
 \begin{equation}
   \label{eq:phiG}
   \phi_{\bm G}(z)=
@@ -535,10 +524,10 @@ properties.
     electrolyte (blue), the electrical contact below the sample
     (yellow) and the controlled current source. We indicate some geometrical
     parameters of the arrangement $x_0$, $z_0$, $a$ and $c$
-    and the current source and a few schematic current flux
+    and a few schematic current flux
     lines. Top and side schematic views of the resulting sample
     (middle and lower panels),
-    illustrating eight regions $1\ldots8$ of decreasing porosity,
+    illustrating eight regions $1\ldots8$ of decreasing porosity and thickness,
     illustrating the changes in pore radii,
     length, and density and the porosity gradient.}
   \label{fig:DE1}
@@ -546,11 +535,9 @@ properties.
 
 In Fig. \ref{fig:DE1} we show a schematic representation of our
 experimental setup to manufacture GRIN PS structures.
-As dicussed above, we fabricated an electrolytic cell with the shape of a
+As discussed above, we fabricated an electrolytic cell with the shape of a
 rectangular prism on the bottom of which we place a Si wafer which makes
-electrical contact to a brass plate\notaC{ laton.}\notaL{Porqué
-  vivechna dice silver/copper? De qué era: latón, plata, cobre, una
-  aleación de cobre y plata? Era un alambre o una placa?  CRISTIAN :  POR FAVOR COLOCAS lo que usaste.  }
+electrical contact to a brass plate
 which together make the anode. The
 cathode consists of a platinum wire insulated except for a small region
 at its tip, which we take as a point current drain.
@@ -576,24 +563,24 @@ $c=1\,\text{cm}$. The cathode was a
 platinum wire with a diameter of $0.41\,\text{mm}$ insulated with
 teflon tape, with an uncovered
 tip located at $\bm r_0=(x_0,
-y_0,z_0)=(0.2\,\text{cm},0.74\,\text{cm},0.9\,\text{cm})$. \notaL{Checa todos estos datos}
+y_0,z_0)=(0.2\,\text{cm},0.74\,\text{cm},0.9\,\text{cm})$.
 We manufactured three samples $G_1$, $G_2$ and $G_3$ by applying a
 current $I_1=5\,\text{mA}$, $I_2=10\,\text{mA}$ and
 $I_3=20\,\text{mA}$, respectively, during a time of $t=250s$.
 
 \subsection{Reflectance Measurement}
 \label{sec:refl-meas}
-We measured absolute reflectance at different positions over our
+We measured the absolute reflectance at different positions over our
 samples using Universal reflectance accessory  equipped {\em Perkin Elmer Lambda 950}
-UV-Vis-NIR spectrophotometer, with a rectangular spot size of
+ultraviolet-visible-near infrared (UV-Vis-NIR) spectrophotometer, with a rectangular spot size of
 $0.7\text{mm}\times2.0\text{mm}$, a slit width of $0.6\text{mm}$ in
 a wavelength range from $300\text{nm}$ to
-$1400\text{nm}$.\notaL{Vivechna: puedes checar si así se reportan estos parámetros? CHANGED}
+$1400\text{nm}$.
 
 For interpretation of the data we used
 the standard formula \cite{stenzel2015physics} for the reflectance of
 a three media system:
-an air environment  (0), the PS film (1) and the c-Si substrate (2),
+an air environment  (0), the PS film (1) and the crystalline Si (c-Si) substrate (2),
 \begin{equation}\label{Eq:ECMR}
   R=\left |\frac{r _ {_ {01}}r _ {_ {12}} e^{2i\psi}}{1+r _ {_
         {01}}r _ {_ {12}} e^{2i\psi}}\right |^2
@@ -621,6 +608,11 @@ $p$ and the etching rate $v=d/t$ for different values of the local
 current density $j_\perp$ expected at several positions on different
 samples.
 
+\subsection{Scanning Electron Microscopy}
+\notaL{Insert a paragraph explaining something about how the
+  micrographs were obtained. Choose an appropriate title for the
+  subsection. Include the definition of the acronym SEM}
+
 \section{Discussion and Results}
 \label{sec:discussion-results}
 \subsection{Current Density}
@@ -647,17 +639,19 @@ in Figs. \ref{f:celda} and \ref{fig:DE1} and described in
 Sect. \ref{sec:fabrication-ps-grin}). For these parameters we obtained
 a large range of values for $ j_\perp/I\sim 0.11-.72\,\text{cm}^{-2}$
 that vary mostly along the $x$ direction. Of course, this would differ
-for cells with different aspect ratios.
+for cells with different aspect ratios and for different positions of
+the electrode.
 
 \subsection{Samples }
 \label{sec:ps-grin-single}
 \begin{figure}
  \centering
-  \includegraphics[width=\textwidth]{G3I20proc}
+ \includegraphics[width=\textwidth]{G3I20proc}
   \caption{ Photograph of sample $G_3$ prepared as described in
     Sec. \ref{sec:fabrication-ps-grin} using the same parameters as
     in Fig. \ref{fig:DR1} with a current $ I_3=20 \text{mA}$,
-    during a time $t=250\text{s}$. We indicate eight regions $x_i$
+    during a time $t=250\text{s}$. We indicate the centerline with a
+    dashed line and eight regions $x_i$
     $(i=1, 2,...8)$ centered at positions,
     $x'_1=0.2\text{cm}$,  $x'_2=0.4\text{cm}$, $x'_3=0.6\text{cm}$,
     $x'_4=0.8\text{cm}$, $x'_5=1\text{cm}$, $x'_6=1.2\text{cm}$,
@@ -717,7 +711,31 @@ Fig. \ref{fig:SI3}.
   \label{t:xj}
 \end{table}
 
-\subsection{Reflectance}
+In Fig. \ref{fig:sem} we show some SEM images of the sample $G_3$,
+including top views and lateral views taken after
+the optical characterization was completed and the sample was cut
+along its centerline (see Sec. \ref{sec:R}) from
+three regions around to the left side, the center, and the right side
+of the sample shown in Fig. \ref{fig:SI3}.
+\begin{figure}
+  \centering
+  \includegraphics[width=.3\textwidth]{sema}
+  \includegraphics[width=.3\textwidth]{semb}
+  \includegraphics[width=.3\textwidth]{semc}
+  \includegraphics[width=.3\textwidth]{semd}
+  \includegraphics[width=.3\textwidth]{seme}
+  \includegraphics[width=.3\textwidth]{semf}
+  \caption{Top ((a), (b), and (c)) and lateral ((d), (e), and (f)) SEM
+    micrographs of the sample $G_3$ taken from a region corresponding to the left
+    side ((a) and (d)), center ((b) and (e)), and right side ((c) and
+    (f)) along the centerline shown in Fig. \ref{fig:SI3}.}
+  \label{fig:sem}
+\end{figure}
+We confirm that as we move away from the electrode, the pore
+size and pore density diminish (panels (a) to (c) of
+Fig. \ref{fig:sem}) and the sample becomes much thinner (panels (d) to (f)).
+
+\subsection{Reflectance}\label{sec:R}
 
 \begin{figure}
   \centering
@@ -770,7 +788,7 @@ $0.7\text{mm}\times2.0\text{mm}$ of the illuminating beam of our
 spectrometer. Thus, as our GRIN sample is not macroscopically homogeneous and its
 properties have a gradient, the
 experimental results have contributions from regions with slightly
-different porosities and thicknesses, averaging out the interference
+different porosities and thicknesses, partially averaging out the interference
 maxima and minima. We expect microscopic inhomogeneities such as
 interface roughness might also reduce the contrast through scattering
 and its corresponding apparent dissipation \cite{missoni2020rough}.
@@ -780,7 +798,7 @@ wavelengths.
 
 The results obtained from the reflectance fits are summarized in table
 \ref{t:jpdv}. Notice that the scaling parameters are close to 1,
-showing that the calibration was adequate. \notaL{Is this meaningful?}.
+showing that the calibration was adequate.
 
 \begin{table}
 \centering
@@ -960,10 +978,9 @@ that may be employed for other samples grown in the same conditions.
 \section*{Acknowledgments}
 \label{sec:acknowledgments}
 WLM acknowledges the support of DGAPA-UNAM under grant
-IN111119. VA acknowledges support from CONACyT Basic Sciences project A-S1 30393, PRODEP and ICF. \notaL{Cristian debe agradecer a conacyt y faltan
-  agradecimientos de Vivechna (quizás incluyendo al icf)}
-\notaV{ acknowledges support from CONACyT Basic Sciences project A-S1 30393,
-PRODEP and ICF.}
+IN111119. VA acknowledges support from CONACyT Basic Sciences project
+A-S1 30393 and from PRODEP, and is grateful to ICF where she spent a
+sabatical. CODLC is grateful for a scholarship from CONACyT.
 \bibliographystyle{unsrt}
-\bibliography{bibligrin} %Aquí ponen el nombre del archivo .bib
+\bibliography{bibligrin}
 \end{document}
