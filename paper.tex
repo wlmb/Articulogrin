@@ -1,7 +1,9 @@
-\documentclass{article}
+\documentclass[review,sort&compress]{cas-sc}
+%\documentclass{article}
 \usepackage{amsmath}
 \usepackage{graphicx} % gráficos
-\usepackage[noblocks]{authblk}
+\usepackage[numbers]{natbib}
+%\usepackage[noblocks]{authblk}
 %\usepackage{authblk}
 %\usepackage[•]{•}ckage{float}
 %\usepackage{cite}% para contraer referencias
@@ -10,7 +12,7 @@
 %\usepackage{ieeetr}
 \usepackage{bm}
 \usepackage{hyperref}
-\usepackage[normalem]{ulem} %opcional para la correcciones
+%\usepackage[normalem]{ulem} %opcional para la correcciones
 \newcommand{\abs}[1]{\lvert#1\rvert}
 \usepackage{xcolor}
 \newif{\ifinclude}
@@ -18,25 +20,39 @@
 \newcommand{\notaC}[1]{{\color{green}+C:#1+}}
 \newcommand{\notaV}[1]{{\color{red}+V:#1+}}
 
-
-\title{Model for Porous Silicon Structures with a Lateral Gradient}
-\author[1]{C. A. Ospina-Delacruz}
-\author[1,2]{V. Agarwal}
-\author[2]{W. L. Mochán}
-
-\affil[1]{Centro de
+\begin{document}
+\shorttitle{Model for PS Structures with a Lateral Gradient}
+\shortauthors{Ospina-Delacruz et al.}
+\title[mode=title]{Model for Porous Silicon Structures with a Lateral Gradient}
+\author[1]{C. A. Ospina-Delacruz}[orcid=0000-0000-0000-0000]
+\ead{crisalod@gmail.com}
+\credit{Investigation; Software; Writing - original draft}
+\author[1,2]{V. Agarwal}[orcid=0000-0003-2168-853X]
+\fnmark[1]
+\ead{vagarwal@uaem.mx}
+\credit{Funding acquisition; Investigation; Supervision; Software; Writing - review \& editing}
+\author[2]{W. L. Mochán}[type=editor,orcid=0000-0003-0418-5375]
+%\cormark[1]
+\ead{mochan@fis.unam.mx}
+\credit{Conceptualization; Funding acquisition; Investigation;
+  Methodology; Supervision; Writing - review \& editing}
+\address[1]{Centro de
   Investigación en Ingeniería y Ciencias Aplicadas (CIICAp-IICBA),
   Universidad Autónoma del Estado de Morelos (UAEM), Cuernavaca CP
   62209, México}
-\affil[2]{Instituto de Ciencias F\'isicas, Universidad Nacional
+\address[2]{Instituto de Ciencias F\'isicas, Universidad Nacional
   Autonóma de México, Av. Universidad S/N, Col. Chamilpa, 62210
   Cuernavaca, Morelos, México}
-\begin{document}
+\fntext[fn1]{On sabatical leave at ICF-UNAM from CIICAP-UAEM.}
+%\cortext[cor1]{Corresponding author}
+
+\begin{keywords}
+  Porous Silicon\sep GRIN \sep Reflectance Spectra.
+\end{keywords}
 
 \maketitle
 
 \begin{abstract}
-
 A variety of optical devices and applications may be based on layered
 systems which have a lateral gradient in both their refractive indices
 and their thicknesses. They may be fabricated of porous silicon (PS) through an
@@ -57,8 +73,6 @@ measurements on only one, or a few simple systems, we may obtain full
 calibration curves which may be used to predict, design, and fabricate
 more complex novel non-homogenous devices with lateral gradients which can be used
 for manifold applications.
-
-Keywords: Porous Silicon; GRIN; Reflectance Spectra.
 \end{abstract}
 
 \section{Introduction}
@@ -402,7 +416,7 @@ the potential
   \label{eq:phifourier}
   \phi(\bm r)=\sum_{\bm G}\phi_{\bm G}(z)e^{i\bm G\cdot\bm r_\|}
 \end{equation}
-where $\phi_{\bm G}(z)$ is the Fourier coefficient of the potential at
+where $\phi_{\bm G}(z)$ is the 2D Fourier coefficient of the potential at
 the height $z$. Substitution in Eq. \eqref{eq:poissonRed} yields the
 ordinary differential equation
  \begin{eqnarray}
@@ -609,8 +623,9 @@ samples.
 \subsection{Morphological studies}
 
 The morphology of the etched porous layers (plan-view and
-cross-sectional) was observed using (SEM) scanning electron microscopy
-(Hitachi SU1510  High Technologies Canada,  Inc., Toronto, Canada).
+cross-sectional) was observed with a {\em Hitachi SU1510} scanning electron microscope
+(SEM).
+%High Technologies Canada,  Inc., Toronto, Canada).
 
 % the thickness  and porosity  of each fabricated  film was measured.
 
@@ -620,8 +635,8 @@ cross-sectional) was observed using (SEM) scanning electron microscopy
 \label{sec:current-density}
 \begin{figure}
   \centering
-  \includegraphics[width=1.2\textwidth]{j_Ivsxy.png}
-  \includegraphics[width=\textwidth]{j_Ivsx.png}
+  \includegraphics[width=.8\textwidth]{j_Ivsxy.png}
+  \includegraphics[width=.6\textwidth]{j_Ivsx.png}
   \caption{Normalized current density $j_\perp(x,y,0)/I$ calculated a
     the surface of the sample through
     Eq. (\ref{Eq:J}) for a
@@ -658,7 +673,7 @@ the electrode.
     $x'_4=0.8\text{cm}$, $x'_5=1\text{cm}$, $x'_6=1.2\text{cm}$,
     $x'_7=1.4\text{cm}$, $x'_8=1.6\text{cm}$, with $y_n=0.74\,\text{cm}$
     on which we measured reflectance spectra. Here,
-    $x'_n=x_n+0.14\,\text{cm}$ is the position from the sealing o-ring.}
+    $x'_n=x_n+0.14\,\text{cm}$ is the position from the left side sealing o-ring.}
   \label{fig:SI3}
 \end{figure}
 
@@ -680,13 +695,14 @@ up to the sealing o-ring (see upper panel of
 Fig. \ref{fig:DE1}) and towards which the current leaks from the
 neighborhood of the wall. The width of this region is
 $w=0.14\,\text{cm}$. Thus, we may expect our formula \eqref{Eq:J}
-to fail within that region and close to the border, at distances of the order of the radius
-of the cross-section of the o-ring, of the order of a milimeter. The
+to {\em fail} within that region and close to the border, at distances of the order of the radius
+of the cross-section of the o-ring, about a milimeter. The
 figure shows eight positions
 $x'_n=0.2\,\text{cm},0.4\,\text{cm},\ldots,1.6\,\text{cm}$ on which we
 measured the near normal incidence reflection spectra of the
-sample. Here, we defined $x'_n=x_n+w$ as the distance to the sealing o-ring,
-where $x_n$ is the corresponding distance to the wall of the
+sample. Here, we defined $x'_n=x_n+w$ as the distance to the edge of
+the etched sample, determined by the position of the sealing o-ring,
+whereas $x_n$ is the corresponding distance to the wall of the
 cell.
 
 From Eq. \eqref{Eq:J} we evaluate the
@@ -916,8 +932,8 @@ to our samples.
     current $j_\perp$ and wavelength $\lambda$ for an etching time
     $t=250\,\text{s}$. Theory (left panel) and experiment (right
     panel, see text). We indicate with the numbers 1, 2, 3 the
-    data corresponding to the corresponding samples $G_1$, $G_2$ and
-    $G_3$.}
+    data corresponding to the corresponding samples $G_1$, $G_2$
+    (shifted, see text) and  $G_3$.}
   \label{fig:Rvsjl}
 \end{figure}
 On the right hand side of the figure we display a quilt made by
@@ -936,8 +952,9 @@ be grouped along bright and dark bands and that they correspond closely to
 those expected theoretically, though the experimental bands are somewhat shifted,
 especially for low current densities, and the minima are not as low.
 
-The theoretical reflectance could as well be calculated using
-\eqref{Eq:ECMR}-\eqref{eq:v} for more complicated structures, in which the
+The theoretical reflectance could as well be calculated using Eqs.
+\eqref{Eq:Brugg}-\eqref{eq:v} and a transfer matrix approach for more
+complicated structures, in which the
 current $I$ is modulated in time, allowing the design and analysis of
 non-trivial multilayered GRIN PS structures.
 
@@ -978,10 +995,15 @@ that may be employed for other samples grown in the same conditions.
 
 \section*{Acknowledgments}
 \label{sec:acknowledgments}
+CAOD is grateful for a scholarship from CONACyT and to
+V. Castillo-Gallardo for useful discussions. VA acknowledges support
+from CONACyT Basic Sciences project A-S1 30393 and from PRODEP, and is
+grateful to ICF where she spent a sabatical.
 WLM acknowledges the support of DGAPA-UNAM under grant
-IN111119. VA acknowledges support from CONACyT Basic Sciences project
-A-S1 30393 and from PRODEP, and is grateful to ICF where she spent a
-sabatical. CAOD is grateful for a scholarship from CONACyT.
+IN111119.
+
+\printcredits
+
 \bibliographystyle{unsrt}
 \bibliography{bibligrin}
 \end{document}
