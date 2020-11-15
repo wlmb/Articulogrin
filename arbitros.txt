@@ -1,0 +1,14 @@
+Michael J Sailor
+University of California San Diego
+msailor@ucsd.edu
+He has done much work on GRIN PS structures.
+
+Paul V Braun
+University of Illinois System
+pbraun@illinois.edu
+He has fabricated PS layers with index gradients.
+
+Nicolas H Voelcker
+Monash University
+nico.voelcker@flinders.edu.au
+He has found biological applications of grin structures

@@ -1,0 +1,14 @@
+- A simple expression was found for computing the current density during the
+  etching process of layered porous Silicon systems with lateral
+  gradients.
+
+- The expression is an exponentially fast converging series, each term
+  of which is a given by a simple analytical formula.
+
+- Full calibration curves for porosity and etching rate can be
+  obtained from measurements on different positions along the surface
+  of a single sample.
+
+- Useful for the design and fabrication of multilayered PS GRIN optical
+  devices with a lateral gradient of refractive indices and layer
+  thicknesses.
