@@ -1,11 +1,11 @@
-Prof. Deren Yang
+Prof. Rick Ubic
 Editor in Chief
-Superlattices and Microstructures
+Materials Research Bulletin
 
-We submit the manuscript 'Model for Porous
-Silicon Structures with a Lateral Gradient' by C. A. Ospina-Delacruz
+We submit the manuscript 'Model for the Electrochemical Synthesis of
+Porous Silicon Structures with a Lateral Gradient' by C. A. Ospina-Delacruz
 et al.  to your consideration for publication as an original research
-paper in the journal Superlattices and Microstructures.
+paper in the journal Materials Research Bulletin.
 
 In this paper we identify we develop a simple model that permits the
 computation of the position dependent current density j(r) within an
