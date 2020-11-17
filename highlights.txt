@@ -1,9 +1,9 @@
 - A simple expression was found for computing the current density during the
-  etching process of layered porous Silicon systems with lateral
+  etching process of layered porous silicon systems with lateral
   gradients.
 
 - The expression is an exponentially fast converging series, each term
-  of which is a given by a simple analytical formula.
+  of which is given by a simple analytical formula.
 
 - Full calibration curves for porosity and etching rate can be
   obtained from measurements on different positions along the surface

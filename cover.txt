@@ -2,24 +2,25 @@ Prof. Rick Ubic
 Editor in Chief
 Materials Research Bulletin
 
-We submit the manuscript 'Model for the Electrochemical Synthesis of
-Porous Silicon Structures with a Lateral Gradient' by C. A. Ospina-Delacruz
+We submit the manuscript 'Analytical Model for the Current Density in
+the Electrochemical Synthesis of Porous Silicon Structures with a
+Lateral Gradient' by C. A. Ospina-Delacruz
 et al.  to your consideration for publication as an original research
 paper in the journal Materials Research Bulletin.
 
-In this paper we identify we develop a simple model that permits the
+In this paper we develop a simple model that permits the
 computation of the position dependent current density j(r) within an
 electrolytic cell during the fabrication of porous Si (PS) structures. This
-allows the caracterization of the porosity and etching rate as a
+allows the characterization of the porosity and etching rate as a
 function of j from a single or a small number of samples, which in
 turn, allows the control of the index of refraction and width of PS
 layers in gradient index (GRIN) devices with optical and structural properties that
 depend on the lateral position. We illustrate our model by analyzing
-three single layered samples produced on similar substrates with different etching
-total currents. We believe our formalism will prove useful for the design and
+three single layered samples produced on similar substrates with different total
+etching currents. We believe our formalism will prove useful for the design and
 fabrication of more complex multilayered non-homogeneous devices with
 lateral gradients such as microcavities tuned to continuously varying
-frequencies, sensors and other aplications, and thus, we consider they
+frequencies for sensing aplications, and thus, we consider they
 will prove to be of interest for the readership of the journal.
 
 Yours truly,
