@@ -1,12 +1,12 @@
-Prof. Rick Ubic
+Prof. Alok M. Srivastava
 Editor in Chief
-Materials Research Bulletin
+Optical Materials
 
 We submit the manuscript 'Analytical Model for the Current Density in
 the Electrochemical Synthesis of Porous Silicon Structures with a
 Lateral Gradient' by C. A. Ospina-Delacruz
 et al.  to your consideration for publication as an original research
-paper in the journal Materials Research Bulletin.
+paper in the journal Optical Materials.
 
 In this paper we develop a simple model that permits the
 computation of the position dependent current density j(r) within an
