@@ -238,6 +238,7 @@ beginfig(3)
   label.rt(btex $z_0$ etex scaled 2, (-.5u,0u));
   drawdblarrow (1u,-2.2u)--(9u,-2.2u);
   label.bot(btex $a$ etex scaled 2, (5u,-2.2u));
+  label(btex (a) etex scaled 1.5, (10u,2.6u));
 endfig;
 
 beginfig(4)
@@ -264,6 +265,9 @@ beginfig(4)
     draw pic0 withcolor white;
   endfor
   clip currentpicture to unitsquare xscaled 30u yscaled 10u;
+  pic1:=thelabel(btex (b) etex scaled 3, (28u,9u));
+  fill bbox(pic1) withcolor white;
+  draw pic1;
 endfig;
 
 
@@ -294,5 +298,8 @@ beginfig(5)
   drawarrow ((3u,0)--(-3u,0)) shifted (15u,-10.5u) withpen pencircle
     scaled 2pt;
   label.bot(btex $\nabla p$ etex scaled 4,(15u,-10.5u));
+  pic1:=thelabel(btex (c) etex scaled 3, (28u,-1u));
+  fill bbox(pic1) withcolor white;
+  draw pic1;
 endfig;
 end.
