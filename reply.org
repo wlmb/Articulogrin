@@ -109,11 +109,36 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
      for Sample. We modified the text, some figures and figure
      captions to include this change.
 
-6. in the text " "From the data in Table 2 we can plot the fitted porosity as a function of the calculated density current, as shown for our three samples in Fig. 11."the authors should precise the used equation, in reference to their model.
+6. in the text " "From the data in Table 2 we can plot the fitted
+   porosity as a function of the calculated density current, as shown
+   for our three samples in Fig. 11."the authors should precise the
+   used equation, in reference to their model.
+   - We notice that our original wording might have produced some
+     confusion. The porosity together with the thickness were /fitted/
+     to optical measurements using Eqs. (18) and (19). Thus, what we
+     show in Fig. 11 as data points are those previously fitted porosity values
+     vs. the computed current density. Thus, when we mentioned that 'we
+     can plot the fitted porosity as a function of the calculated
+     density current' we didn't use any other equation.
+   - We believe that the confusion may be eliminated by rewording the
+     phrase 'porosity as a function of the calculated density current'
+     and rewrite it as 'porosity vs. calculated density current',
+     i.e., by eliminating the word function.
+   - Nevertheless, a few lines afterwards we introduce a new fit: we
+     fit the porosity as a function of the current density. To that
+     end we use a linear fit of the kind $p=mj_\perp+b$ and we display
+     the show parameters $m$ and $b$ at the top of Fig. 11 and in Eq. (20).
+   - To clear up this second fit, following the reviewers advice, we
+     wrote down explicitly the equation for this linear fit.
+   - We made similar changes regarding Fig. 12. *pendiente*
 
-- Could the authors more explain the sentence "For multilayered samples, produced by modulating the current I in time, without changing wafers, these error source would be absent."
+. Could the authors more explain the sentence "For multilayered samples, produced by modulating the current I in time, without changing wafers, these error source would be absent."
 
--	In table 2 the authors should estimate the uncertainties of their results and show the uncertainties on the curves in Figures 11 and 12. To my opinion, only one general fit should be used as  it depends on the current densities .
+- In table 2 the authors should estimate the uncertainties of their
+   results and show the uncertainties on the curves in Figures 11
+   and 12. To my opinion, only one general fit should be used as  it
+   depends on the current densities .
+
 The results should be more discussed with taking into consideration the uncertainties.
 
 - "Furthermore, as the results corresponding to sample G2 in Figs. 11 and 12 seem shifted with respect to those of the other samples," How do the authors explain the shift for the sample G2 in fig 11 and fig 12 ?
