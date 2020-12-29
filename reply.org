@@ -7,8 +7,6 @@ Handling Editor
 Optical Materials
 #+end_verse
 
-*Cambiar el título?*
-
 Dear Dr. Ferrari,
 
 In the following we comment on the referee's remarks and on the
@@ -41,7 +39,6 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
    gradient of lateral porosity and etching speed, which is very
    important for porous silicon applications.
 
-
    For my point of view, the article presents interesting results in
    the topic of the journal. Quality of the research is suitable for the
    journal. The article is quite well detailed and so
@@ -54,13 +51,13 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
    - As discussed below, the thickness of the layers was not
      determined through scanning electron microscopy (see below).
 
-1. Since Figure 4 is composed of 3 parts, the authors should
+2. Since Figure 4 is composed of 3 parts, the authors should
    distinguish them by fig.4a, 4b and 4.c.
 
    - We have labelled the panels of figure 4 as (a), (b) and (c) and
      as such refered to their content in the corresponding caption.
 
-2. Figures 4b and 4c, already represent the porosity gradient and the
+3. Figures 4b and 4c, already represent the porosity gradient and the
    etching rate of the silicon in a top and a side view of a porous
    silicon sample . From my point of view, these are results, and
    figure 4 could be put in the results section and discussed with
@@ -74,7 +71,7 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
      we move them to the results section. For this reason, we prefer
      to leave at their previous place.
 
-3. in the "procedure" part, it must be specified that the thickness
+4. in the "procedure" part, it must be specified that the thickness
    has been determined by microscopic observation and that the
    reflectance spectra can then be adjusted to determine the porosity
    P
@@ -93,15 +90,15 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
    - We modified the text where we present Fig. 7 to eliminate any
      confusion about this issue.
 
-4. in the current density part : "In Fig. 5 we show the current
-   density j⟂(x,y , 0) calculated through Eq. (16) at the surface of
+5. in the current density part : "In Fig. 5 we show the current
+   density j_\perp(x,y , 0) calculated through Eq. (16) at the surface of
    the sample for our cell, as shown in Figs. 1 and 4 and described in
    Sect. 3.1)."the authors should precise in the text: normalized
    current density J /I .
 
    - We agree with the reviewer and we performed the suggested change.
 
-5. The authors should another letter than G1, G2 G3 to name their
+6. The authors should another letter than G1, G2 G3 to name their
    samples as G is used in the model to represent the 2D reciprocal
    lattice.
 
@@ -110,7 +107,7 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
      for Sample. We modified the text, some figures and figure
      captions to include this change.
 
-6. in the text " "From the data in Table 2 we can plot the fitted
+7. in the text " "From the data in Table 2 we can plot the fitted
    porosity as a function of the calculated density current, as shown
    for our three samples in Fig. 11."the authors should precise the
    used equation, in reference to their model.
@@ -134,98 +131,127 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
    - To clear up this second fit, following the reviewers advice, we
      wrote down explicitly the equation for this linear fit.
    - We made similar changes regarding Fig. 12.
-7. Could the authors more explain the sentence "For multilayered
+8. Could the authors more explain the sentence "For multilayered
    samples, produced by modulating the current I in time, without
    changing wafers, these error source would be absent."
 
-   - We believe that the discrepancies between the results for the
-     different samples are due to the poor definition of the reference
-     point from which we measured distances. The horizontal axis in Figs. 11 and 12, the current
-     density, is not a quantity that we measured. Rather, it is a
-     quantity that we calculated using our theory (Eq. (16)) at the
-     positions where we measured the reflectance spectrum from which
-     we obtained the corresponding porosity and etching
-     rate. The input to our theory is the distance $x_n$ from each of
-     these points to the wall of the
-     cell, but we measured the distances $x'_n$ from the border of the
-     chemically attacked region. The difference between these numbers
-     is the distance from the wall to the sealing point
+   - The horizontal position of the points in Figs. 11 and 12, the current
+     density, was calculated using our theory (Eq. (16)) at the
+     positions $x_n$ (with respect to the wall of the cell) for which we
+     measured the reflectance spectrum, but these positions are
+     uncertain, as what we measured were the distances $x'_n$ to the
+     edge of the chemically attacked region. We prepared different
+     layers by applying different currents to different samples, but a
+     multilayered system is made by applying a time varying current to
+     a single sample. The quantities $x'_n-x_n$
+     might differ for layers built on different wafers, but not for
+     those prepared on a single wafer.
 
-. Nevertheless, the electrochemically attacked region reached
-     further, up to the sealing o-ring. Thus, there is an uncertainty
-     in the actual position of the wall with respect to the edge of
-     the attacked region.
+   - We rephrased that sentence in order to make our meaning clear.
 
-- In table 2 the authors should estimate the uncertainties of their
-   results and show the uncertainties on the curves in Figures 11
-   and 12. To my opinion, only one general fit should be used as  it
-   depends on the current densities .
+9. In table 2 the authors should estimate the uncertainties of their
+    results and show the uncertainties on the curves in Figures 11
+    and 12. To my opinion, only one general fit should be used as  it
+    depends on the current densities.
 
-The results should be more discussed with taking into consideration the uncertainties.
+   - We agree with the referee.
 
-- "Furthermore, as the results corresponding to sample G2 in Figs. 11
-  and 12 seem shifted with respect to those of the other samples," How
-  do the authors explain the shift for the sample G2 in fig 11 and fig
-  12 ?
+   - We included the error estimates in
+     table 1 due to the position uncertainties.
 
-- the model is performed for a wire electrode. What is the tendency if
-  using a planar electrode on the side, or on the top?
-	In many applications using porous silicon , homogenous
-  porosity as well as etching rate is also required.
-	 How is it possible the reduce the porosity gradient in a porous silicon  sample?
+   - We made new fits to the reflectance data using a different
+     optimization algorithm, so that we could obtain an uncertainty
+     for the fitted parameters.
 
-- the part "discussion and result" should be renamed by result and discussions
+   - We changed figures 8-10 using the new fits.
 
-- references 7 and 8 have to be checked in "synthesis of Ag-Au alloy gradients
-on steel and chemical composition gradients of CdS layers on gold electrodes have also been obtained [7]. Among electrochemical methods, compositional and doping density changes in conducting polymers have been used to produce gradients using Indium Tin Oxide electrodes [8].". [ref 7] is OK in "Recently, J Wang et al. has shown the fabrication of a miniature spectrometer with a PS based rugate filter using a radial interfacial potential distribution [7]."
+   - We modified table 2 to include the new parameters and their uncertainties.
 
-- Other references should be added to the reference  12 -for the biosensing Porous silicon application in "Applications based on porous silicon now cover various fields such as chemical sensors and biosensors [12]".
+10. The results should be more discussed with taking into consideration the uncertainties.
 
-- Other references should be added with the reference 15 to illustrate optoelectronics applications: "microelectronics and micromechanical systems (MEMS) [13],as well as a range of optical [14] and optoelectronic applications [15]."
+    - We incorporated a discussion of the uncertainty in all
+      parameters.
 
-- The authors should give more references for the porous silicon multilayered structures : waveguide, Bragg reflector, Microcavities, Microresonator  "Specifically, the temporal variation of the current density results in a variation of porosity along the depth, allowing the easy fabrication of different kinds [16] of 1D dielectric multilayered structures." .
+11. "Furthermore, as the results corresponding to sample G2 in Figs. 11
+    and 12 seem shifted with respect to those of the other samples," How
+    do the authors explain the shift for the sample G2 in fig 11 and fig
+    12 ?
+    - Due to the ill defined edge of the sample (the beginning of the
+      chemically attacked region), it is possible that
+      the positions where we measured the reflectance spectra for
+      sample S2 correspond to larger distances from the edge of the
+      wall than those reported in table 1 and used to compute the
+      current density. We estimated an uncertainty in position of half
+      a millimeter, corresponding to the radius of the sealing o-ring,
+      but it could have been larger. Through a rigid displacement of
+      the sample (adding a constant to all $x_n$'s for sample 2), its
+      results could be brought into better agreement with the
+      other samples, and both figures are consistent with a correction
+      in the same direction. Nevertheless, given the uncertainty in
+      the fitted parameters, we believe it is better to present the
+      results as they were obtained.
 
-- The reference 19 is not adapted ".The resulting porous surface can have pore sizes ranging from a few nanometers to few micrometers [19]."
+      *¿Que hacer con la figura 13?*
 
-- Many typo errors have to be corrected
+12. the model is performed for a wire electrode. What is the tendency if
+    using a planar electrode on the side, or on the top?
+	  In many applications using porous silicon , homogenous
+    porosity as well as etching rate is also required.
+	   How is it possible the reduce the porosity gradient in a
+    porous silicon  sample?
 
--	The quality text should be improved. The authors should use the passive form instead of we….
+    - There are many techniques to produce relatively homogeneous
+      porous silicon samples. One could use planar electrodes, or
+      immerse in the electrolyte long non-insulated wire electrodes
+      bent into shapes such as a spiral that covers a relatively large
+      area. However, our purpose in this paper is the
+      opposite; to produce a sizable gradient in porous silicon
+      structures but in a controlled way. We showed that for a
+      particular shape and for a thin wire insulated except in a very
+      small region, the etching current may be obtained as a rapidly
+      converging sum each of whose terms can be calculated
+      analytically. Thus, we can easily predict the current density and use
+      this prediction to calibrate the etching process and to design
+      gradient structures.
 
+13. the part "discussion and result" should be renamed by result and discussions
+    1. Indeed. Done.
 
-*****
+14. References 7 and 8 have to be checked in "synthesis of Ag-Au alloy
+    gradients on steel and chemical composition gradients of CdS
+    layers on gold electrodes have also been obtained [7]. Among
+    electrochemical methods, compositional and doping density changes
+    in conducting polymers have been used to produce gradients using
+    Indium Tin Oxide electrodes [8].". [ref 7] is OK in "Recently, J
+    Wang et al. has shown the fabrication of a miniature spectrometer
+    with a PS based rugate filter using a radial interfacial potential
+    distribution [7]."
 
-Data in Brief (optional):
+15. Other references should be added to the reference  12 -for the
+    biosensing Porous silicon application in "Applications based on
+    porous silicon now cover various fields such as chemical sensors
+    and biosensors [12]".
 
-We invite you to convert your supplementary data (or a part of it) into an additional journal publication in Data in Brief, a multi-disciplinary open access journal. Data in Brief articles are a fantastic way to describe supplementary data and associated metadata, or full raw datasets deposited in an external repository, which are otherwise unnoticed. A Data in Brief article (which will be reviewed, formatted, indexed, and given a DOI) will make your data easier to find, reproduce, and cite.
+16. Other references should be added with the reference 15 to
+    illustrate optoelectronics applications: "microelectronics and
+    micromechanical systems (MEMS) [13],as well as a range of optical
+    [14] and optoelectronic applications [15]."
 
+17. The authors should give more references for the porous silicon
+    multilayered structures : waveguide, Bragg reflector,
+    Microcavities, Microresonator  "Specifically, the temporal
+    variation of the current density results in a variation of porosity
+    along the depth, allowing the easy fabrication of different kinds
+    [16] of 1D dielectric multilayered structures." .
 
-You can submit to Data in Brief when you upload your revised manuscript. To do so, complete the template and follow the co-submission instructions found here: www.elsevier.com/dib-template. If your manuscript is accepted, your Data in Brief submission will automatically be transferred to Data in Brief for editorial review and publication.
+18. The reference 19 is not adapted ".The resulting porous surface can
+    have pore sizes ranging from a few nanometers to few micrometers
+    [19]."
 
+19. Many typo errors have to be corrected
+    - We corrected several typo errors.
 
-Please note: an open access Article Publication Charge (APC) is payable by the author or research funder to cover the costs associated with publication in Data in Brief and ensure your data article is immediately and permanently free to access by all. For the current APC see: www.elsevier.com/journals/data-in-brief/2352-3409/open-access-journal
-
-Please contact the Data in Brief editorial office at dib-me@elsevier.com or visit the Data in Brief homepage (www.journals.elsevier.com/data-in-brief/) if you have questions or need further information.
-
-
-*****
-
-We invite you to submit a method article alongside your research article. This is an opportunity to get full credit for the time and money spent on developing research methods, and to increase the visibility and impact of your work. If your research article is accepted, we will contact you with instructions on the submission process for your method article to MethodsX. On receipt at MethodsX it will be editorially reviewed and, upon acceptance, published as a separate method article. Your articles will be linked on ScienceDirect.  Please prepare your paper using the MethodsX Guide for Authors: https://www.elsevier.com/journals/methodsx/2215-0161/guide-for-authors  (and template available here: https://www.elsevier.com/MethodsX-template) Open access fees apply.
-
-
-
-...........................................................
-IMPORTANT: Reviewers may have uploaded files which cannot be included in this e-mail. Therefore always log on to https://www.editorialmanager.com/om/ to check if such files, referred to in the reviews as attachments or uploaded files, are available. If so, there will be a link View Reviewer Attachments.
-
-%ATTACH_FOR_REVIEWER_DEEP_LINK INSTRUCTIONS%
-
-
-
-
-
-******************************************
-
-
-For further assistance, please visit our customer support site at http://help.elsevier.com/app/answers/list/p/7923. Here you can search for solutions on a range of topics, find answers to frequently asked questions and learn more about EM via interactive tutorials. You will also find our 24/7 support contact details should you need any further assistance from one of our customer support representatives.
-
-__________________________________________________
-In compliance with data protection regulations, you may request that we remove your personal registration details at any time.  (Use the following URL: https://www.editorialmanager.com/om/login.asp?a=r). Please contact the publication office if you have any questions.
+20. The quality text should be improved. The authors should use the passive form instead of we….
+    - We prefer the use of the active form over the passive form, as it
+      yields simpler easier to follow texts. We would be glad to change
+      our manuscript to the passive voice if required.
