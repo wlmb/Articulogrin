@@ -191,8 +191,6 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
       the fitted parameters, we believe it is better to present the
       results as they were obtained.
 
-      *¿Que hacer con la figura 13?*
-
 12. the model is performed for a wire electrode. What is the tendency if
     using a planar electrode on the side, or on the top?
 	  In many applications using porous silicon , homogenous
@@ -255,3 +253,14 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
     - We prefer the use of the active form over the passive form, as it
       yields simpler easier to follow texts. We would be glad to change
       our manuscript to the passive voice if required.
+
+In summary, we have addressed all of the reviewers comments and acted on
+most of his recommendations. We believe that, as stated by the
+reviewer, that the paper contains interesting results of
+suitable quality, they are presented with enough detail and so they
+should be of interest to the readership of the journal.
+
+
+Yours truly,
+
+W: Luis Mochán
