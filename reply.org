@@ -50,6 +50,8 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
 
    - As discussed below, the thickness of the layers was not
      determined through scanning electron microscopy (see below).
+     #VA: Probably it is NOT necessary to clarify this at this point!
+     #LM: Not sure, as he mentions it explicitly in his overview. I'll think about it.
 
 2. Since Figure 4 is composed of 3 parts, the authors should
    distinguish them by fig.4a, 4b and 4.c.
@@ -64,7 +66,9 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
    figure 6 . Even the current lines in figure 4a should be given in
    the results part in confrontation to Figure 6.
 
-   - Figures 4b and 4c are /schematic drawings/ to illustrate what are
+   - Figures 4b and 4c are /schematic drawings/ to illustrate
+     #VA: the complete idea of the work?!!)
+     the purpose of this work and
      the /expected/ results, but they are not results obtained through
      a theoretical calculation nor from experimental
      measurements. Thus we believe that the reader might be misled if
@@ -76,16 +80,16 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
    reflectance spectra can then be adjusted to determine the porosity
    P
 
-   - We actually did not determine the thickness through microscopic
+   - We actually did not determine the thickness at each point of the
+     sample through microscopic
      observations. We obtained /both/ the porosity /and/ the thickness
-     from and adjustment to the optical spectra.
+     by fitting the optical spectra.
 
    - The SEM images shown in Figure 7 verify /qualitatively/ our
      expected results (Figure 4) and our adjusted results (Table 2),
      but were not used to measure the actual thickness of the
-     sample at the positions $n$ where we measured the optical
-     spectra. That was not possible as in order to obtain the
-     micrographs we had to cut the sample.
+     sample at each position $n$ where we measured the optical
+     spectra.
 
    - We modified the text where we present Fig. 7 to eliminate any
      confusion about this issue.
@@ -176,7 +180,7 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
     and 12 seem shifted with respect to those of the other samples," How
     do the authors explain the shift for the sample G2 in fig 11 and fig
     12 ?
-    - Due to the ill defined edge of the sample (the beginning of the
+    - Due to the uncertainty in defining the edge of the sample (the beginning of the
       chemically attacked region), it is possible that
       the positions where we measured the reflectance spectra for
       sample S2 correspond to larger distances from the edge of the
@@ -211,6 +215,9 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
       analytically. Thus, we can easily predict the current density and use
       this prediction to calibrate the etching process and to design
       gradient structures.
+    - If desired, in our configuration we may reduce the gradient by increasing the
+      distance from the tip of the electrode to the silicon wafer, as
+      now mentioned in the revised manuscript after Eq. (16).
 
 13. the part "discussion and result" should be renamed by result and discussions
     1. Indeed. Done.
@@ -225,26 +232,102 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
     with a PS based rugate filter using a radial interfacial potential
     distribution [7]."
 
+    - We thank the reviewer for drawing our attention towards this error.
+      In the revised manuscript the erroneous citation of reference
+      [7] has been replaced by citations to
+      - R.Ramaswamy, C. Shannon, Screening the Optical Properties of
+        Ag− Au Alloy Gradients Formed by Bipolar Electrodeposition Using
+        Surface Enhanced Raman Spectroscopy,  Langmuir 2011, 27, 878;
+	# ramaswamy_screening_2011
+      - S Ramakrishnan, C. Shannon Display of solid-state materials
+        using bipolar electrochemistry, Langmuir 2010 26, 4602
+	# ramakrishnan_display_2010
+      and the erroneous reference [8] by
+      - S. Inagi  Y. Ishiguro, M. Atobe  T. Fuchigami Bipolar
+        patterning of conducting polymers by electrochemical doping and
+        reaction   Angew Chem 2010. 122, 10334-10337].
+	# inagi2010bipolar This is the same as previously!!
+      and we kept the correct citation of the previous reference [7].
+
+
 15. Other references should be added to the reference  12 -for the
     biosensing Porous silicon application in "Applications based on
     porous silicon now cover various fields such as chemical sensors
     and biosensors [12]".
 
+    - The following references have been added:
+      - Victor S.-Y. Lin, Kianoush Motesharei, Keiki-Pua S. Dancil,
+        Michael J. Sailor, M. Reza Ghadiri.  A Porous Silicon-Based
+        Optical Interferometric Biosensor.   Science  1997; 278, 5339,
+        840-843 DOI: 10.1126/science.278.5339.840
+	# lin_porous_1997
+      - Keiki-Pua S. Dancil, Douglas P. Greiner, and
+        Michael J. Sailor.  A Porous Silicon Optical Biosensor:
+        Detection of Reversible Binding of IgG to a Protein A-Modified
+        Surface J. Am. Chem. Soc. 1999, 121, 34, 7925–7930
+	https://doi.org/10.1021/ja991421n
+	# dancil_porous_1999
+
+
+
 16. Other references should be added with the reference 15 to
     illustrate optoelectronics applications: "microelectronics and
     micromechanical systems (MEMS) [13],as well as a range of optical
     [14] and optoelectronic applications [15]."
+    - For optoelectronic applications, the following references have been added:
+      1. F. Namavar Nader M. Kalkhoran, H. P. Maruska,(1993)
+         Optoelectronic switching and display device with porous
+         silicon (US-5272355A)
+	 # namavar_optoelectronic_1993
+      2. Galkin NG, Tan DT (2017) Mechanisms of visible
+         electroluminescence in diode structures on the basis of
+         porous silicon: a review. Opt Spectrosc 122(6):919–925
+	 # galkin_mechanisms_2017
+      3. Handbook of Porous silicon, Editor L.Canham, Springer
+         International Publishing AG Part of Springer Nature 2018
+         (Electroluminescence of porous silicon B. Gelloz Pg 487)
+	 # gelloz_electroluminescence_2018
+
 
 17. The authors should give more references for the porous silicon
     multilayered structures : waveguide, Bragg reflector,
     Microcavities, Microresonator  "Specifically, the temporal
     variation of the current density results in a variation of porosity
     along the depth, allowing the easy fabrication of different kinds
-    [16] of 1D dielectric multilayered structures." .
+    [16] of 1D dielectric multilayered structures."
+    - The following references have been added :
+      # VA:  we cn actually remove the existing reference 16 as it is
+      # more about computational schemes
+      # LM: Better not make more changes, and just follow the
+      # reviewers advice.
+      1. D. Ariza, L. M. Gaggero, V.Agarwal 2012 White metal-like
+         omnidirectional mirror from porous silicon dielectric
+         multilayers Appl. Phys. Lett. 101, 031119 (2012);
+         https://doi.org/10.1063/1.4738765
+	 # ariza-flores_white_2012
+      2. M Ghullinyan, C.J. Oton, Z. Gaburro, P.Bettotti, L. Pavesi
+         Porous silicon free standing coupled
+         microcavities. Appl. Phys. Lett. 82, 1550 (2003);
+         https://doi.org/10.1063/1.1559949
+	 # ghulinyan_porous_2003
+      3. P.Girault, P.Azuelos, N.Lorrain, L.Poffo, J.Lemaitre,
+         P.Pirasteh, I.Hardya, M.Thual, M.Guendouz, J.Charrier,
+         Porous silicon micro-resonator implemented by standard
+         photolithography process for sensing application.  Optical
+         Materials  72, 2017, 596-601
+	 # girault_porous_2017,
+
 
 18. The reference 19 is not adapted ".The resulting porous surface can
     have pore sizes ranging from a few nanometers to few micrometers
     [19]."
+    - The reference [19] has been changed to
+      - Handbook of porous silicon, Editor L.Canham; Chapter : Routes
+        of formation of porous silicon- Leigh Canham, pg 4; ISBN
+        978-3-319-71381-6; Springer International Publishing
+        Switzerland 2014
+	# canham_routes_2018
+	# Actualizar con la realmente usada.
 
 19. Many typo errors have to be corrected
     - We corrected several typo errors.
@@ -253,6 +336,7 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
     - We prefer the use of the active form over the passive form, as it
       yields simpler easier to follow texts. We would be glad to change
       our manuscript to the passive voice if required.
+      # Did we change it?
 
 In summary, we have addressed all of the reviewers comments and acted on
 most of his recommendations. We believe that, as stated by the
