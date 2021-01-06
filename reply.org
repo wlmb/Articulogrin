@@ -1,13 +1,13 @@
 #+OPTIONS: toc:nil
 #+LATEX_HEADER: \usepackage{bm}
 
-#+begin_verse
-Maurizio Ferrari
-Handling Editor
+\noindent
+Maurizio Ferrari\\
+Handling Editor\\
 Optical Materials
-#+end_verse
 
-Dear Dr. Ferrari,
+
+\noindent Dear Dr. Ferrari,
 
 In the following we comment on the referee's remarks and on the
 corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
@@ -102,7 +102,7 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
    samples as G is used in the model to represent the 2D reciprocal
    lattice.
 
-   - We used $G_n$ to label samples as it stands for GRIN-n, but we agree
+   - We used previously $G_n$ to label samples as it stands for GRIN-n, but we agree
      with the reviewer and changed the labels to $S_n$, where $S$ stands
      for Sample. We modified the text, some figures and figure
      captions to include this change.
@@ -128,7 +128,7 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
      fit the porosity as a function of the current density. To that
      end we use a linear fit of the kind $p=mj_\perp+b$ and we display
      the parameters $m$ and $b$ at the top of Fig. 11 and in Eq. (20).
-   - To clear up this second fit, following the reviewers advice, we
+   - To clear up this second fit, following the reviewer's advice, we
      wrote down explicitly the equation for this linear fit.
    - We made similar changes regarding Fig. 12.
 8. Could the authors more explain the sentence "For multilayered
@@ -232,18 +232,30 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
     - We thank the reviewer for drawing our attention towards this error.
       In the revised manuscript the erroneous citation of reference
       [7] has been replaced by citations to
-      - R.Ramaswamy, C. Shannon, Screening the Optical Properties of
-        Ag− Au Alloy Gradients Formed by Bipolar Electrodeposition Using
-        Surface Enhanced Raman Spectroscopy,  Langmuir 2011, 27, 878;
+      - Rajakumari Ramaswamy and Curtis Shannon. Screening the Optical
+        Properties of Ag-Au Alloy Gradients Formed by Bipolar
+        Electrodeposition Using Surface Enhanced Raman
+        Spectroscopy. Langmuir, 27(3):878–881,
+        February 2011. Publisher: American Chemical Society
+        # - R.Ramaswamy, C. Shannon, Screening the Optical Properties of
+        #  Ag− Au Alloy Gradients Formed by Bipolar Electrodeposition Using
+        #  Surface Enhanced Raman Spectroscopy,  Langmuir 2011, 27, 878;
 	# ramaswamy_screening_2011
-      - S Ramakrishnan, C. Shannon Display of solid-state materials
-        using bipolar electrochemistry, Langmuir 2010 26, 4602
+      - Sridevi Ramakrishnan and Curtis Shannon. Display of
+        Solid-State Materials Using Bipolar
+        Electrochemistry. Langmuir, 26(7):4602–4606,
+        April 2010. Publisher: American Chemical Society.
+        # - S Ramakrishnan, C. Shannon Display of solid-state materials
+        # using bipolar electrochemistry, Langmuir 2010 26, 4602
 	# ramakrishnan_display_2010
-      and the erroneous reference [8] by
-      - S. Inagi  Y. Ishiguro, M. Atobe  T. Fuchigami Bipolar
-        patterning of conducting polymers by electrochemical doping and
-        reaction   Angew Chem 2010. 122, 10334-10337].
-	# inagi2010bipolar This is the same as previously!!
+      Regarding reference [8], we believe the content of the paper is adequate, but
+      we found it was also published in an international edition with different
+      volume number, page, etc., so we replaced it by
+      - Shinsuke Inagi, Yutaka Ishiguro, Mahito Atobe, and Toshio Fuchigami.
+	Bipolar patterning of conducting polymers by
+	electrochemical doping and reaction.
+	Angewandte Chemie International Edition, 49(52):10136–10139, 2010.
+	# inagi2010bipolar
       and we kept the correct citation of the previous reference [7].
 15. Other references should be added to the reference  12 -for the
     biosensing Porous silicon application in "Applications based on
@@ -266,18 +278,18 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
     micromechanical systems (MEMS) [13],as well as a range of optical
     [14] and optoelectronic applications [15]."
     - For optoelectronic applications, the following references have been added:
-      1. F. Namavar Nader M. Kalkhoran, H. P. Maruska,(1993)
-         Optoelectronic switching and display device with porous
-         silicon (US-5272355A)
+      - F. Namavar Nader M. Kalkhoran, H. P. Maruska,(1993)
+        Optoelectronic switching and display device with porous
+        silicon (US-5272355A)
 	 # namavar_optoelectronic_1993
-      2. Galkin NG, Tan DT (2017) Mechanisms of visible
-         electroluminescence in diode structures on the basis of
-         porous silicon: a review. Opt Spectrosc 122(6):919–925
-	 # galkin_mechanisms_2017
-      3. Handbook of Porous silicon, Editor L.Canham, Springer
-         International Publishing AG Part of Springer Nature 2018
-         (Electroluminescence of porous silicon B. Gelloz Pg 487)
-	 # gelloz_electroluminescence_2018
+      - Galkin NG, Tan DT (2017) Mechanisms of visible
+        electroluminescence in diode structures on the basis of
+        porous silicon: a review. Opt Spectrosc 122(6):919–925
+        # galkin_mechanisms_2017
+      - Handbook of Porous silicon, Editor L.Canham, Springer
+        International Publishing AG Part of Springer Nature 2018
+        (Electroluminescence of porous silicon B. Gelloz Pg 487)
+        # gelloz_electroluminescence_2018
 17. The authors should give more references for the porous silicon
     multilayered structures : waveguide, Bragg reflector,
     Microcavities, Microresonator  "Specifically, the temporal
@@ -289,22 +301,22 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
       # more about computational schemes
       # LM: Better not make more changes, and just follow the
       # reviewers advice.
-      1. D. Ariza, L. M. Gaggero, V.Agarwal 2012 White metal-like
-         omnidirectional mirror from porous silicon dielectric
-         multilayers Appl. Phys. Lett. 101, 031119 (2012);
-         https://doi.org/10.1063/1.4738765
-	 # ariza-flores_white_2012
-      2. M Ghullinyan, C.J. Oton, Z. Gaburro, P.Bettotti, L. Pavesi
-         Porous silicon free standing coupled
-         microcavities. Appl. Phys. Lett. 82, 1550 (2003);
-         https://doi.org/10.1063/1.1559949
-	 # ghulinyan_porous_2003
-      3. P.Girault, P.Azuelos, N.Lorrain, L.Poffo, J.Lemaitre,
-         P.Pirasteh, I.Hardya, M.Thual, M.Guendouz, J.Charrier,
-         Porous silicon micro-resonator implemented by standard
-         photolithography process for sensing application.  Optical
-         Materials  72, 2017, 596-601
-	 # girault_porous_2017,
+      - D. Ariza, L. M. Gaggero, V.Agarwal 2012 White metal-like
+        omnidirectional mirror from porous silicon dielectric
+        multilayers Appl. Phys. Lett. 101, 031119 (2012);
+        https://doi.org/10.1063/1.4738765
+        # ariza-flores_white_2012
+      - M Ghullinyan, C.J. Oton, Z. Gaburro, P.Bettotti, L. Pavesi
+        Porous silicon free standing coupled
+        microcavities. Appl. Phys. Lett. 82, 1550 (2003);
+        https://doi.org/10.1063/1.1559949
+        # ghulinyan_porous_2003
+      - P.Girault, P.Azuelos, N.Lorrain, L.Poffo, J.Lemaitre,
+        P.Pirasteh, I.Hardya, M.Thual, M.Guendouz, J.Charrier,
+        Porous silicon micro-resonator implemented by standard
+        photolithography process for sensing application.  Optical
+        Materials  72, 2017, 596-601
+        # girault_porous_2017,
 18. The reference 19 is not adapted ".The resulting porous surface can
     have pore sizes ranging from a few nanometers to few micrometers
     [19]."
@@ -321,18 +333,34 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
 	# Actualizar con la realmente usada.
       #+end_comment
 19. Many typo errors have to be corrected
-    - We corrected several typo errors.
-20. The quality text should be improved. The authors should use the passive form instead of we….
+    - We corrected many typographical errors.
+20. The quality text should be improved. The authors should use the
+    passive form instead of we….
+    - We corrected some mistakes and tried to imporove the quality of
+      the text.
     - We prefer the use of the active form over the passive form, as it
-      yields simpler easier to follow texts. We would be glad to change
-      our manuscript to the passive voice if required.
+      yields simpler, more concise and direct texts that are easier to
+      follow.
+    - We believe the use of the passive or active forms is a matter
+      style, and we don't believe one of them is correct and the other
+      wrong, though we found several guides that recommend the use of
+      an active voice for ordinary writing and also for scientific papers.
+    - We didn't find a recommendation for either one or the other form
+      in the Guides for Authors of the journal.
+    - Nevertheless, we would be glad and willing to change
+      our manuscript to the passive voice if that is the editorial
+      opinion.
       # Did we change it?
 
-In summary, we have addressed all of the reviewers comments and acted on
-most of his recommendations. We believe that, as stated by the
-reviewer, that the paper contains interesting results of
-suitable quality, they are presented with enough detail and so they
-should be of interest to the readership of the journal.
+In summary, we have addressed all of the reviewers comments and made
+changes to the manuscript based on most of his recommendations, which
+we believe were beneficial.
+We have highlighted the differences between the current and the
+previous version of our manuscript. We
+believe that, as stated by the reviewer, the paper contains
+interesting results of suitable quality, they are presented with
+appropriate detail and we believe they should be of interest and
+useful to the readership of the journal.
 
 
 Yours truly,
