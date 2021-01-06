@@ -48,10 +48,7 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
    - We appreciate the summary of our work by the reviewer and we are
      grateful for his opinion.
 
-   - As discussed below, the thickness of the layers was not
-     determined through scanning electron microscopy (see below).
-     #VA: Probably it is NOT necessary to clarify this at this point!
-     #LM: Not sure, as he mentions it explicitly in his overview. I'll think about it.
+   - See below regarding the determination of the thickness.
 
 2. Since Figure 4 is composed of 3 parts, the authors should
    distinguish them by fig.4a, 4b and 4.c.
@@ -67,7 +64,6 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
    the results part in confrontation to Figure 6.
 
    - Figures 4b and 4c are /schematic drawings/ to illustrate
-     #VA: the complete idea of the work?!!)
      the purpose of this work and
      the /expected/ results, but they are not results obtained through
      a theoretical calculation nor from experimental
@@ -106,8 +102,8 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
    samples as G is used in the model to represent the 2D reciprocal
    lattice.
 
-   - We used Gn to label samples as it stands for GRIN-n, but we agree
-     with the reviewer and changed the labels to Sn, where S stands
+   - We used $G_n$ to label samples as it stands for GRIN-n, but we agree
+     with the reviewer and changed the labels to $S_n$, where $S$ stands
      for Sample. We modified the text, some figures and figure
      captions to include this change.
 
@@ -154,9 +150,9 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
    - We rephrased that sentence in order to make our meaning clear.
 
 9. In table 2 the authors should estimate the uncertainties of their
-    results and show the uncertainties on the curves in Figures 11
-    and 12. To my opinion, only one general fit should be used as  it
-    depends on the current densities.
+   results and show the uncertainties on the curves in Figures 11
+   and 12. To my opinion, only one general fit should be used as  it
+   depends on the current densities.
 
    - We agree with the referee.
 
@@ -173,7 +169,7 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
 
 10. The results should be more discussed with taking into consideration the uncertainties.
 
-    - We incorporated a discussion of the uncertainty in all
+    - We incorporated a discussion of the uncertainties in all
       parameters.
 
 11. "Furthermore, as the results corresponding to sample G2 in Figs. 11
@@ -183,7 +179,7 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
     - Due to the uncertainty in defining the edge of the sample (the beginning of the
       chemically attacked region), it is possible that
       the positions where we measured the reflectance spectra for
-      sample S2 correspond to larger distances from the edge of the
+      sample $S_2$ correspond to larger distances from the edge of the
       wall than those reported in table 1 and used to compute the
       current density. We estimated an uncertainty in position of half
       a millimeter, corresponding to the radius of the sealing o-ring,
@@ -193,7 +189,8 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
       other samples, and both figures are consistent with a correction
       in the same direction. Nevertheless, given the uncertainty in
       the fitted parameters, we believe it is better to present the
-      results as they were obtained.
+      results in Figs. 11 and 12 as they were obtained, without
+      applying these shifts.
 
 12. the model is performed for a wire electrode. What is the tendency if
     using a planar electrode on the side, or on the top?
@@ -206,8 +203,9 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
       porous silicon samples. One could use planar electrodes, or
       immerse in the electrolyte long non-insulated wire electrodes
       bent into shapes such as a spiral that covers a relatively large
-      area. However, our purpose in this paper is the
-      opposite; to produce a sizable gradient in porous silicon
+      area. However,
+      /our purpose in this paper is the opposite/;
+      to produce a sizable gradient in porous silicon
       structures but in a controlled way. We showed that for a
       particular shape and for a thin wire insulated except in a very
       small region, the etching current may be obtained as a rapidly
@@ -220,7 +218,7 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
       now mentioned in the revised manuscript after Eq. (16).
 
 13. the part "discussion and result" should be renamed by result and discussions
-    1. Indeed. Done.
+    - Indeed. Done.
 
 14. References 7 and 8 have to be checked in "synthesis of Ag-Au alloy
     gradients on steel and chemical composition gradients of CdS
@@ -231,7 +229,6 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
     Wang et al. has shown the fabrication of a miniature spectrometer
     with a PS based rugate filter using a radial interfacial potential
     distribution [7]."
-
     - We thank the reviewer for drawing our attention towards this error.
       In the revised manuscript the erroneous citation of reference
       [7] has been replaced by citations to
@@ -248,13 +245,10 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
         reaction   Angew Chem 2010. 122, 10334-10337].
 	# inagi2010bipolar This is the same as previously!!
       and we kept the correct citation of the previous reference [7].
-
-
 15. Other references should be added to the reference  12 -for the
     biosensing Porous silicon application in "Applications based on
     porous silicon now cover various fields such as chemical sensors
     and biosensors [12]".
-
     - The following references have been added:
       - Victor S.-Y. Lin, Kianoush Motesharei, Keiki-Pua S. Dancil,
         Michael J. Sailor, M. Reza Ghadiri.  A Porous Silicon-Based
@@ -267,9 +261,6 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
         Surface J. Am. Chem. Soc. 1999, 121, 34, 7925–7930
 	https://doi.org/10.1021/ja991421n
 	# dancil_porous_1999
-
-
-
 16. Other references should be added with the reference 15 to
     illustrate optoelectronics applications: "microelectronics and
     micromechanical systems (MEMS) [13],as well as a range of optical
@@ -287,8 +278,6 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
          International Publishing AG Part of Springer Nature 2018
          (Electroluminescence of porous silicon B. Gelloz Pg 487)
 	 # gelloz_electroluminescence_2018
-
-
 17. The authors should give more references for the porous silicon
     multilayered structures : waveguide, Bragg reflector,
     Microcavities, Microresonator  "Specifically, the temporal
@@ -316,22 +305,23 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
          photolithography process for sensing application.  Optical
          Materials  72, 2017, 596-601
 	 # girault_porous_2017,
-
-
 18. The reference 19 is not adapted ".The resulting porous surface can
     have pore sizes ranging from a few nanometers to few micrometers
     [19]."
     - The reference [19] has been changed to
+      - Leigh Canham. Routes of Formation for Porous Silicon. In Leigh
+        Canham, editor, Handbook of Porous Silicon, pages
+        3–11. Springer International Publishing, Cham, 2018.
+      #+begin_comment
       - Handbook of porous silicon, Editor L.Canham; Chapter : Routes
         of formation of porous silicon- Leigh Canham, pg 4; ISBN
         978-3-319-71381-6; Springer International Publishing
         Switzerland 2014
 	# canham_routes_2018
 	# Actualizar con la realmente usada.
-
+      #+end_comment
 19. Many typo errors have to be corrected
     - We corrected several typo errors.
-
 20. The quality text should be improved. The authors should use the passive form instead of we….
     - We prefer the use of the active form over the passive form, as it
       yields simpler easier to follow texts. We would be glad to change
