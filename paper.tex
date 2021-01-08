@@ -8,17 +8,20 @@
 %\usepackage[•]{•}ckage{float}
 %\usepackage{cite}% para contraer referencias
 %\usepackage[usenames]{color}
-\usepackage{showkeys}
+%\usepackage{showkeys}
 %\usepackage{ieeetr}
 \usepackage{bm}
 \usepackage{hyperref}
 %\usepackage[normalem]{ulem} %opcional para la correcciones
 \newcommand{\abs}[1]{\lvert#1\rvert}
 \usepackage{xcolor}
-\newif{\ifinclude}
-\newcommand{\notaL}[1]{{\color{blue}+L:#1+}}
-\newcommand{\notaC}[1]{{\color{green}+C:#1+}}
-\newcommand{\notaV}[1]{{\color{red}+V:#1+}}
+% \newif{\ifinclude}
+%\usepackage{soul}
+%\sethlcolor{yellow}
+\newcommand{\hl}[1]{{\color{orange}#1}}
+%\newcommand{\notaL}[1]{{\color{blue}+L:#1+}}
+%\newcommand{\notaC}[1]{{\color{green}+C:#1+}}
+%\newcommand{\notaV}[1]{{\color{red}+V:#1+}}
 
 \begin{document}
 \shorttitle{Model of the Current Density in the Electrochemical
@@ -133,8 +136,8 @@ fast and easy approach for the fabrication
 of gradient materials has been the use  of asymmetrical
 electrode configurations in the electrochemical synthesis of porous silicon \cite{sailor2012porous}.
 This technique has the additional advantage of being compatible
-with very-large-scale-integration (VLSI) devices that may be
-integrated in  microelectronic circuits.
+with very-large-scale-integration (VLSI) devices \hl{that may be
+integrated in  microelectronic circuits.}
 
 Although porous silicon (PS) initially stimulated the interest of the scientific
 community due to its photo-luminescence in the visible range at room
@@ -532,11 +535,11 @@ $j_\perp=-\sigma\partial\phi/\partial z$,
 \end{equation}
 Eq. \eqref{Eq:J} is a very rapidly convergent expression that allows,
 in particular, to calculate the current $j_\perp(x,y,0)$ that attacks
-the substrate to produce the PS sample. As expected, the current
+the substrate to produce the PS sample. \hl{As expected, the current
 at the surface $z=0$ of the sample becomes more homogeneous as the
 distance $z_0$ to the tip of the electrode and the height of the
 electrolite $c>z_0$ increase, as each term in the sum decays
-approximately exponentially with increasing $z_0$.
+approximately exponentially with increasing $z_0$.}
 Integrating over the surface of the sample we verify
 \begin{equation}
   \label{eq:intj}
@@ -558,7 +561,7 @@ properties.
   \includegraphics[width=.8\textwidth]{paper-4}\\[12pt]
   \includegraphics[width=.8\textwidth]{paper-5}
 
-  \caption{(a): Schematic experimental set-up for
+  \caption{\hl{(a):} Schematic experimental set-up for
     the fabrication of GRIN PS structures. We show a side view of the
     electrochemical cell with the shape of a
     rectangular prism. We indicate the Si wafer (dark
@@ -569,7 +572,7 @@ properties.
     (yellow) and the controlled current source. We indicate some geometrical
     parameters of the arrangement $x_0$, $z_0$, $a$ and $c$
     and a few schematic current flux
-    lines. (b) and (c): Top and side schematic views of expected resulting sample
+    lines. \hl{(b) and (c):} Top and side schematic views of expected resulting sample
     illustrating eight regions $1\ldots8$ of decreasing porosity and thickness,
     illustrating the changes in pore radii,
     length, and density and the porosity gradient.}
@@ -607,7 +610,7 @@ platinum wire with a diameter of $0.41\,\text{mm}$ insulated with
 Teflon tape, with an uncovered
 tip located at $\bm r_0=(x_0,
 y_0,z_0)=(0.2\,\text{cm},0.74\,\text{cm},0.9\,\text{cm})$.
-We manufactured three samples $S_1$, $S_2$ and $S_3$ by applying a
+We manufactured three samples \hl{$S_1$, $S_2$ and $S_3$} by applying a
 current $I_1=5\,\text{mA}$, $I_2=10\,\text{mA}$ and
 $I_3=20\,\text{mA}$, respectively, during a time of $t=250s$.
 
@@ -660,7 +663,7 @@ cross-sectional) was observed with a {\em Hitachi SU1510} scanning electron micr
 
 % the thickness  and porosity  of each fabricated  film was measured.
 
-\section{Results and Discussion}
+\section{\hl{Results and Discussion}}
 \label{sec:discussion-results}
 \subsection{Current Density}
 \label{sec:current-density}
@@ -680,7 +683,7 @@ cross-sectional) was observed with a {\em Hitachi SU1510} scanning electron micr
     $y=0.74\,\text{cm}$. Inset: current over the whole surface.}
   \label{fig:DR1}
 \end{figure}
-In Fig. \ref{fig:DR1} we show the normalized current density $j_\perp(x,y,0)/I$ calculated through
+In Fig. \ref{fig:DR1} we show the \hl{normalized} current density $j_\perp(x,y,0)/I$ calculated through
 Eq. \eqref{Eq:J} at the surface of the sample for our cell, as shown
 in Figs. \ref{f:celda} and \ref{fig:DE1} and described in
 Sect. \ref{sec:fabrication-ps-grin}). For these parameters we obtained
@@ -694,7 +697,7 @@ the electrode.
 \begin{figure}
  \centering
  \includegraphics[width=\textwidth]{G3I20proc}
-  \caption{ Photograph of sample $S_3$ prepared as described in
+  \caption{ Photograph of sample \hl{$S_3$} prepared as described in
     Sec. \ref{sec:fabrication-ps-grin} using the same parameters as
     in Fig. \ref{fig:DR1} with a current $ I_3=20 \text{mA}$,
     during a time $t=250\text{s}$. We indicate the center-line with a
@@ -709,7 +712,7 @@ the electrode.
 \end{figure}
 
 In Fig. \ref{fig:SI3} we show a photograph of one of our samples,
-$S_3$
+\hl{$S_3$},
 prepared as described in Sec. \ref{sec:fabrication-ps-grin}, with the
 same conditions as those corresponding to Fig.~\ref{fig:DR1} applying
 a current
@@ -732,26 +735,27 @@ figure shows eight positions
 $x'_n=0.2\,\text{cm},0.4\,\text{cm},\ldots,1.6\,\text{cm}$ on which we
 measured the near normal incidence reflection spectra of the
 sample. Here, we defined $x'_n=x_n+w$ as the distance to the edge of
-the etched sample, which corresponds to the position of the sealing o-ring,
+the etched sample, \hl{which corresponds to} the position of the sealing o-ring,
 whereas $x_n$ is the corresponding distance to the wall of the
 cell.
 
 From Eq. \eqref{Eq:J} we evaluate the
 normalized current density $j_\perp/I$ expected at the positions $n$ indicated in
-Fig. \ref{fig:SI3}. We included an estimated uncertainty in the
-distance to the wall of the cell, and the corresponding (asymmetrical)
+Fig. \ref{fig:SI3}. \hl{We included an estimated uncertainty $\Delta
+  x_n=\Delta x$ in the
+distances $x_n$ to the wall of the cell, and the corresponding (asymmetrical)
 uncertainty in the computed current density. This
 uncertainty arises from the uncontrolled deformation of the o-ring as
 it is pressed against the wafer to seal in the electrolyte, so that
-its distance to the wall of the cell is ill defined, and we estimate
-it as the radius of the o-ring. \notaL{Would it be a good idea to use a
-  larger uncertainty? 1mm? The beam spot is 2mm wide.}
-(Table \ref{t:xj}).
+its distance $x'_n-x_n\approx 0.14\text{cm}\pm\Delta x$ to the wall of
+the cell is not well determined. We estimate $\Delta x$
+as the radius of the o-ring (Table \ref{t:xj}). }
 \begin{table}
   \centering
   \renewcommand{\arraystretch}{1.1}
-   \begin{tabular}{rrr}
-     \(x'_n\)(cm) & \(x\)(cm)& \(j_\perp/I\) (\(\text{cm}^{-2})\)\\
+  \hl{
+    \begin{tabular}{rrr}
+     $x'_n$(cm) &$x_n$(cm)&$j_\perp/I$ ($\text{cm}^{-2})$\\
      from edge& from wall&\\
      \hline
      0.2 &$ 0.06\pm0.05$ & $0.722^{+0.003}_{-0.007}$\\
@@ -762,12 +766,13 @@ it as the radius of the o-ring. \notaL{Would it be a good idea to use a
      1.2 &$ 1.06\pm0.05$ & $0.275^{+0.019}_{-0.018}$\\
      1.4 &$ 1.26\pm0.05$ & $0.211^{+0.014}_{-0.013}$\\
      1.6 &$ 1.46\pm0.05$ & $0.167^{+0.010}_{-0.009}$\\
-  \end{tabular}
+    \end{tabular}
+    }
   \caption{Normalized current density $j_\perp/I$ expected at different positions $x'_n$.}
   \label{t:xj}
 \end{table}
 
-In Fig. \ref{fig:sem} we show some SEM images of the sample $S_3$,
+In Fig. \ref{fig:sem} we show some SEM images of the sample \hl{$S_3$,}
 including top views and lateral views taken after
 the optical characterization was completed and the sample was cut
 along its center-line (see Sec. \ref{sec:R}) from
@@ -782,7 +787,7 @@ of the sample shown in Fig. \ref{fig:SI3}.
   \includegraphics[width=.3\textwidth]{seme}
   \includegraphics[width=.3\textwidth]{semf}
   \caption{Top ((a), (b), and (c)) and lateral ((d), (e), and (f)) SEM
-    micrographs of the sample $S_3$ taken from a region corresponding to the left
+    micrographs of the sample \hl{$S_3$} taken from a region corresponding to the left
     side ((a) and (d)), center ((b) and (e)), and right side ((c) and
     (f)) along the center-line shown in Fig. \ref{fig:SI3}.}
   \label{fig:sem}
@@ -790,13 +795,16 @@ of the sample shown in Fig. \ref{fig:SI3}.
 We confirm that as we move away from the electrode, the pore
 size and pore density diminish (panels (a) to (c) of
 Fig. \ref{fig:sem}) and the sample becomes much thinner (panels (d) to
-(f)). We remark that these micrographs were taken at three positions
-that do not correspond to the eight locations at which we measured the
-optical spectra. Thus, we didn't use them to obtain quantitatively the
-thickness nor the porosity of the PS layer, but to verify
-qualitative our expected results (Fig. \ref{fig:DE1}) and our
-actual results (Table \ref{t:jpdv}) obtained from our calculation and
-the optical spectra, as explained below.
+(f)). \hl{We remark that these micrographs were taken at three positions
+that were not chosen to correspond to the eight locations at which we measured the
+optical spectra. Thus, we didn't use SEM measurements for the quantitative
+determination of neither the thickess nor the porosity; they were used
+for the qualitative verification of the expected (Fig. \ref{fig:DE1})
+and obtained (Table \ref{t:jpdv}) results. Actually, one of our
+goals is to show that relatively inexpensive reflectance
+measurements might be enough to characterize both the porosity and
+etching rate variations along the sample.
+}
 
 \subsection{Reflectance}\label{sec:R}
 
@@ -842,8 +850,8 @@ Figs. \ref{fig:R5}, \ref{fig:R10}, and \ref{fig:R20}.
 We fitted the reflectance measurements using Eqs. \eqref{Eq:ECMR} and
 \eqref{Eq:Brugg} using the local porosity $p$, and the thickness of the
 film  $d$ as
-adjustable parameters. To that end we used the {\tt migrad} routine of
-the {\tt Minuit} minimization software. From the thickness we
+adjustable parameters. \hl{To that end we used the {\tt migrad} routine of
+the {\tt Minuit} minimization software.} From the thickness we
 obtained the etching rate $v=d/t$ at each position. Notice that the fits are reasonably
 good. The contrast of the reflectance in the experiment is somewhat smaller
 than in our fitted curves. We believe this is due to the finite width
@@ -864,6 +872,7 @@ The results obtained from the reflectance fits are summarized in table
 \begin{table}
 \centering
 \renewcommand{\arraystretch}{1.1}
+\hl{
 \begin{tabular}{lrrrrr}
   Sample & position & density & porosity &
   thickness & rate\\
@@ -895,27 +904,28 @@ $S_3$(20) &$0.2$ &$14.45^{+0.06}_{-0.14}$&$0.69\pm0.03$ &$1.208\pm0.047$ &$  4.8
          &$1.4$ &$  4.22^{+0.28}_{-0.26}$&$0.59\pm0.03$ &$0.369\pm0.018$ &$  1.48\pm0.07$ \\
          &$1.6$ &$  3.33^{+0.19}_{-0.17}$&$0.59\pm0.02$ &$0.338\pm0.014$ &$  1.35\pm0.06$ \\
 \end{tabular}
+}
 \caption{\label{t:jpdv}
-  Current density and fitted parameters for several positions on
-  three samples:  porosity, thickness, and etching rate.}
+  \hl{Current density and fitted parameters for several positions on
+  three samples:  porosity, thickness, and etching rate.}}
 \end{table}
-The uncertainties in the fitted parameters $p$, $d$, and $v$ were
+\hl{The uncertainties in the fitted parameters $p$, $d$, and $v$ were
 chosen as those that increase the sum of squared errors by 10\% with
-respect to its minimum value.
+respect to its minimum value.}
 
-From the data in Table \ref{t:jpdv} we can plot the fitted porosity vs.
-the calculated density current $j_\perp$, as shown for our three
+From the data in Table \ref{t:jpdv} \hl{we can plot the fitted porosity vs.
+the calculated density current $j_\perp$,} as shown for our three
 samples in Fig. \ref{fig:p}.
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{pvsjerr}
-  \caption{Porosity vs. current density for the three samples
+  \caption{\hl{Porosity vs. current density for the three samples
     $S_1$, $S_2$, $S_3$. The arrows point to data that correspond to
     position $x'_1=0.2\,\text{cm}$ (see text). We include a linear fit of the form
     $p=mj_\perp+b$ with parameters
     $m=(0.0122\pm0.001)\frac{\text{cm}^2}{\text{mA}}$ and
     $b=0.551\pm.005$.
-    }
+    }}
   \label{fig:p}
 \end{figure}
 Notice that for each sample the data points lie around straight lines,
@@ -924,11 +934,11 @@ $x'_1$. As discussed in Sec. \ref{sec:ps-grin-single}, those points
 were very close to a wall of the electrolytic cell, so they were
 affected by leakage currents towards the underside of the wall.
 For this reason, we exclude those points from the following
-analysis. We made a linear fit of the form $p=mj_\perp+b$ obtaining
+analysis. \hl{We made a linear fit of the form $p=mj_\perp+b$ obtaining
 \begin{equation}\label{eq:p}
   p\approx (0.0122\pm0.001)\frac{\text{cm}^2}{\text{mA}} j_\perp+(0.551\pm.005).
 \end{equation}
-Thought the fit is reasonably good, it is noticeable that most of the data from
+Though the fit is reasonably good, it is noticeable that most of the data from
 sample $S_2$ lie to the left of the fitted line while most of the data
 from the other samples lie to the right. This discrepancies may be due
 to the uncertainty in the positions $x_n$ (see Table \ref{t:xj}) due
@@ -938,37 +948,39 @@ deformation of the o-ring when the cell is pressed against the wafer
 would be equivalent to a rigid shift of the sample, i.e., to adding a
 constant to all the positions $x_n$. Thus it is likely that the sign
 and magnitude of that uncontrolled constant displacement changes among
-samples.
+samples.}
 
-Similarly, we can plot the fitted etching rate vs.
-the calculated density current, as shown for our three
+\hl{Similarly, we can plot the fitted etching rate vs.
+the calculated density current,} as shown for our three
 samples in Fig. \ref{fig:v}.
 \begin{figure}
   \centering
   \includegraphics[width=\textwidth]{vvsjerr}
-  \caption{Etching rate vs. current density for three samples
+  \caption{\hl{Etching rate vs. current density for three samples
     $S_1$, $S_2$, $S_3$. The arrows point to data that correspond to
     position $x'_1=0.2\,\text{cm}$ (see text). We include a linear fit of the form
     $v=mj_\perp+b$ to the data with parameters $m=(0.312\pm
     0.017)(\text{cm}^2/\text{mA})(\text{nm/s})$ and
-    $b=(0.44\pm0.09)\text{nm/s}$. }
+    $b=(0.44\pm0.09)\text{nm/s}$. }}
   \label{fig:v}
 \end{figure}
-As for the porosity, excluding the points in the
+\hl{As for the porosity, excluding the points in the
 immediate proximity of the wall of the cell, the remaining points
 lie roughly on straight lines for each sample, and they
-may all be approximated by a linear fit to all the data, from which we get
+may all be approximated by a linear fit to all the data, from which we get}
 \begin{equation}\label{eq:v}
-  v\approx (0.312\pm0.017)\frac{\text{cm}^2}{\text{mA}}
-  \frac{\text{nm}}{\text{s}}j_\perp + (0.44\pm0.09)\frac{\text{nm}}{{s}}.
+  \hl{v\approx (0.312\pm0.017)\frac{\text{cm}^2}{\text{mA}}
+  \frac{\text{nm}}{\text{s}}j_\perp +
+  (0.44\pm0.09)\frac{\text{nm}}{{s}}.
+  }
 \end{equation}
-Similarly to
+\hl{Similarly to
 Fig. \ref{fig:p}, most data from sample $S_2$ lies to the left of the
 fitted line and most of the data from $S_1$ and $S_3$  lie to the
 right, which could be similarly explained and corrected.
 These corrections are different for layers grown on different samples,
 but for a multilayered system, produced by modulating the current $I$ in
-time, a single correction ought to be enough for all the layers.
+time, a single correction ought to be enough for all the layers.}
 
 Using Eqs.  \eqref{Eq:ECMR}-\eqref{eq:v} we can calculate the
 reflectance spectra for any
@@ -982,8 +994,8 @@ to our samples.
     current $j_\perp$ and wavelength $\lambda$ for an etching time
     $t=250\,\text{s}$. Theory (left panel) and experiment (right
     panel, see text). We indicate with the numbers 1, 2, 3 the
-    data corresponding to the corresponding samples $S_1$, $S_2$
-    (shifted, see text) and  $S_3$.}
+    data corresponding to the corresponding samples \hl{$S_1$, $S_2$
+    (shifted, see text) and  $S_3$.}}
   \label{fig:Rvsjl}
 \end{figure}
 On the right hand side of the figure we display a quilt made by
@@ -992,10 +1004,10 @@ Figs. \ref{fig:R5}- \ref{fig:R20}, ordered according to the
 corresponding current density as presented in Table
 \ref{t:jpdv}. Nevertheless, for the reasons mentioned above, we
 eliminated the data corresponding to position $x'_1$ on all
-samples. Furthermore, as discussed above and for visualization
+samples. \hl{Furthermore, as discussed above and for visualization
 purposes we applied small rigid translations to the samples along the
 $x$ direction, thereby modifying $j_\perp$, before patching together
-the reflectance spectra.
+the reflectance spectra.}
 Notice that the experimental results may
 be grouped along bright and dark bands that correspond closely to
 those expected theoretically, though the experimental bands are somewhat shifted,
@@ -1024,7 +1036,7 @@ optical measurements on several positions of just a
 few samples. We illustrated the procedure with three samples on each of which we
 measured reflectance spectra at eight different positions.
 Through an optimization procedure, we fitted the porosity and etching
-rates corresponding to each current density. We used these data to
+rates corresponding to each current density. \hl{We used these data to
 obtain calibration curves that allow the approximate prediction of the
 properties of porous Si samples prepared with a current density that
 spans a range of more than one order of magnitude. The
@@ -1034,7 +1046,7 @@ measuring positions, as we used as reference the ill defined edge of
 the sample, while the important reference for our calculation is the
 edge of the wall of the electrolytic cell. Nevertheless, these
 discrepancies are reduced through a rigid shift of the coordinates
-$x_n$ used in the analysis. Our calibration curves can be used to
+$x_n$ used in the analysis. Our calibration curves can be used to}
 design and calculate the optical
 properties of other systems prepared under similar conditions, such as
 multilayered GRIN systems from which photonic crystals, micro-cavities
@@ -1043,8 +1055,8 @@ ongoing work. As the etching rate for the formation of porous silicon
 and the resulting porosity are very sensitive to the growth conditions
 and to the properties of the substrate, such as its doping,
 there are no universal calibration curves. Thus, it is useful to have
-a procedure that from just one or a few samples can produce calibration curves
-that may be employed for other samples grown under similar conditions.
+\hl{a procedure that from just one or a few samples can produce calibration curves
+that may be employed for other samples grown under similar conditions.}
 
 \section*{Acknowledgments}
 \label{sec:acknowledgments}

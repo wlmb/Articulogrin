@@ -87,6 +87,10 @@ corresponding changes we performed on our manuscript Ref. No.:  OM-D-20-02614,
      sample at each position $n$ where we measured the optical
      spectra.
 
+   - Actually, one of our goals is to show that relatively inexpensive
+     reflectance measurements allow the characterization of both the
+     porosity and the etching rate.
+
    - We modified the text where we present Fig. 7 to eliminate any
      confusion about this issue.
 
@@ -356,7 +360,7 @@ In summary, we have addressed all of the reviewers comments and made
 changes to the manuscript based on most of his recommendations, which
 we believe were beneficial.
 We have highlighted the differences between the current and the
-previous version of our manuscript. We
+previous version of our manuscript using colored text. We
 believe that, as stated by the reviewer, the paper contains
 interesting results of suitable quality, they are presented with
 appropriate detail and we believe they should be of interest and
